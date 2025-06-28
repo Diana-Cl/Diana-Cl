@@ -1,8 +1,10 @@
 ---
 layout: doc
 outline: deep
+lang: fa-IR
 title: Cloudflare backend selector
-description: Random domain proxy
+description: "دامنه با آی‌پی‌های رندوم کلادفلر"
+date: 2025-01-18
 editLink: true
 head:
   - - meta
@@ -30,6 +32,7 @@ head:
   <br/>
   
 ## ایجاد وورکر کلادفلر 
+
 در ابتدا کد [worker.js](https://github.com/NiREvil/vless/blob/main/edge/cf-proxy-selector.js) رو از گیتهاب کپی و یک وورکر جدید Deploy کنید بعد لینک وورکری که ساختید رو در قسمت آی‌پی آدرس هر کانفیگی که خواستید می‌تونید استفاده کنید.
 
 <br/>
