@@ -1,21 +1,18 @@
 ---
-layout: post
-title: 'Stable Diffusion'
-subtitle: 'Stable Diffusion is a neural network that generates images from a text prompt'
-author: 'Dìana'
-date: 2025-02-06
-header-mask: 0.4
-tags:
-    - Image generator
-    - Stable Diffusion
-    - text prompt
-    - Telegram bot
-    - DALL.E3
-    - Flux
-    - Midjourney
----  
+layout: doc
+outline: deep
+lang: fa-IR
+title: Stable Diffusio
+description: Stable Diffusion is a neural network that generates images from a text prompt
+editLink: true
+head:
+  - - meta
+    - name: keywords
+      content: Image generator, Stable Diffusion, text prompt, Telegram bot, DALL.E3, Flux, Midjourney
+---
 
 # Stable Diffusion  
+
 > Stable Diffusion is a neural network that generates images from a text prompt
 
 Welcome! Today, we’ll journey from the simplest generations to the most elegant ones, and I’ll provide examples along the way.
@@ -29,17 +26,16 @@ but I will only explain the first one in detail, as the other two are quite simi
 2. **[stable_diffusion_bot]**
 3. **[StableDiffusionWrapperBot]**
 
----
+<hr><br/>
 
 ### First Steps  
 Let’s start with the basics. We’ve just entered the bot and want to generate, say, a frog in a pink spacesuit. So, we’ll write:  
 
 <p align="center">
 <img src="https://github.com/user-attachments/assets/5958bdd9-ad29-49b5-a170-d5bb6c35c956"  width="400px"/>  
-</p>  
+</p><br/>  
 
 > Frog in a pink spacesuit on the moon
-
 
 You’ll notice that it doesn’t matter whether you use Russian or English for the bot, so for clarity, I’ll use English in the following examples:  
 
@@ -48,26 +44,26 @@ Want to improve the quality of your image? Click the "Upscale" button under the 
 
 <p align="center">
 <img src="https://github.com/user-attachments/assets/5b09e183-4bf1-4605-adb6-f0299bf297b7" width="400px"/>  
-</p><br>  
+</p><br/>  
 
 <p align="center">
 <img src="https://github.com/user-attachments/assets/bf866f8b-bddd-41dc-973d-65121758afa9"  width="600px"/>  
 </p>
 
----
+<hr><br/>
 
 ### Main Bot Functionality  
 Access the settings via the `/menu` command or by clicking the ⚙️ Menu button available under each generation.  
 
 <p align="center">
 <img src="https://github.com/user-attachments/assets/3712473f-5c37-4d24-aac2-d1aa5e0b8d06"  width="400px"/>  
-</p><br>
+</p><br/>
 
 - **📐 Format** – The aspect ratio of your generation. The image can be horizontal (for landscapes), vertical (for portraits), or square.  
 - **📺 Model** – The foundation of your generation, determining the style. All models lean towards realism but retain their unique flair. Try them out and find your favorite! ❤️  
 - **🎨 Style** – Easily customize your generation. Be sure to try each one. Examples of all styles are available in the bot!  
 
----
+<hr><br/>
 
 #### Models  
 The bot contains 4 different models: SD 1.5, SDXL 1, SDXL turbo X2. 
@@ -98,7 +94,7 @@ When you upscale a generation, a 🏆 Submit to Contest button will appear.
 > who periodically selects works for publication in our channel! If your work is chosen,
 > it will be published, and you’ll receive 30 bonus generations!  
 
----
+<hr><br/>
 
 ### Advanced Input  
 Let’s learn how to adjust the weights of tag-words. Here’s an example to illustrate this concept:  
@@ -133,12 +129,12 @@ In the second art, we increased the emphasis on the "jump" and reduced the "flow
 
 👍 That’s it! Mastering this technique opens up many more possibilities for refining results and fixing flaws. Practice on your own to see how it can enhance your favorite art.  
 
----
+<hr><br/>
 
 ### Characters  
 We’ve compiled a huge list of character descriptions. Check it out to find the tags you need, or simply write the character’s name in Russian, and the bot will provide the relevant tags.  
 
----
+<hr><br/>
 
 ### Interesting Tags  
 Here, we’ll add non-obvious, interesting tags that can make your generations even cooler!  
@@ -183,7 +179,7 @@ Here, we’ll add non-obvious, interesting tags that can make your generations e
 - **Canon EF 100mm f/2.8L Macro IS USM Lens**: Perfect for close-ups of insects, flowers, or small details. Also great for portraits due to its beautiful bokeh.  
   Example prompt: *close up of a bee on a flower, shot with a Canon EF 100mm f/2.8L Macro IS USM Lens, lit by daylight, photo*  
 
----
+<hr><br/>
 
 ### More Cool Tags  
 Add these tokens to your prompts—they’ll come in handy for all kinds of image generations. These hints will add different styles, colors, moods, and more to your results.  
@@ -238,7 +234,7 @@ Add these tokens to your prompts—they’ll come in handy for all kinds of imag
 - **in the style of surreal architectural landscapes**  
 - **light white and light amber**  
 
----
+<hr><br/>
 
 ### Inspiration  
 Coming up with a good prompt isn’t easy, so you can look at the best art for new ideas. Let’s check out some works from our subscribers, which you can borrow for inspiration:  
@@ -256,50 +252,51 @@ Coming up with a good prompt isn’t easy, so you can look at the best art for n
 > High detail, 8k resolution, masterpiece.
 > > Model: RealVis Vanilla 
 
-----
+<hr><br/>-
+
 <p align="center">
 <img src="https://github.com/user-attachments/assets/923bd226-0482-4c50-9226-4b09d08cbfff"  width="800px"/>  
-</p>  
+</p><br/>  
 
 > Prompt: (totoro:1.5), (by hayao miyazaki:2), (minimalism:1.2), (miyazaki style:1.7)
 > 
 > > Model: Stable Diffusion XL Midjourney 
 
-----
+<hr><br/>
 
 <p align="center">
 <img src="https://github.com/user-attachments/assets/b9ba3e8d-2871-4788-ae12-7b711d4b03e5"  width="800px"/>  
-</p>  
+</p><br>  
 
 > Prompt: three-dimensional white drawing of train placed on a blank page.
 > 
 > > Model: Stable Diffusion XL Vanilla 
 
-----
+<hr><br/>-
 
 <p align="center">
 <img src="https://github.com/user-attachments/assets/000e92dc-3f5c-43f6-975d-07f518ae6b53"  width="800px"/>  
-</p>  
+</p><br>  
 
 > Prompt: rick from rick and morty.
 > 
 > > Model: Dreamshaper Vanilla
 
----
+<hr><br/>
 
 <p align="center">
 <img src="https://github.com/user-attachments/assets/1c2bfaf7-704e-40c6-973f-8ae18802ba0a"  width="800px"/>  
-</p>  
+</p><br/>  
 
 > Prompt: hygge set, hand drawn vector, scandinavian doodle sketchy elements. cozy comfortable lifestyle hygge, set, vector, cozy, cosy, home, illustration, candle, hand drawn, drawing, flat, house, scandinavian, book, warm, lifestyle, trendy, comfortable, doodle.
 > 
 > > Model: Dreamshaper Vanilla
 
----
+<hr><br/>
 
 <p align="center">
 <img src="https://github.com/user-attachments/assets/86e218db-6801-40cf-9037-a76e1dad7b40"  width="800px"/>  
-</p>  
+</p><br/>
 
 > Prompt: skinny model wearing a dress at beach bar drinks a cocktail.
 > 
@@ -311,12 +308,12 @@ Be my guest, [Best of Stable Diffusion]
 **be curious 🤍**
 
 
-[StableDiffusion_robot]: <https://t.me/StableDiffusion_robot/?start=6064662462>
+[StableDiffusion_robot]: https://t.me/StableDiffusion_robot/?start=6064662462
 
-[stable_diffusion_bot]: <https://t.me/stable_diffusion_bot>
+[stable_diffusion_bot]: https://t.me/stable_diffusion_bot
 
-[StableDiffusionWrapperBot]: <https://t.me/StableDiffusionWrapperBot>
+[StableDiffusionWrapperBot]: https://t.me/StableDiffusionWrapperBot
 
-[Best of Stable Diffusion]: <https://t.me/StableDiffusionBest>
+[Best of Stable Diffusion]: https://t.me/StableDiffusionBest
 
-[https://t.me/StableDiffusion_robot/?start=]: <https://t.me/StableDiffusion_robot/?start=6064662462> 
+[https://t.me/StableDiffusion_robot/start]: https://t.me/StableDiffusion_robot/?start=6064662462
