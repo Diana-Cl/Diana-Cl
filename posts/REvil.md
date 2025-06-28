@@ -3,12 +3,13 @@ layout: doc
 outline: deep
 lang: fa-IR
 title: "امپراتوری سایبری REvil: از ظهور تا سقوط"
-description: امروز قراره بریم به اعماق یکی از مخوف‌ترین داستان‌های دنیای هک». یه گروه هکری که شرکت‌های غول‌پیکر رو به زانو درآورد، از کنترل سوخت یک کشور تا تهدید هسته‌ای و حتی درخواست باج از رئیس‌جمهور آمریکا!
+description: "امروز قراره بریم به اعماق یکی از مخوف‌ترین داستان‌های دنیای هک». یه گروه هکری که شرکت‌های غول‌پیکر رو به زانو درآورد، از کنترل سوخت یک کشور تا تهدید هسته‌ای و حتی درخواست باج از رئیس‌جمهور آمریکا!!"
+date: 2025-05-05
 editLink: true
 head:
   - - meta
     - name: keywords
-      content: The fallen crown, Extortion, Nuclear-threat, Ransomware, RaaS, REvil, Hackers, Cyber-threat
+      content: The fallen crown, Extortion, Nuclear-threat, Ransomware, RaaS, REvil, Hackers, Cyber-threat, REvil, malware analysis, cybersecurity
 ---
 
 # «امپراتوری سایبری REvil: از ظهور تا سقوط»  
