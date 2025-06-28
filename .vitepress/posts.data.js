@@ -6,18 +6,23 @@ export default createContentLoader('posts/*.md', {
   transform(raw) {
     return raw
       .map(({ url, frontmatter, excerpt }) => ({
-        title: frontmatter.title,
+        title: frontmatter.title || 'Untitled',
         url,
-        excerpt,
-        date: {
-          time: +new Date(frontmatter.date),
-          string: new Date(frontmatter.date).toLocaleDateString('en-US', {
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric'
-          })
-        }
+        excerpt: excerpt || frontmatter.description || '',
+        date: formatDate(frontmatter.date || new Date())
       }))
       .sort((a, b) => b.date.time - a.date.time)
   }
 })
+
+function formatDate(raw) {
+  const date = new Date(raw)
+  return {
+    time: +date,
+    string: date.toLocaleDateString('fa-IR', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    })
+  }
+}
