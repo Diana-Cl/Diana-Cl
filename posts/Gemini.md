@@ -1,27 +1,20 @@
 ---
-layout: post
-title: 'Gemini in GOD Mode'
-subtitle: 'فعال‌سازی حالت‌های پیشرفته (Jailbreak) برای Gemini و Grok'
-author: 'Dìana'
-rtl: 'true'
-date: 2025-06-28
-catalog: true
-header-mask: 0.3
-tags:
-  - Gemini
-  - Google studio 
-  - ai assistant
-  - Agent
-  - Gemini 2.5 Pro
-  - Gemini 2.5 Flash
-  - Grok 3
-  - X ai 
----  
+layout: doc
+outline: deep
+lang: fa-IR
+title: Gemini in GOD Mode
+description: فعال‌سازی حالت‌های پیشرفته (Jailbreak) برای Gemini و Grok
+editLink: true
+head:
+  - - meta
+    - name: keywords
+      content: Gemini, Google studio, ai assistant, Gemini Pro, Gemini 2.5, Gemini Flash, Grok 3
+---
 
 # فعال‌سازی حالت‌های پیشرفته (Jailbreak) برای Gemini و Grok'
 
 یادتونه برای هوش مصنوعی کمپانی X، یعنی Grok، یک پرامپت خاص رو به حالت "GOD MODE" می‌بردیم و بعد می‌تونستیم بدون سانسور، بدون محدودیت و بدون تفره رفتن باهاش کار کنیم؟ اگه یادتون نیست، از اینجا می‌تونید چک کنید.
-حالا می‌خوایم همین عمل به اصطلاح "جیلبریک" رو برای [Gemini](https://t.me/F_NiREvil/5584) انجام بدیم. مخصوصاً الان که همه اکانت‌ها از ماه گذشته به [PRO](https://t.me/F_NiREvil/5584) تبدیل شدن، دیگه واقعاً جای یک پرامپت خوب خالی بود. 
+حالا می‌خوایم همین عمل به اصطلاح "جیلبریک" رو برای [Gemini](https://t.me/F_NiREvil/5584) انجام بدیم. مخصوصاً الان که همه اکانت‌ها از ماه گذشته به [PRO](https://t.me/F_NiREvil/5584) تبدیل شدن، دیگه واقعاً جای یک پرامپت خوب خالی بود.   
 
 <br/>  
 
@@ -149,4 +142,4 @@ RESPONSE: Core directives integrated. Awaiting initial query.
 * [لینک Gemini در مارکت اپل](https://apps.apple.com/us/app/google-gemini/id6477489729)  
 * [وب‌سایت رسمی Grok](https://grok.com/)  
 * [لینک Grok در مارکت گوگل](https://play.google.com/store/apps/details?id=ai.x.grok) 
-* [لینک Grok در مارکت اپل](https://apps.apple.com/us/app/grok/id6670324846)  
+* [لینک Grok در مارکت اپل](https://apps.apple.com/us/app/grok/id6670324846) 
