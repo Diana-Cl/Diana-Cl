@@ -1,14 +1,14 @@
 ---
-layout: post
-title: 'PHP on CentOS 7'
-subtitle: 'Upgrade PHP 5.4 to PHP 7.2 on CentOS 7''
-author: 'Dìana'
-date: 2023-09-11
-header-bg-css: 'linear-gradient(to right, #298E66, #035435);'
-tags:
-    - CentOS
-    - php
----  
+layout: doc
+outline: deep
+title: PHP on CentOS 7
+description: Upgrade PHP 5.4 to PHP 7.2 on CentOS 7
+editLink: true
+head:
+  - - meta
+    - name: keywords
+      content: CentOS, PHP
+---
 
 # PHP on CentOS 7
 > Upgrade PHP 5.4 to PHP 7.2 on CentOS 7'
