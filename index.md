@@ -8,7 +8,7 @@ hero:
   tagline: Exploring technology, security, and everything in between.
   actions:
     - theme: brand
-      text: Get start with Gemini
+      text: Get start with Gemini Pro
       link: /posts/Gemini
     - theme: alt
       text: View on GitHub
