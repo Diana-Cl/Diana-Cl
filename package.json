@@ -7,7 +7,7 @@
     "dev": "vitepress dev",
     "build": "vitepress build",
     "preview": "vitepress preview",
-    "deploy": "npm run build && gh-pages -d .vitepress/dist -b gh-pages"
+    "deploy": "npm run build && gh-pages -d .vitepress/dist"
   },
   "keywords": [
     "ai",
@@ -18,8 +18,9 @@
   "license": "ISC",
   "type": "module",
   "devDependencies": {
-    "vitepress": "^1.6.3",
+    "gh-pages": "^6.1.1",
     "markdown-it-footnote": "^4.0.0",
-    "markdown-it-mathjax3": "^4.3.2"
+    "markdown-it-mathjax3": "^4.3.2",
+    "vitepress": "^1.6.3"
   }
 }
