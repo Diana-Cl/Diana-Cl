@@ -2,17 +2,17 @@ import { defineConfig } from 'vitepress'
 import footnote from 'markdown-it-footnote'
 import mathjax3 from 'markdown-it-mathjax3'
 
-// .vitepress/config.js
-export default {
+// https://vitepress.dev/reference/site-config
+export default defineConfig({
   title: "Diana's Blog",
   description: 'My personal notes and articles.',
-  base: '/Diana-Cl/', 
+  base: '/Diana-Cl/',
   lang: 'fa-IR',
   dir: 'rtl',
   cleanUrls: true,
   ignoreDeadLinks: true,
   head: [
-    ['link', { rel: 'icon', href: '/Diana-Cl/Diana-Cl/posts/favicon.ico' }]
+    ['link', { rel: 'icon', href: '/Diana-Cl/favicon.ico' }]
   ],
 
   markdown: {
@@ -23,7 +23,7 @@ export default {
   },
 
   themeConfig: {
-    logo: '/logo.svg',
+    logo: '/Diana-Cl/logo.svg',
     docFooter: {
       prev: 'Previous page',
       next: 'Next page'
@@ -38,7 +38,7 @@ export default {
         text: 'All Posts',
         items: [
           { text: 'Google Gemini', link: '/posts/Gemini' },
-          { text: 'REvil Ransomware', link: '/posts/REvil' },
+          { text: 'Ransomware Evil', link: '/posts/REvil' },
           { text: 'Windows Activation', link: '/posts/windows-activation' },
           { text: 'AI Agents', link: '/posts/ai-agents' },
           { text: 'Cloudflare Backend Selector', link: '/posts/cf-backend-selector' },
@@ -47,7 +47,6 @@ export default {
         ]
       }
     ],
-    
     lastUpdated: {
       text: 'Last update:',
       formatOptions: {
@@ -55,20 +54,17 @@ export default {
         timeStyle: 'medium'
       }
     },
-    
     editLink: {
       pattern: 'https://github.com/Diana-Cl/Diana-Cl/edit/main/posts/:path',
       text: 'Edit this page on GitHub'
     },
-
     socialLinks: [
       { icon: 'github', link: 'https://github.com/Diana-Cl/Diana-Cl' },
       { icon: 'telegram', link: 'https://t.me/F_NiREvil' }
     ],
-
     footer: {
       message: 'Released under the REvil License.',
       copyright: '© 2025 Dìana - All Rights Reserved.'
     }
   }
-}
+})
