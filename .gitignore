@@ -1,0 +1,9 @@
+# Dependency directories
+node_modules/
+
+# VitePress cache and build output
+.vitepress/cache/
+.vitepress/dist/
+
+# IDE config files
+.vscode/

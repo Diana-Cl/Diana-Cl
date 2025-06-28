@@ -1,0 +1,25 @@
+{
+  "name": "Diana",
+  "version": "1.0.0",
+  "description": "Dianas blog",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview",
+    "deploy": "npm run build && gh-pages -d .vitepress/dist -b gh-pages"
+  },
+  "keywords": [
+    "ai",
+    "agents",
+    "activation"
+  ],
+  "author": "Diana-Cl",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "vitepress": "^1.6.3",
+    "markdown-it-footnote": "^4.0.0",
+    "markdown-it-mathjax3": "^4.3.2"
+  }
+}
