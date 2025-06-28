@@ -1,5 +1,5 @@
 ---
-# https://vitepress.dev/reference/default-theme-home-pa>
+# https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
 hero:
@@ -22,18 +22,3 @@ features:
   - title: "AI & Technology"
     details: "Exploring the latest in artificial intelligence, from language models to diffusion techniques."
 ---
-
-<script setup>
-import { data as posts } from './.vitepress/posts.data.js'
-</script>
-
-<div class="vp-doc">
-  <h2>Latest Posts</h2>
-  <ul>
-    <li v-for="post of posts">
-      <a :href="post.url">{{ post.title }}</a>
-      <br>
-      <small>{{ post.date.string }}</small>
-    </li>
-  </ul>
-</div>
