@@ -2,7 +2,8 @@
 layout: doc
 outline: deep
 title: Introduction to REvil Activation
-description: A reliable, open-source activation toolkit for Windows and Office. Activate your products in under 40 seconds using methods like HWID, KMS, and more.
+description: "A reliable, open-source activation toolkit for Windows and Office. Activate your products in under 40 seconds using methods like HWID, KMS, and more."
+date: 2025-01-11
 editLink: true
 head:
   - - meta
