@@ -3,7 +3,7 @@ layout: doc
 outline: deep
 title: Stable Diffusion
 description: "Stable Diffusion is a neural network that generates images from a text prompt"
-date: 2025-05-05
+date: 2025-02-06
 editLink: true
 head:
   - - meta
