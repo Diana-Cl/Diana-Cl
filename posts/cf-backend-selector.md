@@ -1,28 +1,22 @@
 ---
-layout: post
-title: 'Cloudflare backend selector'
-subtitle: 'Random domain proxy'
-author: 'Dìana'
-date: 2025-01-18
-header-bg-css: 'linear-gradient(to right, #b0091a, #4b0208);'
-rtl: 'true'
-mathjax: 'true'
-tags:
-    - Cloudflare workers
-    - Failover backend
-    - CDN Scan
-    - Clean Ip
-    - Load balance
----  
+layout: doc
+outline: deep
+title: Cloudflare backend selector
+description: Random domain proxy
+editLink: true
+head:
+  - - meta
+    - name: keywords
+      content: Cloudflare Workers, Failover backend, CDN Scan, Clean Ip, Load balance, Cloudflare pages
+---
 
-## دامنه به جای آی‌پی تمیز کلادفلر  
+# دامنه به جای آی‌پی تمیز کلادفلر  
 
 **بعد از ساخت کانفیگ با وورکر، برای انتخاب آی‌پی تمیز چند حالت پیش میاد:** 
 - یا باید از دامنه خود وورکر استفاده کنیم.  
 - یا باید از کدهایی مثل [هارمونی] استفاده کنیم برای ساخت لینک ساب.  
 - یا آی‌پی تمیز اسکن کنیم هر چند وقت یکبار و جایگزین کنیم در کانفیگ‌ها.  
 - یا از دامنه‌ یکی از سایت‌هایی که پشت کلادفلر هستن استفاده کنیم در کانفیگ مثلا دامنه‌ `zula.ir`.  
-
 
 **ولی بازم چندتا مشکل داریم:**  
 - از دامنه وورکر نمی‌تونیم استفاده کنیم چون فیلتر میشه
@@ -41,12 +35,10 @@ tags:
 لیست دامنه‌های داخل کد رو به دلخواه خودتون می‌تونید تغییر بدید، دوتا دامنه توی لیست باقی بذارید یا صدتا مهم نیست. میتونید از اسکنر ویندوزی که لینکش رو پایین پست گذاشتم کمک بگیرید برای اسکن CDN و قرار دادن نتایج از طریق ... الان میگم.  
 مهم اینه که از دفعه بعد دیگه سراغ ویرایش کد نرید، با ایجاد یک متغیر به اسم `HOST` هر دامنه‌ای رو که می خواستید اضافه کنید به اسکریپت. دامنه ها باید با کاما از هم جدا بشن مثل bpb، مثلا:  
 
-> zula.ir,creativecommons.org,ip.sb  
-{:style="text-align: left;"}  
+> zula.ir,creativecommons.org,ip.sb
 
 و الی آخر. دوتا متغیر دیگه هم می‌تونیم تعریف کنیم ولی برای شما اصلا نیاز نیست، دو متغیر دیگه صرفا برای مقاصد خاص استفاده میشن و فعلا نادیده می‌گیریم.  
 
-  
 ### جدول متغیرها  
 
 | نام متغیر       | توضیحات                                                                 | مقدار پیش‌فرض | مثال                     |
@@ -55,7 +47,6 @@ tags:
 | `PATH`      | مسیر درخواست ارسالی به دامنه‌ها                                 | `/`           | `/api/assets/data`                  |
 | `CODE`      | کد وضعیت HTTP مورد انتظار از پاسخ دامنه‌ها                     | `200`         | `200` یا `404`                  |
   
-
 ### Environment variables  
 
 | Variable Names   | Description                                                             | Default Value | Example                   |
@@ -64,31 +55,29 @@ tags:
 | `PATH`      | Request path sent to backend domains                                    | `/`           | `/api/assets/data`                  |
 | `CODE`      | Expected HTTP status code from backend domains                          | `200`         | `200` or `404`                  |  
 
-<br>  
+<br/>  
 
-#### متغیر 1. **`HOST`**  
+### متغیر 1. **`HOST`**  
 - **لیست دامنه‌های پشت کلادفلر که با کاما از هم جدا شده‌اند.** اگر تنظیم نشود، از لیست پیش‌فرض داخل کد استفاده می‌شود.  
 
 > **English:** A comma-separated list of backend domains. If not set, the default list is used
-{:style="text-align: left;"}    
+{:style="text-align: left;"}  
 
-  
-#### متغیر 2. **`PATH`**  
+### متغیر 2. **`PATH`**  
 - **مسیر درخواست ارسالی به دامنه‌ها،** اگر تنظیم نشود، مقدار پیش‌فرض `/` استفاده می‌شود.  
 
 > **English:** The request path sent to domains. If not set, the default value `/` is used  
 {:style="text-align: left;"}  
-
   
-#### متغیر 3. **`CODE`**  
+### متغیر 3. **`CODE`**  
 - **کد وضعیت HTTP مورد انتظار از پاسخ دامنه‌های لیست،** اگر تنظیم نشود، مقدار پیش‌فرض `200` استفاده می‌شود.  
 
 > **English:** The expected HTTP status code from backend domains. If not set, the default value `200` is used  
-{:style="text-align: left;"}  
 
 ---  
 
-### ساختار کد  
+## ساختار کد  
+
 کدی که در پایین صفحه قرار داره فقط واسه مشاهده ساختار کد هست و قابل استفاده نیست لطفا فقط از [![Here](https://img.shields.io/badge/worker.js-red?logo=cloudflareworkers)](https://github.com/NiREvil/vless/blob/main/edge/cf-proxy-selector.js) اون رو کپی کنید.    
 ```javascript
 export default {
@@ -217,42 +206,18 @@ async function ADD(envadd) {
 }
 ```
 
-<br>      
+<br/>      
 
 ## اسکنر دامنه  
-برای اسکن کردن دامنه های پشت کلادفلر کافیه این فایل نصبی رو دانلود و روی ویندوز اجرا کنید با اینترنت عادی خودتون، حواستون باشه vpn روشن نباشه.   
+
+برای اسکن کردن دامنه های پشت کلادفلر کافیه این فایل نصبی رو دانلود و روی ویندوز اجرا کنید با اینترنت عادی خودتون، حواستون باشه vpn روشن نباشه.  
+
 دو سه دقیقه طول میکشه تا تموم شه و پس از اتمام کار اسکنر، پنجره `cmd` رو ببندید و برگردید داخل فولدر اسکنر، یه فایل به اسم `CDNym.txt` خواهید دید که تازه ایجاد شده و داخلش نتایج اسکن اخیر هست. لیست دامنه‌ها به ترتیب بهتر بودن پینگ نسبت به اینترنت شماست.  
 
-
-[Download CDN Scanner - Win-64 - v23.8.18](https://github.com/NiREvil/vless/raw/refs/heads/main/edge/cdn%20scanner-win64-v23.8.18.exe)
-{:style="text-align: left;"}  
+[Download CDN Scanner - Win-64 - v23.8.18](https://github.com/NiREvil/vless/raw/refs/heads/main/edge/cdn%20scanner-win64-v23.8.18.exe)  
   
-
 ![image](https://github.com/user-attachments/assets/4e2e4b0d-a1ea-4c30-a1ea-b1a8c5581c12)  
 
-<br>  
-
-
-Mathjax test  
-
-$$
-\begin{aligned}
-  & \phi(x,y) = \phi \left(\sum_{i=1}^n x_ie_i, \sum_{j=1}^n y_je_j \right)
-  = \sum_{i=1}^n \sum_{j=1}^n x_i y_j \phi(e_i, e_j) = \\
-  & (x_1, \ldots, x_n) \left( \begin{array}{ccc}
-      \phi(e_1, e_1) & \cdots & \phi(e_1, e_n) \\
-      \vdots & \ddots & \vdots \\
-      \phi(e_n, e_1) & \cdots & \phi(e_n, e_n)
-    \end{array} \right)
-  \left( \begin{array}{c}
-      y_1 \\
-      \vdots \\
-      y_n
-    \end{array} \right)
-\end{aligned}
-$$ 
-
-
-
+<hr><br/>  
 
 [هارمونی]: https://github.com/NiREvil/Harmony "harmony"
