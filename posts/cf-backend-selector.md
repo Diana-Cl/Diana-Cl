@@ -1,7 +1,8 @@
 ---
 layout: doc
 outline: [1, 2, 3]
-lang: fa-IR
+lang: "fa-IR"
+dir: "rtl"
 title: "Cloudflare backend selector"
 description: "دامنه با آی‌پی‌های رندوم کلادفلر"
 date: 2025-01-18
