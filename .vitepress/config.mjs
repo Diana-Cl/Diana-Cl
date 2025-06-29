@@ -1,14 +1,15 @@
 import { defineConfig } from 'vitepress'
+import Gallery from 'vitepress-plugin-gallery'
 import footnote from 'markdown-it-footnote'
 import mathjax3 from 'markdown-it-mathjax3'
+import mermaid from 'markdown-it-mermaid'
+import emoji from 'markdown-it-emoji'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "Diana's Blog",
+  title: "Dìana",
   description: 'My personal notes and articles.',
   base: '/Diana-Cl/',
-  lang: 'fa-IR',
-  dir: 'rtl',
   cleanUrls: true,
   ignoreDeadLinks: true,
   head: [
@@ -17,8 +18,11 @@ export default defineConfig({
 
   markdown: {
     config: (md) => {
+      md.use(Gallery)
       md.use(footnote)
       md.use(mathjax3)
+      md.use(mermaid)
+      md.use(emoji)
     }
   },
 
@@ -35,7 +39,7 @@ export default defineConfig({
 
     sidebar: [
       {
-        text: 'All Posts',
+        text: 'All notes',
         items: [
           { text: 'Google Gemini', link: '/posts/Gemini' },
           { text: 'Ransomware Evil', link: '/posts/REvil' },
@@ -55,7 +59,7 @@ export default defineConfig({
       }
     },
     editLink: {
-      pattern: 'https://github.com/Diana-Cl/Diana-Cl/edit/main/posts/:path',
+      pattern: 'https://github.com/Diana-Cl/Diana-Cl/edit/main/:path',
       text: 'Edit this page on GitHub'
     },
     socialLinks: [
