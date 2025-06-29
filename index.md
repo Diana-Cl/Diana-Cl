@@ -3,7 +3,7 @@ layout: home
 lang: "en-US"
 
 hero:
-  name: "Diana's Blog"
+  name: "Dìana"
   text: "A Collection of My Notes"
   tagline: Exploring technology, security, and everything in between.
   actions:

@@ -4,11 +4,9 @@ import mathjax3 from 'markdown-it-mathjax3'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "Diana's Blog",
-  description: 'My personal notes and articles.',
+  title: "Dìana",
+  description: 'My personal notes and articles',
   base: '/Diana-Cl/',
-  lang: 'fa-IR',
-  dir: 'rtl',
   cleanUrls: true,
   ignoreDeadLinks: true,
   head: [
@@ -55,7 +53,7 @@ export default defineConfig({
       }
     },
     editLink: {
-      pattern: 'https://github.com/Diana-Cl/Diana-Cl/edit/main/posts/:path',
+      pattern: 'https://github.com/Diana-Cl/Diana-Cl/edit/main/:path',
       text: 'Edit this page on GitHub'
     },
     socialLinks: [
