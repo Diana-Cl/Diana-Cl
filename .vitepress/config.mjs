@@ -1,8 +1,6 @@
 import { defineConfig } from 'vitepress'
 import footnote from 'markdown-it-footnote'
 import mathjax3 from 'markdown-it-mathjax3'
-import mermaid from 'markdown-it-mermaid'
-import emoji from 'markdown-it-emoji'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -17,11 +15,8 @@ export default defineConfig({
 
   markdown: {
     config: (md) => {
-      md.use(Gallery)
       md.use(footnote)
       md.use(mathjax3)
-      md.use(mermaid)
-      md.use(emoji)
     }
   },
 
