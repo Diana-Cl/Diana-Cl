@@ -1,6 +1,6 @@
 ---
+# https://vitepress.dev/reference/default-theme-home-page
 layout: home
-lang: "en-US"
 
 hero:
   name: "Dìana"
@@ -18,7 +18,7 @@ features:
   - title: "Security Research"
     details: "Deep dives into malware analysis, security vulnerabilities, and threat intelligence."
   - title: "Development Guides"
-    details: "Practical guides for web development, server configuration, and more."
+    details: "Practical guides for server configuration, web development and more."
   - title: "AI & Technology"
     details: "Exploring the latest in artificial intelligence, from language models to diffusion techniques."
 ---
