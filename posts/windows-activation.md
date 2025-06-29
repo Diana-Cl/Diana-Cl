@@ -1,6 +1,7 @@
 ---
 layout: doc
-outline: deep
+lang: en-US
+outline: [1, 2, 3]
 title: Introduction to REvil Activation
 description: "A reliable, open-source activation toolkit for Windows and Office. Activate your products in under 40 seconds using methods like HWID, KMS, and more."
 date: 2025-01-11
@@ -11,26 +12,26 @@ head:
       content: windows, activation, win 10, win 11, Microsoft Office, KMS
 ---
 
-# Introduction to REvil Activation  
+# Introduction to REvil Activation {#introduction}  
 
 A reliable, open-source activation toolkit for Windows and Office. Activate your products in under 40 seconds using methods like HWID, KMS, and more. 
 
-<br/>  
 
-# Getting Started with REvil  
+# Getting Started with REvil {#getting-start}
 
-Welcome to the REvil (Activation Enhancement Guide).   
+Welcome to the REvil (Activation Enhancement Guide).
+ 
 This project provides a collection of reliable, open-source activation tools for `Windows` and `Office`.   
 Our scripts leverage various methods to help you activate your products quickly and safely.
 
 :::danger IMPORTANT
 For most activation methods, a stable **internet connection** is required.   
 A VPN is generally not necessary.
-:::  
+:::
 
-<br/>  
+<br/>
 
-## Activation Methods Summary
+## Activation Methods Summary {#active-method}
 
 For a quick overview, here is a summary of the activation methods available:
 
@@ -43,25 +44,26 @@ For a quick overview, here is a summary of the activation methods available:
 | **KMS38**       | Windows 10-11-Server   | Until 2038                       | No                               | [Details](./kms38) |
 | **Online KMS**  | Windows / Office       | 180 Days (Lifetime with Renewal) | Yes                              | [Details](./kms) |
 
-<p style="text-align: center;">
-  For a detailed comparison of all methods, check out the <a href="./chart">Activation Methods Chart</a>.</p><br/>   
+For a detailed comparison of all methods, check out the <a href="./chart">Activation Methods Chart</a>
 
-## Method 1: Permanent Activation with HWID 
+</p><br/>
+
+## Method 1 - Permanent Activation with HWID {#method-1} 
 
 For most users, the **HWID (Hardware ID)** method is the simplest way to get a permanent digital license for Windows 10 and 11.
 
-<br><br/>  
+<br><br/>
 
-### Step 1: Open PowerShell as Administrator
+### Step 1 -  Open PowerShell as Administrator {#step-1}
 
 1.  Right-click the **Start menu**.
 2.  Select **Windows Terminal (Admin)** on Windows 11 or **Windows PowerShell (Admin)** on Windows 10. [^1] [^2]   
 
 ![Open PowerShell as Admin](https://github.com/user-attachments/assets/5638557d-9bfe-4e7c-a851-218bec6559bf)
 
-<br><br/>  
+<br><br/>
 
-### Step 2: Run the Activation Script
+### Step 2 - Run the Activation Script {#step-2}
 
 Copy the following command, paste it into the PowerShell window by right-clicking, and press `Enter`.
 
@@ -76,9 +78,9 @@ irm https://massgrave.dev/get | iex
 
 ![Paste command in PowerShell](https://github.com/user-attachments/assets/dfaa3f27-efb8-4979-bc32-081362274a2e)
 
-<br><br/>  
+<br><br/>
 
-### Step 3: Choose the HWID Option
+### Step 3 - Choose the HWID Option {#step-3}
 
 A menu will appear in a new window. Press `1` on your keyboard to select **HWID Activation** and wait a few moments for the process to complete.
 
@@ -90,31 +92,31 @@ To check the activation status of `Windows 10`, navigate to **Settings → Updat
 
 To check the activation status of `Windows 11`, open Settings by clicking the Start button and then selecting **Settings → System → Activation.** [^4]
 
-<br><br/>  
+<br><br/> 
 
-## Additional Information
+## Additional Information {#additional-information}
 
-::: tip Author's Suggestion & Tips  
+::: tip Author's Suggestion & Tips
 
-::: details Click here to see the details  
+::: details Click here to see the details
 - **For Windows:** I personally use the **KMS method** ([see guide](./kms)) for my Windows 10/11 activations. It's official, leaves no files on the system, and takes less than 3 minutes. If for some reason that fails, HWID is my go-to, as it's also official and file-less.  
 - **For Office:** I use Ohook, TSforge, or Online KMS. The small differences are noted in the summary table above.  
 - **Need Help?** If you run into any issues, feel free to ask in the [GitHub Discussions][2] or email me directly.  
 :::
 
-<br/>  
+<br/>
 
 ::: danger How to Remove Activations
 
-::: details  Click here to see the details  
+::: details  Click here to see the details
 - **HWID:** A digital license is stored on Microsoft's servers and tied to your hardware. It cannot be "removed" in the traditional sense. A major hardware change (like the motherboard) will invalidate it.  To return to an unactivated state, you can install a generic KMS key.  
 - **Online KMS / Ohook / KMS38:** Use the corresponding "Uninstall" or "Remove" option within the MAS script menu, then run the "Fix Licensing" option from the Troubleshoot menu.  
 - **TSforge:** This method only appends data and doesn't install files. To reset it, simply run the "Fix Licensing" option from the Troubleshoot menu in the MAS script.   
 :::
 
-<br/>  
+<br/>
 
-::: info Supported Windows 10/11 Products for HWID   
+::: info Supported Windows 10/11 Products for HWID
 
 | Windows 10/11 Product Names           | EditionID                | Generic Retail/OEM/MAK Key    |
 | :-------------------------------------: | :------------------------: | :-----------------------------: |
@@ -151,11 +153,10 @@ To check the activation status of `Windows 11`, open Settings by clicking the St
 *A generic key is automatically applied by the script where needed.*
 :::
 
----
+<br><br/>
 
-<br><br/>  
 
-[^1]: [10 Ways to run PowerShell in windows][1]  
+[^1]: [10 Ways to run PowerShell in windows][1]
 
 [^2]: Another easiest way to run PowerShell: **Right-click** on your Start menu to trigger the quick link menu and select **Windows Terminal (admin)** at win11 or **Windows powershell (admin)** at win 10 in the menu list.  
 
@@ -163,13 +164,16 @@ To check the activation status of `Windows 11`, open Settings by clicking the St
 
 [^4]: To check the activation status of Windows 11, open Settings by clicking the **Start button** and then selecting Settings → System → Activation. The activation status will be displayed, showing whether Windows is activated, along with details about the activation method and any linked Microsoft account.  
 
-[^5]: Home Country Specific version.  
+[^5]: Home Country Specific version.
 
-[^6]: Home Single language version.  
+[^6]: Home Single language version.
 
 [^7]: Professional for Workstations & Professional N for Workstations.  
 
 [1]: https://www.minitool.com/news/open-windows-11-powershell.html
+
 [2]: https://github.com/NiREvil/windows-activation/discussions/new/choose
+
 [3]: mailto:diana.clk01@gmail.com
+
 [rainbow]: https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256

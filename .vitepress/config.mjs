@@ -63,8 +63,8 @@ export default defineConfig({
       { icon: 'telegram', link: 'https://t.me/F_NiREvil/6448' }
     ],
     footer: {
-      message: 'Released under the REvil License.',
-      copyright: '© 2025 Dìana - All Rights Reserved.'
+      message: 'Released under the MIT License',
+      copyright: '© 2025 REvil - All Rights Reserved'
     }
   }
 })

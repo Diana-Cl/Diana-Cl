@@ -1,5 +1,6 @@
 ---
 layout: home
+lang: "en-US"
 
 hero:
   name: "Diana's Blog"

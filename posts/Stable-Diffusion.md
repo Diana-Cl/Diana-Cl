@@ -1,6 +1,7 @@
 ---
 layout: doc
-outline: deep
+lang: "en-US"
+outline: [1, 2]
 title: Stable Diffusion
 description: "Stable Diffusion is aa neural network that generates images from a text prompt"
 date: 2025-02-06
@@ -19,7 +20,8 @@ Welcome! Today, we’ll journey from the simplest generations to the most elegan
 
 Before we begin, I’d like to mention that AI models are excellent at generating various types of content: girls, cities, guys, nature. However, we’ll focus on cats and something unusual to showcase the full potential! You can experiment on your own after reading this guide
 
-**I recommend three bots for use,**   
+**I recommend three bots for use,**
+
 but I will only explain the first one in detail, as the other two are quite similar to each other.
 
 1. **[StableDiffusion_robot]**

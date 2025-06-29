@@ -1,7 +1,7 @@
 {
   "name": "Diana",
   "version": "1.0.0",
-  "description": "Dianas blog",
+  "description": "Dìana",
   "main": "index.js",
   "scripts": {
     "dev": "vitepress dev",
