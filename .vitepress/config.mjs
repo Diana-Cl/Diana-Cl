@@ -1,5 +1,4 @@
 import { defineConfig } from 'vitepress'
-import Gallery from 'vitepress-plugin-gallery'
 import footnote from 'markdown-it-footnote'
 import mathjax3 from 'markdown-it-mathjax3'
 import mermaid from 'markdown-it-mermaid'
