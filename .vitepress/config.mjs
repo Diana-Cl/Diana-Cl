@@ -40,9 +40,9 @@ export default defineConfig({
           { text: 'Google Gemini', link: '/posts/Gemini' },
           { text: 'Ransomware Evil', link: '/posts/REvil' },
           { text: 'Windows Activation', link: '/posts/windows-activation' },
-          { text: 'AI Agents', link: '/posts/ai-agents' },
+          { text: 'AI Assistants', link: '/posts/ai-agents' },
           { text: 'Cloudflare Backend Selector', link: '/posts/cf-backend-selector' },
-          { text: 'Stable Diffusion', link: '/posts/Stable-Diffiusion' },
+          { text: 'Stable Diffusion', link: '/posts/Stable-Diffusion' },
           { text: 'Upgrade PHP on CentOS 7', link: '/posts/Upgrade-PHP-version-on-CentOS-7' }
         ]
       }
@@ -59,8 +59,8 @@ export default defineConfig({
       text: 'Edit this page on GitHub'
     },
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/Diana-Cl/Diana-Cl' },
-      { icon: 'telegram', link: 'https://t.me/F_NiREvil' }
+      { icon: 'github', link: 'https://github.com/NiREvil/vless' },
+      { icon: 'telegram', link: 'https://t.me/F_NiREvil/6448' }
     ],
     footer: {
       message: 'Released under the REvil License.',
