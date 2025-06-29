@@ -1,7 +1,7 @@
 {
   "name": "Diana",
   "version": "1.0.0",
-  "description": "Dìana",
+  "description": "A Collection of My Notes",
   "main": "index.js",
   "scripts": {
     "dev": "vitepress dev",
@@ -11,7 +11,7 @@
   },
   "keywords": [
     "ai",
-    "agents",
+    "cybersecurity",
     "activation"
   ],
   "author": "Diana-Cl",
