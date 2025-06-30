@@ -1,6 +1,6 @@
 ---
 layout: doc
-outline: [1, 2, 3]
+outline: deep
 lang: "fa-IR"
 dir: "rtl"
 title: "بدون سانسور جمنای"

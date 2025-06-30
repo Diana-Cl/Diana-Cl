@@ -1,9 +1,9 @@
 ---
 layout: doc
-outline: deep
+outline: [1, 2]
 title: PHP on CentOS 7
 description: "Upgrade PHP 5.4 to PHP 7.2 on CentOS 7"
-data: 2024-01-23
+date: 2024-01-23
 editLink: true
 head:
   - - meta
