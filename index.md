@@ -36,7 +36,7 @@ import { data as posts } from './.vitepress/posts.data.js'
         <h3 class="post-title">
           <a :href="post.url" class="post-link">{{ post.title }}</a>
         </h3>
-        <p class="post-date">📅 {{ post.date.string }}</p>
+        <p class="post-date"> {{ post.date.string }}</p>
         <p class="post-excerpt" v-if="post.excerpt">{{ post.excerpt }}</p>
         <div class="post-actions">
           <a :href="post.url" class="read-more">Read More →</a>
@@ -188,16 +188,16 @@ import { data as posts } from './.vitepress/posts.data.js'
   .latest-posts-section {
     padding: 0 16px;
   }
-  
+
   .posts-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
-  
+
   .post-content {
     padding: 1.5rem;
   }
-  
+
   .section-title {
     font-size: 1.75rem;
   }
@@ -208,7 +208,7 @@ import { data as posts } from './.vitepress/posts.data.js'
   .post-card {
     background: var(--vp-c-bg-alt);
   }
-  
+
   .post-card:hover {
     box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
   }
