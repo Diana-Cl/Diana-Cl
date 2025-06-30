@@ -231,7 +231,7 @@ head:
 
 <br/>
 
-[Image from Google](/posts/img/FBI-1.jpg)
+![Image from Google](/posts/img/FBI-1.jpg)
 
 <br/>  
 
