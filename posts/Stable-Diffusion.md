@@ -31,9 +31,10 @@ Before we begin, I’d like to mention that AI models are excellent at generatin
 
 Let’s start with the basics. We’ve just entered the bot and want to generate, say, a frog in a pink spacesuit. So, we’ll write:
 
-![Example 1](https://github.com/user-attachments/assets/5958bdd9-ad29-49b5-a170-d5bb6c35c956)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/5958bdd9-ad29-49b5-a170-d5bb6c35c956" alt="Example 1" width="480px" />
+</p>> Frog in a pink spacesuit on the moon <br/>  
 
-> Frog in a pink spacesuit on the moon
 
 You’ll notice that it doesn’t matter whether you use Russian or English for the bot, so for clarity, I’ll use English in the following examples.
 
@@ -43,7 +44,9 @@ You’ll notice that it doesn’t matter whether you use Russian or English for 
 
 Want to improve the quality of your image? Click the **Upscale** button under the art, and you’ll get a high-resolution PNG image.
 
-![Upscale 1](https://github.com/user-attachments/assets/5b09e183-4bf1-4605-adb6-f0299bf297b7)  
+![Upscale 1](https://github.com/user-attachments/assets/5b09e183-4bf1-4605-adb6-f0299bf297b7)
+
+
 ![Upscale 2](https://github.com/user-attachments/assets/bf866f8b-bddd-41dc-973d-65121758afa9)
 
 ---
@@ -52,7 +55,9 @@ Want to improve the quality of your image? Click the **Upscale** button under th
 
 Access the settings via the `/menu` command or by clicking the ⚙️ Menu button available under each generation.
 
+
 ![Bot Menu](https://github.com/user-attachments/assets/3712473f-5c37-4d24-aac2-d1aa5e0b8d06)
+
 
 ::: tip
 **📐 Format** – The aspect ratio of your generation. The image can be horizontal (for landscapes), vertical (for portraits), or square.  
@@ -60,31 +65,36 @@ Access the settings via the `/menu` command or by clicking the ⚙️ Menu butto
 **🎨 Style** – Easily customize your generation. Be sure to try each one. Examples of all styles are available in the bot!
 :::
 
-::: info
-**Models**  
+
+::: info Models
+
 The bot includes 4 different models: SD 1.5, SDXL 1, SDXL Turbo, SDXL Turbo X2.  
 You get **8 free generations** every day.
 :::
 
-::: info
-**How to Earn Generations?**  
+
+::: info How to Earn Generations?
+ 
 We provide you with several free generations daily. If you run out, here’s how to get more:
 :::
 
-::: info
-**Referral System**  
+
+::: info Referral System
+
 In the ⚙️ Menu, select **✨ Invite a Friend** and get your unique referral link in this format:  
 `https://t.me/StableDiffusion_robot/?start=`  
 For every person who clicks your link and creates art, you’ll earn **10 generations**!
 :::
 
-::: warning
-**Shop**  
+
+::: warning Shop
+
 Find **🚀 Shop** in the menu and purchase additional generations.  
 Developing and maintaining each model costs us a lot, so we’d appreciate your support.
 
 💎 Premium subscription unlocks 18+ art generation.
 :::
+
 
 ---
 
@@ -98,7 +108,7 @@ When you upscale a generation, a **🏆 Submit to Contest** button appears.
 - who periodically selects works for publication in our channel!
 - If your work is chosen, it will be published and you'll receive **30 bonus generations**.
 
----
+<br/>
 
 ## Advanced Input: Weighted Tags
 
@@ -108,41 +118,44 @@ Let’s learn how to adjust the **weights** of tag-words.
 
 > **a cat**, (jumping:0.5), (flowers at the background:1.5), **close up**
 
-![Cat Example 2](https://github.com/user-attachments/assets/bb5ce6d4-76ac-46b8-a2ef-7275649ec7fa)
+
+![Cat Example 2](https://github.com/user-attachments/assets/bb5ce6d4-76ac-46b8-a2ef-7275649ec7fa)  
 
 > **a cat**, (jumping:1.5), (flowers at the background:0.5), **close up**
+
 
 You can see how adjusting weights changes emphasis.  
 By default, weight is `1.0`. Use values between **0.5** and **1.6** to avoid distortion.
 
-::: tip
+
+::: tip❗Only round brackets support manual weights7
+
+Square brackets just reduce weight by ~10%.
+
 - `(flowers in the background)` → 1.1 weight  
 - `((flowers in the background))` → ~1.21 weight  
 - You can also do: `(flowers in the background:1.4)`  
 - To **decrease**, use: `[flowers in the background]` or `(flowers:0.7)`  
 
-ℹ️ Only **round brackets** `()` support manual weights. Square brackets just reduce weight by ~10%.
 :::
 
 ---
 
-## Characters
+::: info Characters
 
-::: info
 We’ve compiled a huge list of character descriptions.  
 You can find the tags you need or just write the character’s name in Russian—the bot will suggest tags!
 :::
 
-## Interesting Tags
 
-::: info
+::: info Interesting Tags
+
 Non-obvious but powerful tags you can use:
 :::
 
-## Framing Tips
 
-::: info
-**Frame Examples**  
+::: tip Framing Tips
+
 - Wide shot  
 - Low angle  
 - Selfie  
@@ -155,9 +168,10 @@ Non-obvious but powerful tags you can use:
 
 ---
 
-## Tags for Different Genres
+### Tags for Different Genres
 
-::: tip
+::: tip The Different Genres
+
 **Abstract Art**: vibrant colors, geometric shapes, abstract patterns  
 **Surrealism**: dreamlike, mystical creatures, twisted reality  
 **Landscape**: majestic mountains, lush forests, desert dunes  
@@ -171,7 +185,7 @@ Non-obvious but powerful tags you can use:
 
 ---
 
-## Camera Lenses (for prompt enhancement)
+### Camera Lenses (for prompt enhancement)
 
 - **Sigma 150–600mm**: Great for wildlife/sports.  
   Example: _mountain lion in the wild, Sigma 150-600mm lens, daylight, photo_
@@ -188,11 +202,10 @@ Non-obvious but powerful tags you can use:
 - **Canon EF 100mm Macro**: Insects, flowers, soft portraits.  
   Example: _bee on flower, Canon EF 100mm, daylight_
 
----
+<br/> 
 
-## More Cool Tags
+::: details Let see more cool & Contextual Tags
 
-::: details More Contextual Tags
 - holographic  
 - in the style of kawaii aesthetic  
 - neon light  
@@ -213,9 +226,9 @@ Non-obvious but powerful tags you can use:
 
 ---
 
-## Inspiration
+### Inspiration
 
-Coming up with a good prompt isn’t easy. You can explore amazing works by our users for ideas.
+Coming up with a good prompt isn’t easy. You can explore amazing works by our users for ideas.  
 
 ![Wolf Example](https://github.com/user-attachments/assets/abd03786-9704-4006-9b9a-722bdf43b434)
 
@@ -226,49 +239,61 @@ Coming up with a good prompt isn’t easy. You can explore amazing works by our 
 
 ---
 
-![Totoro Minimalism](https://github.com/user-attachments/assets/923bd226-0482-4c50-9226-4b09d08cbfff)
+
+![Totoro Minimalism](https://github.com/user-attachments/assets/923bd226-0482-4c50-9226-4b09d08cbfff)  
 
 > (totoro:1.5), (by hayao miyazaki:2), (minimalism:1.2), (miyazaki style:1.7)  
 > **Model**: Stable Diffusion XL Midjourney
 
 ---
 
-![Train Drawing](https://github.com/user-attachments/assets/b9ba3e8d-2871-4788-ae12-7b711d4b03e5)
+
+![Train Drawing](https://github.com/user-attachments/assets/b9ba3e8d-2871-4788-ae12-7b711d4b03e5)  
 
 > Three-dimensional white drawing of train placed on a blank page.  
 > **Model**: Stable Diffusion XL Vanilla
 
 ---
 
-![Rick and Morty](https://github.com/user-attachments/assets/000e92dc-3f5c-43f6-975d-07f518ae6b53)
+
+![Rick and Morty](https://github.com/user-attachments/assets/000e92dc-3f5c-43f6-975d-07f518ae6b53)  
 
 > Rick from Rick and Morty  
 > **Model**: Dreamshaper Vanilla
 
 ---
 
-![Hygge Set](https://github.com/user-attachments/assets/1c2bfaf7-704e-40c6-973f-8ae18802ba0a)
+
+![Hygge Set](https://github.com/user-attachments/assets/1c2bfaf7-704e-40c6-973f-8ae18802ba0a)  
 
 > Hand-drawn vector, Scandinavian hygge doodle set.  
 > **Model**: Dreamshaper Vanilla
 
 ---
 
-![Beach Model](https://github.com/user-attachments/assets/86e218db-6801-40cf-9037-a76e1dad7b40)
+![Beach Model](https://github.com/user-attachments/assets/86e218db-6801-40cf-9037-a76e1dad7b40)  
 
 > Skinny model wearing a dress at beach bar, drinking cocktail.  
 > **Model**: EpicRealism Vanilla
 
+
 ---
 
 ::: tip Need more inspiration?
+
 Be my guest: [Best of Stable Diffusion]
+
 :::
+
 
 ---
 
+
 [StableDiffusion_robot]: https://t.me/StableDiffusion_robot/?start=6064662462  
+
 [stable_diffusion_bot]: https://t.me/stable_diffusion_bot  
+
 [StableDiffusionWrapperBot]: https://t.me/StableDiffusionWrapperBot  
+
 [Best of Stable Diffusion]: https://t.me/StableDiffusionBest
 
