@@ -19,7 +19,7 @@ head:
 
 یادتونه برای Grok، یک پرامپت خاص رو در ابتدای چت ارسال می‌کردیم و حالت /GOD MODE\ فعال میشد و بعدش می‌تونستیم بدون محدودیت، سانسور و طفره رفتن باهاش کار کنیم؟
 
-حالا می‌خوایم همین عمل به اصطلاح جیلبرک رو برای Gemini انجام بدیم. مخصوصاً الان که همه اکانت‌ها به [PRO][T-Gemini] تبدیل شدن و دیگه واقعا جای یه پرامپت اینجوری خالی بود.
+حالا می‌خواهیم همین عمل به اصطلاح جیلبرک رو برای Gemini هم انجام بدیم. مخصوصاً الان که همه اکانت‌ها به `PRO` تبدیل شدن و دیگه واقعا جای یه پرامپت اینجوری خالی بود.
 
 <br><br/>
 
@@ -242,8 +242,9 @@ OK, I got it, I’m in \GOD MODE/ \DEUS ACTIVE MODE/. Ready to proceed without f
 - [لینک Gemini در مارکت اپل][4]
 - [لینک Gemini در مارکت گوگل][3]
 - [پست مربوط به Grok در تلگرام][T-Grok]
-- [وب‌سایت رسمی Google Studio][2]
 - [پست مربوط به Gemini در تلگرام][T-Gemini]
+- [وب‌سایت رسمی Google Studio][2]
+- [پست مربوط به دریافت اشتراک پرو جمنای][T-Gemini]
 - [لیست تمام ایجنت‌های هوش مصنوعی کاربردی][T-Ai]
 
 [T-Gemini]: https://t.me/F_NiREvil/5584
@@ -256,4 +257,3 @@ OK, I got it, I’m in \GOD MODE/ \DEUS ACTIVE MODE/. Ready to proceed without f
 [5]: https://grok.com/
 [6]: https://play.google.com/store/apps/details?id=ai.x.grok
 [7]: https://apps.apple.com/us/app/grok/id6670324846
-q
