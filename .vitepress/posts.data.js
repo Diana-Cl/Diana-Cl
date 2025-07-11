@@ -1,4 +1,3 @@
-// .vitepress/posts.data.js
 import { createContentLoader } from 'vitepress'
 
 const base = '/Diana-Cl/';
@@ -6,51 +5,43 @@ const EXCERPT_MAX_LENGTH = 150;
 
 function stripHtmlAndTruncate(html, maxLength) {
   if (!html) return '';
-  let text = html;
-  text = text.replace(/<\/?[^>]+(>|$)/g, "");
-  text = text.replace(/&ZeroWidthSpace;/gi, ' ');
-  text = text.replace(/&nbsp;/gi, ' ');
-  text = text.replace(/\s\s+/g, ' ').trim();
-
-  if (text.length > maxLength) {
-    return text.substring(0, maxLength) + '...';
-  }
-  return text;
+  let text = html
+    .replace(/<\/?[^>]+(>|$)/g, "")
+    .replace(/&ZeroWidthSpace;|&nbsp;/gi, ' ')
+    .replace(/\s\s+/g, ' ')
+    .trim();
+  return text.length > maxLength ? text.substring(0, maxLength) + '...' : text;
 }
 
-export default createContentLoader('posts/*.md', {
-  excerpt: true, 
-  transform(raw) {
-    return raw
-      .filter(({ frontmatter }) => frontmatter && frontmatter.title)
-      .map(({ url, frontmatter, excerpt: autoExcerpt }) => { 
-        let finalExcerpt = '';
-
-        if (frontmatter.description) {
-          finalExcerpt = stripHtmlAndTruncate(frontmatter.description, EXCERPT_MAX_LENGTH);
-        } else if (autoExcerpt) {
-          finalExcerpt = stripHtmlAndTruncate(autoExcerpt, EXCERPT_MAX_LENGTH);
-        }
-
-        return {
-          title: frontmatter.title || 'Untitled',
-          url: `${base}${url.startsWith('/') ? url.substring(1) : url}`,
-          excerpt: finalExcerpt,
-          date: formatDate(frontmatter.date || frontmatter.data || new Date())
-        };
-      })
-      .sort((a, b) => b.date.time - a.date.time)
-  }
-})
-
 function formatDate(raw) {
-  const date = new Date(raw)
+  const date = raw ? new Date(raw) : new Date();
+  if (isNaN(date.getTime())) return { time: 0, string: 'N/A' };
   return {
     time: +date,
-    string: date.toLocaleDateString('en-US', { 
+    string: date.toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'long',
       day: 'numeric'
     })
-  }
+  };
 }
+
+export default createContentLoader('docs/*.md', {
+  excerpt: true,
+  transform(raw) {
+    return raw
+      .filter(({ frontmatter }) => frontmatter?.title)
+      .map(({ url, frontmatter, excerpt }) => {
+
+        const lang = 'en';
+        return {
+          title: frontmatter.title,
+          url: `${base}${url.startsWith('/') ? url.substring(1) : url}`,
+          excerpt: stripHtmlAndTruncate(frontmatter.description || excerpt, EXCERPT_MAX_LENGTH),
+          date: formatDate(frontmatter.date),
+          lang
+        };
+      })
+      .sort((a, b) => b.date.time - a.date.time);
+  }
+});
