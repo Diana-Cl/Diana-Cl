@@ -1,30 +1,35 @@
 {
-  "name": "Diana",
-  "version": "1.0.0",
+  "name": "NoteBook",
+  "version": "0.0.0",
   "description": "A Collection of My Notes",
-  "main": "index.js",
   "scripts": {
-    "dev": "vitepress dev",
-    "build": "vitepress build",
-    "preview": "vitepress preview",
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "preview": "vitepress preview docs",
     "deploy": "npm run build && gh-pages -d .vitepress/dist"
   },
   "keywords": [
     "ai",
     "cybersecurity",
-    "activation"
+    "activation",
+    "cloudflare"
   ],
-  "author": "Diana-Cl",
+  "author": "Diana",
   "license": "ISC",
   "type": "module",
   "devDependencies": {
+    "vue": "^3.4.27",
     "gh-pages": "^6.3.0",
+    "vitepress": "^1.6.3",
+    "markdown-it-attrs": "^4.1.6",
     "markdown-it-footnote": "^4.0.0",
     "markdown-it-mathjax3": "^4.3.2",
-    "vitepress": "^1.6.3"
+    "vitepress-plugin-tabs": "^0.7.1",
+    "vitepress-plugin-mermaid": "^2.0.16",
+    "vitepress-plugin-image-viewer": "^1.1.6"
   },
   "dependencies": {
-    "viewerjs": "^1.11.7",
-    "vitepress-plugin-image-viewer": "^1.1.6"
+    "video.js": "^8.23.3",
+    "viewerjs": "^1.11.6"
   }
 }
