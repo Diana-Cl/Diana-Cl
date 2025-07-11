@@ -2,9 +2,9 @@ import { defineConfig } from 'vitepress'
 import footnote from 'markdown-it-footnote'
 import mathjax3 from 'markdown-it-mathjax3'
 import attrs from 'markdown-it-attrs'
+import { tabsMarkdownPlugin } from 'vitepress-plugin-tabs'
 
 const base = '/Diana-Cl/'
-const siteUrl = `https://Diana-Cl.github.io${base}`
 
 export default defineConfig({
   base: base,
@@ -12,14 +12,6 @@ export default defineConfig({
   ignoreDeadLinks: true,
   title: "Dìana",
   description: 'My personal notes and articles about technology, security, and AI',
-  base: '/Diana-Cl/',
-  cleanUrls: true,
-  ignoreDeadLinks: true,
-  
-export default defineConfig({
-  base: base,
-  cleanUrls: true,
-  ignoreDeadLinks: true,
 
   head: [
     ['link', { rel: 'icon', href: `${base}favicon.ico` }],
@@ -28,7 +20,15 @@ export default defineConfig({
     ['link', { href: 'https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap', rel: 'stylesheet' }],
     ['meta', { name: 'theme-color', content: '#5f67ee' }],
     ['link', { rel: 'stylesheet', href: 'https://unpkg.com/video.js@8.17.4/dist/video-js.min.css' }],
-    ['script', { src: 'https://unpkg.com/video.js@8.17.4/dist/video.min.js' }]
+    ['script', { src: 'https://unpkg.com/video.js@8.17.4/dist/video.min.js' }],
+    ['style', {}, `
+      .video-js {
+        width: 100%;
+        max-width: 960px;
+        height: auto;
+        aspect-ratio: 16/9;
+      }
+    `]
   ],
 
   markdown: {
@@ -56,7 +56,6 @@ export default defineConfig({
           { text: '🤖 AI', link: '/Gemini' },
           { text: '⚙️ Development', link: '/cf-backend-selector' }
         ],
-    
         sidebar: [
           {
             text: '🔒 Security Research',
@@ -84,39 +83,36 @@ export default defineConfig({
             ]
           }
         ],
-    
-  themeConfig: {
-    logo: '/logo-h.svg',
-    search: {
-      provider: 'local'
-    },
-    docFooter: {
-      prev: 'Previous page',
-      next: 'Next page'
-    },
-    lastUpdated: {
-      text: 'Last updated',
-      formatOptions: {
-        dateStyle: 'medium',
-        timeStyle: 'short'
-      }
-    },
-    
+        logo: '/logo-h.svg',
+        search: {
+          provider: 'local'
+        },
+        docFooter: {
+          prev: 'Previous page',
+          next: 'Next page'
+        },
+        lastUpdated: {
+          text: 'Last updated',
+          formatOptions: {
+            dateStyle: 'medium',
+            timeStyle: 'short'
+          }
+        },
         editLink: {
           pattern: 'https://github.com/Diana-Cl/Diana-Cl/edit/main/docs/:path',
           text: 'Edit this page on GitHub'
         },
-    
         socialLinks: [
           { icon: 'github', link: 'https://github.com/Diana-Cl/' },
           { icon: 'telegram', link: 'https://t.me/F_NiREvil/6448' }
         ],
-    
         footer: {
-          message: 'Made with using VitePress',
-          copyright: '© 2025 Dìana - Sharing knowledge, one note at a time'
+          copyright: '© 2025 Dìana — Sharing knowledge, one note at a time',
+          message: 'Made with using VitePress'
         }
-      },
+      }
+    }
+  },
 
   vite: {
     optimizeDeps: {
