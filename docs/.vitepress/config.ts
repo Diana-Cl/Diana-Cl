@@ -17,6 +17,7 @@ export default defineConfig({
     ['link', { rel: 'icon', href: `${base}favicon.ico` }],
     ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
     ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }],
+    ['link', { href: 'https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap', rel: 'stylesheet' }],
     ['meta', { name: 'theme-color', content: '#5f67ee' }],
     ['link', { rel: 'stylesheet', href: 'https://unpkg.com/video.js@8.17.4/dist/video-js.min.css' }],
     ['script', { src: 'https://unpkg.com/video.js@8.17.4/dist/video.min.js' }],
@@ -45,7 +46,7 @@ export default defineConfig({
   locales: {
     root: {
       label: 'English',
-      lang: 'en',
+      lang: 'en-US, fa-IR',
       title: 'Dìana',
       description: 'My personal notes and articles about technology, security, and AI',
       themeConfig: {
