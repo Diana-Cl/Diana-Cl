@@ -1,15 +1,12 @@
 ---
 layout: doc
 outline: deep
+lang: fa-IR
+dir: rtl
 title: 'جمنای بدون سانسور'
 description: 'فعال‌سازی حالت‌ پیشرفته برای Gemini'
 date: 2025-06-27
 editLink: true
-head:
-  - - meta
-    - name: keywords
-      content: Gemini, Google studio, ai assistant, Gemini Pro, Gemini 2.5, Gemini Flash, Grok3
----
 head:
   - - meta
     - name: description

@@ -59,15 +59,16 @@ export default defineConfig({
         sidebar: [
           {
             text: '🔒 Security Research',
-            collapsed: false,
+            collapsed: true,
             items: [
               { text: 'Ransomware Evil', link: '/REvil' },
-              { text: 'Windows Activation', link: '/windows-activation' }
+              { text: 'Win Activation with hwid', link: '/windows-activation' },
+              { text: 'Win Activation with kms', link: '/kms' }
             ]
           },
           {
             text: '🤖 AI & Technology',
-            collapsed: false,
+            collapsed: true,
             items: [
               { text: 'Google Gemini', link: '/Gemini' },
               { text: 'AI Assistants', link: '/ai-agents' },
