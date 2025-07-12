@@ -1,7 +1,7 @@
 ---
 layout: doc
 outline: deep
-lang: fa-IR
+lang: fa
 dir: rtl
 title: 'جمنای بدون سانسور'
 description: 'فعال‌سازی حالت‌ پیشرفته برای Gemini'

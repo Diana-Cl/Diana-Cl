@@ -1,7 +1,7 @@
 ---
 layout: doc
 outline: deep
-lang: fa-IR
+lang: fa
 dir: rtl
 title: 'امپراتوری سایبری REvil'
 description: 'از ظهور تا سقوط'

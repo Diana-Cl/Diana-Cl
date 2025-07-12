@@ -3,8 +3,8 @@ node_modules/
 package-lock.json
 
 # VitePress cache and build output
-.vitepress/cache/
-
+docs/.vitepress/cache/
+docs/.vitepress/dist
 # IDE config files
 .vscode/
 .nojekyll

@@ -26,7 +26,7 @@ function formatDate(raw) {
   };
 }
 
-export default createContentLoader('docs/*.md', {
+export default createContentLoader('/*.md', {
   excerpt: true,
   transform(raw) {
     return raw
