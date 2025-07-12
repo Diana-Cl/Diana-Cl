@@ -1,8 +1,8 @@
 ---
 layout: doc
 outline: deep
-lang: fa
-dir: rtl
+lang: 'fa-IR'
+dir: 'rtl'
 title: 'جمنای بدون سانسور'
 description: 'فعال‌سازی حالت‌ پیشرفته برای Gemini'
 date: 2025-06-27
