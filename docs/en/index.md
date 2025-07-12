@@ -1,6 +1,8 @@
 ---
 layout: doc
 outline: deep
+lang : 'en-US'
+dir: 'ltr'
 title: 'All-in-One Windows & Office Activation Guide: HWID, KMS, TSforge and More.'
 description: 'Comprehensive open-source guide to safely activate Windows 10/11 and Office using HWID, KMS, TSforge, Ohook in under 40 seconds. Includes troubleshooting tips and detailed comparisons.'
 date: 2025-05-05
@@ -34,7 +36,7 @@ head:
 
 ::: tip **Author's Notes**
 
-- After activation via the `HWID` method, you may encounter issues signing into your Microsoft account in **Microsoft Edge** browser settings!
+- After permanent activation via the `HWID` method, you may encounter issues signing into your Microsoft account in **Microsoft Edge** browser settings!
 - **Solution 1:** Skip this activation method< and use [KMS](./kms) instead (takes less than 2 minutes and requires renewal every 6 months).
 - **Solution 2:** Avoid Edge and switch to alternative browsers like **Chrome** or **Firefox**.
 
@@ -70,37 +72,29 @@ For most users, the **HWID (Hardware ID)** method is the simplest way to get a p
 
 ## Step 1. Open PowerShell as Administrator
 
-**Run PowerShell using search bar**
-
-- 1. Click on windows `Start` button or `Search` icon in the taskbar.
-- 2. Type `powershell`.
-- 3. Select **Run as administrator**. <br/>
+### Option A: Using Search Bar (Recommended)  
+1. Click on windows "Start" button or "Search" icon in the taskbar  
+2. Type `powershell`  
+3. Select `Run as administrator` <br/>  
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/9b27cd4b-21d8-4970-98bb-3c97010e09bf" alt="open-powershell-as-admin" width="540px" /></p><br/>
+  <img src="https://github.com/user-attachments/assets/9b27cd4b-21d8-4970-98bb-3c97010e09bf" alt="open-powershell-as-admin" width="580px" /></p><br/>
   
 ::: tip Another ways to run PowerShell
 
-::: details Click here to see more ways
+::: details Click here to see more waysa
 
-**1. Using search bar**
+### Option B: Using Run Box
 
-- 1. Click on windows `Start` button or `Search` icon in the taskbar.
+1. Open the Run dialog box: Press `Win (⊞) + R` keys simultaneously  
+2. Type `powershell`  
+3. Press `Ctrl + Shift + Enter` to run as administrator  
+4. If prompted by User Account Control, click `Yes` <br/>  
 
-2.  Type `powershell`.
-3.  Select **Run as administrator**. <br/>
+### Option C: Using Power User Menu
 
-**2. Using the Run box**
-
-- 1. **Open the Run dialog box:** Simultaneously Press `Win (⊞) + R` keys on your keyboard.
-- 2. **Type:** `powershell`.
-- 3. **Run as administrator:** Instead of just pressing Enter, press `Ctrl + Shift + Enter`. This combination will launch PowerShell with elevated (administrator) privileges.
-- 4. If prompted by the User Account Control dialog, click `Yes` to grant administrative privileges. <br/>
-
-**3. Using Power User Menu (Win+X)**
-
-- 1. Right-click on the **Start menu**.
-- 2. Then select **Windows Terminal (Admin)** on Windows 11 or **Windows PowerShell (Admin)** on Windows 10 to run PowerShell. <br/>
+1. Right-click on the "Start menu" (or press `Win (⊞) + X`)  
+2. Select "Windows Terminal (Admin)" on Windows 11 or "Windows PowerShell (Admin)" on Windows 10 <br/>  
 
 Or You can visit [this Link][1] to see 10 ways to run **PowerShell** And [this link][2] For Running CMD in your windows.
 
@@ -108,17 +102,15 @@ Or You can visit [this Link][1] to see 10 ways to run **PowerShell** And [this l
 
 ## Step 2. Run the Activation Script
 
-Copy the following command, paste it into the PowerShell window and press `Enter` key.
-
-> You can `paste` everything you copied by **Right-clicking** in CMD Or PowerShell Or other terminals.
+Copy the following command, paste it (via Right-click) into the PowerShell window and press `Enter` key.
 
 ::: code-group
 
-```powershell [Recommended]
+```reg [Recommended]
 irm https://get.activated.win | iex
 ```
 
-```powershell [Alternative]
+```reg [Alternative]
 irm https://massgrave.dev/get | iex
 ```
 
@@ -127,14 +119,14 @@ irm https://massgrave.dev/get | iex
 <br/>
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/6b72787e-f5ad-47a2-ab2b-ae93de9f70bc" alt="Paste command in PowerShell" width="540px" /></p><br/>
+  <img src="https://github.com/user-attachments/assets/6b72787e-f5ad-47a2-ab2b-ae93de9f70bc" alt="Paste command in PowerShell" width="580px" /></p><br/>
 
 ## Step 3. Choose the HWID Option
 
 A menu will appear in a new window. Press `1` number on your keyboard to select **HWID Activation** and wait a few moments for the process to complete.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/8b119e05-d506-4c42-91cb-ac58c9a2f189" alt="Select HWID Activation" width="540px" /></p><br/>
+  <img src="https://github.com/user-attachments/assets/8b119e05-d506-4c42-91cb-ac58c9a2f189" alt="Select HWID Activation" width="580px" /></p><br/>
 
 **Congratulations!**  
 Your Windows is now permanently activated with a digital license. <br/>
