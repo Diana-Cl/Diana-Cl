@@ -54,33 +54,47 @@ export default defineConfig({
           { text: '🏠 Home', link: '/' },
           { text: '🔒 Security', link: '/REvil' },
           { text: '🤖 AI', link: '/Gemini' },
-          { text: '⚙️ Development', link: '/cf-backend-selector' }
+          { text: '⚙️ Development', link: '/en/' }
         ],
         sidebar: [
           {
             text: '🔒 Security Research',
-            collapsed: true,
+            collapsed: false,
             items: [
               { text: 'Ransomware Evil', link: '/REvil' },
-              { text: 'Win Activation with hwid', link: '/en/index' },
-              { text: 'Win Activation with kms', link: '/en/kms' }
+              { text: 'Instant Activation AEG', link: '/en/' },
+              { text: 'Cloudflare Backend Selector', link: '/cf-backend-selector' }
             ]
           },
           {
             text: '🤖 AI & Technology',
-            collapsed: true,
+            collapsed: false,
             items: [
               { text: 'Google Gemini', link: '/Gemini' },
               { text: 'AI Assistants', link: '/ai-agents' },
-              { text: 'Stable Diffusion', link: '/Stable-Diffusion' }
+              { text: 'Stable Diffusion', link: '/Stable-Diffusion' },
+              { text: 'Upgrade PHP on CentOS 7', link: '/Upgrade-PHP-version-on-CentOS-7' }
             ]
           },
           {
             text: '⚙️ Development',
-            collapsed: false,
+            collapsed: true,
             items: [
-              { text: 'Cloudflare Backend Selector', link: '/cf-backend-selector' },
-              { text: 'Upgrade PHP on CentOS 7', link: '/Upgrade-PHP-version-on-CentOS-7' }
+              { text: 'Windiws Activation — HWID Method', link: '/en/' },
+              { text: 'Windows Activation — KMS Method', link: '/en/kms' },
+              { text: 'Methods Chart', link: '/en/chart' },
+              { text: 'TSforge', link: '/en/tsforge' },
+              { text: 'KMS38', link: '/en/kms38' },
+              { text: 'Online KMS', link: '/en/online_kms' },
+              { text: 'Remove Malware', link: '/en/remove_malware' },
+              { text: 'Clean Install Windows', link: '/en/clean_install_windows' },
+              { text: 'Office c2r Custom Install', link: '/en/office_c2r' },
+              { text: 'Fix WPA Registry', link: '/en/fix-wpa-registry' },
+              { text: '$OEM$ Folders', link: '/en/oem-folder' },
+              { text: 'Switches in Command line', link: '/en/command_line_switches' },
+              { text: 'Evaluation Editions', link: '/en/evaluation_editions' },
+              { text: 'Manual HWID activation', link: '/en/manual_hwid_activation' },
+              { text: 'FAQ', link: '/en/faq' }
             ]
           }
         ],
