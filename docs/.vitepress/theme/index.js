@@ -1,4 +1,5 @@
 import DefaultTheme from 'vitepress/theme'
+import './fonts.css'
 import './styles.css'
 import './vars.css'
 import 'viewerjs/dist/viewer.min.css'
