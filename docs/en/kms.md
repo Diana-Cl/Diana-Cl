@@ -24,7 +24,7 @@ head:
 
 # Manual KMS Activation for Windows & Office
 
-**[Do you need the README file in فارسی ??](/fa/kms-fa)**
+**[من انگلیسی میفهمم ولی متوجه نمیشم ✋🤧😅](/fa/kms-fa)**
 
 > This guide walks you through activating Windows and Office for 180 days using Microsoft’s official Key Management Service (KMS) method.
 >
