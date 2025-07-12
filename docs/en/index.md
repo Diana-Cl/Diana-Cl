@@ -1,6 +1,8 @@
 ---
 layout: doc
 outline: deep
+lang: 'fa-IR'
+dir: 'rtl'
 title: 'All-in-One Windows & Office Activation Guide: HWID, KMS, TSforge and More.'
 description: 'Comprehensive open-source guide to safely activate Windows 10/11 and Office using HWID, KMS, TSforge, Ohook in under 40 seconds. Includes troubleshooting tips and detailed comparisons.'
 date: 2024-05-05
@@ -21,6 +23,8 @@ head:
 ---
 
 # Welcome to the ultimate guide for activating Windows and Office using trusted open-source methods.
+
+**[Do you need the README file in فارسی ??](/fa/index-fa)**
 
 
 This comprehensive guide walks you through reliable, open-source methods — like HWID, KMS, TSforge, and more — to activate your `Windows` and `Office` safely and permanently. <br/>

@@ -1,6 +1,8 @@
 ---
 layout: doc
 outline: deep
+lang: 'fa-IR'
+dir: 'rtl'
 title: 'Official KMS Activation Guide — 180 Days, Renewable'
 description: 'Step-by-step guide to activating Windows and Office using the official KMS method for volume licensing.'
 date: 2024-04-17
@@ -21,6 +23,8 @@ head:
 ---
 
 # Manual KMS Activation for Windows & Office
+
+**[Do you need the README file in فارسی ??](/fa/kms-fa)**
 
 > This guide walks you through activating Windows and Office for 180 days using Microsoft’s official Key Management Service (KMS) method.
 >
@@ -66,10 +70,10 @@ Or You can visit [this Link][2] to see 8 ways to run **cmd**, And  [This Link][1
 
 ## Step 2: Install a Generic KMS Client Key
 
-In the Command Prompt window, run the following command.  
+In the Command Prompt window, run the following command. 
 You must replace `Your-License-Key` with the key from the table below that matches your Windows edition. <br/>
 
-```shell
+```powershell
 slmgr /ipk Your-License-Key
 ```
 
@@ -81,8 +85,8 @@ slmgr /ipk Your-License-Key
   - This will open the **About** section in **Settings** directly. and you will see the Edition of your Windows under **Windows specifications**. <br/>
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/647ef16b-9208-4ff3-a94b-825ffa99721f" alt="about-system" width="320px" /></p><br/>
- 
+  <img src="https://github.com/user-attachments/assets/647ef16b-9208-4ff3-a94b-825ffa99721f" alt="about-system" width="420px" /></p><br/>
+  
 ::: details Click here to see more ways
 
 **1. Using a keyboard shortcut**
@@ -104,31 +108,31 @@ slmgr /ipk Your-License-Key
      > A window will appear showing the Windows version and build number and other details. <br/>
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/f764797a-e07f-4c58-b932-bfe7b359a7bd" alt="winver-command" width="320px" /></p>
+  <img src="https://github.com/user-attachments/assets/f764797a-e07f-4c58-b932-bfe7b359a7bd" alt="winver-command" width="420px" /></p>
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/4c7edc15-1c02-4d7b-ab5f-df70eaff8ad7" alt="winver-response" width="320px" /></p><br/>
+  <img src="https://github.com/user-attachments/assets/4c7edc15-1c02-4d7b-ab5f-df70eaff8ad7" alt="winver-response" width="420px" /></p><br/>
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/a6360712-0ad0-4be4-b0a4-01171d293d83" alt="msinfo32-command" width="320px" /></p>
+  <img src="https://github.com/user-attachments/assets/a6360712-0ad0-4be4-b0a4-01171d293d83" alt="msinfo32-command" width="420px" /></p>
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/8592c1bd-4a1a-47c1-bd21-0eb17049db31" alt="msinfo32-response" width="320px" /></p><br/>
-
-**4. Using Command Prompt or PowerShell** [^2]
+  <img src="https://github.com/user-attachments/assets/8592c1bd-4a1a-47c1-bd21-0eb17049db31" alt="msinfo32-response" width="420px" /></p><br/>
+  
+**4. Using Command Prompt or PowerShell** [^2]  
 - 1.  Click the `Start` button or search icon.
 - 2.  Type `cmd` or `Command Prompt`.
 - 3. At the Command Prompt, type `systeminfo` Or `systeminfo | findstr /B /C:"OS Name" /B /C:"OS Version"` and then press Enter
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/16e8f49a-0cec-4836-b841-0cbd9344fbb1" alt="findstdr command" width="320px" /></p><br/>
+  <img src="https://github.com/user-attachments/assets/16e8f49a-0cec-4836-b841-0cbd9344fbb1" alt="findstdr command" width="420px" /></p><br/>
 
 - Also you can run the PowerShell or Command Prompt, and type `slmgr /dlv`, and then press Enter.
   - The /dlv command displays the detailed licensing information.
     - Notice the output displays "Home" as seen in the following image:
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/86925e56-7cac-4b53-8ccf-6addcd799ece" alt="slmgr-command" width="320px" /></p><br/>
+  <img src="https://github.com/user-attachments/assets/86925e56-7cac-4b53-8ccf-6addcd799ece" alt="slmgr-command" width="420px" /></p><br/>
 
 :::
 
@@ -187,7 +191,7 @@ Please select one of the **license keys** from the list that **matches your vers
 
 Next, point your system to a public KMS server. Run this command:
 
-```shell
+```powershell
 slmgr /skms kms8.msguides.com
 ```
 
@@ -198,7 +202,7 @@ slmgr /skms kms8.msguides.com
 
 Finally, trigger the activation by running command:
 
-```shell
+```powershell
 slmgr /ato
 ```
 
@@ -207,7 +211,7 @@ slmgr /ato
 
 ## Step 5: Check Activation Status
 
-**You're all set!** 
+**You're all set!**  
 To check the activation status of `Windows 10`, navigate to **Settings → Update & Security → Activation.**. [^7]
 
 To check the activation status of `Windows 11`, open Settings by clicking the Start button and then selecting **Settings → System → Activation.**. [^8]
@@ -218,7 +222,7 @@ To check the activation status of `Windows 11`, open Settings by clicking the St
 ### Troubleshooting
 
 - **Error 0xC004F074:** This usually means your internet connection is unstable or the server is busy. Ensure you are online and try the `slmgr /ato` command again.
-- **Method Not Working?** If you're still having trouble, try the **HWID method** from the [Main guide](./index).
+- **Method Not Working?** If you're still having trouble, try the **HWID method** from the [Main guide](./en/index).
   - For additional help, visit the **[Discussion Section][3]** Or send [Email][4] Directly to me. <br/>
 
 <p align="left"><Huge> Be curious 🤍</Huge></p><br/>
@@ -231,7 +235,7 @@ To check the activation status of `Windows 11`, open Settings by clicking the St
 So, you can quickly access those tools through the Power user menu.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/7fa52188-2ac2-4b4d-9600-cf3f92e11d3d" alt="windows-plus-x-menu" width="320px" /></p><br/>
+  <img src="https://github.com/user-attachments/assets/7fa52188-2ac2-4b4d-9600-cf3f92e11d3d" alt="windows-plus-x-menu" width="420px" /></p><br/>
   
 The default programs in the Power User Menu have a corresponding hotkey. Familiarity with the hotkeys of common programs can save a lot of time and improve efficiency.  
 For example:

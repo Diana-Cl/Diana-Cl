@@ -62,8 +62,8 @@ export default defineConfig({
             collapsed: true,
             items: [
               { text: 'Ransomware Evil', link: '/REvil' },
-              { text: 'Win Activation with hwid', link: '/windows-activation' },
-              { text: 'Win Activation with kms', link: '/kms' }
+              { text: 'Win Activation with hwid', link: '/en/index' },
+              { text: 'Win Activation with kms', link: '/en/kms' }
             ]
           },
           {
