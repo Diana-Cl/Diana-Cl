@@ -30,9 +30,7 @@ head:
 
 [من انگلیسی میفهمم ولی متوجه نمیشم ✋🤧😅](/fa/index-fa)
 
-</div><br/>
-
-This comprehensive guide walks you through reliable, open-source methods — like HWID, KMS, TSforge, and more — to activate your `Windows` and `Office` safely and permanently. <br/>
+<br/>
 
 ::: tip **Author's Notes**
 
