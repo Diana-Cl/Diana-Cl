@@ -20,20 +20,19 @@ head:
       content: A complete guide to activating Windows and Office using the secure, renewable KMS method.
 ---
 
-# Official KMS Activation Guide — 180 Days, Renewable
+# KMD Activation guide
 
-### Step-by-step guide to activating Windows and Office using the official KMS method for volume licensing.
+### Official KMS Activation Guide — 180 Days, Renewable
 
+> This guide walks you through activating Windows and Office for 180 days using Microsoft’s official Key Management Service (KMS) method.
+> 
+>   - It is a safe and trusted activation approach for volume-licensed products, and can be renewed indefinitely. <br/>
 
 <div class="rtl">
 
 [من انگلیسی میفهمم ولی متوجه نمیشم ✋🤧😅](/fa/kms-fa)
 
 </div>
-
-> This guide walks you through activating Windows and Office for 180 days using Microsoft’s official Key Management Service (KMS) method.
->
-> It is a safe and trusted activation approach for volume-licensed products, and can be renewed indefinitely. <br/>
 
 ::: tip Prerequisites
 
