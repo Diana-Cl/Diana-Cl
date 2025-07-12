@@ -46,7 +46,7 @@ export default defineConfig({
   locales: {
     root: {
       label: 'English',
-      lang: 'en-US, fa-IR',
+      lang: 'fa-IR',
       title: 'Dìana',
       description: 'My personal notes and articles about technology, security, and AI',
       themeConfig: {
