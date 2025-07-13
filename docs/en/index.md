@@ -34,7 +34,7 @@ head:
 
 </div><br/>
 
-::: tip **Author's Notes**
+::: tip Notes
 
 - After permanent activation via the `HWID` method, you may encounter issues signing into your Microsoft account in **Microsoft Edge** browser settings!
 - **Solution 1:** Skip this activation method< and use [KMS](./kms) instead (takes less than 2 minutes and requires renewal every 6 months).
@@ -68,7 +68,7 @@ For a quick overview, here is a summary of the activation methods available:
 
 # Method 1. Permanent Activation with HWID
 
-For most users, the **HWID (Hardware ID)** method is the simplest way to get a permanent digital license for Windows 10 and 11. <br/>
+For most users, the HWID <Badge type="info" text="Hardware ID" /> method is the simplest way to get a permanent digital license for Windows 10 and 11. <br/>
 
 ## Step 1. Open PowerShell as Administrator
 
@@ -128,12 +128,14 @@ A menu will appear in a new window. Press `1` number on your keyboard to select 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/8b119e05-d506-4c42-91cb-ac58c9a2f189" alt="Select HWID Activation" width="580px" /></p><br/>
 
-**Congratulations!**  
+<Badge type="tip" text="Congratulations!" />  
 Your Windows is now permanently activated with a digital license. <br/>
 
-To check the activation status of `Windows 10`, navigate to **Settings → Update & Security → Activation.** [^1]
+To check the activation status of "Windows 10" Navigate to:  
+Settings > Update & Security > Activation [^1]
 
-To check the activation status of `Windows 11`, open Settings by clicking the Start button and then selecting **Settings → System → Activation.** [^2] <br/>
+To check the activation status of "Windows 11" Navigate to:  
+Settings > System > Activation [^2] <br/>
 
 ## Additional Information
 
@@ -208,4 +210,3 @@ _A generic key is automatically applied by the script where needed._
 [3]: https://github.com/NiREvil/windows-activation/discussions
 [4]: mailto:diana.clk01@gmail.com
 [rainbow]: https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256
-
