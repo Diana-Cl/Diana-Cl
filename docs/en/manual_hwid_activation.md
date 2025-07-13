@@ -1,6 +1,8 @@
 ---
 layout: doc
 outline: deep
+lang: 'en-US'
+dir: 'ltr'
 title: 'Manual HWID Activation'
 description: 'A step-by-step guide for manually activating Windows 10/11 via HWID, for users who prefer not to use automated scripts.'
 date: 2024-02-11
@@ -9,7 +11,7 @@ editLink: true
 
 # Manual HWID Activation for Windows 10/11
 
-Prefer to activate Windows yourself without using scripts or automated tools? This guide walks you through the HWID activation process, step by step.
+### Prefer to activate Windows yourself without using scripts or automated tools? This guide walks you through the HWID activation process, step by step.
 
 ::: info supported
 
@@ -23,66 +25,68 @@ HWID activation is supported **only** on Windows 10 and 11.
 
 > Make sure you have an internet connection before doing anything
 
-### 1. Identify Your Windows Edition
+### Step 1. Identify Your Windows Edition
 
-- Simultaneously Press **`Win (⊞) + Pause/Break`** on your keyboard.
-- This will open the **About** section in **Settings** directly. and you will see the Edition of your Windows under `Windows specifications`. <br/>
+::: tip To find your Windows edition
+
+#### Option A: Using keyboard shortcuts <Badge type="danger" text="Recommend" />
+
+1. Open the Run dialog box: Press `Win (⊞) + Pause/Break` keys Simultaneously
+2. This will open the "About" section in "Settings" directly. and you will see the Edition of your Windows under "Windows specifications" <br/>
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/647ef16b-9208-4ff3-a94b-825ffa99721f" alt="about-system" width="480px" /></p><br/>
+  <img src="https://github.com/user-attachments/assets/647ef16b-9208-4ff3-a94b-825ffa99721f" alt="about-system" width="420px" /></p><br/>
   
-::: details There are other ways to find your Windows version.
+::: details Click here to see more ways
 
-#### 1.1 Using the system settings
+#### Option B: Using System Settings
 
-- **Step 1:** Click the `🪟 Start` button and then click `⚙️ Settings`.
-- **Step 2:** Click on `💻 System`.
-- **Step 3:** Scroll down and click on `ℹ️ About`.
-- **Step 4:** Under `Windows specifications`, you will see the Edition of your Windows. <br/>
+1. Click the "🪟 Start" button and then click "⚙️ Settings"
+2. Click on "💻 System"
+3. Scroll down and click on "ℹ️ About"
+4. Under `Windows specifications`, you will see the Edition of your Windows <br/>
 
-#### 1.2 Using the Run dialog
+#### Option C: Using Run Box
 
-- **Step 1:** Press the `Win (⊞) + R` to open the Run dialog box.
-- **Step 2:** Type one of the three commands in `Run box` and press Enter:
-`winver` Or`msinfo32` Or `ms-settings:about`  
-- **Step 3:** A window will appear showing the Windows version and build number and some unnecessary details for us. <br/>
-
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/f764797a-e07f-4c58-b932-bfe7b359a7bd" alt="winver-command" width="320px" /></p>
+1. Open the Run dialog box: Press `Win (⊞) + R` keys Simultaneously
+2. Type `winver` or `msinfo32` or `ms-settings:about` and press Enter key
+3. A window will appear showing the Windows version and build number, Done <br/>
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/4c7edc15-1c02-4d7b-ab5f-df70eaff8ad7" alt="winver-response" width="320px" /></p><br/>
+  <img src="https://github.com/user-attachments/assets/f764797a-e07f-4c58-b932-bfe7b359a7bd" alt="winver-command" width="480px" /></p>
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/a6360712-0ad0-4be4-b0a4-01171d293d83" alt="msinfo32-command" width="320px" /></p>
+  <img src="https://github.com/user-attachments/assets/4c7edc15-1c02-4d7b-ab5f-df70eaff8ad7" alt="winver-response" width="480px" /></p><br/>
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/8592c1bd-4a1a-47c1-bd21-0eb17049db31" alt="msinfo32-response" width="320px" /></p><br/>
+  <img src="https://github.com/user-attachments/assets/a6360712-0ad0-4be4-b0a4-01171d293d83" alt="msinfo32-command" width="480px" /></p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/8592c1bd-4a1a-47c1-bd21-0eb17049db31" alt="msinfo32-response" width="480px" /></p><br/>
   
-#### 1.3 Using Command Prompt or PowerShell. [^2]
-
-- **Step 1:** Click the `Start` button or search icon.
-- **Step 2:** Type `cmd` or `Command Prompt`.
-- **Step 3:** Type one of the them in CMD or PowerShell and press Enter.
-
-`systeminfo` Or `systeminfo | findstr /B /C:"OS Name" /B /C:"OS Version"`  
+#### Option D: Using CMD or PowerShell [^2]  
+1. Click on windows "Start" button or "Search" icon
+2. Type `cmd` or `Command Prompt`
+3. in running terminal, type: `systeminfo` or `systeminfo | findstr /B /C:"OS Name" /B /C:"OS Version"` and press "Enter" key.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/16e8f49a-0cec-4836-b841-0cbd9344fbb1" alt="findstdr command" width="420px" /></p><br/>
 
-- Also you can run the PowerShell or Command Prompt, and type `slmgr /dlv`, and then press Enter.
-  - The /dlv command displays the detailed licensing information.
-    - Notice the output displays "Home" as seen in the following image:
+#### Option E: Using CMD like option D
+
+1. Also, run "PowerShell" or "CMD"
+2. Type `slmgr /dlv`, and press "Enter" key
+3. The `/dlv` command displays the detailed licensing information.
+4. Notice the output displays "Home" as seen in the following image:
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/86925e56-7cac-4b53-8ccf-6addcd799ece" alt="slmgr-command" width="320px" /></p><br/>
+  <img src="https://github.com/user-attachments/assets/86925e56-7cac-4b53-8ccf-6addcd799ece" alt="slmgr-command" width="420px" /></p><br/>
 
 :::
-
-### 2. Download the Correct Ticket File  
+### Step 2. Download the Correct Ticket File  
 From the [table below](#product-keys-and-ticket-downloads), download the ticket file that matches your Windows edition.
 
-### 3. Copy the Ticket File
+### Step 3. Copy the Ticket File
 Move the downloaded file to this address:  
 `C:\ProgramData\Microsoft\Windows\ClipSVC\GenuineTicket`
 
@@ -92,26 +96,25 @@ The `ProgramData` folder is hidden. Paste the path above directly into the Windo
 
 :::
 
+### Step 4. Open Activation Settings
+Go to **Settings > Activation**, and click `Change product key`
 
-### 4. Open Activation Settings 
-Go to **Settings > Activation**, and click **Change product key**
-
-### 5. Enter the Product Key* 
+### Step 5. Enter the Product Key  
 Copy the product key from the table below (matching your edition) and paste it when prompted.
 
-### 6. Complete Activation
-Wait a few moments—Windows should activate automatically. <br/>
+### Step 6. Complete Activation  
+Wait a few moments, Windows should activate automatically. <br/>
 
-### 7. Check Windows Activation Status
+### Step 7. Check Windows Activation Status
 
-To check the activation status of `Windows 10`, navigate to **Settings → Update & Security → Activation.**. [^2]
+To check the activation status of "Windows 10" Navigate to:  
+Settings > Update & Security > Activation. [^2]
 
-To check the activation status of `Windows 11`, open Settings by clicking the Start button and then selecting **Settings → System → Activation.**. [^3]
+To check the activation status of "Windows 11" Navigate to:  
+Settings > System > Activation. [^3]
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/da52f1bb-79c9-45db-bade-a0f56cd0a739" alt="activated" width="540px" /></p><br/>
-
-
 
 ::: info Troubleshooting
 
@@ -165,9 +168,9 @@ Looking for an easier solution? Try our [automatic activation tool](./index).
 
 <hr/><br/>
 
-[^1]: Another easiest way to run **PowerShell** is **Using Power User Menu**. <br/> - 1. **Right-click** the **Windows Start** icon on the Taskbar to open the menu containing shortcuts to frequently used tools. Also you can open this menu with **`Win (⊞) + x`**. <br/> - 2. Select **Windows Terminal (admin)** at windows 11 Or **Windows PowerShell (admin)** at Windows 10.
+[^1]: Another easiest way to run **PowerShell** is **Using Power User Menu**. <br/> - 1. **Right-click** the **Windows Start** icon on the Taskbar to open the menu containing shortcuts to frequently used tools. Also you can open this menu with `Win (⊞) + x`. <br/> - 2. Select **Windows Terminal (admin)** at windows 11 Or **Windows PowerShell (admin)** at Windows 10.
 
-[^2]: To check the activation status of Windows 10, navigate to Settings → Update & Security → Activation. You will see your activation status listed there. If Windows is activated, you should see "Activated" with a green checkmark.
+[^2]: To check the activation status of Windows 10, Navigate to Settings → Update & Security → Activation. You will see your activation status listed there. If Windows is activated, you should see "Activated" with a green checkmark.
 
-[^3]: To check the activation status of Windows 11, open Settings by clicking the Start button and then selecting Settings → System → Activation. The activation status will be displayed, showing whether Windows is activated, along with details about the activation method and any linked Microsoft account.
+[^3]: To check the activation status of Windows 11, Navigate to Settings → System → Activation. The activation status will be displayed, showing whether Windows is activated, along with details about the activation method and any linked Microsoft account.
 
