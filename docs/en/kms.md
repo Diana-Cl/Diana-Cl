@@ -1,9 +1,11 @@
 ---
 layout: doc
 outline: deep
+lang: 'en-US'
+dir: 'ltr'
 title: 'Official KMS Activation Guide — 180 Days, Renewable'
-description: 'Step-by-step guide to activating Windows and Office using the offi7cial KMS method for volume licensing.'
-date: 2025-04-17
+description: 'Step-by-step guide to activating Windows using the official KMS method for volume licensing.'
+date: 2025-05-04
 editLink: true
 head:
   - - meta
@@ -14,17 +16,17 @@ head:
       content: KMS, Windows activation, Office activation, Windows 10, Windows 11, volume license, activate Office 2021, digital license
   - - meta
     - property: og:title
-      content: Activate Windows and Office Using the Official KMS Method
+      content: Activate Windows Using the Official KMS Method
   - - meta
     - property: og:description
-      content: A complete guide to activating Windows and Office using the secure, renewable KMS method.
+      content: A complete guide to activating Windows using the secure, renewable KMS method.
 ---
 
 # KMS Activation guide
 
 ### Official KMS Activation Guide — 180 Days, Renewable
 
-> This guide walks you through activating Windows and Office for 180 days using Microsoft’s official Key Management Service (KMS) method.
+> This guide walks you through activating Windows for <Badge type="tip" text="180 Days" /> using Microsoft’s official Key Management Service <Badge type="tip" text="KMS" /> method.
 > 
 > It is a safe and trusted activation approach for volume-licensed products, and can be renewed indefinitely. <br/>
 
@@ -34,117 +36,117 @@ head:
 
 </div>
 
+# Method 2. Activating Win for 180 days with KMS
+
 ::: tip Prerequisites
 
-A stable internet connection.
--Administrator privileges for CMD on your computer.
+A stable internet connection.  
+Administrator privileges for CMD on your computer.
 
 :::
 
 <br/>
 
-## Step 1: Open Command Prompt as Administrator {#open-cmd}
+## Step 1. Open Command Prompt as Administrator
 
-1. Click the `Start` button or `Search` icon in the taskbar.
-2. Type `cmd` or `Command Prompt`.
-3. Select **Run as administrator**. <br/>
+### Option A: Using Search Bar <Badge type="danger" text="Recommend" />
+
+1. Click the "Start" button or "Search" icon in the taskbar
+2. Type `cmd` or `Command Prompt`
+3. Select "Run as administrator" <br/>
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/4465a2d3-6c93-4ee1-bb63-94ab7b8e06ac" alt="run-cmd-as-dmin" width="320px" /></p><br/>
+  <img src="https://github.com/user-attachments/assets/4465a2d3-6c93-4ee1-bb63-94ab7b8e06ac" alt="run-cmd-as-dmin" width="580px" /></p><br/>
 
 ::: tip Another ways to run CMD
 
 ::: details Click here to see more details
 
-**2. Using the Run box**
+### Option B: Using the Run box
 
-- 1. **Open the Run box:** Simultaneously Press `Win (⊞) + R` keys on your keyboard.
-- 2. **Type:** `cmd` or `command prompt`.
-- 3. **Run as administrator:** Instead of just pressing Enter, press `Ctrl + Shift + Enter`. This combination will launch command prompt with elevated (administrator) privileges.
-- 4. If prompted by the User Account Control dialog, click `Yes` to grant administrative privileges. <br/>
+1. Open the Run Dialog box: Press `Win (⊞) + R` keys Simultaneously
+2. Type: `cmd` or `command prompt`
+3. press `Ctrl + Shift + Enter` to run as administrator
+4. If prompted by User Account Control, click `Yes` <br/>
 
-**3. Using Power User Menu**
+### Option C: Using Power User Menu
 
-- 1. Right-click the **Start menu**.
-- 2. Select **Windows Terminal (Admin)** on Windows 11 or **Windows PowerShell (Admin)** on Windows 10.
+1. Right-click the "Start menu"
+2. Select "Windows Terminal (Admin)" on Windows 11 or "Windows PowerShell (Admin)" on Windows 10.  
 
 Or You can visit [this Link][2] to see 8 ways to run **cmd**, And  [This Link][1] to see more than 10 ways For Running PowerShell on your windows.
 
 :::
 
-## Step 2: Install a Generic KMS Client Key
+## Step 2. Install a Generic KMS Client Key
 
-In the Command Prompt window, run the following command. 
+In the Command Prompt window, run the following command.  
 You must replace `Your-License-Key` with the key from the table below that matches your Windows edition. <br/>
 
-```powershell
+```reg
 slmgr /ipk Your-License-Key
 ```
 
 ::: tip To find your Windows edition
 
-**1. Using a keyboard shortcut**
+### Option A: Using keyboard shortcuts <Badge type="danger" text="Recommend" />
 
-- Simultaneously Press **`Win (⊞) + Pause/Break`** on your keyboard.
-  - This will open the **About** section in **Settings** directly. and you will see the Edition of your Windows under **Windows specifications**. <br/>
+1. Open the Run dialog box: Press `Win (⊞) + Pause/Break` keys Simultaneously
+2. This will open the "About" section in "Settings" directly. and you will see the Edition of your Windows under "Windows specifications". <br/>
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/647ef16b-9208-4ff3-a94b-825ffa99721f" alt="about-system" width="420px" /></p><br/>
   
 ::: details Click here to see more ways
 
-**1. Using a keyboard shortcut**
+### Option B: Using System Settings
 
-- Simultaneously Press **`Win (⊞) + Pause/Break`** on your keyboard.
-  - This will open the **About** section in **Settings** directly. and you will see the Edition of your Windows under **Windows specifications**. <br/>
+1. Click the "🪟 Start" button and then click "⚙️ Settings"
+2. Click on "💻 System"
+3. Scroll down and click on "ℹ️ About"
+4. Under `Windows specifications`, you will see the Edition of your Windows. <br/>
 
-**2. Using system settings**
+### Option C: Using Run Box
 
-- 1. Click the `🪟 Start` button and then click `⚙️ Settings`.
-- 2. Click on `💻 System`.
-- 3. Scroll down and click on `ℹ️ About`.
-- 4. Under `Windows specifications`, you will see the Edition of your Windows. <br/>
-
-**3. Using the Run dialog**
-
-- 1. Press the `Win (⊞) + R` to open the Run dialog box.
-- 2. Type the `ms-settings:about` Or `winver` Or `msinfo32` and press Enter key.
-     > A window will appear showing the Windows version and build number and other details. <br/>
+1. Open the Run dialog box: Press `Win (⊞) + R` keys Simultaneously
+2. Type `winver` or `msinfo32` or `ms-settings:about` and press Enter key.
+3. A window will appear showing the Windows version and build number, Done <br/>
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/f764797a-e07f-4c58-b932-bfe7b359a7bd" alt="winver-command" width="420px" /></p>
+  <img src="https://github.com/user-attachments/assets/f764797a-e07f-4c58-b932-bfe7b359a7bd" alt="winver-command" width="480px" /></p>
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/4c7edc15-1c02-4d7b-ab5f-df70eaff8ad7" alt="winver-response" width="420px" /></p><br/>
+  <img src="https://github.com/user-attachments/assets/4c7edc15-1c02-4d7b-ab5f-df70eaff8ad7" alt="winver-response" width="480px" /></p><br/>
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/a6360712-0ad0-4be4-b0a4-01171d293d83" alt="msinfo32-command" width="420px" /></p>
+  <img src="https://github.com/user-attachments/assets/a6360712-0ad0-4be4-b0a4-01171d293d83" alt="msinfo32-command" width="480px" /></p>
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/8592c1bd-4a1a-47c1-bd21-0eb17049db31" alt="msinfo32-response" width="420px" /></p><br/>
+  <img src="https://github.com/user-attachments/assets/8592c1bd-4a1a-47c1-bd21-0eb17049db31" alt="msinfo32-response" width="480px" /></p><br/>
   
-**4. Using Command Prompt or PowerShell** [^2]  
-- 1.  Click the `Start` button or search icon.
-- 2.  Type `cmd` or `Command Prompt`.
-- 3. At the Command Prompt, type `systeminfo` Or `systeminfo | findstr /B /C:"OS Name" /B /C:"OS Version"` and then press Enter
+### Option D: Using CMD or PowerShell [^2]  
+1. Click on windows "Start" button or "Search" icon
+2. Type `cmd` or `Command Prompt`
+3. in running terminal, type: `systeminfo` or `systeminfo | findstr /B /C:"OS Name" /B /C:"OS Version"` and press "Enter" key.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/16e8f49a-0cec-4836-b841-0cbd9344fbb1" alt="findstdr command" width="420px" /></p><br/>
 
-- Also you can run the PowerShell or Command Prompt, and type `slmgr /dlv`, and then press Enter.
-  - The /dlv command displays the detailed licensing information.
-    - Notice the output displays "Home" as seen in the following image:
+### Option E: Using CMD like option D
+
+1. Also, run "PowerShell" or "CMD"
+2. Type `slmgr /dlv`, and press "Enter" key
+3. The `/dlv` command displays the detailed licensing information.
+4. Notice the output displays "Home" as seen in the following image:
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/86925e56-7cac-4b53-8ccf-6addcd799ece" alt="slmgr-command" width="420px" /></p><br/>
 
 :::
 
-Please select one of the **license keys** from the list that **matches your version of Windows** and replace it with the phrase `Your-License-Key` in the command.
+Please select one of the "license keys" from the list that "matches your version of Windows" and replace it (via Right-click) with the phrase `Your-License-Key` in the command. <br/>
 
-> You can `paste` everything you copied by **Right-clicking** in CMD Or PowerShell Or anoter terminals.
-
-### Generic Volume License Keys (GVLK)
+### Generic Volume License Keys <Badge type="danger" text="GVLK" />
 
 | Windows Edition               | GVLK Key         |
 | :---------------------------- | :--------------- |
@@ -169,10 +171,10 @@ Please select one of the **license keys** from the list that **matches your vers
 <br/>
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/d5d93702-7865-4552-85d0-6916b1331bc0" alt="Install-KMS-Key" width="540px" /></p>
+  <img src="https://github.com/user-attachments/assets/d5d93702-7865-4552-85d0-6916b1331bc0" alt="Install-KMS-Key" width="580px" /></p>
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/50c23cad-7690-49fb-bf1c-d1c7cc66f0fe" alt="install-KMS-keyy" width="540px" /></p><br/>
+  <img src="https://github.com/user-attachments/assets/50c23cad-7690-49fb-bf1c-d1c7cc66f0fe" alt="install-KMS-keyy" width="580px" /></p><br/>
  
 ::: details An alternative license keys
 
@@ -191,60 +193,63 @@ Please select one of the **license keys** from the list that **matches your vers
 
 :::
 
-## Step 3: Set the KMS Server Address
+## Step 3. Set the KMS Server Address
 
 Next, point your system to a public KMS server. Run this command:
 
-```powershell
+```reg
 slmgr /skms kms8.msguides.com
 ```
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/edd0835f-c314-4ef8-a87d-a33e29f3f7c0" alt="set-kms-server" width="540px" /></p><br/>
+  <img src="https://github.com/user-attachments/assets/edd0835f-c314-4ef8-a87d-a33e29f3f7c0" alt="set-kms-server" width="580px" /></p><br/>
 
-## Step 4: Activate Windows
+## Step 4. Activate Windows
 
 Finally, trigger the activation by running command:
 
-```powershell
+```reg
 slmgr /ato
 ```
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/95e014e5-8946-4036-84ca-77ebb6122b1b" alt="active-windows" width="540px" /></p><br/>
+  <img src="https://github.com/user-attachments/assets/95e014e5-8946-4036-84ca-77ebb6122b1b" alt="active-windows" width="580px" /></p><br/>
 
-## Step 5: Check Activation Status
+## Step 5. Check Activation Status
 
-**You're all set!**  
-To check the activation status of `Windows 10`, navigate to **Settings → Update & Security → Activation.**. [^7]
+<Badge type="tip" text="You're all set!!" />
 
-To check the activation status of `Windows 11`, open Settings by clicking the Start button and then selecting **Settings → System → Activation.**. [^8]
+To check the activation status of "Windows 10" Navigate to:  
+Settings > Update & Security > Activation. [^7]
+
+To check the activation status of "Windows 11" Navigate to:  
+Settings > System > Activation. [^8]
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/da52f1bb-79c9-45db-bade-a0f56cd0a739" alt="activated" width="540px" /></p><br/>
+  <img src="https://github.com/user-attachments/assets/da52f1bb-79c9-45db-bade-a0f56cd0a739" alt="activated" width="580px" /></p><br/>
 
 ### Troubleshooting
 
 - **Error 0xC004F074:** This usually means your internet connection is unstable or the server is busy. Ensure you are online and try the `slmgr /ato` command again.
-- **Method Not Working?** If you're still having trouble, try the **HWID method** from the [Main guide](./en/index).
+- **Method Not Working?** If you're still having trouble, try the **HWID method** from the [Main guide](./index).
   - For additional help, visit the **[Discussion Section][3]** Or send [Email][4] Directly to me. <br/>
 
 <p align="left"><Huge> Be curious 🤍</Huge></p><br/>
 
-## About Hotkeys
+## About Hotkeys <Badge type="danger" text="For enthusiasts" />
 
-::: details Use the hotkeys to open default programs in the Win+X Menu.
+::: details Use the hotkeys to open default programs in the Win+X Menu
 
 **Power user menu** is a brief menu listing some advanced system tools like event viewer, device manager, disk management, computer management, task manager, etc.  
 So, you can quickly access those tools through the Power user menu.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/7fa52188-2ac2-4b4d-9600-cf3f92e11d3d" alt="windows-plus-x-menu" width="420px" /></p><br/>
+  <img src="https://github.com/user-attachments/assets/7fa52188-2ac2-4b4d-9600-cf3f92e11d3d" alt="windows-plus-x-menu" width="480px" /></p><br/>
   
 The default programs in the Power User Menu have a corresponding hotkey. Familiarity with the hotkeys of common programs can save a lot of time and improve efficiency.  
 For example:
 
-- Press **`Windows + X`** opens the **Power User Menu** (Win+X Menu).
+- Press `Win (⊞) + X` opens the **Power User Menu** (Win+X Menu).
 - The second keypress (e.g., `F`, `B`, `U`) selects the corresponding program.
 - For shutdown/restart options, `U` opens the submenu, followed by `I`, `S`, `U`, or press `R` for reatart system.
 

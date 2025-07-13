@@ -72,7 +72,7 @@ For most users, the **HWID (Hardware ID)** method is the simplest way to get a p
 
 ## Step 1. Open PowerShell as Administrator
 
-### Option A: Using Search Bar (Recommended)  
+### Option A: Using Search Bar <Badge type="danger" text="Recommend" />  
 1. Click on windows "Start" button or "Search" icon in the taskbar  
 2. Type `powershell`  
 3. Select `Run as administrator` <br/>  
@@ -208,3 +208,4 @@ _A generic key is automatically applied by the script where needed._
 [3]: https://github.com/NiREvil/windows-activation/discussions
 [4]: mailto:diana.clk01@gmail.com
 [rainbow]: https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256
+
