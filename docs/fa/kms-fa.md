@@ -84,7 +84,8 @@ slmgr /ipk Your-License-Key
 
 ::: details برای مشاهده روش‌های مختلف کلیک کنید
 
-### روش الف: استفاده از میانبر کیبورد < Badge type="danger" text="پیشنهادی" /> 
+### روش الف: استفاده از میانبر کیبورد <Badge type="danger" text="پیشنهادی" />
+
 `Win (⊞) + R`
 کلیدهای `Win (⊞) + Pause/Break` را همزمان فشار دهید. این کار بخش **About** را در **Settings** مستقیماً باز می‌کند و شما نسخه ویندوز خود را در زیر **Windows specifications** خواهید دید.
 
