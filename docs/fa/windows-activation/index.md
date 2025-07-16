@@ -3,34 +3,36 @@
 layout: home
 
 hero:
-  name: "Dìana"
-  text: "A Collection of My Notes"
-  tagline: Exploring technology, security, and everything in between.
+  name: 'رویای آزادی 🦋'
+  text: 'فعال‌سازی فوری محصولات مایکروسافت'
+  tagline: "مجموعه ابزارهای قابل اعتماد و متن‌باز برای فعال‌سازی محصولات ویندوز و آفیس، شامل HWID، KMS، Ohook و بیشتر. فعال‌سازی دائمی در کمتر از ۴۰ ثانیه!"
   actions:
     - theme: brand
-      text: Get Started with Gemini
-      link: /ai/Gemini
+      text: شروع کنید
+      link: ./intro
     - theme: alt
-      text: View on GitHub
-      link: https://github.com/Diana-Cl/Diana-Cl
+      text: مشاهده در گیت‌هاب
+      link: https://github.com/sahar-km/windows-activation
 
 features:
-  - title: "🔒 Security Research"
-    details: "Deep dives into malware analysis, security vulnerabilities, and threat intelligence."
-  - title: "⚙️ Development Guides"
-    details: "Practical guides for server configuration, web development and more."
-  - title: "🤖 AI & Technology"
-    details: "Exploring the latest in artificial intelligence, from language models to diffusion techniques."
+  - title: '🔐 فعال‌سازی دائمی با  HWID'
+    details: 'یک لایسنس دیجیتال دائمی برای ویندوز ۱۰ و ۱۱ دریافت کنید. این لایسنس به سخت‌افزار شما گره خورده و حتی پس از نصب مجدد ویندوز باقی می‌ماند.'
+  - title: '⚙️ تمدید خودکار با KMS و Online KMS'
+    details: 'ویندوز و آفیس را برای ۱۸۰ روز فعال کنید و با یک تَسک خودکار، تمدید آن را برای همیشه تضمین کنید.'
+  - title: '🏆 فعال‌سازی آفلاین با Ohook و TSforge'
+    details: 'یک روش فعال‌سازی دائمی و کاملاً آفلاین برای تمامی نسخه‌های مایکروسافت آفیس روی ویندوز 7 تا 11'
+  - title: '📦 تمام اون چیزی که میخوای'
+    details: 'مجموعه‌ای کامل از تمام روش‌های معتبر فعال‌سازی در یک پکیج واحد'
 ---
 
 <script setup>
-import { data as posts } from './.vitepress/posts.data.js'
+import { data as posts } from '../../.vitepress/posts.data.js'
 </script>
 
 <div class="latest-posts-section">
-  <h2 class="section-title">Latest Posts</h2>
+  <h2 class="section-title">آخرین مطالب</h2>
   <div class="posts-grid" v-if="posts && posts.length > 0">
-    <article v-for="post of posts" :key="post.url" class="post-card">
+    <article v-for="post of posts.filter(p => p.lang === 'fa')" :key="post.url" class="post-card">
       <div class="post-content">
         <h3 class="post-title">
           <a :href="post.url" class="post-link">{{ post.title }}</a>
@@ -38,13 +40,13 @@ import { data as posts } from './.vitepress/posts.data.js'
         <p class="post-date"> {{ post.date.string }}</p>
         <p class="post-excerpt" v-if="post.excerpt">{{ post.excerpt }}</p>
         <div class="post-actions">
-          <a :href="post.url" class="read-more">Read More →</a>
+          <a :href="post.url" class="read-more">← بیشتر بخوانید</a>
         </div>
       </div>
     </article>
   </div>
   <div v-else class="no-posts">
-    <p>No posts available at the moment.</p>
+    <p>در حال حاضر هیچ مطلبی در دسترس نیست.</p>
   </div>
 </div>
 
@@ -101,7 +103,7 @@ import { data as posts } from './.vitepress/posts.data.js'
   height: 3px;
   background: linear-gradient(90deg, var(--vp-c-brand-1), var(--vp-c-brand-2));
   transform: scaleX(0);
-  transform-origin: left;
+  transform-origin: right;
   transition: transform 0.3s ease;
 }
 
@@ -157,7 +159,7 @@ import { data as posts } from './.vitepress/posts.data.js'
 
 .post-actions {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 
 .read-more {

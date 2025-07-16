@@ -1,6 +1,7 @@
 :root:where(:lang(fa)) {
-  --vp-font-family-base: 'Vazirmatn', sans-serif;
-}
+  --vp-font-family-base:
+    'Vazirmatn', 'Inter', ui-sans-serif, system-ui, sans-serif; 
+    }
 
 :root {
   --vp-home-hero-name-color: transparent;
