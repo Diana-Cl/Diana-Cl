@@ -33,8 +33,7 @@ Let’s start with the basics. We’ve just entered the bot and want to generate
 
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/5958bdd9-ad29-49b5-a170-d5bb6c35c956" alt="Example 1" width="580px" />
-</p>
+  <img src="https://github.com/user-attachments/assets/5958bdd9-ad29-49b5-a170-d5bb6c35c956" alt="Example 1" width="580px" /></p>
 
 <p style="text-align: center;">
   Frog in a pink spacesuit on the moon </p>
@@ -49,8 +48,7 @@ You’ll notice that it doesn’t matter whether you use Russian or English for 
 Want to improve the quality of your image? Click the **Upscale** button under the art, and you’ll get a high-resolution PNG image.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/5b09e183-4bf1-4605-adb6-f0299bf297b7" alt="Upscale 1" width="580px" />
-</p>
+  <img src="https://github.com/user-attachments/assets/5b09e183-4bf1-4605-adb6-f0299bf297b7" alt="Upscale 1" width="580px" /></p>
 
 
 <p align="center">
