@@ -1,8 +1,10 @@
 ---
 layout: doc
 outline: deep
-title: Stable Diffusion
-description: 'Stable Diffusion is a neural network that generates images from a text prompt'
+lang: "en-US"
+dir: "ltr"
+title: "Stable Diffusion"
+description: "Stable Diffusion is a neural network that generates images from a text prompt"
 date: 2025-02-06
 editLink: true
 head:
@@ -33,7 +35,8 @@ Let’s start with the basics. We’ve just entered the bot and want to generate
 
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/5958bdd9-ad29-49b5-a170-d5bb6c35c956" alt="Example 1" width="580px" /></p>
+  <img src="https://github.com/user-attachments/assets/5958bdd9-ad29-49b5-a170-d5bb6c35c956" alt="Example1" width="540px" />
+</p>
 
 <p style="text-align: center;">
   Frog in a pink spacesuit on the moon </p>
@@ -60,7 +63,7 @@ Want to improve the quality of your image? Click the **Upscale** button under th
 ## Main Bot Functionality
 
 Access the settings via the `/menu` command or by clicking the ⚙️ Menu button available under each generation.
-
+7
 <p align="center">
   <img src="https://github.com/user-attachments/assets/3712473f-5c37-4d24-aac2-d1aa5e0b8d06" alt="BotMenu" width="580px" />
 </p>

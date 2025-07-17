@@ -2,6 +2,8 @@
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
 index: true
+lang: en-US
+dir: ltr
 
 hero:
   name: "Dìana"
