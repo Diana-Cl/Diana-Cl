@@ -260,7 +260,7 @@ export default defineConfig({
 
   vite: {
     optimizeDeps: {
-      include: ['video.js']
+      exclude: ['video.js']
     }
   }
 })

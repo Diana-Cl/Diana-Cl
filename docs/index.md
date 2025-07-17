@@ -10,7 +10,7 @@ hero:
   actions:
     - theme: brand
       text: Get Started with Gemini
-      link: /fa/topics/Gemini
+      link: /topics/Gemini
     - theme: alt
       text: View on GitHub
       link: https://github.com/Diana-Cl/Diana-Cl
@@ -25,7 +25,10 @@ features:
 ---
 
 <script setup>
-import { data as posts } from '/.vitepress/posts.data.js'
+import { data } from '/.vitepress/posts.data.js'
+import { useData } from 'vitepress'
+const { lang } = useData()
+const posts = data[lang.value] ?? []
 </script>
 
 <div class="latest-posts-section">

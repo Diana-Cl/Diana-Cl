@@ -33,7 +33,7 @@ function formatDate(raw, lang = 'en') {
 }
 
 function categorizePost(url) {
-  if (url.includes('/wa/')) return 'wa';
+  if (url.includes('/wa/')) return 'windows-activation';
   if (url.includes('/topics/')) return 'topics';
   return 'other';
 }
@@ -41,7 +41,7 @@ function categorizePost(url) {
 function getCategoryIcon(category) {
   const icons = {
     'windows-activation': '🪟',
-    'topics': '📚', 
+    'topics': '📚',
     'other': '📄'
   };
   return icons[category] || '📄';
@@ -49,67 +49,52 @@ function getCategoryIcon(category) {
 
 function getCategoryTitle(category, lang = 'en') {
   const titles = {
-    'wa': lang === 'fa' ? 'فعال‌سازی ویندوز' : 'Wa',
+    'windows-activation': lang === 'fa' ? 'فعال‌سازی ویندوز' : 'Windows Activation',
     'topics': lang === 'fa' ? 'موضوعات عمومی' : 'General Topics',
     'other': lang === 'fa' ? 'سایر' : 'Other'
   };
   return titles[category] || (lang === 'fa' ? 'سایر' : 'Other');
 }
 
-export default createContentLoader([
-  'wa/*.md',
-  'fa/topics/*.md',
-  'fa/wa/*.md'
-], {
-  excerpt: true,
-  transform(raw) {
-    const sortedPosts = raw
-      .filter(({ frontmatter }) => frontmatter?.title && !frontmatter.index) 
-      .map(({ url, frontmatter, excerpt }) => {
-        const lang = url.includes('/fa/') ? 'fa' : 'en';
-        const category = categorizePost(url);
+export default createContentLoader(
+  ['docs/fa/wa/*.md', 'docs/wa/*.md', 'docs/topics/*.md', 'docs/fa/topics/*.md'],
+  {
+    excerpt: true,
+    transform(raw) {
+      const posts = raw
+        .filter(
+          ({ frontmatter, url }) =>
+            frontmatter.title &&
+            !frontmatter.index &&
+            !url.endsWith('index.md')
+        )
+        .map((page) => processPost(page, base))
+        .sort((a, b) => b.date.time - a.date.time);
 
-        return {
-          title: frontmatter.title,
-          url: `${base}${url.replace(/\.md$/, '')}`,
-          excerpt: stripHtmlAndTruncate(frontmatter.description || excerpt, EXCERPT_MAX_LENGTH),
-          date: formatDate(frontmatter.date || frontmatter.lastUpdated, lang),
-          lang,
-          category,
-          categoryIcon: getCategoryIcon(category),
-          categoryTitle: getCategoryTitle(category, lang),
-          tags: frontmatter.tags || [],
-          author: frontmatter.author || 'Dìana'
-        };
-      })
-      .sort((a, b) => b.date.time - a.date.time);
-
-    const postsByCategory = {};
-    sortedPosts.forEach(post => {
-      const key = `${post.category}-${post.lang}`;
-      if (!postsByCategory[key]) {
-        postsByCategory[key] = [];
-      }
-      if (postsByCategory[key].length < MAX_POSTS_PER_SECTION) {
-        postsByCategory[key].push(post);
-      }
-    });
-
-    const finalPosts = Object.values(postsByCategory)
-      .flat()
-      .sort((a, b) => b.date.time - a.date.time)
-      .slice(0, MAX_TOTAL_POSTS);
-
-    return {
-      posts: finalPosts,
-      categories: {
-        windowsActivation: finalPosts.filter(p => p.category === 'windows-activation'),
-        topics: finalPosts.filter(p => p.category === 'topics')
-      },
-      byLang: {
-        en: finalPosts.filter(p => p.lang === 'en'),
-        fa: finalPosts.filter(p => p.lang === 'fa')
-      }
-    };
+      return {
+        'fa-IR': posts.filter((p) => p.lang === 'fa'),
+        'en-US': posts.filter((p) => p.lang === 'en'),
+      };
+    },
   }
-});
+);
+
+function processPost(page, base) {
+  const lang = page.url.includes('/fa/') ? 'fa' : 'en';
+  const category = categorizePost(page.url);
+  return {
+    title: page.frontmatter.title,
+    url: `${base}${page.url.replace(/\.md$/, '')}`,
+    excerpt: stripHtmlAndTruncate(
+      page.frontmatter.description || page.excerpt,
+      EXCERPT_MAX_LENGTH
+    ),
+    date: formatDate(page.frontmatter.date || page.frontmatter.lastUpdated, lang),
+    lang,
+    category,
+    categoryIcon: getCategoryIcon(category),
+    categoryTitle: getCategoryTitle(category, lang),
+    tags: page.frontmatter.tags || [],
+    author: page.frontmatter.author || 'Dìana',
+  };
+}
