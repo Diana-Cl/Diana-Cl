@@ -2,7 +2,7 @@
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
 index: true
-lanf: "fa-IR"
+lang: "fa-IR"
 dir: "rtl"
 
 hero:

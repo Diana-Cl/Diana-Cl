@@ -57,7 +57,7 @@ function getCategoryTitle(category, lang = 'en') {
 }
 
 export default createContentLoader(
-  ['docs/fa/wa/*.md', 'docs/wa/*.md', 'docs/topics/*.md', 'docs/fa/topics/*.md'],
+  ['fa/wa/*.md', 'wa/*.md', 'topics/*.md', 'fa/topics/*.md'],
   {
     excerpt: true,
     transform(raw) {
