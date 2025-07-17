@@ -4,28 +4,30 @@ layout: home
 index: true
 
 hero:
-  name: "Dìana"
-  text: "A Collection of My Notes"
-  tagline: Exploring technology, security, and everything in between.
+  name: "Freedom to Dream 🦋"
+  text: "Instant Windows & Office Activation"
+  tagline: "A reliable, open-source activation toolkit for Windows and Office, featuring HWID, KMS, Ohook, and more. Activate in under 40 seconds!"
   actions:
     - theme: brand
-      text: Get Started with Gemini
-      link: /fa/topics/Gemini
+      text: Get Started
+      link: ./intro
     - theme: alt
       text: View on GitHub
-      link: https://github.com/Diana-Cl/Diana-Cl
+      link: https://github.com/Diana-Cl/Diana-Cl/
 
 features:
-  - title: "🔒 Security Research"
-    details: "Deep dives into malware analysis, security vulnerabilities, and threat intelligence."
-  - title: "⚙️ Development Guides"
-    details: "Practical guides for server configuration, web development and more."
-  - title: "🤖 AI & Technology"
-    details: "Exploring the latest in artificial intelligence, from language models to diffusion techniques."
+  - title: "🔐 HWID Activation"
+    details: "Get a permanent digital license for Windows 10 & 11. Tied to your hardware, it survives reinstalls."
+  - title: "⚙️ KMS & Online KMS"
+    details: "Activate Windows and Office for 180 days, with an auto-renewal task for lifetime activation."
+  - title: "🏆 Ohook & TSforge"
+    details: "Permanent, offline activation methods for various editions of Microsoft Office for windows 7 / 11"
+  - title: "📦 All-in-one"
+    details: "All-in One, This comprehensive guide walks you through reliable, open-source methods"
 ---
 
 <script setup>
-import { data as posts } from './.vitepress/posts.data.js'
+import { data as posts } from '../.vitepress/posts.data.js'
 </script>
 
 <div class="latest-posts-section">

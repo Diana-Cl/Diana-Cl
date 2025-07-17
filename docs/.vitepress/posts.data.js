@@ -2,8 +2,8 @@ import { createContentLoader } from 'vitepress'
 
 const base = '/Diana-Cl/';
 const EXCERPT_MAX_LENGTH = 150;
-const MAX_POSTS_PER_SECTION = 3;
-const MAX_TOTAL_POSTS = 12;
+const MAX_POSTS_PER_SECTION = 5;
+const MAX_TOTAL_POSTS = 15; 
 
 function stripHtmlAndTruncate(html, maxLength) {
   if (!html) return '';
@@ -33,19 +33,15 @@ function formatDate(raw, lang = 'en') {
 }
 
 function categorizePost(url) {
-  if (url.includes('/security/')) return 'security';
-  if (url.includes('/ai/')) return 'ai';
-  if (url.includes('/development/')) return 'development';
   if (url.includes('/windows-activation/')) return 'windows-activation';
+  if (url.includes('/topics/')) return 'topics';
   return 'other';
 }
 
 function getCategoryIcon(category) {
   const icons = {
-    'security': '🔒',
-    'ai': '🤖',
-    'development': '⚙️',
     'windows-activation': '🪟',
+    'topics': '📚', 
     'other': '📄'
   };
   return icons[category] || '📄';
@@ -53,32 +49,31 @@ function getCategoryIcon(category) {
 
 function getCategoryTitle(category, lang = 'en') {
   const titles = {
-    'security': lang === 'fa' ? 'امنیت' : 'Security',
-    'ai': lang === 'fa' ? 'هوش مصنوعی' : 'AI',
-    'development': lang === 'fa' ? 'توسعه' : 'Development',
     'windows-activation': lang === 'fa' ? 'فعال‌سازی ویندوز' : 'Windows Activation',
+    'topics': lang === 'fa' ? 'موضوعات عمومی' : 'General Topics',
     'other': lang === 'fa' ? 'سایر' : 'Other'
   };
   return titles[category] || (lang === 'fa' ? 'سایر' : 'Other');
 }
 
 export default createContentLoader([
-  '{security,ai,development,windows-activation}/*.md',
-  'fa/{security,ai,development,windows-activation}/*.md'
+  'wa/*.md',
+  'fa/topics/*.md',
+  'fa/wa/*.md'
 ], {
   excerpt: true,
   transform(raw) {
     const sortedPosts = raw
-      .filter(({ frontmatter }) => frontmatter?.title)
+      .filter(({ frontmatter }) => frontmatter?.title && !frontmatter.index) 
       .map(({ url, frontmatter, excerpt }) => {
         const lang = url.includes('/fa/') ? 'fa' : 'en';
         const category = categorizePost(url);
         
         return {
           title: frontmatter.title,
-          url: `${base}${url.startsWith('/') ? url.substring(1) : url}`,
+          url: `${base}${url.replace(/\.md$/, '')}`, 
           excerpt: stripHtmlAndTruncate(frontmatter.description || excerpt, EXCERPT_MAX_LENGTH),
-          date: formatDate(frontmatter.date, lang),
+          date: formatDate(frontmatter.date || frontmatter.lastUpdated, lang),
           lang,
           category,
           categoryIcon: getCategoryIcon(category),
@@ -109,10 +104,8 @@ export default createContentLoader([
     return {
       posts: finalPosts,
       categories: {
-        security: finalPosts.filter(p => p.category === 'security'),
-        ai: finalPosts.filter(p => p.category === 'ai'),
-        development: finalPosts.filter(p => p.category === 'development'),
-        windowsActivation: finalPosts.filter(p => p.category === 'windows-activation')
+        windowsActivation: finalPosts.filter(p => p.category === 'windows-activation'),
+        topics: finalPosts.filter(p => p.category === 'topics')
       },
       byLang: {
         en: finalPosts.filter(p => p.lang === 'en'),
