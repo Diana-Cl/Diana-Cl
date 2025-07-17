@@ -65,10 +65,23 @@ export default defineConfig({
       themeConfig: {
         nav: [
           { text: '🏠 Home', link: '/' },
-          { text: '📚 Notes', link: '/fa/topics/Gemini' },
+          { text: '📚 Notes', link: '/topics/' },
           { text: '🪟 Windows Activation', link: '/wa/' },
         ],
         sidebar: {
+          '/wa/topics/': [
+            {
+              text: '📚 Notes',
+              items: [
+                { text: 'Google Gemini', link: '/topics/Gemini' },
+                { text: 'Ai Agents', link: '/topics/ai-agents' },
+                { text: 'Stable Diffusion', link: '/topics/Stable-Diffusion' },
+                { text: 'REvil', link: '/topics/REvil' },
+                { text: 'Cloudflare Back-end Sl', link:  '/topics/cf-backend-selector' },
+                { text: 'Upgrade PHP On CentOS 7', link: '/topics/Upgrade-PHP-version-on-CentOS-7' },
+              ]
+            }
+          ],
           '/wa/': [
             {
               text: 'Activation Guides',
@@ -156,7 +169,7 @@ export default defineConfig({
       themeConfig: {
         nav: [
           { text: '🏠 خانه', link: '/fa/' },
-          { text: '📚 یادداشت‌ها', link: '/fa/topics/Gemini' },
+          { text: '📚 یادداشت‌ها', link: '/fa/topics/' },
           { text: '🪟 فعال‌سازی ویندوز', link: '/fa/wa/' },
         ],
         sidebar: {

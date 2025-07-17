@@ -2,6 +2,8 @@
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
 index: true
+lanf: "fa-IR"
+dir: "rtl"
 
 hero:
   name: 'رویای آزادی 🦋'

@@ -18,14 +18,14 @@ function stripHtmlAndTruncate(html, maxLength) {
 function formatDate(raw, lang = 'en') {
   const date = raw ? new Date(raw) : new Date();
   if (isNaN(date.getTime())) return { time: 0, string: 'N/A' };
-  
+
   const locale = lang === 'fa' ? 'fa-IR' : 'en-US';
   const options = {
     year: 'numeric',
     month: 'long',
     day: 'numeric'
   };
-  
+
   return {
     time: +date,
     string: date.toLocaleDateString(locale, options)
@@ -33,7 +33,7 @@ function formatDate(raw, lang = 'en') {
 }
 
 function categorizePost(url) {
-  if (url.includes('/windows-activation/')) return 'windows-activation';
+  if (url.includes('/wa/')) return 'wa';
   if (url.includes('/topics/')) return 'topics';
   return 'other';
 }
@@ -49,7 +49,7 @@ function getCategoryIcon(category) {
 
 function getCategoryTitle(category, lang = 'en') {
   const titles = {
-    'windows-activation': lang === 'fa' ? 'فعال‌سازی ویندوز' : 'Windows Activation',
+    'wa': lang === 'fa' ? 'فعال‌سازی ویندوز' : 'Wa',
     'topics': lang === 'fa' ? 'موضوعات عمومی' : 'General Topics',
     'other': lang === 'fa' ? 'سایر' : 'Other'
   };
@@ -68,10 +68,10 @@ export default createContentLoader([
       .map(({ url, frontmatter, excerpt }) => {
         const lang = url.includes('/fa/') ? 'fa' : 'en';
         const category = categorizePost(url);
-        
+
         return {
           title: frontmatter.title,
-          url: `${base}${url.replace(/\.md$/, '')}`, 
+          url: `${base}${url.replace(/\.md$/, '')}`,
           excerpt: stripHtmlAndTruncate(frontmatter.description || excerpt, EXCERPT_MAX_LENGTH),
           date: formatDate(frontmatter.date || frontmatter.lastUpdated, lang),
           lang,
@@ -85,7 +85,6 @@ export default createContentLoader([
       .sort((a, b) => b.date.time - a.date.time);
 
     const postsByCategory = {};
-    
     sortedPosts.forEach(post => {
       const key = `${post.category}-${post.lang}`;
       if (!postsByCategory[key]) {
