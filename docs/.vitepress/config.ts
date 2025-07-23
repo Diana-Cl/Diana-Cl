@@ -5,14 +5,13 @@ import attrs from 'markdown-it-attrs';
 import { mermaid } from 'vitepress-plugin-mermaid';
 import { tabsMarkdownPlugin } from 'vitepress-plugin-tabs';
 
-const base = '/Diana-Cl/';
+const base = '/Diana-Cl/;
+const siteUrl = `https://Diana-Cl.github.io${base}`;
 
-export default defineConfig({
+  export default defineConfig({
   base: base,
   cleanUrls: true,
   ignoreDeadLinks: true,
-  title: "Dìana",
-  description: 'My personal notes and articles about technology, security, and AI',
 
   head: [
     ['link', { rel: 'icon', href: `${base}favicon.ico` }],
@@ -62,6 +61,8 @@ export default defineConfig({
       label: 'English',
       lang: 'en-US',
       dir: 'ltr',
+      title: 'Dìana',
+      description: 'My personal notes and articles about technology, security, and AI',
       themeConfig: {
         nav: [
           { text: '🏠 Home', link: '/' },
@@ -74,10 +75,11 @@ export default defineConfig({
               text: '📚 Notes',
               items: [
                 { text: 'Google Gemini', link: '/topics/Gemini' },
+                { text: 'Poker – Texas Holdem', link: '/topics/poker-holdem' },
                 { text: 'Ai Agents', link: '/topics/ai-agents' },
                 { text: 'Stable Diffusion', link: '/topics/Stable-Diffusion' },
                 { text: 'REvil', link: '/topics/REvil' },
-                { text: 'Cloudflare Back-end Sl', link:  '/topics/cf-backend-selector' },
+                { text: 'Cloudflare Back-end Selector', link:  '/topics/cf-backend-selector' },
                 { text: 'Upgrade PHP On CentOS 7', link: '/topics/Upgrade-PHP-version-on-CentOS-7' },
               ]
             }
@@ -85,9 +87,9 @@ export default defineConfig({
           '/wa/': [
             {
               text: 'Activation Guides',
-              collapsed: false,
+              collapsed: true,
               items: [
-                { text: 'HWID Activation', link: '/wa/intro' },
+                { text: 'HWID Activation', link: '/wa/' },
                 { text: 'KMS Activation', link: '/wa/kms' },
                 { text: 'Methods Chart', link: '/wa/chart' },
                 { text: 'Download Windows / Office', link: '/wa/genuine-installation-media' },
@@ -115,9 +117,15 @@ export default defineConfig({
                 { text: 'Win 10 After End-Of-Life', link: '/wa/windows10_eol' },
                 { text: 'Remove Malware', link: '/wa/remove_malware' },
                 { text: 'Clean Install Windows', link: '/wa/clean_install_windows' },
-                { text: 'Office License Is Not Genuine', link: '/wa/office-license-is-not-genuine' },
+                {
+                  text: 'Office License Is Not Genuine',
+                  link: '/wa/office-license-is-not-genuine',
+                },
                 { text: 'Licensing Servers Issue', link: '/wa/licensing-servers-issue' },
-                { text: 'Issues Due To Gaming Spoofers', link: '/wa/issues_due_to_gaming_spoofers' },
+                {
+                  text: 'Issues Due To Gaming Spoofers',
+                  link: '/wa/issues_due_to_gaming_spoofers',
+                },
                 { text: 'Change Edition Issues', link: '/wa/change_edition_issues' },
                 { text: 'Evaluation Editions', link: '/wa/evaluation_editions' },
                 { text: 'Fix Powershell', link: '/wa/fix_powershell' },
@@ -150,22 +158,30 @@ export default defineConfig({
         logo: '/logo-h.svg',
         search: { provider: 'local' },
         docFooter: { prev: 'Previous page', next: 'Next page' },
-        lastUpdated: { text: 'Last updated', formatOptions: { dateStyle: 'medium', timeStyle: 'short' } },
-        editLink: { pattern: 'https://github.com/Diana-Cl/Diana-Cl/edit/main/docs/:path', text: 'Edit this page on GitHub' },
+        lastUpdated: {
+          text: 'Last updated',
+          formatOptions: { dateStyle: 'medium', timeStyle: 'short' },
+        },
+        editLink: {
+          pattern: 'https://github.com/Diana-Cl/Diana-Cl/edit/main/docs/:path',
+          text: 'Edit this page on GitHub',
+        },
         socialLinks: [
           { icon: 'github', link: 'https://github.com/Diana-Cl/' },
           { icon: 'telegram', link: 'https://t.me/F_NiREvil/6448' },
         ],
         footer: {
-          copyright: '© 2025 Dìana — Sharing knowledge, one note at a time',
+          copyright: '© 2025 REvil — Sharing knowledge, one note at a time',
           message: 'Made with using VitePress',
         },
-      }
+      },
     },
     fa: {
       label: 'فارسی',
       lang: 'fa-IR',
       dir: 'rtl',
+      title: 'Dìana',
+      description: '',
       themeConfig: {
         nav: [
           { text: '🏠 خانه', link: '/fa/' },
@@ -178,6 +194,7 @@ export default defineConfig({
               text: '📚 یادداشت‌ها',
               items: [
                 { text: 'گوگل جمنای', link: '/fa/topics/Gemini' },
+                { text: 'پوکر – تگزاس هولدم', link: '/fa/topics/poker-holdem' },
                 { text: 'دستیارهای هوش مصنوعی', link: '/fa/topics/ai-agents' },
                 { text: 'استیبل دیفیوژن', link: '/fa/topics/Stable-Diffusion' },
                 { text: 'REvil', link: '/fa/topics/REvil' },
@@ -191,10 +208,10 @@ export default defineConfig({
               text: 'راهنمای فعال‌سازی',
               collapsed: false,
               items: [
-                { text: 'فعال‌سازی با روش HWID', link: '/fa/wa/intro' },
+                { text: 'فعال‌سازی با روش HWID', link: '/fa/wa/' },
                 { text: 'فعال‌سازی با روش KMS', link: '/fa/wa/kms' },
                 { text: 'مقایسه انواع روش‌ها', link: '/fa/wa/chart' },
-                { text: 'دانلود ویندوز / آفیس', link: '/fa/wa/genuine-installation-media' },
+                { text: 'دانلود ویندوز – آفیس', link: '/fa/wa/genuine-installation-media' },
               ],
             },
             {
@@ -218,10 +235,13 @@ export default defineConfig({
               items: [
                 { text: 'ویندوز ۱۰ بعد از پایان پشتیبانی', link: '/fa/wa/windows10_eol' },
                 { text: 'حذف بدافزارها', link: '/fa/wa/remove_malware' },
-                { text: 'نصب تمیز ویندوز', link: '/fa/wa/clean_install_windows' },
+                { text: 'نصب تمیز و اصولی ویندوز', link: '/fa/wa/clean_install_windows' },
                 { text: 'لایسنس آفیس اصل نیست', link: '/fa/wa/office-license-is-not-genuine' },
                 { text: 'مشکل سرورهای لایسنس', link: '/fa/wa/licensing-servers-issue' },
-                { text: 'مشکلات ناشی از اسپوفرهای گیم', link: '/fa/wa/issues_due_to_gaming_spoofers' },
+                {
+                  text: 'مشکلات ناشی از اسپوفرهای گیم',
+                  link: '/fa/wa/issues_due_to_gaming_spoofers',
+                },
                 { text: 'مشکلات تغییر نسخه', link: '/fa/wa/change_edition_issues' },
                 { text: 'نسخه‌های ارزیابی', link: '/fa/wa/evaluation_editions' },
                 { text: 'رفع مشکل پاورشل', link: '/fa/wa/fix_powershell' },
@@ -251,16 +271,19 @@ export default defineConfig({
             },
           ],
         },
-        editLink: { pattern: 'https://github.com/Diana-Cl/Diana-Cl/edit/main/docs/:path', text: 'این صفحه را در گیت‌هاب ویرایش کنید' },
+        editLink: {
+          pattern: 'https://github.com/Diana,-Cl/Diana-Cl/edit/main/docs/:path',
+          text: 'این صفحه را در گیت‌هاب ویرایش کنید',
+        },
         docFooter: { prev: 'صفحه قبلی', next: 'صفحه بعدی' },
         lastUpdated: { text: 'آخرین بروزرسانی' },
-      }
-    }
+      },
+    },
   },
 
   vite: {
     optimizeDeps: {
-      exclude: ['video.js']
-    }
-  }
-})
+      exclude: ['video.js'],
+    },
+  },
+});
