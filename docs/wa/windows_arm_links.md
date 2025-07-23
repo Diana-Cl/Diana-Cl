@@ -9,10 +9,12 @@ editLink: true
 
 # Windows ARM64 Download
 
-> All download links lead to genuine files only.
->
+All download links lead to genuine files only.
+
 > - [FAQ](./genuine-installation-media#faq)
 > - You need an ARM64 processor (CPU) to install Windows ARM64 architecture OS.
+
+----
 
 ## Download Links
 
@@ -27,6 +29,8 @@ editLink: true
 Build - 26100.1742
 
 **Download Links:** [MSDL 🤍][1] / [Microsoft][2]
+
+----
 
 == Windows 11 IoT Enterprise 24H2
 
@@ -141,7 +145,6 @@ Build - 19045.5854
 **(Not LTSC)**  
 
 Build - 19045.2006  
-
 ARM64 version for IoT Enterprise ISO is available only in English language.  
 
 | Language | Arch  | Link                                                                                                                                                                   |
@@ -154,13 +157,14 @@ ARM64 version for IoT Enterprise ISO is available only in English language.
 
 **Windows 10 IoT Enterprise LTSC 2021**
 
-Build - 19044.1288
-
+Build - 19044.1288  
 ARM64 version for LTSC is available only in English language.  
 
 | Language | Arch  | Link                                                                                                                                                             |
 |:---------|:------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | English  | ARM64 | [en-us_windows_10_iot_enterprise_ltsc_2021_arm64_dvd_e8d4fc46.iso](https://drive.massgrave.dev/en-us_windows_10_iot_enterprise_ltsc_2021_arm64_dvd_e8d4fc46.iso) |
+
+----
 
 == Other Versions
 
@@ -170,6 +174,8 @@ ARM64 version for LTSC is available only in English language.
 - Put the ESD file beside `decrypt.cmd` and run that script.
 - It will create the ISO file.
 - This process is the same as how the official MCT tool creates Windows 10 and 11 ISOs.
+
+---
 
 :::
 

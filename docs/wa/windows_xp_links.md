@@ -7,14 +7,17 @@ date: 2025-04-19
 editLink: true
 ---
 
+
 # Windows XP Download
 
-> All download links lead to genuine files only.
-> 
-> [FAQ](./genuine-installation-media#faq)
+All download links lead to genuine files only.
+
+> - [FAQ](./genuine-installation-media#faq)
 > -   For x86, SP3 and for x64, SP2 are the last released ISOs available. x64 SP2 version was released in English language only.
 > -   x86 VL ISOs can be activated with the key `XCYBK-2B3KV-G8T8F-WXJM7-WCTYT`
 > -   x64 VL ISOs can be activated with the key `VCFQD-V9FX9-46WVH-K3CD4-4J3JM`
+
+----
 
 :::tabs
 
@@ -49,6 +52,8 @@ editLink: true
 | zh-hans               | x86  | [zh-hans_windows_xp_professional_with_service_pack_3_x86_cd_vl_x14-74070.iso](https://drive.massgrave.dev/zh-hans_windows_xp_professional_with_service_pack_3_x86_cd_vl_x14-74070.iso) |
 | Chinese-Hong Kong SAR | x86  | [zh-hk_windows_xp_professional_with_service_pack_3_x86_cd_vl_x14-74075.iso](https://drive.massgrave.dev/zh-hk_windows_xp_professional_with_service_pack_3_x86_cd_vl_x14-74075.iso)     |
 | Chinese-Traditional   | x86  | [zh-tw_windows_xp_professional_with_service_pack_3_x86_cd_vl_x14-74140.iso](https://drive.massgrave.dev/zh-tw_windows_xp_professional_with_service_pack_3_x86_cd_vl_x14-74140.iso)     |
+
+----
 
 == Windows XP SP2 VL (x64)
 

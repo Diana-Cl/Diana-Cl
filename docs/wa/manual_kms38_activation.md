@@ -10,7 +10,7 @@ editLink: true
 
 # KMS38
 
-This page is intended for users who do not want to use the script for any reason and would rather perform the KMS38 activation process themselves. If you'd like to use a tool for this instead, please check [here](./intro#step-2-run-the-activation-script).
+This page is intended for users who do not want to use the script for any reason and would rather perform the KMS38 activation process themselves. If you'd like to use a tool for this instead, please check [here](./index#step-2-run-the-activation-script).
 
 ::: info Note
 
@@ -81,6 +81,8 @@ clipup -v -o -altto C:\
   Place the `ClipUp.exe` file in the `C:\Windows\System32` folder and perform the KMS38 activation process. Once the activation is complete, you can remove the file.
 
 :::
+
+<br/>
 
 ### Windows 10 / 11
 | Product Names                                          | Generic Volume License Key    |

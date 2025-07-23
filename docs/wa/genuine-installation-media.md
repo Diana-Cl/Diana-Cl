@@ -29,7 +29,7 @@ All download links available on our website lead to genuine files only.
 
 ## Download Office
 
-Activation with [MAS](./intro#step2) is required after the installation of Office.
+Activation with [MAS](./index#step2) is required after the installation of Office.
 
 -  [Office C2R Installers][4] 🤍 (O365 / 2024 / 2021 / 2019 / 2016 / 2013)
 -  [Office C2R Custom Install][5] (O365 / 2024 / 2021 / 2019 / 2016)

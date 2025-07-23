@@ -26,23 +26,26 @@ head:
 
 > This guide walks you through activating Windows for <Badge type="tip" text="180 Days" /> using Microsoft’s official Key Management Service <Badge type="tip" text="KMS" /> method
 > 
-> It is a safe and trusted activation approach for volume-licensed products, and can be renewed indefinitely. <br/>
+> It is a safe and trusted activation approach for volume-licensed products, and can be renewed indefinitely.
+
+<br/>
 
 <div class="rtl">
 
-**[من انگلیسی میفهمم ولی متوجه نمیشم ✋🤧😅](/fa/wa/kms)**
+**[من انگلیسی می‌فهمم ولی متوجه نمیشم ✋🤧😅](/fa/wa/kms)**
 
 </div>
-
 
 # Method 2. Activating Win for 180 days with KMS
 
 ::: tip Prerequisites
 
 - A stable internet connection.
-- Administrator privileges for CMD on your computer.
+- Administrator privileges for CMD on your computer
 
 :::
+
+<br/>
 
 ## Step 1. Open Command Prompt as Administrator
 
@@ -56,16 +59,18 @@ head:
   <img src="https://github.com/user-attachments/assets/4465a2d3-6c93-4ee1-bb63-94ab7b8e06ac" alt="run-cmd-as-dmin" width="580px" />
 </p>
 
-::: tip Another ways to run CMD
+::: tip To run CMD
 
-::: details Click here to see more details
+::: details For a view of alternative methods, please click here.
 
 ### Option B: Using the Run box
 
 1. Open the Run Dialog box: Press `Win (⊞) + R` keys Simultaneously
 2. Type: `cmd` or `command prompt`
 3. press `Ctrl + Shift + Enter` to run as administrator
-4. If prompted by User Account Control, click `Yes` <br/>
+4. If prompted by User Account Control, click `Yes`
+
+<br/>
 
 ### Option C: Using Power User Menu
 
@@ -76,6 +81,8 @@ Or You can visit [this Link][2] to see 8 ways to run **cmd**, And  [This Link][1
 
 :::
 
+<br/>
+
 ## Step 2. Install a Generic KMS Client Key
 
 In the Command Prompt window, run the following command.  
@@ -84,6 +91,8 @@ You must replace `Your-License-Key` with the key from the table below that match
 ```reg
 slmgr /ipk Your-License-Key
 ```
+
+<br/>
 
 ::: tip To find your Windows edition
 
@@ -95,6 +104,8 @@ slmgr /ipk Your-License-Key
 <p align="center">
   <img src="https://github.com/user-attachments/assets/647ef16b-9208-4ff3-a94b-825ffa99721f" alt="about-system" width="540px" />
 </p>
+
+<br/>
   
 ::: details Click here to see more ways
 
@@ -104,6 +115,8 @@ slmgr /ipk Your-License-Key
 2. Click on `💻 System`
 3. Scroll down and click on `ℹ️ About`
 4. Under `Windows specifications`, you will see the Edition of your Windows
+
+<br/>
 
 ### Option C: Using Run Box
 
@@ -117,7 +130,7 @@ slmgr /ipk Your-License-Key
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/4c7edc15-1c02-4d7b-ab5f-df70eaff8ad7" alt="winver-response" width="540px" />
-</p>
+</p><br/>
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/a6360712-0ad0-4be4-b0a4-01171d293d83" alt="msinfo32-command" width="540px" />
@@ -126,6 +139,8 @@ slmgr /ipk Your-License-Key
 <p align="center">
   <img src="https://github.com/user-attachments/assets/8592c1bd-4a1a-47c1-bd21-0eb17049db31" alt="msinfo32-response" width="540px" />
 </p>
+
+<br/>
   
 ### Option D: Using CMD or PowerShell [^2]  
 1. Click on windows "Start" button or "Search" icon
@@ -136,12 +151,14 @@ slmgr /ipk Your-License-Key
   <img src="https://github.com/user-attachments/assets/16e8f49a-0cec-4836-b841-0cbd9344fbb1" alt="findstdr command" width="540px" />
 </p>
 
+<br/>
+
 ### Option E: Using CMD like option D
 
 1. Also, run "PowerShell" or "CMD"
 2. Type `slmgr /dlv`, and press "Enter" key
 3. The `/dlv` command displays the detailed licensing information
-4. Notice the output displays "Home" as seen in the following image:
+4. Notice the output displays "Enterprise" as seen in the following image:
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/86925e56-7cac-4b53-8ccf-6addcd799ece" alt="slmgr-command" width="540px" />
@@ -149,7 +166,11 @@ slmgr /ipk Your-License-Key
 
 :::
 
-Please select one of the "license keys" from the list that "matches your version of Windows" and replace it (via Right-click) with the phrase `Your-License-Key` in the command.
+<br/>
+
+Please select one of the **"license keys"** from the list that "matches your version of Windows" and replace it (via Right-click) with the phrase `Your-License-Key` in the command.
+
+<br/>
 
 ### Generic Volume License Keys <Badge type="danger" text="GVLK" />
 
@@ -180,6 +201,8 @@ Please select one of the "license keys" from the list that "matches your version
 <p align="center">
   <img src="https://github.com/user-attachments/assets/50c23cad-7690-49fb-bf1c-d1c7cc66f0fe" alt="install-KMS-keyy" width="540px" />
 </p>
+
+<br/>
  
 ::: details An alternative license keys
 
@@ -198,6 +221,8 @@ Please select one of the "license keys" from the list that "matches your version
 
 :::
 
+<br/>
+
 ## Step 3. Set the KMS Server Address
 
 Next, point your system to a public KMS server. Run this command:
@@ -210,6 +235,8 @@ slmgr /skms kms8.msguides.com
   <img src="https://github.com/user-attachments/assets/edd0835f-c314-4ef8-a87d-a33e29f3f7c0" alt="set-kms-server" width="580px" />
 </p>
 
+<br/>
+
 ## Step 4. Activate Windows
 
 Finally, trigger the activation by running command:
@@ -221,6 +248,8 @@ slmgr /ato
 <p align="center">
   <img src="https://github.com/user-attachments/assets/95e014e5-8946-4036-84ca-77ebb6122b1b" alt="active-windows" width="580px" />
 </p>
+
+<br/>
 
 ## Step 5. Check Activation Status
 
@@ -236,27 +265,27 @@ Settings > System > Activation. [^8]
   <img src="https://github.com/user-attachments/assets/da52f1bb-79c9-45db-bade-a0f56cd0a739" alt="activated" width="580px" />
 </p>
 
-### Troubleshooting
-
--
-::: danger Troubleshooting
-
-**Error 0xC004F074:** This usually means your internet connection is unstable or the server is busy. Ensure you are online and try the `slmgr /ato` command again. <br/>
-
-**Method Not Working?** If you're still having trouble, try the **HWID method** from the [Main guide](./intro). or [Online KMS](./online_kms) from MAS. <br/>
-
-:::
+<hr/><br/>
 
 ::: danger Troubleshoot
 
-- If you need any help regarding this, first review the [**FAQ section**](./faq) — your answer will most likely be there.  
+**Error 0xC004F074:** This usually means your internet connection is unstable or the server is busy. Ensure you are online and try the `slmgr /ato` command again. 
 
-- If your issue persists — You can [**Contact us**](./troubleshoot).
+<br/>
+
+**Method Not Working?** If you're still having trouble, try the **HWID method** from the [Main guide](./index#step2). or [Online KMS](./online_kms).
+
+<br/>
+
+If you need any help regarding this, first review the [**FAQ section**](./faq) — your answer will most likely be there.  
+
+If your issue persists — You can [**Contact us**](./troubleshoot).
 
 :::
 
+<h3 align="center">Be curious 🪐🩶</h3>
 
-<h3 align="left">Be curious 🪐🩶</h3>
+<br/><br/>
 
 ## About Hotkeys <Badge type="danger" text="For Enthusiasts" />
 
@@ -267,7 +296,7 @@ So, you can quickly access those tools through the Power user menu.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/7fa52188-2ac2-4b4d-9600-cf3f92e11d3d" alt="windows-plus-x-menu" width="460px" />
-</p>
+</p><br/>
   
 The default programs in the Power User Menu have a corresponding hotkey. Familiarity with the hotkeys of common programs can save a lot of time and improve efficiency.  
 For example:

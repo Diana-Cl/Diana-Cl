@@ -9,13 +9,13 @@ editLink: true
 
 # Ohook
 
-> This page is intended for users who do not want to use the script for any reason and would rather perform the Ohook activation process themselves. If you'd like to use a tool for this instead, please check [here](./intro#step2).
+> This page is intended for users who do not want to use the script for any reason and would rather perform the Ohook activation process themselves. If you'd like to use a tool for this instead, please check [here](./index#step2).
 
 ::: tip Tip
 
 The steps below only apply to Office 16.0 (2016, 2019, 2021 and 365) C2R x64 bit versions running on an x64 bit Windows 8+ machine.  
 
-For older Office versions, please follow [this](./intro#step2) instead.
+For older Office versions, please follow [this](./index#step2) instead.
 
 :::
 

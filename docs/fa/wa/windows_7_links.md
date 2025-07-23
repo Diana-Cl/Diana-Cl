@@ -12,7 +12,7 @@ editLink: true
 > - تمام لینک‌های دانلود فقط به فایل‌های اصلی منتهی می‌شوند.
 > 
 > - [FAQ](./genuine-installation-media#سوالات-متداول)
-> -   **شما می‌توانید ویندوز ۷ را با [TSforge option in MAS](./index#step2)** به طور دائم فعال کنید.
+> -   **شما می‌توانید ویندوز ۷ را با [TSforge option in MAS](./index#مرحله-۲)** به طور دائم فعال کنید.
 > -   فایل‌های ISO نسخه‌های Ultimate، Professional، Home Premium، Home Basic و Starter شامل همه نسخه‌ها به جز Enterprise هستند، اما به طور پیش‌فرض هنگام نصب ویندوز نمایش داده نمی‌شوند. می‌توانید به راحتی هر یک از آنها را هنگام نصب انتخاب کنید و برای این کار باید آنها را حذف یا ویرایش کنید.`sources\ei.cfg` فایل را در USB یا ISO قابل بوت قرار دهید.
 > -   برای دریافت آخرین به‌روزرسانی‌ها در نصب ویندوز ۷، می‌توانید از [Simplix Pack][1]  ESU را با گزینه TSforge در MAS فعال کنید.
 
@@ -20,7 +20,8 @@ editLink: true
 
 ## لینک‌های دانلود
 
-**Windows 7 SP1**  
+**Windows 7 SP1**
+
 **Build - 7601.17514**
 
 :::tabs
@@ -270,7 +271,7 @@ editLink: true
 
 == Windows 7 Professional VL SP1
 
-**Windows 7 Professional VL SP1**  
+**Windows 7 Professional VL SP1**
 
 > این نسخه فقط شامل فهرست نسخه حرفه‌ای است
 
@@ -434,7 +435,7 @@ editLink: true
 
 == Windows 7 Home Basic SP1
 
-**Windows 7 Home Basic SP1**  
+**Windows 7 Home Basic SP1**
 
 > فقط در MVS به صورت x86 موجود است
 
@@ -482,7 +483,7 @@ editLink: true
 
 == Windows 7 Starter SP1
 
-**Windows 7 Starter SP1**  
+**Windows 7 Starter SP1**
 
 > فقط به صورت x86 موجود است
 
@@ -535,8 +536,6 @@ editLink: true
 > - [MVS Bot][3]
 > - [os.click/][4]
 > - [files.rg-adguard.net/5e876ce4d2c3][5]
-
-----
 
 :::
 

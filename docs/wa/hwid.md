@@ -24,7 +24,7 @@ head:
 
 ### Overview
 
-- How to use it? Please find the instructions [here](./intro).
+- How to use it? Please find the instructions [here](./index).
 - This activation method supports Windows 10/11 only.
 - This activation method does not store or modify any files in your system.
 - This activation method gives you permanent Windows activation for your system hardware.
@@ -133,13 +133,13 @@ Now a question, can Microsoft block the new requests or revoke already establish
 
 ### Command line Switches
 
-- Check [Command line switches](/command_line_switches).
+- Check [here - Command line switches](/command_line_switches).
 
 <br/>
 
 ### Manual Activation
 
-- Check [Manual hwid activation](/manual_hwid_activation).
+- Check [here - Manual hwid activation](/manual_hwid_activation).
 
 <br/>
 
@@ -248,14 +248,14 @@ C:\Files\gatherosstatemodified.exe /c Pfn=$value`;PKeyIID=4651452171313143042643
 - Check the Extract OEM option in the MAS `Extras` section if you want pre-activated Windows installation.
 - Further, read [here - OEM Folder](/oem-folder).
 
+<hr/>
 
-## Troubleshoot  
+## Troubleshooting
 
-::: danger Troubleshoot
+::: danger Troubleshooting
 
-- If you need any help regarding this, first review the [**FAQ section**](./faq) — your answer will most likely be there.  
-
-- If your issue persists — You can [**Contact Us**](./troubleshoot).
+If you have any questions, first review the [**FAQ section**](./faq) - your answer will most likely be there.
+If your issue persists - [**contact us**](./troubleshoot).
 
 :::
 

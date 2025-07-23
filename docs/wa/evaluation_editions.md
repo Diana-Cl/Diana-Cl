@@ -78,7 +78,7 @@ _(For Windows 11 on unsupported hardware, use `IoTEnterprise`)_
 
 #### Windows Server
 
-- Official conversion is supported. See [Microsoft guide][4] or use the [MAS script](./intro).
+- Official conversion is supported. See [Microsoft guide][4] or use the [MAS script](./index).
 
 ### Extending the Evaluation Period
 

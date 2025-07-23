@@ -24,7 +24,7 @@ and would like to stay on Windows 10 as long as they can.
 
 Microsoft announced [Extended Security Updates (ESU)][1] where users can buy the ESU subscription to receive Windows updates. These updates will begin to roll out in November 2025.
 
-**You can use [TSforge option in MAS](./intro#step2) to activate 3 Years ESU (Oct 2025 to Oct 2028).**
+**You can use [TSforge option in MAS](./index#step2) to activate 3 Years ESU (Oct 2025 to Oct 2028).**
 
 ## Windows 10 (IoT) Enterprise LTSC 2021
 

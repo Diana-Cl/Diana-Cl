@@ -41,4 +41,4 @@ The MAS project wouldn't be possible without the kind help and use of other hono
 | [BetaWiki](https://betawiki.net/)                                           | Documenting beta builds used for reverse engineering |
 | [MDL Forums](https://forums.mydigitallife.net/forums/51/)                   | Helpful resources                                    |
 
-And thanks to the users for their interest, feedback, and assistance. 🤍
+And thanks to the users for their interest, feedback, and assistance. ❤️

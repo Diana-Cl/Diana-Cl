@@ -9,8 +9,8 @@ editLink: true
 
 # Windows LTSC Download
 
-> All download links lead to genuine files only.
->
+All download links lead to genuine files only.
+
 > - [FAQ](./genuine-installation-media#faq)
 > - Microsoft provides Evaluation ISO public [links][1] for Windows LTSC releases, but as the name states, those ISOs are for evaluation purposes and can not be activated for more than 90 days. Below listed ISOs are full version that can be activated.
 
@@ -21,6 +21,8 @@ editLink: true
 ::: details Click here
 
 If you're uncertain, avoid LTSC and choose the general availability channel and its editions (Home, Pro, Enterprise, etc).
+
+---
 
 Microsoft releases Windows 10 and 11 through two servicing channels.
 
@@ -35,6 +37,8 @@ Microsoft releases Windows 10 and 11 through two servicing channels.
    - Maximum support on the same build is usually [5 years][4] for LTSC and [10 years][5] for the IoT LTSC.
    - This is not the main servicing channel and other software and games usually don't follow this channel's life cycle. For example, browsers and games might not provide support for 10 years on same build.
    - It lacks most of the Store (UWP) apps.
+
+---
 
 **Reasons to use LTSC:**
 
@@ -71,7 +75,7 @@ LTSC editions do not come with store apps pre-installed. To install them, follow
 - Make sure the Internet is connected.
 - Open Powershell as admin and enter,  
 
-```reg
+```
 wsreset -i
 ```
   
@@ -641,6 +645,8 @@ It doesn't have the actual IotEnterpriseS edition, it's just EnterpriseS with OE
 **Windows 10/11 IoT Enterprise LTSC ARM64**
 
 Check [Windows arm links](./windows_arm_links).
+
+---
 
 :::
 

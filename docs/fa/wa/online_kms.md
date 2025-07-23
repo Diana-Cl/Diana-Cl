@@ -11,7 +11,7 @@ editLink: true
 
 ## بررسی اجمالی
 
-- چگونه از آن استفاده کنیم؟ لطفاً دستورالعمل‌ها را در [مقدمه](./intro) بیابید.
+- چگونه از آن استفاده کنیم؟ لطفاً دستورالعمل‌ها را در [مقدمه](./index#مرحله-۲) بیابید.
 - KMS ویندوز / آفیس را برای 180 روز فعال می‌کند. برای نسخه‌های Windows Core / ProWMC این مدت 30 / 45 روز است.
 - این اسکریپت می‌تواند هم نصب ویندوز Retail و هم Volume را فعال کند.
 - این اسکریپت می‌تواند آفیس C2R Retail و VL، آفیس UWP را فعال کند، اما نه آفیس Retail 2010 / 2013 MSI.
@@ -24,7 +24,9 @@ editLink: true
 
 برای دریافت فعال‌سازی مادام‌العمر، اسکریپت به طور پیش‌فرض وظیفه تمدید خودکار ایجاد می‌کند.
 این دو فایل زیر را ایجاد می‌کند،
+
 `C:\Program Files\Activation-Renewal\Activation_task.cmd`
+
 `C:\Program Files\Activation-Renewal\Info.txt`
 
 و یک وظیفه زمان‌بندی شده `\Activation-Renewal` برای اجرای اسکریپت هر 7 روز ایجاد می‌کند. این وظیفه سرور KMS در حال کار را ثبت می‌کند و دستورات فعال‌سازی را فقط برای محصولات Volume نصب شده فعال می‌کند. وظیفه زمان‌بندی شده فقط در صورتی اجرا می‌شود که سیستم به اینترنت متصل باشد.
@@ -91,6 +93,8 @@ editLink: true
 | Windows Server 2025 Azure Core       | ServerAzureCor   | FCNV3-279Q9-BQB46-FTKXX-9HPRH |
 | Windows Server 2025 Azure Datacenter | ServerTurbine    | XGN3F-F394H-FD2MY-PP6FD-8MCRC |
 
+<br/>
+
 ### ویندوز سرور 2022 (LTSC)
 
 | نام‌های محصول                        | EditionID        | کلید مجوز حجمی عمومی    |
@@ -99,6 +103,8 @@ editLink: true
 | Windows Server 2022 Standard         | ServerStandard   | VDYBN-27WPP-V4HQT-9VMD4-VMK7H |
 | Windows Server 2022 Azure Core       | ServerAzureCor   | 6N379-GGTMK-23C6M-XVVTC-CKFRQ |
 | Windows Server 2022 Azure Datacenter | ServerTurbine    | NTBV8-9K7Q8-V27C6-M2BTV-KHMXV |
+
+<br/>
 
 ### ویندوز سرور 2019 (LTSC)
 
@@ -524,6 +530,7 @@ HKLM\SOFTWARE\WOW6432Node\Microsoft\Windows NT\CurrentVersion\SoftwareProtection
 ::: danger رفع مشکلات
 
 اگر سوالی دارید، ابتدا صفحه [**سوالات پرتکرار**](./faq) را مرور کنید — به احتمال زیاد جواب‌تان اینجاست.
+
 اگر همچنان مشکل پابرجا بود — با ما [**در ارتباط**](./troubleshoot) باشید.
 
 :::

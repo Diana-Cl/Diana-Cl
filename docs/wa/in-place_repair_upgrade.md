@@ -1,12 +1,3 @@
----
-layout: doc
-outline: deep
-title: 'In-place Repair Upgrade'
-description: 'In-place repair upgrade using Windows ISO file is a good way to fix system errors'
-date: 2024-02-05
-editLink: true
----
-
 # In-place Repair Upgrade
 
 
@@ -14,7 +5,7 @@ In-place repair upgrade using Windows ISO file is a good way to fix system error
 
 
 
-- Download the Windows ISO, preferably from [MSDL][1] in the **same Windows language, and architecture**.
+-   Download the Windows ISO, preferably from [MSDL][1] in the **same Windows language, and architecture**.
 
     -   To check the installed Windows architecture, open Powershell as admin and enter,
 
@@ -68,9 +59,9 @@ In-place repair upgrade using Windows ISO file is a good way to fix system error
 
 :::
 
-- Go into that DVD drive and run setup.exe, just continue until you reach the final confirmation screen.
+-   Go into that DVD drive and run setup.exe, just continue until you reach the final confirmation screen.
 
-- Make sure it says "**Keep personal files and apps**" on the final screen. Then you can continue the process and wait until it is done.
+-   Make sure it says "**Keep personal files and apps**" on the final screen. Then you can continue the process and wait until it is done.
 
 <br/>
 

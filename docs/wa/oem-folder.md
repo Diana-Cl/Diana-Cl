@@ -2,8 +2,8 @@
 layout: doc
 outline: deep
 title: "OEM Folder"
-description: "To create a pre-activated Windows installation ISO"
-date: 2023-05-06
+description: ""
+date: 2025-05-06
 editLink: true
 ---
 
@@ -28,6 +28,8 @@ To create a pre-activated Windows installation ISO, do the following:
     
 :::
 
+<br></br>  
+
 ## Edit ISO File  
 
 ::: tip  NOTE
@@ -41,7 +43,7 @@ To create a pre-activated Windows installation ISO, do the following:
 
 :::
 
-</br>
+</br>    
 
 ## KMS38 - Server Cor/Acor  
 
@@ -53,7 +55,7 @@ To create a pre-activated Windows installation ISO, do the following:
 -   Put the `ClipUp.exe` beside the KMS38 Activation script. That would be either `MAS_AIO.cmd` or `KMS38_Activation.cmd`  
 -   The activation script will check `ClipUp.exe` in the current folder (from where script is running) and will use it accordingly.  
 
-</br>
+</br>    
 
 ##  Preinstall Office  
 
@@ -66,9 +68,9 @@ To create a pre-activated Windows installation ISO, do the following:
 	```
 - 	Save the $OEM$ folder into the ISO as per above instructions, that's it.
 
-<br/>
+<br/> 
 
-::: danger How to Remove Activations
+::: danger How to Remove Activations ?
 
 ::: details  Click here to see the details
 

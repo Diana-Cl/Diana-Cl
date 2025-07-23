@@ -11,8 +11,8 @@ editLink: true
 
 ::: info
 
-- On this page, only those product activation methods are mentioned that are **not supported by [MAS](./intro) script**.
-- If you are unsure, run [MAS](./intro#step2) script activation options first.
+- On this page, only those product activation methods are mentioned that are **not supported by [MAS](./index) script**.
+- If you are unsure, run [MAS](./index#step2) script activation options first.
 
 :::
 

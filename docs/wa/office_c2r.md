@@ -10,12 +10,13 @@ editLink: true
 # Office C2R Custom Install
 
 ::: info Note
-
 - If the below guide is confusing to you then the simplest option for you is to use [Office C2R Installer][1].     
 - Retail Office (e.g. O365) has latest feature updates and Volume Office (e.g. ProPlus 2024) doesn't.    
 - Please note that in the official C2R office custom installation method, there is no ISO or any one-click solution available. Below is the simplest guide to installing customized office.    
 
 :::
+
+<br/>  
 
 ## Custom Installation Guide
 
@@ -55,7 +56,9 @@ editLink: true
     setup.exe /configure Configuration.xml
     ```
 
-::: tip Common errors
+<br/>
+
+::: tip **Common errors**  
 
 - Make sure you are entering those commands in command prompt (CMD) as administrator privilege.  
  
@@ -63,9 +66,9 @@ editLink: true
 
 :::
 
+<br/>  
 
 ### Alternative Methods  
-
 -  [YAOCTRU][7] (Office Downloader) & [YAOCTRI][8] (Office Installer)
 -  [Office Tool Plus][9].  
 

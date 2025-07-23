@@ -17,7 +17,7 @@ head:
 
 ::: tip How to use it?
 
-- Please find the instructions [here](intro#step2).
+- Please find the instructions [here](index#step2).
 
 - This activation method can activate all kinds of Office versions on Windows Vista and higher and their Server equivalent except Office UWP apps.
 - This activation method works offline and activates Office permanently.

@@ -29,7 +29,7 @@ Below, you can find various ways of avoiding this banner. The simplest option fo
 
 ### 1- Activation Tools
 
-- Use [MAS](./intro#step2) or abbodi1406's [KMS_VL_ALL][1] to activate Office.
+- Use [MAS](./index#step2) or abbodi1406's [KMS_VL_ALL][1] to activate Office.
 
 
 ### 2- Manual Activation
@@ -64,7 +64,7 @@ Please see the guide [here][2] for VL Office installation.
 
 If we change the Insider or Current update channel **to** Monthly Enterprise or Semi-Annual channel then such non-genuine banners won't appear by default.
 
-You can find this option in [MAS](./intro#step2) under Change Office edition option.
+You can find this option in [MAS](./index#step2) under Change Office edition option.
 
 ## Troubleshoot  
 

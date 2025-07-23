@@ -9,8 +9,8 @@ editLink: true
 
 # Windows 8.1 Download
 
-> All download links lead to genuine files only.
-> 
+All download links lead to genuine files only.
+
 > - [FAQ](./genuine-installation-media#faq)
 > -   In the install process of Windows 8.1 (Core / Pro) ISO, setup will ask to enter the key, you can enter below generic keys for the desired edition.  
 >     `Windows 8.1 Core: 334NH-RXG76-64THK-C7CKG-D3VPT`  
@@ -21,6 +21,8 @@ editLink: true
 > -   **Windows 8.1 can be permanently activated with TSforge option in MAS.**
 > -   Windows 8.1 Embedded editions don't come with preinstalled store apps.
 
+----
+
 ## Download Links
 ### Windows 8.1
 
@@ -29,7 +31,6 @@ editLink: true
 == Windows 8.1 Core / Pro 🤍
 
 **Windows 8.1 Core / Pro**  
-
 (Build - 9600.17415)  
 
 [MSDL][MSDL] provides official links directly from Microsoft.
@@ -459,6 +460,8 @@ editLink: true
 | Ukrainian              | x64  | [uk_windows_embedded_8.1_industry_enterprise_with_update_x64_dvd_6052210.iso](https://drive.massgrave.dev/uk_windows_embedded_8.1_industry_enterprise_with_update_x64_dvd_6052210.iso)           |
 | Ukrainian              | x86  | [uk_windows_embedded_8.1_industry_enterprise_with_update_x86_dvd_6052328.iso](https://drive.massgrave.dev/uk_windows_embedded_8.1_industry_enterprise_with_update_x86_dvd_6052328.iso)           |
 
+----
+
 == Other Versions
 
 **Other Versions**
@@ -467,6 +470,8 @@ editLink: true
 - [os.click][2]
 - [files.rg-adguard.net/language/a7c44b76e808][3]
 - [MVS Bot][4]
+
+----
 
 :::
 

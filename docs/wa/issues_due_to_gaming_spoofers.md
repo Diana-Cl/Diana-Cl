@@ -2,7 +2,7 @@
 layout: doc
 outline: deep
 title: 'Issues Due To Gaming Spoofers'
-description: 'MAS activation may show the error related to -Incorrect ModuleId'
+description: 'MAS activation may show the error related to -Incorrect ModuleId- Some gaming spoofers mess with Windows activation-related registry keys and because of that windows can not be activated'
 date: 2021-02-11
 editLink: true
 ---

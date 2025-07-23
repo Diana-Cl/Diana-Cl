@@ -40,7 +40,7 @@ editLink: true
 
 ### 1- ابزارهای فعال‌سازی
 
-- از [MAS](./intro#مرحله۲) یا [KMS_VL_ALL][1] abbodi1406 برای فعال‌سازی آفیس استفاده کنید.
+- از [MAS](./index#مرحله-۲) یا [KMS_VL_ALL][1] abbodi1406 برای فعال‌سازی آفیس استفاده کنید.
 
 
 ### 2- فعال‌سازی دستی
@@ -75,7 +75,7 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SoftwareProtectionPla
 
 اگر کانال به‌روزرسانی Insider یا Current را **به** کانال Monthly Enterprise یا Semi-Annual تغییر دهیم، چنین بنرهای غیر اصلی به طور پیش‌فرض ظاهر نمی‌شوند.
 
-می‌توانید این گزینه را در [MAS](./intro#مرحله۲) در زیر گزینه تغییر نسخه آفیس پیدا کنید.
+می‌توانید این گزینه را در [MAS](./index#مرحله-۲) در زیر گزینه تغییر نسخه آفیس پیدا کنید.
 
 
 ::: danger عیب یابی

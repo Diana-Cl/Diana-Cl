@@ -18,7 +18,7 @@ head:
 ::: tip Notes
 
 > How to use it?  
-> Please find the instructions [Intro](./intro#step2)
+> Please find the instructions [Intro](./index#step2)
 
 ## Overview  
 -   This activation is permanent until a Windows reinstall or a major feature upgrade (not to be confused with small enablement upgrades or monthly cumulative updates).  

@@ -11,7 +11,7 @@ editLink: true
 
 ## Overview
 
-- How to use it? Please find the instructions [intro](./intro#step2).
+- How to use it? Please find the instructions [intro](./index#step2).
 - KMS activates Windows / Office for 180 Days. For Windows Core / ProWMC editions it is 30 / 45 Days.
 - This script can activate both Retail and Volume Windows installation.
 - This script can activate C2R Retail and VL Office, UWP Office, but not 2010 / 2013 MSI Retail Office.
