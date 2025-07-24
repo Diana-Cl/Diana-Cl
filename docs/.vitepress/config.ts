@@ -5,7 +5,7 @@ import attrs from 'markdown-it-attrs';
 import { mermaid } from 'vitepress-plugin-mermaid';
 import { tabsMarkdownPlugin } from 'vitepress-plugin-tabs';
 
-const base = '/Diana-Cl/;
+const base = '/Diana-Cl/';
 const siteUrl = `https://Diana-Cl.github.io${base}`;
 
   export default defineConfig({
@@ -75,7 +75,7 @@ const siteUrl = `https://Diana-Cl.github.io${base}`;
               text: '📚 Notes',
               items: [
                 { text: 'Google Gemini', link: '/topics/Gemini' },
-                { text: 'Poker – Texas Holdem', link: '/topics/poker-holdem' },
+                { text: 'Poker – Texas Holdem', link: '/topics/poker-texas' },
                 { text: 'Ai Agents', link: '/topics/ai-agents' },
                 { text: 'Stable Diffusion', link: '/topics/Stable-Diffusion' },
                 { text: 'REvil', link: '/topics/REvil' },
@@ -194,7 +194,7 @@ const siteUrl = `https://Diana-Cl.github.io${base}`;
               text: '📚 یادداشت‌ها',
               items: [
                 { text: 'گوگل جمنای', link: '/fa/topics/Gemini' },
-                { text: 'پوکر – تگزاس هولدم', link: '/fa/topics/poker-holdem' },
+                { text: 'پوکر – تگزاس هولدم', link: '/fa/topics/poker-texas' },
                 { text: 'دستیارهای هوش مصنوعی', link: '/fa/topics/ai-agents' },
                 { text: 'استیبل دیفیوژن', link: '/fa/topics/Stable-Diffusion' },
                 { text: 'REvil', link: '/fa/topics/REvil' },

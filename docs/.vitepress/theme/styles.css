@@ -40,3 +40,106 @@ img[src='/search.png'] {
   width: 100%;
   aspect-ratio: 1 / 1;
 }
+
+.poker-table {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.poker-card {
+  width: 64px;
+  height: 90px;
+  border-radius: 8px;
+  background: #ffffff;
+  border: 1px solid #d1d5db;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', 'Vazirmatn', sans-serif;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 6px;
+  box-sizing: border-box;
+  transition: transform 0.2s ease;
+}
+
+.poker-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+.dark .poker-card {
+  background: #f8fafc;
+  border: 1px solid #94a3b8;
+}
+
+.poker-card.red {
+  color: #e11d48;
+}
+.poker-card.black {
+  color: #1e293b;
+}
+
+
+.poker-corner {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  text-align: left;
+  line-height: 1;
+}
+
+.poker-corner .rank {
+  font-size: 0.95rem;
+  font-weight: bold;
+}
+
+.poker-corner .suit {
+  font-size: 0.55rem;
+  display: block;
+  margin-top: 1px;
+}
+
+
+.big-suit {
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  font-size: 2rem;
+  opacity: 0.9;
+}
+
+.poker-card:not(.face) .big-suit {
+  font-size: 2rem;
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  opacity: 0.9;
+}
+
+.poker-card.face .big-suit {
+  font-size: 2.2rem;
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+}
+
+.poker-card.king .big-suit::before {
+  content: '👑';
+}
+.poker-card.queen .big-suit::before {
+  content: '👸';
+}
+.poker-card.jack .big-suit::before {
+  content: '🪖';
+}
+
+.big-svg {
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  width: 28px;
+  height: 28px;
+  opacity: 0.95;
+}
