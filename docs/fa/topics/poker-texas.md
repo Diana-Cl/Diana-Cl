@@ -140,6 +140,15 @@ editLink: true
   <img src="https://github.com/user-attachments/assets/71184a4d-2a1a-41cf-a283-bbe4a2c9a579" alt="Ranking" width="680px" />
 </p><br/> 
 
+<br/>
+<p align="center">
+  <img src="/ranking.webp>
+</p><br/>
+
+
+![Image from imagin3](/ranking.webp)
+ 
+
 ### 🔟 High Card <Badge type="info" text="کارت بالا" /> 
 
 هیچ ترکیبی نداری؟ اونوقت بالاترین کارتت ملاکه. مثلاً **`A`** بهتر از **`K`** هست. اگه همه هیچی نداشته باشن، کسی که بالاترین کارت رو داره می‌بره.
