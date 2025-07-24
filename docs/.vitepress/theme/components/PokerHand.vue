@@ -3,14 +3,13 @@ const props = defineProps({
   cards: {
     type: Array,
     required: true,
-    default: () => ['A♠', 'K♥️', 'Q♣', 'J♦', '10♠']
+    default: () => ['A♠', 'K❤️', 'Q♣', 'J♦', '10♠']
   }
 })
 
 const suits = {
   '♠': { symbol: '♠', color: 'black' },
-  '♣': { symbol: '♣', color: 'black' },
-  '♥️': { symbol: '♥️', color: 'red' },
+  '♣': { symbol: '❤️', color: 'red' },
   '♦': { symbol: '♦', color: 'red' },
 }
 
@@ -101,12 +100,12 @@ const faceEmojis = {
 }
 
 .poker-corner .rank {
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   font-weight: bold;
 }
 
 .poker-corner .suit {
-  font-size: 0.65rem;
+  font-size: 0.80rem;
   display: block;
   margin-top: 1px;
 }
@@ -115,12 +114,12 @@ const faceEmojis = {
   position: absolute;
   bottom: 4px;
   right: 4px;
-  font-size: 2.2rem;
+  font-size: 2.4rem;
   opacity: 0.9;
 }
 
 .poker-card.face .big-suit {
-  font-size: 2.2rem;
+  font-size: 2.4rem;
   content: '';
 }
 .poker-card.king .big-suit::before {
