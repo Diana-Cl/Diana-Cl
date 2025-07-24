@@ -13,7 +13,7 @@ editLink: true
 
 <br/>
 
-### بازی اصولا با <Badge type="danger" text="۹ نفر" /> انجام میشه.  
+### بازی اصولا با **۹ نفر** انجام میشه.  
 و میزهای استاندارد هم همین تعداد رو ساپورت می‌کنن, به این نوع بازی میگن **`تگزاس هولدم – Texas Hold'em`** و اگه دیدی جایی نوشتن **`9-max`** بدون منظورش اینه که حداکثر ۹ نفر سر میز هستن. اگه کمترهم بشه مشکلی نداره، قرار نیست توی کازینو وگاس یا crown بازی کنی که 😂
 
 <br/>
@@ -48,21 +48,21 @@ editLink: true
 
 ### بازی در چهار مرحله اصلی پیش میره:
 
-#### 1. Pre-Flop: 
+#### 1. Pre-Flop   
 قبل از اینکه کارت‌های زمین (کارت‌های مشترک) پخش بشن.
 
-#### 2. The Flop:
+#### 2. The Flop  
 دیلر **۳ کارت مشترک** رو وسط میز باز می‌کنه.
 
-#### 3. The Turn:
+#### 3. The Turn  
 دیلر یه کارت چهارم به زمین اضافه می‌کنه.
 
-#### 4. The River:
+#### 4. The River  
 کارت پنجم ینی آخر رو دیلر می‌ذاره زمین.
 
 <br/>
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/c4d6f753-43f5-45ec-b489-54a1ad87b5c8" alt="pre-flop" width="680px" />
+  <img src="/ranking.webp" alt="pre-flop" width="680px" />
 </p><br/>
 
 ### مرحله اول – Pre-Flop  
@@ -135,23 +135,13 @@ editLink: true
 
 حالا اصل کاری! باید از ۷ تا کارتی که داری (۲ تا تو دست خودت، ۵ تا رو زمین)، **بهترین ترکیب ۵ تایی** ممکن رو بسازی. بهت می‌گم الان ترکیب‌هارو. من به ترتیب از کم‌ارزش‌ترین ترکیب‌ می‌نویسم تا در نهایت برسم به با‌ارزش‌ترینِ اون‌ها.
 
-<br/> 
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/71184a4d-2a1a-41cf-a283-bbe4a2c9a579" alt="Ranking" width="680px" />
-</p><br/> 
-
-<br/>
-<p align="center">
-  <img src="/ranking.webp>
-</p><br/>
-
-
-![Image from imagin3](/ranking.webp)
- 
+<br><br/>
 
 ### 🔟 High Card <Badge type="info" text="کارت بالا" /> 
 
 هیچ ترکیبی نداری؟ اونوقت بالاترین کارتت ملاکه. مثلاً **`A`** بهتر از **`K`** هست. اگه همه هیچی نداشته باشن، کسی که بالاترین کارت رو داره می‌بره.
+
+<br/>
 
 ::: danger 💡 منظور از بالاترین یا بزرگترین کارت چیه ؟ 
 
@@ -182,13 +172,13 @@ editLink: true
     <span class="corner-suit top-right">♥️</span>
     <span class="corner-suit bottom-left">♦️</span>
     <span class="corner-suit bottom-right">♣️</span>
-    <span class="info-text">سه کارت بی ربط دیگه</span>
+    <span class="info-text">سه‌کارت بی‌ربط دیگه</span>
   </div>
   <div class="poker-card info">
-    <span class="corner-suit top-left">♠️</span>
-    <span class="corner-suit top-right">♥️</span>
-    <span class="corner-suit bottom-left">♦️</span>
-    <span class="corner-suit bottom-right">♣️</span>
+    <span class="corner-suit top-left"> </span>
+    <span class="corner-suit top-right"> </span>
+    <span class="corner-suit bottom-left"> </span>
+    <span class="corner-suit bottom-right"> </span>
     <span class="info-text"> + </span>
   </div>
   <div class="poker-card black">
@@ -233,7 +223,7 @@ editLink: true
     <span class="corner-suit top-right">♥️</span>
     <span class="corner-suit bottom-left">♦️</span>
     <span class="corner-suit bottom-right">♣️</span>
-    <span class="info-text">+ یه کارت دیگه</span>
+    <span class="info-text">  +  یه‌کارت  دیگه</span>
   </div>
   <div class="poker-card black">
     <div class="poker-corner">
@@ -270,10 +260,10 @@ editLink: true
     <span class="info-text">دو کارت دیگه</span>
   </div>
   <div class="poker-card info">
-    <span class="corner-suit top-left">♠️</span>
-    <span class="corner-suit top-right">♥️</span>
-    <span class="corner-suit bottom-left">♦️</span>
-    <span class="corner-suit bottom-right">♣️</span>
+    <span class="corner-suit top-left"> </span>
+    <span class="corner-suit top-right"> </span>
+    <span class="corner-suit bottom-left"> </span>
+    <span class="corner-suit bottom-right"> </span>
     <span class="info-text"> + </span>
   </div>
   <div class="poker-card black face queen">
@@ -415,7 +405,6 @@ editLink: true
 ::: raw
 <div class="poker-table">
 
-  <!-- Three of a Kind -->
   <div class="poker-label">Three of a Kind</div>
   <div class="poker-row">
     <div class="poker-card black">
@@ -432,19 +421,17 @@ editLink: true
     </div>
   </div>
 
-  <!-- Info Card -->
-  <div class="poker-label">+ یه‌جفت دیگه</div>
+  <div class="poker-label"> </div>
   <div class="poker-row">
     <div class="poker-card info">
       <span class="corner-suit top-left">♠️</span>
       <span class="corner-suit top-right">♥️</span>
       <span class="corner-suit bottom-left">♦️</span>
       <span class="corner-suit bottom-right">♣️</span>
-      <span class="info-text">+ یه‌جفت‌دیگه</span>
+      <span class="info-text"> + یه‌جفت  دیگه</span>
     </div>
   </div>
 
-  <!-- Pair -->
   <div class="poker-label">One Pair</div>
   <div class="poker-row">
     <div class="poker-card black">
@@ -458,6 +445,7 @@ editLink: true
   </div>
 </div>
 :::
+
 
 اگه دو نفر فول هاوس داشتن، کسی که سه‌تاییش عدد بزرگ‌تری داره میبره.
 
@@ -474,14 +462,7 @@ editLink: true
     <span class="corner-suit top-right">♥️</span>
     <span class="corner-suit bottom-left">♦️</span>
     <span class="corner-suit bottom-right">♣️</span>
-    <span class="info-text">یه کارت دیگه</span>
-  </div>
-  <div class="poker-card info">
-    <span class="corner-suit top-left"> </span>
-    <span class="corner-suit top-right"> </span>
-    <span class="corner-suit bottom-left"> </span>
-    <span class="corner-suit bottom-right"> </span>
-    <span class="info-text"> + </span>
+    <span class="info-text"> + یه‌کارت  دیگه</span>
   </div>
   <div class="poker-card red">
     <div class="poker-corner">
@@ -573,7 +554,7 @@ editLink: true
 
 ::: raw
 <div class="poker-table">
-  <div class="poker-card black">
+  <div class="poker-card red">
     <div class="poker-corner">
       <div class="rank">A</div>
       <div class="suit">❤️</div>
@@ -601,7 +582,7 @@ editLink: true
     </div>
     <div class="big-suit"></div>
   </div>
-  <div class="poker-card black">
+  <div class="poker-card red">
     <div class="poker-corner">
       <div class="rank">10</div>
       <div class="suit">❤️</div>
@@ -664,7 +645,7 @@ Pot Odds یعنی اینکه ببینی **نسبت مقدار پاتی که قر
 #### ❌ کی بلوف نزنیم:
 - اگه طرف مقابل **زیاد کال می‌کنه**، احتمالاً بلوف رو نمی‌فهمه یا شایدم براش مهم نیست.
 - اگه ۲ نفر یا بیشتر تو پات هستن، بلوف سخت‌تر جواب میده.
-- اگه خودت زیاد زر زدی تو دستای قبل، حواست باشه که **لو رفتی **!
+- اگه خودت زیاد زر زدی تو دستای قبل، حواست باشه که **لو رفتی**!
 
 #### ✅ کی بلوف بزنیم:
 - اگه تو زمین کارت‌هایی هستن که دست قوی نشون میدن (مثلاً 3 تا پیک روی میزه)، ولی هیچ‌کس Raise نکرده، تو می‌تونی زر بزنی که Flush شدی.
