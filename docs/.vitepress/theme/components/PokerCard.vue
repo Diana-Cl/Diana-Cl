@@ -1,60 +1,31 @@
-<script setup>
-const props = defineProps({
-  cards: {
-    type: Array,
-    required: true,
-    default: () => ['A♠', 'K♥', 'Q♣', 'J♦', '10♠']
-  }
-})
-
-const suits = {
-  '♠': { symbol: '♠', color: 'black' },
-  '♣': { symbol: '♣', color: 'black' },
-  '♥': { symbol: '♥', color: 'red' },
-  '♦': { symbol: '♦', color: 'red' },
-}
-
-const faceEmojis = {
-  'K': '👑',
-  'Q': '👸',
-  'J': '🪖'
-}
-</script>
-
 <template>
-  <div class="poker-table">
-    <div
-      v-for="card in cards"
-      :key="card"
-      :class="[
-        'poker-card',
-        suits[card.slice(-1)]?.color,
-        faceEmojis[card.slice(0, -1)] ? 'face' : '',
-        card.startsWith('K') ? 'king' : '',
-        card.startsWith('Q') ? 'queen' : '',
-        card.startsWith('J') ? 'jack' : ''
-      ]"
-    >
-      <div class="poker-corner">
-        <div class="rank">{{ card.slice(0, -1) }}</div>
-        <div class="suit">{{ suits[card.slice(-1)]?.symbol }}</div>
-      </div>
-      <div class="big-suit">
-        <template v-if="!faceEmojis[card.slice(0, -1)]">
-          {{ suits[card.slice(-1)]?.symbol }}
-        </template>
-      </div>
+  <div class="poker-card" :class="colorClass" :data-rank="rank">
+    <div class="poker-corner">
+      <div class="rank">{{ rank }}</div>
+      <div class="suit">{{ suit }}</div>
+    </div>
+    <div class="big-suit" v-if="!isFaceCard">{{ suit }}</div>
+    <div class="big-suit face" v-else>
+      <span v-if="rank === 'K'">👑</span>
+      <span v-else-if="rank === 'Q'">👸</span>
+      <span v-else-if="rank === 'J'">🪖</span>
     </div>
   </div>
 </template>
 
+<script setup>
+defineProps(['rank', 'suit'])
+
+const redSuits = ['♥', '♦']
+const isFaceCard = ['J', 'Q', 'K'].includes(rank)
+const colorClass = redSuits.includes(suit) ? 'red' : 'black'
+</script>
+
 <style scoped>
 .poker-table {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   gap: 8px;
-  margin: 16px 0;
-  justify-content: center;
 }
 
 .poker-card {
@@ -81,7 +52,7 @@ const faceEmojis = {
 
 .dark .poker-card {
   background: #f8fafc;
-  border-color: #94a3b8;
+  border: 1px solid #94a3b8;
 }
 
 .poker-card.red {
@@ -110,21 +81,30 @@ const faceEmojis = {
   margin-top: 1px;
 }
 
+
 .big-suit {
   position: absolute;
   bottom: 4px;
   right: 4px;
-  font-size: 2.0rem;
+  font-size: 2rem;
+  opacity: 0.9;
+}
+
+.poker-card:not(.face) .big-suit {
+  font-size: 2rem;
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
   opacity: 0.9;
 }
 
 .poker-card.face .big-suit {
-  font-size: 2.0rem;
+  font-size: 2.2rem;
   position: absolute;
   bottom: 4px;
   right: 4px;
-  content: '';
 }
+
 .poker-card.king .big-suit::before {
   content: '👑';
 }
@@ -134,7 +114,6 @@ const faceEmojis = {
 .poker-card.jack .big-suit::before {
   content: '🪖';
 }
-
 
 .big-svg {
   position: absolute;

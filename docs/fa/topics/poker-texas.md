@@ -9,6 +9,14 @@ date: 2025-07-17
 editLink: true
 ---
 
+## مثال از یک دست پوکر
+
+<PokerHand :cards="['A♠', 'K♥', 'Q♣', 'J♦', '10♠']" />
+
+
+<PokerHand :cards="['K♦', '2♠', '6♣', 'K♥', 'Q♣', 'J♦', '8♠']" />
+
+
 # پوکر <Badge type="danger" text="تگزاس هولدم" />
 
 <br/>
