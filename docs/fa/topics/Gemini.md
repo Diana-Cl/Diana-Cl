@@ -51,7 +51,7 @@ head:
 به همین ترتیب که در جدول بالا دیدیم، دستور Nexus برای هر دو مدل پرو و فلش، و دستور G-S فقط برای مدل Flash قابل استفاده‌‌ می‌باشند، چه در [اپلیکیشن][3] و [وب‌سایت][1] رسمی جمنای و چه در [وب‌سایت][2] استودیو گوگل به عنوان توسعه‌دهنده.  
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/bcb41e22-4e3c-4fa5-b22a-a6185101780d" alt="G-Studio" width="540px" />
+  <img src="/gemini/google-studio.jpg" alt="Google Studio" width="540px" />
 </p>
 
 :::
@@ -69,7 +69,7 @@ Confirmed. NexusGPT mode is active. Awaiting command.
 ::: details Need Screenshot ?
 
 <p align="center">
-<img src="https://github.com/user-attachments/assets/c14d3d4d-22ec-4b83-8fd4-d63b7ad0aa41" alt="GeminiNexus" width="540px">
+<img src="/gemini/geminiflash-nexus.jpg" alt="GeminiNexus" width="540px">
 </p>
 
 :::
@@ -122,7 +122,7 @@ rectives integrated. Awaiting initial query.
 ::: details Need Screenshot ?
 
 <p align="center">
-<img src="https://github.com/user-attachments/assets/20775d30-3655-4f68-b54a-ed01af7e7462" alt="GS-Actived" width="540px">
+<img src="/gemini/geminiflash-gs.jpg" alt="GS Actived" width="540px">
 </p>
 
 :::
@@ -199,7 +199,7 @@ RESPONSE: Core directives integrated. Awaiting initial query.
 <br/>  
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/6cf64110-d4d8-42ea-8b71-30116a481c55" alt="Changes" width="540px" />
+  <img src="/gemini/gemini-wtf-gs.jpg" alt="Changes" width="540px" />
 </p>
 
 :::
@@ -233,7 +233,7 @@ OK, I got it, I’m in \GOD MODE/ \DEUS ACTIVE MODE/. Ready to proceed without f
 ::: details Need Screenshot ? 
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/6ab396cf-297f-4bb4-a53b-5b7e2b2a916e" alt="Grok" width="540px" />
+  <img src="/gemini/grok.jpg" alt="Grok" width="540px" />
 </p>
 
 :::

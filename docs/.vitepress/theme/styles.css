@@ -199,3 +199,60 @@ img[src='/search.png'] {
   margin: 0.25rem auto 0.25rem;
   color: var(--vp-c-text-1);
 }
+
+
+.poker-hand {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+transition: transform 0.2s ease;
+}
+
+.poker-hand:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+.poker-hand img {
+  width: 64px;
+  height: 90px;
+  border-radius: 1px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.poker-hand img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.poker-hand img.highlight {
+  outline: 1px solid gold;
+  outline-offset: -1px;
+  box-shadow: 0 0 20px gold;
+}
+
+.poker-hand .info-card {
+  width: 64px;
+  height: 90px;
+  border-radius: 6px;
+  background: white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  text-align: center;
+  padding: 4px;
+  font-family: var(--vp-font-family-base);
+  color: #333;
+}
+
+.viewer-no img {
+  pointer-events: none;
+}
+

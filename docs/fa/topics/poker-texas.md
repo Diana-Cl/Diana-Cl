@@ -9,14 +9,6 @@ date: 2025-07-17
 editLink: true
 ---
 
-## مثال از یک دست پوکر
-
-<PokerHand :cards="['A♠', 'K♥', 'Q♣', 'J♦', '10♠']" />
-
-
-<PokerHand :cards="['K♦', '2♠', '6♣', 'K♥', 'Q♣', 'J♦', '8♠']" />
-
-
 # پوکر <Badge type="danger" text="تگزاس هولدم" />
 
 <br/>
@@ -26,7 +18,7 @@ editLink: true
 
 <br/>
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/acea2360-7f44-4da8-9345-d96c5d4e0eec" alt="poker" width="940px" />
+  <img src="/poker/max-9.jpg" alt="Poker" width="940px" />
 </p><br/>
 
 ## دیلر، بلایندها و کارت‌ها
@@ -49,7 +41,7 @@ editLink: true
 
 <br/>
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/682d931a-d8e0-4fa1-890d-f03e36a4a255" alt="Dealer" width="680px" />
+  <img src="/poker/the-blinds.jpg" alt="The Blinds" width="680px" />
 </p><br/>
 
 ## مراحل بازی
@@ -70,7 +62,7 @@ editLink: true
 
 <br/>
 <p align="center">
-  <img src="/ranking.webp" alt="pre-flop" width="680px" />
+  <img src="/poker/format.webp" alt="Format" width="680px" />
 </p><br/>
 
 ### مرحله اول – Pre-Flop  
@@ -78,6 +70,9 @@ editLink: true
 این مرحله صرفا برا اینه که همه یه دور چک بکنن اکه قراره شرط همین اول افزایش پیدا بکنه افزایش بدن وگرنه تو این دور اول نه کسی از بازی بیرون میره ینی **`Fold`** می‌کنه و نه کسی حتی **`raise`** می‌کنه الکی رو هوا.
 
 <br/>
+<p align="center">
+  <img src="/poker/pre-flop.jpg" alt="Pre Flop" width="680px" />
+</p><br/>
 
 ### مرحله دوم – The Flop
 
@@ -86,25 +81,19 @@ editLink: true
 
 <br/>
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/d8fdbc83-6264-4bf8-82e4-b4a33cf8fa6f" alt="the-flop" width="680px" />
+  <img src="/poker/the-flop.jpg" alt="The Flop" width="680px" />
 </p><br/>
 
 ### مرحله سوم و چهارم – Turn / River
 
-<br/>
-
-::: danger نکته
-
 این مراحل نکته خاصی ندارن فعلا، یار‌و دیلر همون‌طور که گفتم کارت چهارم و کارت پنجم رو باز می‌کنه روی میز.
 
-:::
-
 <br/>
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/07d528f4-b642-4558-af4c-dd2cbb8e4292" alt="Turn" width="680px" />
+  <img src="/poker/the-turn.jpg" alt="The Turn" width="680px" />
 </p>
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/8956bab9-fd38-4c89-af15-915d77e3e899" alt="River" width="680px" />
+  <img src="/poker/the-river.jpg" alt="The River" width="680px" />
 </p><br/>
 
 ### مرحله آخر – ShowDown
@@ -113,7 +102,7 @@ editLink: true
 
 <br/>
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/30625b88-23f9-4a06-a667-b9ac18fb2bef" alt="ShowDown" width="680px" />
+  <img src="/poker/the-showdown.jpg" alt="ShowDown" width="680px" />
 </p><br/>
 
 ## انتخاب‌هایی که یه بازیکن‌ در هر دور می‌تونه داشته باشه
@@ -128,13 +117,13 @@ editLink: true
 
 **هر بازیکن می‌تونه یکی از این کارها رو انجام بده:**
 
-- **Fold**:  
+- **Fold**   
 کارتتو بنداز و از این دست بازی برو بیرون [^1]  
-- **Call**:  
+- **Call**  
 به اندازهٔ شرط فعلی ژتون بذار و بمون تو بازی. [^2]  
-- **Raise**:  
+- **Raise**  
 شرط رو بیشتر کن. یعنی بگو: "پاشو بیا بالا!" [^3]  
-- **Check**:  
+- **Check**  
 اگه شرطی وسط نیست، رد شو و نوبتو بده به نفر بعد. [^4]  
 
 <br/>
@@ -143,9 +132,12 @@ editLink: true
 
 حالا اصل کاری! باید از ۷ تا کارتی که داری (۲ تا تو دست خودت، ۵ تا رو زمین)، **بهترین ترکیب ۵ تایی** ممکن رو بسازی. بهت می‌گم الان ترکیب‌هارو. من به ترتیب از کم‌ارزش‌ترین ترکیب‌ می‌نویسم تا در نهایت برسم به با‌ارزش‌ترینِ اون‌ها.
 
-<br><br/>
+<br/>
+<p align="center">
+  <img src="/poker/ranking.jpg" alt="Ranking" width="680px" />
+</p><br><br/>
 
-### 🔟 High Card <Badge type="info" text="کارت بالا" /> 
+### 10. High Card <Badge type="info" text="کارت بالا" /> 
 
 هیچ ترکیبی نداری؟ اونوقت بالاترین کارتت ملاکه. مثلاً **`A`** بهتر از **`K`** هست. اگه همه هیچی نداشته باشن، کسی که بالاترین کارت رو داره می‌بره.
 
@@ -167,86 +159,33 @@ editLink: true
 > پس همیشه اگه دست خاصی نساخته باشی (مثل جفت یا فلاش)، اون کسی که بالاترین کارت رو داره، برنده میشه.
 
 :::
+
 <br/>
 
-### 9️⃣ One Pair <Badge type="info" text="یه جفت" /> 
+### 9. One Pair <Badge type="info" text="یه جفت" /> 
 
 دو تا کارت با **عدد یکسان** داری، مثل:
 
 ::: raw
-  <div class="poker-table">
-  <div class="poker-card info">
-    <span class="corner-suit top-left">♠️</span>
-    <span class="corner-suit top-right">♥️</span>
-    <span class="corner-suit bottom-left">♦️</span>
-    <span class="corner-suit bottom-right">♣️</span>
-    <span class="info-text">سه‌کارت بی‌ربط دیگه</span>
-  </div>
-  <div class="poker-card info">
-    <span class="corner-suit top-left"> </span>
-    <span class="corner-suit top-right"> </span>
-    <span class="corner-suit bottom-left"> </span>
-    <span class="corner-suit bottom-right"> </span>
-    <span class="info-text"> + </span>
-  </div>
-  <div class="poker-card black">
-    <div class="poker-corner">
-      <div class="rank">8</div>
-      <div class="suit">♣️</div>
-    </div>
-    <div class="big-suit">♣️</div>
-  </div>
-  <div class="poker-card red">
-    <div class="poker-corner">
-      <div class="rank">8</div>
-      <div class="suit">♥️</div>
-    </div>
-    <div class="big-suit">♥️</div>
-  </div>
+<div class="poker-hand viewer-no">
+  <div class="info-card"> + سه کارت بی‌ربط دیگه</div>
+  <img src="/poker/8-c.png" class="highlight">
+  <img src="/poker/8-h.png" class="highlight">
 </div>
 :::
+
 <br/>
 
-### 8️⃣ Two Pair <Badge type="info" text="دو جفت" /> 
+### 8. Two Pair <Badge type="info" text="دو جفت" /> 
 دو تا جفت داری، مثلاً:
 
 ::: raw
-<div class="poker-table">
-  <div class="poker-card black">
-    <div class="poker-corner">
-      <div class="rank">A</div>
-      <div class="suit">♣️</div>
-    </div>
-    <div class="big-suit">♣️</div>
-  </div>
-  <div class="poker-card red">
-    <div class="poker-corner">
-      <div class="rank">A</div>
-      <div class="suit">♥️</div>
-    </div>
-    <div class="big-suit">♥️</div>
-  </div>
-  <div class="poker-card info">
-    <span class="corner-suit top-left">♠️</span>
-    <span class="corner-suit top-right">♥️</span>
-    <span class="corner-suit bottom-left">♦️</span>
-    <span class="corner-suit bottom-right">♣️</span>
-    <span class="info-text">  +  یه‌کارت  دیگه</span>
-  </div>
-  <div class="poker-card black">
-    <div class="poker-corner">
-      <div class="rank">9</div>
-      <div class="suit">♠️</div>
-    </div>
-    <div class="big-suit">♠️</div>
-  </div>
-  <div class="poker-card red">
-    <div class="poker-corner">
-      <div class="rank">9</div>
-      <div class="suit">♦️</div>
-    </div>
-    <div class="big-suit">♦️</div>
-  </div>
+<div class="poker-hand viewer-no">
+  <img src="/poker/queen-c.png" class="highlight">
+  <img src="/poker/queen-s.png" class="highlight">
+  <div class="info-card">+ یه کارت دیگه</div>
+  <img src="/poker/10-d.png" class="highlight">
+  <img src="/poker/10-h.png" class="highlight">
 </div>
 :::
 
@@ -254,252 +193,116 @@ editLink: true
 
 <br/>
 
-### 7️⃣ Three of a Kind <Badge type="info" text="سه تایی یا trips" /> 
+### 7. Three of a Kind <Badge type="info" text="سه تایی یا trips" /> 
 
 سه کارت با **عدد یکسان**، مثل:
 
 ::: raw
-<div class="poker-table">
-  <div class="poker-card info">
-    <span class="corner-suit top-left">♠️</span>
-    <span class="corner-suit top-right">♥️</span>
-    <span class="corner-suit bottom-left">♦️</span>
-    <span class="corner-suit bottom-right">♣️</span>
-    <span class="info-text">دو کارت دیگه</span>
-  </div>
-  <div class="poker-card info">
-    <span class="corner-suit top-left"> </span>
-    <span class="corner-suit top-right"> </span>
-    <span class="corner-suit bottom-left"> </span>
-    <span class="corner-suit bottom-right"> </span>
-    <span class="info-text"> + </span>
-  </div>
-  <div class="poker-card black face queen">
-    <div class="poker-corner">
-      <div class="rank">Q</div>
-      <div class="suit">♣️</div>
-    </div>
-    <div class="big-suit"></div>
-  </div>
-  <div class="poker-card red face queen">
-    <div class="poker-corner">
-      <div class="rank">Q</div>
-      <div class="suit">♦️</div>
-    </div>
-    <div class="big-suit"></div>
-  </div>
-  <div class="poker-card black face queen">
-    <div class="poker-corner">
-      <div class="rank">Q</div>
-      <div class="suit">♠️</div>
-    </div>
-    <div class="big-suit"></div>
-  </div>
+<div class="poker-hand viewer-no">
+  <div class="info-card">+ دو کارت دیگه</div>
+  <img src="/poker/9-d.png" class="highlight">
+  <img src="/poker/9-h.png" class="highlight">
+  <img src="/poker/9-s.png" class="highlight">
 </div>
 :::
 
 این ترکیب از Two Pair قوی‌تره.
 
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/d96a9481-c3e3-40f3-9b39-c9c29355fac5" alt="ThreeOfKind" width="680px" />
-</p><br/>
+::: details مشاهده تصویر
 
-### 6️⃣ Straight <Badge type="info" text="استریت یا ردیف" /> 
+<p align="center">
+  <img src="/poker/three-of-a-kind.jpg" alt="ThreeOfKind" width="680px" />
+</p>
+
+:::
+
+<br/>
+
+### 6. Straight <Badge type="info" text="استریت یا ردیف" /> 
 
 پنج کارت **پشت سر هم** از هر خالی، مثل:
 
 ::: raw
-<div class="poker-table">
-  <div class="poker-card red">
-    <div class="poker-corner">
-      <div class="rank">10</div>
-      <div class="suit">♦️</div>
-    </div>
-    <div class="big-suit">♦️</div>
-  </div>
-  <div class="poker-card red">
-    <div class="poker-corner">
-      <div class="rank">9</div>
-      <div class="suit">♥️</div>
-    </div>
-    <div class="big-suit">♥️</div>
-  </div>
-  <div class="poker-card black">
-    <div class="poker-corner">
-      <div class="rank">8</div>
-      <div class="suit">♣️</div>
-    </div>
-    <div class="big-suit">♣️</div>
-  </div>
-  <div class="poker-card black">
-    <div class="poker-corner">
-      <div class="rank">7</div>
-      <div class="suit">♠️</div>
-    </div>
-    <div class="big-suit">♠️</div>
-  </div>
-  <div class="poker-card red">
-    <div class="poker-corner">
-      <div class="rank">6</div>
-      <div class="suit">♦️</div>
-    </div>
-    <div class="big-suit">♦️</div>
-  </div>
+<div class="poker-hand viewer-no">
+  <img src="/poker/jack-c.png" class="highlight">
+  <img src="/poker/10-d.png" class="highlight">
+  <img src="/poker/9-s.png" class="highlight">
+  <img src="/poker/8-h.png" class="highlight">
+  <img src="/poker/7-s.png" class="highlight">
 </div>
 :::
 
 خال‌ها مهم نیستن، فقط باید پشت سر هم باشن.
 
+::: details مشاهده تصویر
+
 <br/>
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/01e718a4-722d-4835-a15d-2fb1c2156767" alt="Straight" width="680px" />
-</p><br/>
+  <img src="/poker/straight.jpg" alt="Straight" width="680px" />
+</p>
 
-### 5️⃣ Flush <Badge type="info" text="فلاش یا رنگ" /> 
+:::
+
+<br/>
+
+### 5. Flush <Badge type="info" text="فلاش یا رنگ" /> 
 
 پنج کارت **هم‌رنگ** ولی غیر متوالی. مثلاً پنج‌تا **پیک**:
 
 ::: raw
-<div class="poker-table">
-  <div class="poker-card black face king">
-    <div class="poker-corner">
-      <div class="rank">K</div>
-      <div class="suit">♠️</div>
-    </div>
-    <div class="big-suit"></div>
-  </div>
-  <div class="poker-card black face jack">
-    <div class="poker-corner">
-      <div class="rank">J</div>
-      <div class="suit">♠️</div>
-    </div>
-    <div class="big-suit"></div>
-  </div>
-  <div class="poker-card black">
-    <div class="poker-corner">
-      <div class="rank">8</div>
-      <div class="suit">♠️</div>
-    </div>
-    <div class="big-suit">♠️</div>
-  </div>
-  <div class="poker-card black">
-    <div class="poker-corner">
-      <div class="rank">5</div>
-      <div class="suit">♠️</div>
-    </div>
-    <div class="big-suit">♠️</div>
-  </div>
-  <div class="poker-card black">
-    <div class="poker-corner">
-      <div class="rank">2</div>
-      <div class="suit">♠️</div>
-    </div>
-    <div class="big-suit">♠️</div>
-  </div>
+<div class="poker-hand viewer-no">
+  <img src="/poker/king-s.png" class="highlight">
+  <img src="/poker/jack-s.png" class="highlight">
+  <img src="/poker/8-s.png" class="highlight">
+  <img src="/poker/5-s.png" class="highlight">
+  <img src="/poker/2-s.png" class="highlight">
 </div>
 :::
 
 اگر چند نفر Flush داشتن، کسی برنده‌ست که کارت **بالاتری** از اون رنگ داشته باشه.
 
 <br/>
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/6d6a2828-eb90-4d81-beed-2852ba7a055d" alt="Flush" width="680px" />
-</p><br/>
 
-### 4️⃣ Full House <Badge type="info" text="فول هاوس" /> 
+::: details مشاهده تصویر
+
+<p align="center">
+  <img src="/poker/flush.jpg" alt="Flush" width="680px" />
+</p>
+
+:::
+
+<br/>
+
+### 4. Full House <Badge type="info" text="فول هاوس" /> 
 
 ترکیب یه Three of a Kind و یه Pair:
 
 ::: raw
-<div class="poker-table">
-
-  <div class="poker-label">Three of a Kind</div>
-  <div class="poker-row">
-    <div class="poker-card black">
-      <div class="poker-corner"><div class="rank">8</div><div class="suit">♠️</div></div>
-      <div class="big-suit">♠️</div>
-    </div>
-    <div class="poker-card red">
-      <div class="poker-corner"><div class="rank">8</div><div class="suit">♥️</div></div>
-      <div class="big-suit">♥️</div>
-    </div>
-    <div class="poker-card black">
-      <div class="poker-corner"><div class="rank">8</div><div class="suit">♣️</div></div>
-      <div class="big-suit">♣️</div>
-    </div>
-  </div>
-
-  <div class="poker-label"> </div>
-  <div class="poker-row">
-    <div class="poker-card info">
-      <span class="corner-suit top-left">♠️</span>
-      <span class="corner-suit top-right">♥️</span>
-      <span class="corner-suit bottom-left">♦️</span>
-      <span class="corner-suit bottom-right">♣️</span>
-      <span class="info-text"> + یه‌جفت  دیگه</span>
-    </div>
-  </div>
-
-  <div class="poker-label">One Pair</div>
-  <div class="poker-row">
-    <div class="poker-card black">
-      <div class="poker-corner"><div class="rank">A</div><div class="suit">♠️</div></div>
-      <div class="big-suit">♠️</div>
-    </div>
-    <div class="poker-card red">
-      <div class="poker-corner"><div class="rank">A</div><div class="suit">♦️</div></div>
-      <div class="big-suit">♦️</div>
-    </div>
-  </div>
+<div class="poker-hand viewer-no">
+  <img src="/poker/10-d.png" class="highlight">
+  <img src="/poker/10-s.png" class="highlight">
+  <div class="info-card">+ یه جفت دیگه</div>
+  <img src="/poker/8-s.png" class="highlight">
+  <img src="/poker/8-h.png" class="highlight">
+  <img src="/poker/8-c.png" class="highlight">
 </div>
 :::
-
 
 اگه دو نفر فول هاوس داشتن، کسی که سه‌تاییش عدد بزرگ‌تری داره میبره.
 
 <br/>
 
-### 3️⃣ Four of a Kind <Badge type="info" text="چهارتا یکی" /> 
+### 3. Four of a Kind <Badge type="info" text="چهارتا یکی" /> 
 
 چهار تا کارت با **عدد یکسان**، مثل:
 
 ::: raw
-<div class="poker-table">
-  <div class="poker-card info">
-    <span class="corner-suit top-left">♠️</span>
-    <span class="corner-suit top-right">♥️</span>
-    <span class="corner-suit bottom-left">♦️</span>
-    <span class="corner-suit bottom-right">♣️</span>
-    <span class="info-text"> + یه‌کارت  دیگه</span>
-  </div>
-  <div class="poker-card red">
-    <div class="poker-corner">
-      <div class="rank">6</div>
-      <div class="suit">♥️</div>
-    </div>
-    <div class="big-suit">♥️</div>
-  </div>
-  <div class="poker-card black">
-    <div class="poker-corner">
-      <div class="rank">6</div>
-      <div class="suit">♣️</div>
-    </div>
-    <div class="big-suit">♣️</div>
-  </div>
-  <div class="poker-card red">
-    <div class="poker-corner">
-      <div class="rank">6</div>
-      <div class="suit">♦️</div>
-    </div>
-    <div class="big-suit">♦️</div>
-  </div>
-  <div class="poker-card black">
-    <div class="poker-corner">
-      <div class="rank">6</div>
-      <div class="suit">♠️</div>
-    </div>
-    <div class="big-suit">♠️</div>
-  </div>
+<div class="poker-hand viewer-no">
+  <div class="info-card">+ یه کارت دیگه</div>
+  <img src="/poker/5-s.png" class="highlight">
+  <img src="/poker/5-c.png" class="highlight">
+  <img src="/poker/5-h.png" class="highlight">
+  <img src="/poker/5-d.png" class="highlight">
 </div>
 :::
 
@@ -507,47 +310,17 @@ editLink: true
 
 <br/>
 
-### 2️⃣ Straight Flush <Badge type="info" text="استریت فلاش" /> 
+### 2. Straight Flush <Badge type="info" text="استریت فلاش" /> 
 
 ترکیب **پنج کارت پشت سر هم** که همشون **یه رنگ** هم هستن:
 
 ::: raw
-<div class="poker-table">
-  <div class="poker-card black">
-    <div class="poker-corner">
-      <div class="rank">9</div>
-      <div class="suit">♠️</div>
-    </div>
-    <div class="big-suit">♠️</div>
-  </div>
-  <div class="poker-card black">
-    <div class="poker-corner">
-      <div class="rank">8</div>
-      <div class="suit">♠️</div>
-    </div>
-    <div class="big-suit">♠️</div>
-  </div>
-  <div class="poker-card black">
-    <div class="poker-corner">
-      <div class="rank">7</div>
-      <div class="suit">♠️</div>
-    </div>
-    <div class="big-suit">♠️</div>
-  </div>
-  <div class="poker-card black">
-    <div class="poker-corner">
-      <div class="rank">6</div>
-      <div class="suit">♠️</div>
-    </div>
-    <div class="big-suit">♠️</div>
-  </div>
-  <div class="poker-card black">
-    <div class="poker-corner">
-      <div class="rank">5</div>
-      <div class="suit">♠️</div>
-    </div>
-    <div class="big-suit">♠️</div>
-  </div>
+<div class="poker-hand viewer-no">
+  <img src="/poker/9-c.png" class="highlight">
+  <img src="/poker/8-c.png" class="highlight">
+  <img src="/poker/7-c.png" class="highlight">
+  <img src="/poker/6-c.png" class="highlight">
+  <img src="/poker/5-c.png" class="highlight">
 </div>
 :::
 
@@ -555,48 +328,18 @@ editLink: true
 
 <br/>
 
-### 1️⃣ Royal Flush <Badge type="info" text="رویال فلاش" />
+### 1. Royal Flush <Badge type="info" text="رویال فلاش" />
 
 قوی‌ترین ترکیب ممکن در پوکر:  
 پنج کارت متوالی از A تا 10 و همشون یه رنگ:
 
 ::: raw
-<div class="poker-table">
-  <div class="poker-card red">
-    <div class="poker-corner">
-      <div class="rank">A</div>
-      <div class="suit">❤️</div>
-    </div>
-    <div class="big-suit">❤️</div>
-  </div>
-  <div class="poker-card red face king">
-    <div class="poker-corner">
-      <div class="rank">K</div>
-      <div class="suit">❤️</div>
-    </div>
-    <div class="big-suit"></div>
-  </div>
-  <div class="poker-card red face queen">
-    <div class="poker-corner">
-      <div class="rank">Q</div>
-      <div class="suit">❤️</div>
-    </div>
-    <div class="big-suit"></div>
-  </div>
-  <div class="poker-card red face jack">
-    <div class="poker-corner">
-      <div class="rank">J</div>
-      <div class="suit">❤️</div>
-    </div>
-    <div class="big-suit"></div>
-  </div>
-  <div class="poker-card red">
-    <div class="poker-corner">
-      <div class="rank">10</div>
-      <div class="suit">❤️</div>
-    </div>
-    <div class="big-suit">❤️</div>
-  </div>
+<div class="poker-hand viewer-no">
+  <img src="/poker/ace-s.png" class="highlight">
+  <img src="/poker/king-s.png" class="highlight">
+  <img src="/poker/queen-s.png" class="highlight">
+  <img src="/poker/jack-s.png" class="highlight">
+  <img src="/poker/10-s.png" class="highlight">
 </div>
 :::
 <br/> 
@@ -611,15 +354,13 @@ editLink: true
 
 توضیحاتی که اینجا گفتم بیشتر مربوط به بازی‌های آنلاینه، مثل بازی در اپلیکیشن پلاتو یا هر پلتفرم دیگه. توی بازی‌های واقعی، همه‌چی یه درجه پیچیده‌تر و جدی‌تر میشه. اونجا باید بتونی حرکات بدن بقیه رو بخونی، از نگاهشون، صداشون، لرزش دست یا حتی نحوه گرفتن کارتاشون بفهمی دارن بلوف می‌زنن یا نه. کلی جزئیات ریز هست که فقط با تجربه و تمرین می‌تونی توش ماهر بشی، چیزی که تو بازی آنلاین اصلا دیده نمی‌شه 🩶✋🏿
 
-<br/> 
+<br/><br/>
 
-## آموزش مفاهیم مهم
+# آموزش مفاهیم مهم
 
-< ♟️ صرفا برای بازیکن‌های متوسط و حرفه‌ای
+> ♟️ صرفا برای بازیکن‌های متوسط و حرفه‌ای
 
-::: tip 🎯 استراتژی بلوف و Pot Odds
-
-::: details اکه مایل به خوندن توضیحات هستی اینجا کلیک کن
+## 🎯 استراتژی بلوف و Pot Odds
 
 
 ### 📊 Pot Odds یعنی چی و چطوری حسابش کنیم؟؟
@@ -633,7 +374,7 @@ Pot Odds یعنی اینکه ببینی **نسبت مقدار پاتی که قر
 - مقدار پات الان هست 100 تا ژتون  
 - حریف شرط بسته و تو باید 20 تا ژتون بدی تا ادامه بدی
 
-خب حالا:
+**خب حالا:**
 - احتمال اینکه توی کارت بعدی اون پیک بیاد چقدره؟ تقریبا 9 کارت پیک از 47 تا کارت مونده = ینی حدود **19٪**
 - حالا Pot Odds چنده؟؟  
   تو باید 20 تا ژتون بدی که شانس ببری 100 تا (پات)، پس 20 / (100+20) = **16.6٪**
@@ -646,9 +387,10 @@ Pot Odds یعنی اینکه ببینی **نسبت مقدار پاتی که قر
 
 <br/>
 
-### 🎭 استراتژی بلوف – بلوف حرفه‌ای، نه فقط زِر مفت
+#### 🎭 استراتژی بلوف – بلوف حرفه‌ای، نه فقط زِر مفت
 
-بلوف / Bluffing یعنی نشون بدی دستت خیلی قویه، در حالی که ممکنه هیچی گوهی تو دستت نداشته باشی 😏 ولی همین کار هم تاکتیک داره:
+بلوف / Bluffing یعنی نشون بدی دستت خیلی قویه، در حالی که ممکنه هیچی گوهی تو دستت نداشته باشی 😏  
+ولی همین کار هم تاکتیک داره:
 
 #### ❌ کی بلوف نزنیم:
 - اگه طرف مقابل **زیاد کال می‌کنه**، احتمالاً بلوف رو نمی‌فهمه یا شایدم براش مهم نیست.
@@ -668,19 +410,17 @@ Pot Odds یعنی اینکه ببینی **نسبت مقدار پاتی که قر
 
 خلاصه که Bluff Strategy یا استراتژی بلوف یه هنر واقعیه، نه یه شیرین‌کاری. اگه به‌جا ازش استفاده کنی، حتی با دست خالی هم می‌تونی میزو جارو کنی 😎🃏🤪
 
-:::
-
 <hr/><br/> 
 
 تا اینجای توضیحات؛ نوشته‌های نیما بود، واسه اینکه می‌خواستم تو سایت بذارمش و دیگه پست تلگرامی نبود و محدودیت کاراکتر نداشتیم از ai خواستم یکی دو بخش بهش اضافه بکنه، از اینجا به بعد همش نوشته‌های جمنای هست
 
-## نکات بیشتر 
+## توضیحات بیشتر 
 
 ::: info **♟️ صرفا برای بازیکن‌های متوسط و حرفه‌ای**
 
 ::: details اکه مایل به خوندن نکات بیشتر هستی اینجا کلیک کن
 
-### 💡 مدیریت پوزیشن (Position)
+### 💡 مدیریت پوزیشن <Badge type="info" text="Position" /> 
 
 تو پوکر، جایی که سر میز نشستی خیلی مهمه. همیشه سعی کن **آخرین نفر** باشی که تو هر دور تصمیم می‌گیره (یعنی اصطلاحاً "in position" باشی). چون وقتی نوبت بقیه رو می‌بینی، راحت‌تر می‌تونی تصمیم بگیری که Raise کنی، فقط Call بدی یا Fold.
 
@@ -718,14 +458,18 @@ Pot Odds یعنی اینکه ببینی **نسبت مقدار پاتی که قر
 
 :::
 
-<br/> 
+<br/>
+
+## منابع آموزشی
+
+- **[wikihow.com][1]**
+- **[Pokerology.com][2]**
 
 ## Credits 
 
-**[NiREvil][1]** <Badge type="info" text="✋🏿🩶" />  
-**[0x00 Gp][2]** <Badge type="info" text="✨✨" />  
-**[Gemini_][3]** <Badge type="info" text="📚📚" />    
-
+- **[NiREvil][3]** ✋🏿🩶 
+- **[0x00 Gp][4]** ✨
+- **[Gemini][5]** 📚
 
 [^1]: اگه کارت های توی دستم باحال باشن امیدوار باشم می‌تونم جوگیر بشم بگم **`Raise`** به این معنی ک می‌خوام یکم ژتون بیشتر از شرطی ک اون اول **`Big blind`** تعیین کرده بیام وسط و بقیه رو به چالش بکشم چون بقیه هم مجبورن از من پیروی کنن و **`Call`** بکنند.
 
@@ -735,6 +479,8 @@ Pot Odds یعنی اینکه ببینی **نسبت مقدار پاتی که قر
 
 [^4]: اگه قبل از من یه کسی **`Raise`** کرده باشه و شرط رو افزایش داده باشه منم بخوام ادامه بدم بازی رو نخوام خارج بشم مجبورم **`Call`** بکنم ب این معنی که منم به همون اندازه شرط پول بیام وسط تا بتونم ادامه بدم، یا که **`Fold`** کنم و خارج شم از بازی.
 
-[1]: https://github.com/NiREvil/vless/
-[2]: https://telegram.me/NiREvil_GP
-[3]: https://aistudio.google.com/
+[1]: https://www.wikihow.com/Play-Poker
+[2]: https://www.pokerology.com/lessons/poker-tells/
+[3]: https://github.com/NiREvil/vless/
+[4]: https://telegram.me/NiREvil_GP
+[5]: https://aistudio.google.com/
