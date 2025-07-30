@@ -1,6 +1,8 @@
 ---
 layout: doc
 outline: deep
+lang: 'en-US'
+dir: 'rtl'
 title: 'Official KMS Activation Guide'
 description: 'Step-by-step guide to activating Windows using the official KMS method for volume licensing.'
 date: 2025-05-04
@@ -32,7 +34,7 @@ head:
 
 <div class="rtl">
 
-**[من انگلیسی می‌فهمم ولی متوجه نمیشم ✋🤧😅](/fa/wa/kms)**
+**[من انگلیسی می‌فهمم ولی متوجه نمیشم ✋🤧😅](/wa/kms)**
 
 </div>
 
@@ -141,7 +143,7 @@ slmgr /ipk Your-License-Key
 </p>
 
 <br/>
-  
+
 ### Option D: Using CMD or PowerShell [^2]  
 1. Click on windows "Start" button or "Search" icon
 2. Type `cmd` or `Command Prompt`

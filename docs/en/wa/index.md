@@ -47,7 +47,7 @@ This project reflects our mission to enable creativity, productivity, and ambiti
 
 <div class="rtl">
 
-**[من انگلیسی می‌فهمم ولی متوجه نمیشم ✋🤧😅](/fa/wa/index)**
+**[من انگلیسی می‌فهمم ولی متوجه نمیشم ✋🤧😅](/wa/index)**
 
 </div>
 
@@ -103,7 +103,7 @@ For most users, the HWID <Badge type="info" text="Hardware ID" /> method is the 
 
 ### Option C: Using Power User Menu
 
-1. Right-click on the "Start menu" (or press `Win (⊞) + X`)  
+1. Right-click on the "Start menu" (or press `Win (⊞) + X`) 
 2. Select "Windows Terminal (Admin)" on Windows 11 or "Windows PowerShell (Admin)" on Windows 10
 
 <br/>
