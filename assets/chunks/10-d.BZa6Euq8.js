@@ -1,1 +1,0 @@
-const s="/Diana-Cl/poker/5-s.png",a="/Diana-Cl/poker/7-c.png",o="/Diana-Cl/poker/ace-s.png",p="/Diana-Cl/poker/5-c.png",n="/Diana-Cl/poker/7-s.png",r="/Diana-Cl/poker/10-d.png";export{s as _,a,o as b,p as c,n as d,r as e};
