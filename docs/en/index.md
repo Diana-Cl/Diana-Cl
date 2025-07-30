@@ -2,6 +2,8 @@
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
 index: true
+lang: "en-US"
+dir: "ltr"
 
 hero:
   name: "Dìana"
@@ -25,7 +27,7 @@ features:
 ---
 
 <script setup>
-import { data } from '/.vitepress/posts.data.js'
+import { data } from '../.vitepress/posts.data.js'
 import { useData } from 'vitepress'
 const { lang } = useData()
 const posts = data[lang.value] ?? []

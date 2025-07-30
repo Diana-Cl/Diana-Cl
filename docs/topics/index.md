@@ -27,7 +27,7 @@ features:
 ---
 
 <script setup>
-import { data as posts } from '../../.vitepress/posts.data.js'
+import { data as posts } from '../.vitepress/posts.data.js'
 </script>
 
 <div class="latest-posts-section">

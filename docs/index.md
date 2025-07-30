@@ -12,7 +12,7 @@ hero:
   actions:
     - theme: brand
       text: شروع با جمنای
-      link: /fa/topics/Gemini
+      link: /topics/Gemini
     - theme: alt
       text: مشاهده در گیت‌هاب
       link: https://github.com/Diana-Cl/Diana-Cl
@@ -27,7 +27,7 @@ features:
 ---
 
 <script setup>
-import { data } from '../.vitepress/posts.data.js'
+import { data } from '/.vitepress/posts.data.js'
 import { useData } from 'vitepress'
 const { lang } = useData()
 const posts = data[lang.value] ?? []

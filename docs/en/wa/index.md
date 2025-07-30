@@ -79,15 +79,15 @@ For most users, the HWID <Badge type="info" text="Hardware ID" /> method is the 
 
 ### Option A: Using Search Bar <Badge type="danger" text="Recommend" />  
 1. Click on windows "Start" button or "Search" icon in the taskbar  
-2. Type `powershell`  
-3. Select `Run as administrator` <br/>  
+2. Type `powershell`
+3. Select `Run as administrator` <br/ 
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/9b27cd4b-21d8-4970-98bb-3c97010e09bf" alt="open-powershell-as-admin" width="540px" />
 </p>
 
 <br/>
-  
+
 ::: tip To run PowerShell
 
 ::: details To view additional methods, please click here 
@@ -95,11 +95,11 @@ For most users, the HWID <Badge type="info" text="Hardware ID" /> method is the 
 ### Option B: Using Run Box
 
 1. Open the Run dialog box: Press `Win (⊞) + R` keys simultaneously  
-2. Type `powershell`  
-3. Press `Ctrl + Shift + Enter` to run as administrator  
+2. Type `powershell`
+3. Press `Ctrl + Shift + Enter` to run as administrator
 4. If prompted by User Account Control, click `Yes`
 
-<br/>  
+<br/>
 
 ### Option C: Using Power User Menu
 
