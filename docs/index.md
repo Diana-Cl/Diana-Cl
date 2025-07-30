@@ -7,7 +7,7 @@ dir: "rtl"
 
 hero:
   name: "Dìana"
-  text: "مجموعه‌ای از یادداشت‌های من"
+  text: "یادداشت‌های من"
   tagline: کاوش در فناوری، امنیت و هر چیزی در این بین.
   actions:
     - theme: brand

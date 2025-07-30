@@ -3,7 +3,7 @@ import { createContentLoader } from 'vitepress'
 const base = '/Diana-Cl/';
 const EXCERPT_MAX_LENGTH = 150;
 const MAX_POSTS_PER_SECTION = 5;
-const MAX_TOTAL_POSTS = 15; 
+const MAX_TOTAL_POSTS = 15;
 
 function stripHtmlAndTruncate(html, maxLength) {
   if (!html) return '';
@@ -57,7 +57,7 @@ function getCategoryTitle(category, lang = 'en') {
 }
 
 export default createContentLoader(
-  ['fa/wa/*.md', 'wa/*.md', 'topics/*.md', 'fa/topics/*.md'],
+  ['wa/*.md', 'topics/*.md', 'en/wa/*.md', 'en/topics/*.md'],
   {
     excerpt: true,
     transform(raw) {
@@ -80,7 +80,7 @@ export default createContentLoader(
 );
 
 function processPost(page, base) {
-  const lang = page.url.includes('/fa/') ? 'fa' : 'en';
+  const lang = page.url.includes('/en/') ? 'en' : 'fa';
   const category = categorizePost(page.url);
   return {
     title: page.frontmatter.title,
