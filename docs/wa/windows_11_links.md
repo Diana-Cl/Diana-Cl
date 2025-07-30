@@ -1,21 +1,20 @@
 ---
 layout: doc
 outline: deep
-title: 'Windows 11 Download'
-description: 'All download links lead to genuine files only'
-date: 2025-04-19
+title: 'دانلود ویندوز 11'
+description: 'تمام لینک‌های دانلود فقط به فایل‌های اصلی منتهی می‌شوند.'
+date: 2025-01-19
 editLink: true
 ---
 
-# Windows 11 Download
+# دانلود ویندوز 11
 
-> - All download links lead to genuine files only
->
-> - [FAQ](./genuine-installation-media#faq)
+> - تمام لینک‌های دانلود فقط به فایل‌های اصلی منتهی می‌شوند.
+> - [سوالات متداول](./genuine-installation-media#سوالات-متداول)
 
 ----
 
-## Download Links
+## لینک‌های دانلود
 
 ### Windows 11 24H2
 
@@ -123,8 +122,7 @@ Build - 26100.4652 (July 2025)
 
 **(Not LTSC)**  
 
-Build - 26100.1742 (RTM) (This ISO file is not updated every month)
-IoT Enterprise ISO is available only in English language.
+> نسخه ساخت - ۲۶۱۰۰.۱۷۴۲ (RTM) (این فایل ISO هر ماه به‌روزرسانی نمی‌شود) ISO مربوط به IoT Enterprise فقط به زبان انگلیسی موجود است.
 
 | Language | Arch | Link |
 |:---|:---|:---|
@@ -142,11 +140,11 @@ Check [here](./windows_ltsc_links)
 
 - [MVS Bot][2]
 - [os.click/][3]
-- [files.rg-adguard.net/version/216fefbe94c5][4]
-- Download the [Official Microsoft ESD file][5] and [ESD>ISO Converter][6] by [abbodi1406][7],
-  - Put the ESD file beside `decrypt.cmd` and run that script.
-  - It will create the ISO file.
-  - This process is same as how Official MCT tool creates Windows 10 and 11 ISOs.
+- [files.rg-adguard.net/version/c5][4]
+- فایل [Official Microsoft ESD file][5] و [ESD> ISO Converter][6] از [abbodi1406][7] دانلود کنید.    
+  - فایل ESD را کنار آن قرار دهید `decrypt.cmd` و اسکریپت را اجرا کنید.  
+  - این فایل ISO را ایجاد خواهد کرد.
+  - این فرآیند مشابه روشی است که ابزار رسمی MCT برای ایجاد فایل‌های ISO ویندوز ۱۰ و ۱۱ استفاده می‌کند.
 
 :::
 
@@ -248,7 +246,7 @@ Build - 22631.5624 (July 2025)
 
 **(Not LTSC)**
 
-Build - 22631.2428 (31-Oct-2023) (This ISO file is not updated every month)
+> - نسخه ساخت - 22631.2428 (31 اکتبر 2023) (این فایل ISO هر ماه به‌روزرسانی نمی‌شود)
 
 | Language | Arch | Link |
 |:---|:---|:---|

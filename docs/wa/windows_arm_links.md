@@ -3,14 +3,13 @@ layout: doc
 outline: deep
 title: 'Windows ARM64 Download'
 description: 'All download links lead to genuine files only'
-date: 2025-04-19
+date: 2025-01-19
 editLink: true
 ---
 
 # Windows ARM64 Download
 
-All download links lead to genuine files only.
-
+> - All download links lead to genuine files only.
 > - [FAQ](./genuine-installation-media#faq)
 > - You need an ARM64 processor (CPU) to install Windows ARM64 architecture OS.
 

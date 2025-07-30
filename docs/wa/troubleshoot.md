@@ -1,28 +1,31 @@
 ---
 layout: doc
 outline: deep
-title: 'Troubleshooting'
-description: 'If you run into any issues,
-feel free to ask'
+title: 'رفع مشکلات'
+description: 'مشکلات خود را با ما در میان بگذارید، در سریع‌ترین زمان ممکن پاسخگو خواهیم بود'
 date: 2022-02-02
 editLink: true
 head:
   - - meta
     - name: description
-      content: troubleshoot, discussion, errors
+      content: رفع مشکل، سوالات، ابهام، گفتگوی آزاد، ایراد
 ---
 
-## Troubleshooting
+<div class="rtl">
 
-**Make sure** you are using the latest version.
+## رفع مشکلات
 
+اگر سوالی دارید، ابتدا صفحه [**سوالات پرتکرار**][./faq] را مرور کنید — به احتمال زیاد جواب‌تان اینجاست.
 
-**Need Help?** If you run into any issues,
-feel free to ask in the [GitHub Discussions][1] or [Email Me][2] directly.
+** همچنان نیاز به راهنمایی دارید؟** در هر مرحله از پروسه اگر با مشکلی برخورد کردید:
 
-**Reach out to us** on [Discord][3]
-> - (signup not required)
-> - with an error screenshot.
+باخیال راحت با ما درمیان بگذارید، در [بحث و گفتگوهای گیت‌هاب][1] و یا مستقیما به من [ایمیل بزنید][2] .
+
+**حتی می‌توانید** در [دیسکورد][3] با ما در ارتباط باشید.
+> - (ساخت اکانت نیاز نیست)
+> -  متن خطا به همراه اسکرین‌شات ارسال شود.
+
+</div>
 
 [1]: https://github.com/NiREvil/windows-activation/discussions
 [2]: mailto:diana.clk01@gmail.com

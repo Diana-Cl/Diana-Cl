@@ -1,24 +1,24 @@
 ---
 layout: doc
 outline: deep
-title: 'Issues Due To Gaming Spoofers'
-description: 'MAS activation may show the error related to -Incorrect ModuleId- Some gaming spoofers mess with Windows activation-related registry keys and because of that windows can not be activated'
+title: 'مشکلات ناشی از اسپوفرهای بازی'
+description: 'فعال‌سازی MAS ممکن است خطای مربوط به -Incorrect ModuleId- را نشان دهد. برخی از اسپوفرهای بازی با کلیدهای رجیستری مربوط به فعال‌سازی ویندوز تداخل ایجاد می‌کنند و به همین دلیل ویندوز فعال نمی‌شود.'
 date: 2021-02-11
 editLink: true
 ---
 
-# Issues Due To Gaming Spoofers
+# مشکلات ناشی از اسپوفرهای بازی
 
-## Incorrect ModuleId
+## شناسه ماژول نادرست
 
-MAS activation may show the error related to "Incorrect ModuleId". Some gaming spoofers mess with Windows activation-related registry keys and because of that windows can not be activated. To fix this, you just need to restore that corrupt registry key with default data.
+فعال‌سازی MAS ممکن است خطای مربوط به «شناسه ماژول نادرست» را نشان دهد. برخی از اسپوفرهای بازی با کلیدهای رجیستری مربوط به فعال‌سازی ویندوز تداخل ایجاد می‌کنند و به همین دلیل ویندوز فعال نمی‌شود. برای رفع این مشکل، فقط باید آن کلید رجیستری خراب را با داده‌های پیش‌فرض بازیابی کنید.
 
 
-::: tip Tips
+::: tip نکات
 
-- [Download][1] and run this registry file, and confirm all prompts.
-- Restart your system.
-- Run the activation in MAS and if the issue is still not resolved, connect with us [here](./troubleshoot).
+- این فایل رجیستری را [دانلود][1] و اجرا کنید و تمام درخواست‌ها را تأیید کنید.
+- سیستم خود را مجدداً راه‌اندازی کنید.
+- فعال‌سازی را در MAS اجرا کنید و اگر مشکل هنوز حل نشده است، از [اینجا](./troubleshoot) با ما در ارتباط باشید.
 
 :::
 

@@ -1,18 +1,18 @@
 ---
 layout: doc
 outline: deep
-title: 'Windows XP Download'
-description: 'All download links lead to genuine files only'
-date: 2025-04-19
+title: 'دانلود ویندور XP'
+description: 'تمام لینک‌های دانلود فقط به فایل‌های اصلی منتهی می‌شوند.'
+date: 2024-04-19
 editLink: true
 ---
 
 
-# Windows XP Download
+# دانلود ویندور XP
 
-All download links lead to genuine files only.
-
-> - [FAQ](./genuine-installation-media#faq)
+> - تمام لینک‌های دانلود فقط به فایل‌های اصلی منتهی می‌شوند..
+> 
+> - [FAQ](./genuine-installation-media#سوالات-متداول)
 > -   For x86, SP3 and for x64, SP2 are the last released ISOs available. x64 SP2 version was released in English language only.
 > -   x86 VL ISOs can be activated with the key `XCYBK-2B3KV-G8T8F-WXJM7-WCTYT`
 > -   x64 VL ISOs can be activated with the key `VCFQD-V9FX9-46WVH-K3CD4-4J3JM`

@@ -1,92 +1,88 @@
 ---
 layout: doc
 outline: deep
-title: 'Official KMS Activation Guide'
-description: 'Step-by-step guide to activating Windows using the official KMS method for volume licensing.'
-date: 2025-05-04
+title: 'فعـال‌سازی ویندوز با روش KMS'
+description: 'راهنمای کامل فعال‌سازی قانونی ویندوز با روش رسمی KMS، قابل تمدید هر ۱۸۰ روز'
+date: 2025-05-09
 editLink: true
 head:
   - - meta
     - name: description
-      content: Activate Windows 10, 11 and Microsoft Office safely using the KMS method. Official, renewable every 180 days, and file-free.
+      content: فعال‌سازی ایمن و قانونی ویندوز ۱۰، ویندوز ۱۱ با روش KMS. قابل تمدید، بدون نیاز به فایل اضافی و مطابق با کانال‌های رسمی مایکروسافت.
   - - meta
     - name: keywords
-      content: KMS, Windows activation, Office activation, Windows 10, Windows 11, volume license, activate Office 2021, digital license
+      content: فعال‌سازی KMS، ویندوز ۱۰، ویندوز ۱۱، فعال‌سازی، روش قانونی، تمدید لایسنس، فعال‌سازی موقت
   - - meta
     - property: og:title
-      content: Activate Windows Using the Official KMS Method
+      content: راهنمای فعال‌سازی ویندوز با روش رسمی KMS
   - - meta
     - property: og:description
-      content: A complete guide to activating Windows using the secure, renewable KMS method.
+      content: آموزش کامل و ساده برای فعال‌سازی قانونی و قابل تمدید ویندوز با روش رسمی KMS
 ---
 
-# KMS Activation guide
+# فعال‌سازی ویندوز با روش KMS
 
-### Official KMS Activation Guide — 180 Days, Renewable
-
-> This guide walks you through activating Windows for <Badge type="tip" text="180 Days" /> using Microsoft’s official Key Management Service <Badge type="tip" text="KMS" /> method
-> 
-> It is a safe and trusted activation approach for volume-licensed products, and can be renewed indefinitely.
+> این راهنما نحوه فعال‌سازی موقت و ایمن ویندوز و آفیس را با استفاده از روش رسمی `KMS` توضیح می‌دهد.
+>
+> این روش توسط مایکروسافت برای لایسنس‌های حجمی ارائه شده و به‌مدت `180` روز معتبر است. پس از پایان این دوره، به‌راحتی می‌توان آن را تمدید کرد.
 
 <br/>
 
-<div class="rtl">
+::: tip پیش‌نیازها
 
-**[من انگلیسی می‌فهمم ولی متوجه نمیشم ✋🤧😅](/fa/wa/kms)**
-
-</div>
-
-# Method 2. Activating Win for 180 days with KMS
-
-::: tip Prerequisites
-
-- A stable internet connection.
-- Administrator privileges for CMD on your computer
+- اتصال پایدار به اینترنت
+- دسترسی ادمین برای CMD در کامپیوتر
+- اتصال به VPN درصورت اجرا نشدن فرامین — دامنه‌ها فعلاً فیلتر نشده‌اند پس طبیعتاً برای اجرای دستورها نیازی به اتصال به VPN نیست
 
 :::
 
 <br/>
 
-## Step 1. Open Command Prompt as Administrator
+## مرحله ۱. اجرای Command Prompt با مجوز مدیر سیستم
 
-### Option A: Using Search Bar <Badge type="danger" text="Recommend" />
+### روش الف: استفاده از نوار جستجو <Badge type="tip" text="پیشنهادی" />
 
-1. Click the "Start" button or "Search" icon in the taskbar
-2. Type `cmd` or `Command Prompt`
-3. Select "Run as administrator"
+1. روی دکمه "Start" یا آیکون "Search" در taskbar کلیک کنید
+2. عبارت `cmd` یا `Command Prompt` را تایپ کنید
+3. روی گزینه **Run as administrator** کلیک نمایید
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/4465a2d3-6c93-4ee1-bb63-94ab7b8e06ac" alt="run-cmd-as-dmin" width="580px" />
+  <img src="https://github.com/user-attachments/assets/4465a2d3-6c93-4ee1-bb63-94ab7b8e06ac" alt="run-cmd-as-admin" width="540px" />
 </p>
-
-::: tip To run CMD
-
-::: details For a view of alternative methods, please click here.
-
-### Option B: Using the Run box
-
-1. Open the Run Dialog box: Press `Win (⊞) + R` keys Simultaneously
-2. Type: `cmd` or `command prompt`
-3. press `Ctrl + Shift + Enter` to run as administrator
-4. If prompted by User Account Control, click `Yes`
 
 <br/>
 
-### Option C: Using Power User Menu
+::: tip راهنمایی‌ها
 
-1. Right-click the "Start menu"
-2. Select "Windows Terminal (Admin)" on Windows 11 or "Windows PowerShell (Admin)" on Windows 10.  
+::: details برای مشاهده روش‌های جایگزین، لطفاً اینجا کلیک کنید
 
-Or You can visit [this Link][2] to see 8 ways to run **cmd**, And  [This Link][1] to see more than 10 ways For Running PowerShell on your windows.
+### روش ب: استفاده از Run Box
+
+1. کلیدهای `Win (⊞) + R` را همزمان فشار دهید
+2. عبارت `cmd` یا `command prompt` را تایپ کنید
+3. برای اجرا به عنوان مدیر، کلیدهای `Ctrl + Shift + Enter` را فشار دهید
+4. اگر پنجره User Account Control ظاهر شد، روی `Yes` کلیک کنید
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/4465a2d3-6c93-4ee1-bb63-94ab7b8e06ac" alt="run-cmd-as-admin" width="540px" />
+</p>
+
+<br/> 
+
+### روش ج: استفاده از Power User Menu
+
+1. روی آیکون "Windows Start" در "Taskbar" کلیک راست کنید (یا `Win + X` را فشار دهید)
+2. روی گزینه **Windows Terminal (Admin)** در ویندوز ۱۱ یا **Windows PowerShell (Admin)** در ویندوز ۱۰ کلیک کنید
+
+> همچنین می‌توانید از [این لینک][2] برای مشاهده ۸ روش اجرای **cmd** و از [این لینک][1] برای اجرای PowerShell به ۱۰ روش مختلف در ویندوز استفاده کنید.
 
 :::
 
 <br/>
 
-## Step 2. Install a Generic KMS Client Key
+## مرحله ۲. نصب کلید عمومی KMS
 
-In the Command Prompt window, run the following command.  
-You must replace `Your-License-Key` with the key from the table below that matches your Windows edition.
+در پنجره Command Prompt، دستور زیر را اجرا کنید. حتماً `Your-License-Key` را با کلید مناسب از جدول زیر که با نسخه ویندوز شما هم‌خوانی دارد جایگزین کنید:
 
 ```reg
 slmgr /ipk Your-License-Key
@@ -94,35 +90,34 @@ slmgr /ipk Your-License-Key
 
 <br/>
 
-::: tip To find your Windows edition
+::: tip تشخیص نسخه ویندوز شما
 
-### Option A: Using keyboard shortcuts <Badge type="danger" text="Recommend" />
+::: details برای مشاهده روش‌های مختلف کلیک کنید
 
-1. Open the Run dialog box: Press `Win (⊞) + Pause/Break` keys Simultaneously
-2. This will open the "About" section in "Settings" directly. and you will see the Edition of your Windows under "Windows specifications"
+### روش الف: استفاده از میانبر کیبورد <Badge type="tip" text="پیشنهادی" />
+
+کلیدهای `Win (⊞) + Pause/Break` را همزمان فشار دهید. این کار بخش **About** را در **Settings** مستقیماً باز می‌کند و شما نسخه ویندوز خود را در زیر **Windows specifications** خواهید دید.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/647ef16b-9208-4ff3-a94b-825ffa99721f" alt="about-system" width="540px" />
 </p>
 
 <br/>
-  
-::: details Click here to see more ways
 
-### Option B: Using System Settings
+### روش ب: استفاده از تنظیمات سیستم
 
-1. Click the `🪟 Start` button and then click `⚙️ Settings`
-2. Click on `💻 System`
-3. Scroll down and click on `ℹ️ About`
-4. Under `Windows specifications`, you will see the Edition of your Windows
+1. روی دکمه `🪟 Start` و سپس روی `⚙️ Settings` کلیک کنید
+2. روی `💻 System` کلیک کنید
+3. به پایین اسکرول کرده و روی `ℹ️ About` کلیک کنید
+4. در زیر `Windows specifications`، نسخه ویندوز شما را خواهید دید
 
 <br/>
 
-### Option C: Using Run Box
+### روش ج: استفاده از Run Box
 
-1. Open the Run dialog box: Press `Win (⊞) + R` keys Simultaneously
-2. Type `winver` or `msinfo32` or `ms-settings:about` and press Enter key
-3. A window will appear showing the Windows version and build number, Done✔️
+1. کلیدهای `Win (⊞) + R` را فشار دهید تا Run dialog box باز شود
+2. یکی از موارد `ms-settings:about` یا `winver` یا `msinfo32` را تایپ کنید و Enter را فشار دهید
+3. پنجره‌ای ظاهر می‌شود که نسخه ویندوز، Build number و سایر جزئیات را نشان می‌دهد
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/f764797a-e07f-4c58-b932-bfe7b359a7bd" alt="winver-command" width="540px" />
@@ -138,27 +133,22 @@ slmgr /ipk Your-License-Key
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/8592c1bd-4a1a-47c1-bd21-0eb17049db31" alt="msinfo32-response" width="540px" />
-</p>
+</p><br/>
 
 <br/>
-  
-### Option D: Using CMD or PowerShell [^2]  
-1. Click on windows "Start" button or "Search" icon
-2. Type `cmd` or `Command Prompt`
-3. in running terminal, type: `systeminfo` or `systeminfo | findstr /B /C:"OS Name" /B /C:"OS Version"` and press "Enter" key
+
+### روش د: استفاده از Command Prompt یا PowerShell
+
+1. ابتدا Command Prompt یا PowerShell را اجرا کنید
+2. یکی از عبارات `systeminfo`  یا  `systeminfo | findstr /B /C:"OS Name" /B /C:"OS Version"` را تایپ کرده و Enter را فشار دهید
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/16e8f49a-0cec-4836-b841-0cbd9344fbb1" alt="findstdr command" width="540px" />
+  <img src="https://github.com/user-attachments/assets/16e8f49a-0cec-4836-b841-0cbd9344fbb1" alt="findstr command" width="540px" />
 </p>
 
 <br/>
 
-### Option E: Using CMD like option D
-
-1. Also, run "PowerShell" or "CMD"
-2. Type `slmgr /dlv`, and press "Enter" key
-3. The `/dlv` command displays the detailed licensing information
-4. Notice the output displays "Enterprise" as seen in the following image:
+همچنین می‌توانید `slmgr /dlv` را تایپ کنید که اطلاعات مفصل لایسنس را نمایش می‌دهد:
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/86925e56-7cac-4b53-8ccf-6addcd799ece" alt="slmgr-command" width="540px" />
@@ -168,50 +158,53 @@ slmgr /ipk Your-License-Key
 
 <br/>
 
-Please select one of the **"license keys"** from the list that "matches your version of Windows" and replace it (via Right-click) with the phrase `Your-License-Key` in the command.
+لطفاً یکی از **کلیدهای لایسنس** را از لیست زیر که **با نسخه ویندوز شما مطابقت دارد** انتخاب کنید و آن را با عبارت `Your-License-Key` در دستور جایگزین کنید (با راست-کلیک).
 
 <br/>
 
-### Generic Volume License Keys <Badge type="danger" text="GVLK" />
+### کلیدهای لایسنس حجمی <Badge type="danger" text="GVLK" />
 
-| Windows Edition               | GVLK Key         |
-| :---------------------------- | :--------------- |
-| TX9XD-98N7V-6WMQ6-BX7FG-H8Q99 | Home             |
-| 3KHY7-WNT83-DGQKR-F7HPR-844BM | Home N           |
-| 7HNRX-D7KGG-3K4RQ-4WPJ4-YTDFH | Home sl [^3]     |
-| PVMJN-6DFY6–9CCP6–7BKTT-D3WVR | Home cs [^4]     |
-| W269N-WFGWX-YVC9B-4J6C9-T83GX | Pro              |
-| MH37W-N47XK-V7XM9-C7227-GCQG9 | Pro N            |
-| YNMGQ-8RYV3-4PGQ3-C8XTP-7CFBY | Education        |
-| 84NGF-MHBT6-FXBX8-QWJK7-DRR8H | Education N      |
-| NW6C2-QMPVW-D7KKK-3GKT6-VCFB2 | Pro Education    |
-| 2WH4N-8QGBV-H22JP-CT43Q-MDWWJ | Pro Education N  |
-| DXG7C-N36C4-C4HTG-X4T3X-2YV77 | Pro for W [^5]   |
-| WYPNQ-8C467-V2W6J-TX4WX-WT2RQ | Pro N for W [^6] |
-| NPPR9-FWDCX-D2C8J-H872K-2YT43 | Enterprise       |
-| DPH2V-TTNVB-4X9Q3-TJR4H-KHJW4 | Enterprise N     |
-| XKCNC-J26Q9-KFHD2-FKTHY-KD72Y | Team             |
-| V3WVW-N2PV2-CGWC3-34QGF-VMJ2C | S                |
-| KY7PN-VR6RX-83W6Y-6DDYQ-T6R4W | SE               |
+
+| نسخه ویندوز      | کلید GVLK                     |
+| :--------------- | :---------------------------- |
+| Home             | TX9XD-98N7V-6WMQ6-BX7FG-H8Q99 |
+| Home N           | 3KHY7-WNT83-DGQKR-F7HPR-844BM |
+| Home SL [^3]     | 7HNRX-D7KGG-3K4RQ-4WPJ4-YTDFH |
+| Home CS [^4]     | PVMJN-6DFY6–9CCP6–7BKTT-D3WVR |
+| Pro              | W269N-WFGWX-YVC9B-4J6C9-T83GX |
+| Pro N            | MH37W-N47XK-V7XM9-C7227-GCQG9 |
+| Education        | YNMGQ-8RYV3-4PGQ3-C8XTP-7CFBY |
+| Education N      | 84NGF-MHBT6-FXBX8-QWJK7-DRR8H |
+| Pro Education    | NW6C2-QMPVW-D7KKK-3GKT6-VCFB2 |
+| Pro Education N  | 2WH4N-8QGBV-H22JP-CT43Q-MDWWJ |
+| Pro for W [^5]   | DXG7C-N36C4-C4HTG-X4T3X-2YV77 |
+| Pro N for W [^6] | WYPNQ-8C467-V2W6J-TX4WX-WT2RQ |
+| Enterprise       | NPPR9-FWDCX-D2C8J-H872K-2YT43 |
+| Enterprise N     | DPH2V-TTNVB-4X9Q3-TJR4H-KHJW4 |
+| Team             | XKCNC-J26Q9-KFHD2-FKTHY-KD72Y |
+| S                | V3WVW-N2PV2-CGWC3-34QGF-VMJ2C |
+| SE               | KY7PN-VR6RX-83W6Y-6DDYQ-T6R4W |
+
+<br/>
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/d5d93702-7865-4552-85d0-6916b1331bc0" alt="Install-KMS-Key" width="540px" />
+  <img src="https://github.com/user-attachments/assets/d5d93702-7865-4552-85d0-6916b1331bc0" alt="Install-KMS-Key" width="580px" />
 </p>
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/50c23cad-7690-49fb-bf1c-d1c7cc66f0fe" alt="install-KMS-keyy" width="540px" />
+  <img src="https://github.com/user-attachments/assets/50c23cad-7690-49fb-bf1c-d1c7cc66f0fe" alt="install-KMS-keyy" width="580px" />
 </p>
 
 <br/>
- 
-::: details An alternative license keys
 
-|            **Key**            |  **Version**   |
+::: details کلیدهای لایسنس جایگزین
+
+|           **کلید**            |    **نسخه**    |
 | :---------------------------: | :------------: |
 | TX9XD-98N7V-6WMQ6-BX7FG-H8Q99 |      Home      |
 | 3KHY7-WNT83-DGQKR-F7HPR-844BM |     Home N     |
-| 7HNRX-D7KGG-3K4RQ-4WPJ4-YTDFH |    Home sl     |
-| PVMJN-6DFY6–9CCP6–7BKTT-D3WVR |    Home cs     |
+| 7HNRX-D7KGG-3K4RQ-4WPJ4-YTDFH |    Home SL     |
+| PVMJN-6DFY6–9CCP6–7BKTT-D3WVR |    Home CS     |
 | W269N-WFGWX-YVC9B-4J6C9-T83GX |  Professional  |
 | MH37W-N47XK-V7XM9-C7227-GCQG9 | Professional N |
 | NW6C2-QMPVW-D7KKK-3GKT6-VCFB2 |   Education    |
@@ -223,9 +216,9 @@ Please select one of the **"license keys"** from the list that "matches your ver
 
 <br/>
 
-## Step 3. Set the KMS Server Address
+## مرحله ۳. تنظیم آدرس سرور KMS
 
-Next, point your system to a public KMS server. Run this command:
+سپس، سیستم خود را به یک سرور KMS عمومی متصل کنید. این دستور را اجرا کنید:
 
 ```reg
 slmgr /skms kms8.msguides.com
@@ -237,9 +230,9 @@ slmgr /skms kms8.msguides.com
 
 <br/>
 
-## Step 4. Activate Windows
+## مرحله ۴. فعال‌سازی ویندوز
 
-Finally, trigger the activation by running command:
+در نهایت، با اجرای این دستور فعال‌سازی را انجام دهید:
 
 ```reg
 slmgr /ato
@@ -251,104 +244,107 @@ slmgr /ato
 
 <br/>
 
-## Step 5. Check Activation Status
+## مرحله ۵. بررسی وضعیت فعال‌سازی
 
-**You're all set!!** <Badge type="danger" text="Done" />
+**همه چیز آماده است!**
 
-To check the activation status of "Windows 10" Navigate to:  
-Settings > Update & Security > Activation. [^7]
+### برای ویندوز ۱۰
 
-To check the activation status of "Windows 11" Navigate to:  
-Settings > System > Activation. [^8]
+**Settings → Update & Security → Activation** [^7]
+
+### برای ویندوز ۱۱
+
+**Settings → System → Activation** [^8]
+
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/da52f1bb-79c9-45db-bade-a0f56cd0a739" alt="activated" width="580px" />
 </p>
 
-<hr/><br/>
+<br/>
 
-::: danger Troubleshoot
+### رفع مشکلات
 
-**Error 0xC004F074:** This usually means your internet connection is unstable or the server is busy. Ensure you are online and try the `slmgr /ato` command again. 
+- **خطای 0xC004F074:** معمولاً به این معنی است که اتصال اینترنت شما ناپایدار است یا سرور شلوغ است. مطمئن شوید که آنلاین هستید و دوباره دستور `slmgr /ato` را امتحان کنید.
+
+- **این روش کار نمی‌کند؟** اگر همچنان مشکل دارید، روش **HWID** را از [**راهنمای اصلی**](./index#مرحله-۲) امتحان کنید.
+
+- بد نیست صفحه [**سوالات پرتکرار**](./faq) را مرور کنید — به احتمال زیاد جواب‌تان اینجاست.
+
+- اگر همچنان مشکل پابرجا بود — با ما [**در ارتباط**](./troubleshoot) باشید.
+
+<h3 align="center">کنجکاو باشید 🪐🩶</h3>
 
 <br/>
 
-**Method Not Working?** If you're still having trouble, try the **HWID method** from the [Main guide](./index#step2). or [Online KMS](./online_kms).
+### درباره کلیدهای میانبر 
 
-<br/>
+::: details <Badge type="danger" text="فقط برای علاقه‌مندان" />
 
-If you need any help regarding this, first review the [**FAQ section**](./faq) — your answer will most likely be there.  
+**از کلیدهای میانبر** برای باز کردن برنامه‌های پیش‌فرض در منوی Win+X استفاده کنید.
 
-If your issue persists — You can [**Contact us**](./troubleshoot).
-
-:::
-
-<h3 align="center">Be curious 🪐🩶</h3>
-
-<br/><br/>
-
-## About Hotkeys <Badge type="danger" text="For Enthusiasts" />
-
-::: details Use the hotkeys to open default programs in the Win+X Menu
-
-**Power user menu** is a brief menu listing some advanced system tools like event viewer, device manager, disk management, computer management, task manager, etc.  
-So, you can quickly access those tools through the Power user menu.
+**منوی Power user** یک منوی کوتاه است که برخی از ابزارهای پیشرفته سیستم مانند event viewer، device manager، disk management، computer management، task manager و غیره را فهرست می‌کند.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/7fa52188-2ac2-4b4d-9600-cf3f92e11d3d" alt="windows-plus-x-menu" width="460px" />
-</p><br/>
-  
-The default programs in the Power User Menu have a corresponding hotkey. Familiarity with the hotkeys of common programs can save a lot of time and improve efficiency.  
-For example:
+  <img src="https://github.com/user-attachments/assets/7fa52188-2ac2-4b4d-9600-cf3f92e11d3d" alt="windows-plus-x-menu" width="320px" />
+</p>
 
-- Press `Win (⊞) + X` opens the **Power User Menu** (Win+X Menu).
-- The second keypress (e.g., `F`, `B`, `U`) selects the corresponding program.
-- For shutdown/restart options, `U` opens the submenu, followed by `I`, `S`, `U`, or press `R` for reatart system.
+<br/>
 
-The following are the hotkeys corresponding to each program:
+برنامه‌های پیش‌فرض در منوی Power User دارای کلید میانبر متناظر هستند. آشنایی با کلیدهای میانبر برنامه‌های معمول می‌تواند زمان زیادی صرفه‌جویی کند و بهره‌وری را افزایش دهد.  
+به عنوان مثال:
 
-| Keyboard Shortcut            | Program                  |
-| ---------------------------- | ------------------------ |
-| `Windows + X`, then `F`      | Apps and Features        |
-| `Windows + X`, then `B`      | Mobility Center          |
-| `Windows + X`, then `O`      | Power Options            |
-| `Windows + X`, then `V`      | Event Viewer             |
-| `Windows + X`, then `Y`      | System                   |
-| `Windows + X`, then `M`      | Device Manager           |
-| `Windows + X`, then `W`      | Network Connections      |
-| `Windows + X`, then `K`      | Disk Management          |
-| `Windows + X`, then `G`      | Computer Management      |
-| `Windows + X`, then `A`      | Windows Terminal (Admin) |
-| `Windows + X`, then `T`      | Task Manager             |
-| `Windows + X`, then `N`      | Settings                 |
-| `Windows + X`, then `E`      | File Explorer            |
-| `Windows + X`, then `S`      | Search                   |
-| `Windows + X`, then `R`      | Run                      |
-| `Windows + X`, then `U`, `I` | Sign out                 |
-| `Windows + X`, then `U`, `S` | Sleep                    |
-| `Windows + X`, then `U`, `U` | Shut Down                |
-| `Windows + X`, then `U`, `R` | Restart                  |
-| `Windows + X`, then `D`      | Desktop                  |
+- فشردن **`Windows + X`** منوی **Power User** (منوی Win+X) را باز می‌کند.
+- فشردن کلید دوم (مثل `F`، `B`، `U`) برنامه متناظر را انتخاب می‌کند.
+- برای گزینه‌های خاموش/راه‌اندازی مجدد، `U` زیرمنو را باز می‌کند، سپس `I`، `S`، `U` هرکدام عمل خاصی را انجام می‌دهند، برای مثال می‌توانید `R` را برای راه‌اندازی مجدد سیستم فشار دهید.
+
+<br/>
+
+در زیر کلیدهای میانبر متناظر با هر برنامه آمده است:
+
+| میانبر کیبورد               | برنامه                   |
+| --------------------------- | ------------------------ |
+| `Windows + X`, سپس `F`      | Apps and Features        |
+| `Windows + X`, سپس `B`      | Mobility Center          |
+| `Windows + X`, سپس `O`      | Power Options            |
+| `Windows + X`, سپس `V`      | Event Viewer             |
+| `Windows + X`, سپس `Y`      | System                   |
+| `Windows + X`, سپس `M`      | Device Manager           |
+| `Windows + X`, سپس `W`      | Network Connections      |
+| `Windows + X`, سپس `K`      | Disk Management          |
+| `Windows + X`, سپس `G`      | Computer Management      |
+| `Windows + X`, سپس `A`      | Windows Terminal (Admin) |
+| `Windows + X`, سپس `T`      | Task Manager             |
+| `Windows + X`, سپس `N`      | Settings                 |
+| `Windows + X`, سپس `E`      | File Explorer            |
+| `Windows + X`, سپس `S`      | Search                   |
+| `Windows + X`, سپس `R`      | Run                      |
+| `Windows + X`, سپس `U`, `I` | Sign out                 |
+| `Windows + X`, سپس `U`, `S` | Sleep                    |
+| `Windows + X`, سپس `U`, `U` | Shut Down                |
+| `Windows + X`, سپس `U`, `R` | Restart                  |
+| `Windows + X`, سپس `D`      | Desktop                  |
 
 :::
 
-[^1]: 10 Ways to run PowerShell in windows [read here][1].
+[^1]: ۱۰ روش برای اجرای PowerShell در ویندوز [اینجا بخوانید][1].
 
-[^2]: Another easiest way to run **PowerShell** is **Using Power User Menu**. <br/> - 1. **Right-click** the **Windows Start** icon on the Taskbar to open the menu containing shortcuts to frequently used tools. Also you can open this menu with **`Win (⊞) + x`**. <br/> - 2. Select **Windows Terminal (admin)** at windows 11 Or **Windows PowerShell (admin)** at Windows 10.
+[^2]: ساده‌ترین روش دیگر برای اجرای **PowerShell** از طریق **Power User Menu** می‌باشد. <br/> - 1. روی آیکون `Windows Start` در `Taskbar` کلیک راست کنید تا منوی حاوی میانبرهای ابزارهای پرکاربرد باز شود، همچنین می‌توانید این منو را با `Win (⊞) + x` باز کنید.<br/> - 2. سپس بر روی گزینه **Windows Terminal (Admin)** در ویندوز 11 و یا **Windows PowerShell (Admin)** در ویندوز 10 کلیک کنید.
 
-[^3]: Home Single language version.
+[^3]: نسخه تک زبانه Home.
 
-[^4]: Home Country Specific version.
+[^4]: نسخه مخصوص کشور Home.
 
 [^5]: Professional for Workstations.
 
 [^6]: Professional N for Workstations.
 
-[^7]: To check the activation status of Windows 10, navigate to <br/> Settings → Update & Security → Activation. <br/> You will see your activation status listed there. If Windows is activated, you should see "Activated" with a green checkmark.
+[^7]: برای بررسی وضعیت فعال‌سازی ویندوز 10، به این آدرس بروید: 
+<br/> Settings → Update & Security → Activation <br/>وضعیت فعال‌سازی شما در آنجا فهرست شده است. اگر ویندوز فعال باشد، باید "Activated" را با علامت تیک سبز ببینید.
 
-[^8]: To check the activation status of Windows 11, Navigate to <br/> Settings → System → Activation. <br/> The activation status will be displayed, showing whether Windows is activated, along with details about the activation method and any linked Microsoft account.
+[^8]: برای بررسی وضعیت فعال‌سازی ویندوز 11، به این آدرس بروید: <br/> Settings → System → Activation <br/>وضعیت فعال‌سازی قابل مشاهده خواهد بود، همراه با جزئیات روش فعال‌سازی و حساب‌های پیوند شده‌ی مایکروسافت.
 
 [1]: https://www.minitool.com/news/open-windows-11-powershell.html
 [2]: https://www.minitool.com/news/open-command-prompt-windows-11.html
-[3]: https://github.com/NiREvil/windows-activation/discussions/
+[3]: https://github.com/NiREvil/windows-activation/discussions
 [4]: mailto:diana.clk01@gmail.com

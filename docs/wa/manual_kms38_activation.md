@@ -1,8 +1,8 @@
 ---
 layout: doc
 outline: deep
-title: 'Manual KMS38 Activation'
-description: 'This page is intended for users who do not want to use the script for any reason and would rather perform the KMS38 activation process themselves'
+title: 'فعال‌سازی دستی KMS38'
+description: 'این صفحه برای کاربرانی در نظر گرفته شده است که به هر دلیلی نمی‌خواهند از اسکریپت استفاده کنند و ترجیح می‌دهند فرآیند فعال‌سازی KMS38 را خودشان انجام دهند.'
 date: 2023-03-07
 editLink: true
 ---
@@ -10,82 +10,82 @@ editLink: true
 
 # KMS38
 
-This page is intended for users who do not want to use the script for any reason and would rather perform the KMS38 activation process themselves. If you'd like to use a tool for this instead, please check [here](./index#step-2-run-the-activation-script).
+این صفحه برای کاربرانی در نظر گرفته شده است که به هر دلیلی نمی‌خواهند از اسکریپت استفاده کنند و ترجیح می‌دهند فرآیند فعال‌سازی KMS38 را خودشان انجام دهند. اگر به جای آن می‌خواهید از ابزاری برای این کار استفاده کنید، لطفاً [اینجا](./index#مرحله-۲) را بررسی کنید.
 
-::: info Note
+::: info نکته
 
-KMS38 activation is only supported on Windows 10/11 Client and Server editions.
+فعال‌سازی KMS38 فقط در نسخه‌های کلاینت و سرور ویندوز 10/11 پشتیبانی می‌شود.
 
 :::
 
-## Manually Activate Windows
+## فعال‌سازی دستی ویندوز
 
-To manually activate Windows, follow these steps:
+برای فعال‌سازی دستی ویندوز، این مراحل را دنبال کنید:
 
-- **step 1:** Open Windows Powershell as administrator and enter the below commands
-::: tip To run Powershell
+- **مرحله 1:** Windows Powershell را به عنوان مدیر باز کنید و دستورات زیر را وارد کنید.
+::: tip برای اجرای Powershell
 
-::: details Click here to see details
+::: details برای مشاهده جزئیات اینجا کلیک کنید
 
-### Option A: Using Search Bar <Badge type="danger" text="Recommend" />
-1. Click on windows "Start" button or "Search" icon in the taskbar
-2. Type `powershell`
-3. Select `Run as administrator` <br/>
+### گزینه الف: استفاده از نوار جستجو <Badge type="danger" text="توصیه می‌شود" />
+1. روی دکمه «Start» ویندوز یا نماد «Search» در نوار وظیفه کلیک کنید.
+2. `powershell` را تایپ کنید.
+3. `Run as administrator` را انتخاب کنید. <br/>
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/9b27cd4b-21d8-4970-98bb-3c97010e09bf" alt="open-powershell-as-admin" width="540px" />
 </p>
 
-### Option B: Using Run Box
+### گزینه ب: استفاده از کادر Run
 
-1. Open the Run dialog box: Press `Win (⊞) + R` keys simultaneously
-2. Type `powershell`
-3. Press `Ctrl + Shift + Enter` to run as administrator
-4. If prompted by User Account Control, click `Yes` <br/>
+1. کادر محاوره‌ای Run را باز کنید: کلیدهای `Win (⊞) + R` را همزمان فشار دهید.
+2. `powershell` را تایپ کنید.
+3. برای اجرای به عنوان مدیر، `Ctrl + Shift + Enter` را فشار دهید.
+4. اگر توسط کنترل حساب کاربری درخواست شد، روی `Yes` کلیک کنید. <br/>
 
-### Option C: Using Power User Menu
+### گزینه ج: استفاده از منوی Power User
 
-1. Right-click on the "Start menu" (or press `Win (⊞) + X`)
-2. Select "Windows Terminal (Admin)" on Windows 11 or "Windows PowerShell (Admin)" on Windows 10
+1. روی «Start menu» راست کلیک کنید (یا `Win (⊞) + X` را فشار دهید).
+2. «Windows Terminal (Admin)» را در ویندوز 11 یا «Windows PowerShell (Admin)» را در ویندوز 10 انتخاب کنید.
 
-Or You can visit [this Link][1] to see 10 ways to run **PowerShell** And [this link][2] For Running CMD in your windows.
+یا می‌توانید از [این لینک][1] برای دیدن 10 روش برای اجرای **PowerShell** و [این لینک][2] برای اجرای CMD در ویندوز خود بازدید کنید.
 
 :::
 
-- **step 2:** Install the generic key which matches your Windows edition and version:
+- **مرحله 2:** کلید عمومی را که با نسخه ویندوز شما مطابقت دارد نصب کنید:
 
 ``` reg
 slmgr /ipk <key>
 ```
 
-*(Refer to the table below for the appropriate key.)*
+*(برای کلید مناسب به جدول زیر مراجعه کنید.)*
 
-- **Step 3:** Download the [KMS38 ticket file][3].
-- **Step 4:** Copy the downloaded ticket file to the root of the C: drive.
-- **Step 5:** Migrate the ticket to a license and activate Windows by running the commands:
+- **مرحله 3:** [فایل تیکت KMS38][3] را دانلود کنید.
+- **مرحله 4:** فایل تیکت دانلود شده را در ریشه درایو C: کپی کنید.
+- **مرحله 5:** با اجرای دستورات زیر، تیکت را به یک لایسنس منتقل کرده و ویندوز را فعال کنید:
 
 ```reg
 clipup -v -o -altto C:\
 ```
 
-- **Finally** After waiting for a few seconds, Windows should be activated.
+- **در نهایت** پس از چند ثانیه انتظار، ویندوز باید فعال شود.
 
 
-::: tip Notes
+::: tip نکات
 
-- For Windows Server Cor/Acor editions, the system does not have the `clipup.exe` file.
-    To activate it using KMS38, download the missing `ClipUp.exe` file from [this link][4].
+- برای نسخه‌های Windows Server Cor/Acor، سیستم فایل `clipup.exe` را ندارد.
+    برای فعال‌سازی آن با استفاده از KMS38، فایل گمشده `ClipUp.exe` را از [این لینک][4] دانلود کنید.
     `File: ClipUp.exe`
     `SHA-256: 0d6e9f6bbd0321eda149658d96040cb4f79e0bd93ba60061f25b28fecbf4d4ef`
-  The file is digitally signed and verifiable. You can also obtain this file from the official [Windows Server 2016 x64 RTM ISO][5].
-  Place the `ClipUp.exe` file in the `C:\Windows\System32` folder and perform the KMS38 activation process. Once the activation is complete, you can remove the file.
+  این فایل به صورت دیجیتالی امضا شده و قابل تأیید است. همچنین می‌توانید این فایل را از [ISO رسمی Windows Server 2016 x64 RTM][5] دریافت کنید.
+  فایل `ClipUp.exe` را در پوشه `C:\Windows\System32` قرار دهید و فرآیند فعال‌سازی KMS38 را انجام دهید. پس از اتمام فعال‌سازی، می‌توانید فایل را حذف کنید.
 
 :::
 
 <br/>
 
-### Windows 10 / 11
-| Product Names                                          | Generic Volume License Key    |
+### ویندوز 10 / 11
+| نام محصول                                          | کلید لایسنس حجمی عمومی    |
 |--------------------------------------------------------|-------------------------------|
 | Education                                              | NW6C2-QMPVW-D7KKK-3GKT6-VCFB2 |
 | Education N                                            | 2WH4N-8QGBV-H22JP-CT43Q-MDWWJ |
@@ -101,15 +101,15 @@ clipup -v -o -altto C:\
 | Enterprise N LTSC 2019                                 | 92NFX-8DJQP-P6BBQ-THF9C-7CG2H |
 | Enterprise N LTSC 2021                                 | 92NFX-8DJQP-P6BBQ-THF9C-7CG2H |
 | Enterprise N LTSC 2024                                 | 92NFX-8DJQP-P6BBQ-THF9C-7CG2H |
-| IoT Enterprise LTSC 2021 <br /> (19044.2788 and later) | KBN8V-HFGQ4-MGXVD-347P6-PDQGT |
+| IoT Enterprise LTSC 2021 <br /> (19044.2788 و بالاتر) | KBN8V-HFGQ4-MGXVD-347P6-PDQGT |
 | IoT Enterprise LTSC 2024                               | KBN8V-HFGQ4-MGXVD-347P6-PDQGT |
 | Home                                                   | TX9XD-98N7V-6WMQ6-BX7FG-H8Q99 |
 | Home N                                                 | 3KHY7-WNT83-DGQKR-F7HPR-844BM |
 | Home China                                             | PVMJN-6DFY6-9CCP6-7BKTT-D3WVR |
 | Home Single Language                                   | 7HNRX-D7KGG-3K4RQ-4WPJ4-YTDFH |
 | Lean                                                   | NBTWJ-3DR69-3C4V8-C26MC-GQ9M6 |
-| Enterprise multi-session <br /> (17763 and later)      | CPWHC-NT2C7-VYW78-DHDB2-PG3GK |
-| Enterprise multi-session <br /> (17134 and before)     | 7NBT4-WGBQX-MP4H7-QXFF8-YP3KX |
+| Enterprise multi-session <br /> (17763 و بالاتر)      | CPWHC-NT2C7-VYW78-DHDB2-PG3GK |
+| Enterprise multi-session <br /> (17134 و قبل)     | 7NBT4-WGBQX-MP4H7-QXFF8-YP3KX |
 | Pro                                                    | W269N-WFGWX-YVC9B-4J6C9-T83GX |
 | Pro N                                                  | MH37W-N47XK-V7XM9-C7227-GCQG9 |
 | Pro Education                                          | 6TP4R-GNPTD-KYYHQ-7B7DP-J447Y |
@@ -121,8 +121,8 @@ clipup -v -o -altto C:\
 
 <br/>
 
-### Windows Server 2025 (LTSC)
-| Product Names                        | Generic Volume License Key    |
+### ویندوز سرور 2025 (LTSC)
+| نام محصول                        | کلید لایسنس حجمی عمومی    |
 |--------------------------------------|-------------------------------|
 | Windows Server 2025 Standard         | TVRH6-WHNXV-R9WG3-9XRFY-MY832 |
 | Windows Server 2025 Datacenter       | D764K-2NDRG-47T6Q-P8T8W-YP6DF |
@@ -131,8 +131,8 @@ clipup -v -o -altto C:\
 
 <br/>
 
-### Windows Server 2022 (LTSC)
-| Product Names                        | Generic Volume License Key    |
+### ویندوز سرور 2022 (LTSC)
+| نام محصول                        | کلید لایسنس حجمی عمومی    |
 |--------------------------------------|-------------------------------|
 | Windows Server 2022 Datacenter       | WX4NM-KYWYW-QJJR4-XV3QB-6VM33 |
 | Windows Server 2022 Standard         | VDYBN-27WPP-V4HQT-9VMD4-VMK7H |
@@ -141,8 +141,8 @@ clipup -v -o -altto C:\
 
 <br/>
 
-### Windows Server 2019 (LTSC)
-| Product Names                  | Generic Volume License Key    |
+### ویندوز سرور 2019 (LTSC)
+| نام محصول                  | کلید لایسنس حجمی عمومی    |
 |--------------------------------|-------------------------------|
 | Windows Server 2019 Datacenter | WMDGN-G9PQG-XVVXX-R3X43-63DFG |
 | Windows Server 2019 Standard   | N69G4-B89J2-4G8F4-WWYCC-J464C |
@@ -152,8 +152,8 @@ clipup -v -o -altto C:\
 
 <br/>
 
-### Windows Server 2016 (LTSC)
-| Product Names                     | Generic Volume License Key    |
+### ویندوز سرور 2016 (LTSC)
+| نام محصول                     | کلید لایسنس حجمی عمومی    |
 |-----------------------------------|-------------------------------|
 | Windows Server 2016 ARM64         | K9FYF-G6NCK-73M32-XMVPY-F9DRR |
 | Windows Server 2016 Datacenter    | CB7KF-BWN84-R7R2Y-793K2-8XDDG |
@@ -164,43 +164,43 @@ clipup -v -o -altto C:\
 
 <br/>
 
-### Windows Server 23H2 (Annual Channel)
-| Product Names             | Generic Volume License Key    |
+### ویندوز سرور 23H2 (کانال سالانه)
+| نام محصول             | کلید لایسنس حجمی عمومی    |
 |---------------------------|-------------------------------|
 | Windows Server Datacenter | WX4NM-KYWYW-QJJR4-XV3QB-6VM33 |
 
 <br/>
 
-### Windows Server 20H2, 2004, 1909, 1903, and 1809 (Semi-Annual Channel)
-| Product Names             | Generic Volume License Key    |
+### ویندوز سرور 20H2, 2004, 1909, 1903, and 1809 (کانال نیم‌ساله)
+| نام محصول             | کلید لایسنس حجمی عمومی    |
 |---------------------------|-------------------------------|
 | Windows Server Datacenter | 6NMRW-2C8FM-D24W7-TQWMY-CWH2D |
 | Windows Server Standard   | N2KJX-J94YW-TQVFB-DG9YT-724CC |
 
 <br/>
 
-### Windows Server 1803 (Semi-Annual Channel)
-| Product Names             | Generic Volume License Key    |
+### ویندوز سرور 1803 (کانال نیم‌ساله)
+| نام محصول             | کلید لایسنس حجمی عمومی    |
 |---------------------------|-------------------------------|
 | Windows Server Datacenter | 2HXDN-KRXHB-GPYC7-YCKFJ-7FVDG |
 | Windows Server Standard   | PTXN8-JFHJM-4WC78-MPCBR-9W4KR |
 
 <br/>
 
-### Windows Server 1709 (Semi-Annual Channel)
-| Product Names             | Generic Volume License Key    |
+### ویندوز سرور 1709 (کانال نیم‌ساله)
+| نام محصول             | کلید لایسنس حجمی عمومی    |
 |---------------------------|-------------------------------|
 | Windows Server Datacenter | 6Y6KB-N82V8-D8CQV-23MJW-BWTG6 |
 | Windows Server Standard   | DPCNP-XQFKJ-BJF7R-FRC8D-GF6G4 |
 
 
-## Troubleshoot
+## عیب یابی
 
-::: danger Troubleshoot
+::: danger عیب یابی
 
-- If you need any help regarding this, first review the [**FAQ section**](./faq) — your answer will most likely be there.
+- اگر در این مورد به کمکی نیاز دارید، ابتدا بخش [**سوالات متداول**](./faq) را مرور کنید — به احتمال زیاد پاسخ شما در آنجا خواهد بود.
 
-- If your issue persists — You can [**Contact us**](./troubleshoot).
+- اگر مشکل شما همچنان ادامه داشت — می‌توانید [**با ما تماس بگیرید**](./troubleshoot).
 
 :::
 

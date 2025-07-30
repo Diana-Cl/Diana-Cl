@@ -1,54 +1,54 @@
 ---
 layout: doc
 outline: deep
-title: 'Online KMS Activation'
-description: 'KMS activates Windows – Office for 180 Days, For Windows Core – ProWMC editions it is 30 – 45 Days'
-date: 2025-05-05
+title: 'فعال‌سازی آنلاین KMS'
+description: 'فعال‌سازی آنلاین kms'
+date: 2025-04-06
 editLink: true
 ---
 
-# Online KMS Activation
+# فعال‌سازی آنلاین KMS
 
-## Overview
+## بررسی اجمالی
 
-- How to use it? Please find the instructions [intro](./index#step2).
-- KMS activates Windows / Office for 180 Days. For Windows Core / ProWMC editions it is 30 / 45 Days.
-- This script can activate both Retail and Volume Windows installation.
-- This script can activate C2R Retail and VL Office, UWP Office, but not 2010 / 2013 MSI Retail Office.
-- This script skips the activation if Windows is permanently / KMS38 activated.
-- As mentioned, KMS activates only for a limited period and it's not permanent, read below on how to achieve lifetime activation.
+- چگونه از آن استفاده کنیم؟ لطفاً دستورالعمل‌ها را در [مقدمه](./index#مرحله-۲) بیابید.
+- KMS ویندوز / آفیس را برای 180 روز فعال می‌کند. برای نسخه‌های Windows Core / ProWMC این مدت 30 / 45 روز است.
+- این اسکریپت می‌تواند هم نصب ویندوز Retail و هم Volume را فعال کند.
+- این اسکریپت می‌تواند آفیس C2R Retail و VL، آفیس UWP را فعال کند، اما نه آفیس Retail 2010 / 2013 MSI.
+- این اسکریپت در صورتی که ویندوز به طور دائمی / KMS38 فعال شده باشد، از فعال‌سازی صرف‌نظر می‌کند.
+- همانطور که ذکر شد، KMS فقط برای یک دوره محدود فعال می‌شود و دائمی نیست، در ادامه در مورد چگونگی دستیابی به فعال‌سازی مادام‌العمر بخوانید.
 
-## Activation Renewal
+## تمدید فعال‌سازی
 
-By design in the genuine [KMS][1] activation method, the system contacts the registered server every 7 days, and if contacted successfully it will automatically renew and reset the activation for the full period of 180 days again, starting from the day of successful contact. If the system cannot contact the server, it will be deactivated after 180 days and it will remain deactivated until contact can be restored.
+طبق طراحی در روش فعال‌سازی واقعی [KMS][1]، سیستم هر 7 روز با سرور ثبت شده تماس می‌گیرد و در صورت تماس موفقیت‌آمیز، فعال‌سازی را به طور خودکار تمدید و برای دوره کامل 180 روز از روز تماس موفقیت‌آمیز بازنشانی می‌کند. اگر سیستم نتواند با سرور تماس بگیرد، پس از 180 روز غیرفعال می‌شود و تا زمانی که تماس برقرار نشود، غیرفعال باقی می‌ماند.
 
-To get the lifetime activation, script by default creates auto renewal task.  
-It creates the following two files,  
-`C:\Program Files\Activation-Renewal\Activation_task.cmd`  
+برای دریافت فعال‌سازی مادام‌العمر، اسکریپت به طور پیش‌فرض وظیفه تمدید خودکار ایجاد می‌کند.
+این دو فایل زیر را ایجاد می‌کند،
+
+`C:\Program Files\Activation-Renewal\Activation_task.cmd`
+
 `C:\Program Files\Activation-Renewal\Info.txt`
 
-And creates a scheduled task `\Activation-Renewal` to run the script every 7 days. This task registers the working KMS server and triggers activation commands only for the installed Volume products. The scheduled task runs only if the system is connected to the Internet.
+و یک وظیفه زمان‌بندی شده `\Activation-Renewal` برای اجرای اسکریپت هر 7 روز ایجاد می‌کند. این وظیفه سرور KMS در حال کار را ثبت می‌کند و دستورات فعال‌سازی را فقط برای محصولات Volume نصب شده فعال می‌کند. وظیفه زمان‌بندی شده فقط در صورتی اجرا می‌شود که سیستم به اینترنت متصل باشد.
 
-If you don't want to install this renewal task, you can turn off the "Renewal Task With Activation" option in script menu <br/>
+اگر نمی‌خواهید این وظیفه تمدید را نصب کنید، می‌توانید گزینه "Renewal Task With Activation" را در منوی اسکریپت خاموش کنید <br/>
 
-## Remarks
+## ملاحظات
 
-- With KMS Activation, you can update Windows/Office without any issues.
-- What is left in the system in the activation process?
-  - **If Renewal Task is installed:** After activation, it leaves the KMS Server IP in the registry, which helps you to get the global activation feature whereby the system auto-renews the activation. About files and scheduled tasks, it has been mentioned above.
-  - **If Renewal Task is NOT installed:** It leaves a non-existent IP 10.0.0.10 to avoid the Office Not Genuine Banner issue.
-- This script includes the most-stable KMS servers (16) list from all over the world. The server selection process is fully automatic. Script randomly selects a server, tests if it's online, if yes then apply the activation command, if fails, then retry this process maximum of total 3 times for a product. Such redundancy makes sure that we get the working KMS server at any time.
-- If your system date is incorrect (beyond 180 days) and you are offline, the system will be deactivated, but will automatically reactivate when you correct the system date.
-- The advantage of Online KMS activation is that it doesn't need any KMS binary file and the system can be activated using some manual commands or transparent batch script files. So this is for those who don't like/have difficulties/trust issues in offline KMS because of its binary files and antivirus detections.
-  But if you prefer offline KMS then checkout an open-source activator, abbodi1406's [KMS_VL_ALL][2].
+- با فعال‌سازی KMS، می‌توانید ویندوز/آفیس را بدون هیچ مشکلی به‌روزرسانی کنید.
+- چه چیزی در سیستم در فرآیند فعال‌سازی باقی می‌ماند؟
+  - **اگر وظیفه تمدید نصب شده باشد:** پس از فعال‌سازی، IP سرور KMS را در رجیستری باقی می‌گذارد، که به شما کمک می‌کند تا ویژگی فعال‌سازی جهانی را دریافت کنید که به موجب آن سیستم به طور خودکار فعال‌سازی را تمدید می‌کند. در مورد فایل‌ها و وظایف زمان‌بندی شده، در بالا ذکر شده است.
+  - **اگر وظیفه تمدید نصب نشده باشد:** یک IP غیرموجود 10.0.0.10 را برای جلوگیری از مشکل بنر غیر اصلی آفیس باقی می‌گذارد.
+- این اسکریپت شامل لیست پایدارترین سرورهای KMS (16) از سراسر جهان است. فرآیند انتخاب سرور کاملاً خودکار است. اسکریپت به طور تصادفی یک سرور را انتخاب می‌کند، آزمایش می‌کند که آیا آنلاین است، اگر بله، دستور فعال‌سازی را اعمال می‌کند، اگر شکست بخورد، این فرآیند را حداکثر 3 بار برای یک محصول تکرار می‌کند. چنین افزونگی اطمینان می‌دهد که ما در هر زمان سرور KMS در حال کار را دریافت می‌کنیم.
+- اگر تاریخ سیستم شما نادرست باشد (بیش از 180 روز) و آفلاین باشید، سیستم غیرفعال می‌شود، اما با تصحیح تاریخ سیستم به طور خودکار دوباره فعال می‌شود.
+- مزیت فعال‌سازی آنلاین KMS این است که به هیچ فایل باینری KMS نیاز ندارد و سیستم را می‌توان با استفاده از برخی دستورات دستی یا فایل‌های اسکریپت بچ شفاف فعال کرد. بنابراین این برای کسانی است که به دلیل فایل‌های باینری و تشخیص آنتی‌ویروس، KMS آفلاین را دوست ندارند/مشکل دارند/اعتماد ندارند.
+  اما اگر KMS آفلاین را ترجیح می‌دهید، یک فعال‌کننده منبع باز، [KMS_VL_ALL][2] abbodi1406 را بررسی کنید.
 
-<hr/><br/>
+## محصولات پشتیبانی شده
 
-## Supported Products
+### ویندوز 10 / 11
 
-### Windows 10 / 11
-
-| Product Names                                         | EditionID                | Generic Volume License Key    |
+| نام‌های محصول                                         | EditionID                | کلید مجوز حجمی عمومی    |
 | ----------------------------------------------------- | ------------------------ | ----------------------------- |
 | Education                                             | Education                | NW6C2-QMPVW-D7KKK-3GKT6-VCFB2 |
 | Education N                                           | EducationN               | 2WH4N-8QGBV-H22JP-CT43Q-MDWWJ |
@@ -64,15 +64,15 @@ If you don't want to install this renewal task, you can turn off the "Renewal Ta
 | Enterprise N LTSC 2019                                | EnterpriseSN             | 92NFX-8DJQP-P6BBQ-THF9C-7CG2H |
 | Enterprise N LTSC 2021                                | EnterpriseSN             | 92NFX-8DJQP-P6BBQ-THF9C-7CG2H |
 | Enterprise N LTSC 2024                                | EnterpriseSN             | 92NFX-8DJQP-P6BBQ-THF9C-7CG2H |
-| IoT Enterprise LTSC 2021 <br/> (19044.2788 and later) | IoTEnterpriseS           | KBN8V-HFGQ4-MGXVD-347P6-PDQGT |
+| IoT Enterprise LTSC 2021 <br/> (19044.2788 و بالاتر) | IoTEnterpriseS           | KBN8V-HFGQ4-MGXVD-347P6-PDQGT |
 | IoT Enterprise LTSC 2024                              | IoTEnterpriseS           | KBN8V-HFGQ4-MGXVD-347P6-PDQGT |
 | Home                                                  | Core                     | TX9XD-98N7V-6WMQ6-BX7FG-H8Q99 |
 | Home N                                                | CoreN                    | 3KHY7-WNT83-DGQKR-F7HPR-844BM |
 | Home China                                            | CoreCountrySpecific      | PVMJN-6DFY6-9CCP6-7BKTT-D3WVR |
 | Home Single Language                                  | CoreSingleLanguage       | 7HNRX-D7KGG-3K4RQ-4WPJ4-YTDFH |
 | Lean                                                  | CloudE                   | NBTWJ-3DR69-3C4V8-C26MC-GQ9M6 |
-| Enterprise multi-session <br/> (17763 and later)      | ServerRdsh               | CPWHC-NT2C7-VYW78-DHDB2-PG3GK |
-| Enterprise multi-session <br/> (17134 and before)     | ServerRdsh               | 7NBT4-WGBQX-MP4H7-QXFF8-YP3KX |
+| Enterprise multi-session <br/> (17763 و بالاتر)      | ServerRdsh               | CPWHC-NT2C7-VYW78-DHDB2-PG3GK |
+| Enterprise multi-session <br/> (17134 و قبل)     | ServerRdsh               | 7NBT4-WGBQX-MP4H7-QXFF8-YP3KX |
 | Pro                                                   | Professional             | W269N-WFGWX-YVC9B-4J6C9-T83GX |
 | Pro N                                                 | ProfessionalN            | MH37W-N47XK-V7XM9-C7227-GCQG9 |
 | Pro Education                                         | ProfessionalEducation    | 6TP4R-GNPTD-KYYHQ-7B7DP-J447Y |
@@ -84,9 +84,9 @@ If you don't want to install this renewal task, you can turn off the "Renewal Ta
 
 <br/>
 
-### Windows Server 2025 (LTSC)
+### ویندوز سرور 2025 (LTSC)
 
-| Product Names                        | EditionID        | Generic Volume License Key    |
+| نام‌های محصول                        | EditionID        | کلید مجوز حجمی عمومی    |
 | ------------------------------------ | ---------------- | ----------------------------- |
 | Windows Server 2025 Standard         | ServerStandard   | TVRH6-WHNXV-R9WG3-9XRFY-MY832 |
 | Windows Server 2025 Datacenter       | ServerDatacenter | D764K-2NDRG-47T6Q-P8T8W-YP6DF |
@@ -95,9 +95,9 @@ If you don't want to install this renewal task, you can turn off the "Renewal Ta
 
 <br/>
 
-### Windows Server 2022 (LTSC)
+### ویندوز سرور 2022 (LTSC)
 
-| Product Names                        | EditionID        | Generic Volume License Key    |
+| نام‌های محصول                        | EditionID        | کلید مجوز حجمی عمومی    |
 | ------------------------------------ | ---------------- | ----------------------------- |
 | Windows Server 2022 Datacenter       | ServerDatacenter | WX4NM-KYWYW-QJJR4-XV3QB-6VM33 |
 | Windows Server 2022 Standard         | ServerStandard   | VDYBN-27WPP-V4HQT-9VMD4-VMK7H |
@@ -106,9 +106,9 @@ If you don't want to install this renewal task, you can turn off the "Renewal Ta
 
 <br/>
 
-### Windows Server 2019 (LTSC)
+### ویندوز سرور 2019 (LTSC)
 
-| Product Names                  | EditionID        | Generic Volume License Key    |
+| نام‌های محصول                  | EditionID        | کلید مجوز حجمی عمومی    |
 | ------------------------------ | ---------------- | ----------------------------- |
 | Windows Server 2019 Datacenter | ServerDatacenter | WMDGN-G9PQG-XVVXX-R3X43-63DFG |
 | Windows Server 2019 Standard   | ServerStandard   | N69G4-B89J2-4G8F4-WWYCC-J464C |
@@ -118,9 +118,9 @@ If you don't want to install this renewal task, you can turn off the "Renewal Ta
 
 <br/>
 
-### Windows Server 2016 (LTSC)
+### ویندوز سرور 2016 (LTSC)
 
-| Product Names                     | EditionID          | Generic Volume License Key    |
+| نام‌های محصول                     | EditionID          | کلید مجوز حجمی عمومی    |
 | --------------------------------- | ------------------ | ----------------------------- |
 | Windows Server 2016 ARM64         | ServerARM64        | K9FYF-G6NCK-73M32-XMVPY-F9DRR |
 | Windows Server 2016 Datacenter    | ServerDatacenter   | CB7KF-BWN84-R7R2Y-793K2-8XDDG |
@@ -131,44 +131,44 @@ If you don't want to install this renewal task, you can turn off the "Renewal Ta
 
 <br/>
 
-### Windows Server 23H2 (Annual Channel)
+### ویندوز سرور 23H2 (کانال سالانه)
 
-| Product Names             | EditionID        | Generic Volume License Key    |
+| نام‌های محصول             | EditionID        | کلید مجوز حجمی عمومی    |
 | ------------------------- | ---------------- | ----------------------------- |
 | Windows Server Datacenter | ServerDatacenter | WX4NM-KYWYW-QJJR4-XV3QB-6VM33 |
 
 <br/>
 
-### Windows Server 20H2, 2004, 1909, 1903, and 1809 (Semi-Annual Channel)
+### ویندوز سرور 20H2، 2004، 1909، 1903 و 1809 (کانال نیمه سالانه)
 
-| Product Names             | EditionID            | Generic Volume License Key    |
+| نام‌های محصول             | EditionID            | کلید مجوز حجمی عمومی    |
 | ------------------------- | -------------------- | ----------------------------- |
 | Windows Server Datacenter | ServerDatacenterACor | 6NMRW-2C8FM-D24W7-TQWMY-CWH2D |
 | Windows Server Standard   | ServerStandardACor   | N2KJX-J94YW-TQVFB-DG9YT-724CC |
 
 <br/>
 
-### Windows Server 1803 (Semi-Annual Channel)
+### ویندوز سرور 1803 (کانال نیمه سالانه)
 
-| Product Names             | EditionID            | Generic Volume License Key    |
+| نام‌های محصول             | EditionID            | کلید مجوز حجمی عمومی    |
 | ------------------------- | -------------------- | ----------------------------- |
 | Windows Server Datacenter | ServerDatacenterACor | 2HXDN-KRXHB-GPYC7-YCKFJ-7FVDG |
 | Windows Server Standard   | ServerStandardACor   | PTXN8-JFHJM-4WC78-MPCBR-9W4KR |
 
 <br/>
 
-### Windows Server 1709 (Semi-Annual Channel)
+### ویندوز سرور 1709 (کانال نیمه سالانه)
 
-| Product Names             | EditionID            | Generic Volume License Key    |
+| نام‌های محصول             | EditionID            | کلید مجوز حجمی عمومی    |
 | ------------------------- | -------------------- | ----------------------------- |
 | Windows Server Datacenter | ServerDatacenterACor | 6Y6KB-N82V8-D8CQV-23MJW-BWTG6 |
 | Windows Server Standard   | ServerStandardACor   | DPCNP-XQFKJ-BJF7R-FRC8D-GF6G4 |
 
 <br/>
 
-### Windows 8.1
+### ویندوز 8.1
 
-| EditionID                    | Generic Volume License Key    |
+| EditionID                    | کلید مجوز حجمی عمومی    |
 | ---------------------------- | ----------------------------- |
 | Enterprise                   | MHF9N-XY6XB-WVXMC-BTDCT-MKKG7 |
 | EnterpriseN                  | TT4HM-HN7YT-62K67-RGRQJ-JFFXW |
@@ -192,9 +192,9 @@ If you don't want to install this renewal task, you can turn off the "Renewal Ta
 
 <br/>
 
-### Windows Server 2012 R2
+### ویندوز سرور 2012 R2
 
-| EditionID          | Generic Volume License Key    |
+| EditionID          | کلید مجوز حجمی عمومی    |
 | ------------------ | ----------------------------- |
 | ServerStandard     | D2N9P-3P6X9-2R39C-7RTCD-MDVJX |
 | ServerDatacenter   | W3GGN-FT8W3-Y4M27-J84CP-Q3VJ9 |
@@ -203,9 +203,9 @@ If you don't want to install this renewal task, you can turn off the "Renewal Ta
 
 <br/>
 
-### Windows 8
+### ویندوز 8
 
-| EditionID           | Generic Volume License Key    |
+| EditionID           | کلید مجوز حجمی عمومی    |
 | ------------------- | ----------------------------- |
 | Enterprise          | 32JNW-9KQ84-P47T8-D8GGY-CWCK7 |
 | EnterpriseN         | JMNMF-RHW7P-DMY6X-RF3DR-X2BQT |
@@ -222,9 +222,9 @@ If you don't want to install this renewal task, you can turn off the "Renewal Ta
 
 <br/>
 
-### Windows Server 2012
+### ویندوز سرور 2012
 
-| EditionID                | Generic Volume License Key    |
+| EditionID                | کلید مجوز حجمی عمومی    |
 | ------------------------ | ----------------------------- |
 | ServerStandard           | XC9B7-NBPP2-83J2H-RHMBY-92BT4 |
 | ServerDatacenter         | 48HP8-DN98B-MYWDG-T2DCC-8W83P |
@@ -234,9 +234,9 @@ If you don't want to install this renewal task, you can turn off the "Renewal Ta
 
 <br/>
 
-### Windows 7
+### ویندوز 7
 
-| EditionID         | Generic Volume License Key    |
+| EditionID         | کلید مجوز حجمی عمومی    |
 | ----------------- | ----------------------------- |
 | Enterprise        | 33PXH-7Y6KF-2VJC9-XBBR8-HVTHH |
 | EnterpriseN       | YDRBP-3D83W-TY26F-D46B2-XCKRJ |
@@ -249,9 +249,9 @@ If you don't want to install this renewal task, you can turn off the "Renewal Ta
 
 <br/>
 
-### Windows Server 2008 R2
+### ویندوز سرور 2008 R2
 
-| EditionID              | Generic Volume License Key    |
+| EditionID              | کلید مجوز حجمی عمومی    |
 | ---------------------- | ----------------------------- |
 | ServerStandard         | YC6KT-GKW9T-YTKYR-T4X34-R7VHC |
 | ServerDatacenter       | 74YFP-3QFB3-KQT8W-PMXWJ-7M648 |
@@ -267,9 +267,9 @@ If you don't want to install this renewal task, you can turn off the "Renewal Ta
 
 <br/>
 
-### Windows Vista
+### ویندوز ویستا
 
-| EditionID   | Generic Volume License Key    |
+| EditionID   | کلید مجوز حجمی عمومی    |
 | ----------- | ----------------------------- |
 | Enterprise  | VKK3X-68KWM-X2YGT-QR4M6-4BWMV |
 | Business    | YFKBB-PQJJV-G996G-VWGXY-2V3X8 |
@@ -278,9 +278,9 @@ If you don't want to install this renewal task, you can turn off the "Renewal Ta
 
 <br/>
 
-### Windows Server 2008
+### ویندوز سرور 2008
 
-| EditionID            | Generic Volume License Key    |
+| EditionID            | کلید مجوز حجمی عمومی    |
 | -------------------- | ----------------------------- |
 | ServerStandard       | TM24T-X9RMF-VWXK6-X8JC9-BFGM2 |
 | ServerDatacenter     | 7M67G-PC374-GR742-YH8V4-TCBY3 |
@@ -294,9 +294,9 @@ If you don't want to install this renewal task, you can turn off the "Renewal Ta
 
 <br/>
 
-### Office 2010
+### آفیس 2010
 
-| EditionID        | Generic Volume License Key    |
+| EditionID        | کلید مجوز حجمی عمومی    |
 | ---------------- | ----------------------------- |
 | AccessVL         | V7Y44-9T38C-R2VJK-666HK-T7DDX |
 | ExcelVL          | H62QG-HXVKF-PP4HP-66KMR-CW9BM |
@@ -317,9 +317,9 @@ If you don't want to install this renewal task, you can turn off the "Renewal Ta
 
 <br/>
 
-### Office 2013
+### آفیس 2013
 
-| EditionID        | Generic Volume License Key    |
+| EditionID        | کلید مجوز حجمی عمومی    |
 | ---------------- | ----------------------------- |
 | AccessVolume     | NG2JY-H4JBT-HQXYP-78QH9-4JM2D |
 | ExcelVolume      | VGPNG-Y7HQW-9RHP7-TKPV3-BG7GB |
@@ -342,9 +342,9 @@ If you don't want to install this renewal task, you can turn off the "Renewal Ta
 
 <br/>
 
-### Office 2016
+### آفیس 2016
 
-| EditionID              | Generic Volume License Key    |
+| EditionID              | کلید مجوز حجمی عمومی    |
 | ---------------------- | ----------------------------- |
 | AccessVolume           | GNH9Y-D2J4T-FJHGG-QRVH7-QPFDW |
 | ExcelVolume            | 9C2PK-NWTVB-JMPW8-BFT28-7FTBF |
@@ -369,9 +369,9 @@ If you don't want to install this renewal task, you can turn off the "Renewal Ta
 
 <br/>
 
-### Office 2019
+### آفیس 2019
 
-| EditionID                  | Generic Volume License Key    |
+| EditionID                  | کلید مجوز حجمی عمومی    |
 | -------------------------- | ----------------------------- |
 | Access2019Volume           | 9N9PT-27V4Y-VJ2PD-YXFMF-YTFQT |
 | Excel2019Volume            | TMJWT-YYNMB-3BKTF-644FC-RVXBD |
@@ -389,9 +389,9 @@ If you don't want to install this renewal task, you can turn off the "Renewal Ta
 
 <br/>
 
-### Office 2021
+### آفیس 2021
 
-| EditionID                  | Generic Volume License Key    |
+| EditionID                  | کلید مجوز حجمی عمومی    |
 | -------------------------- | ----------------------------- |
 | Access2021Volume           | WM8YG-YNGDD-4JHDC-PG3F4-FC4T4 |
 | Excel2021Volume            | NWG3X-87C9K-TC7YY-BC2G7-G6RVC |
@@ -409,9 +409,9 @@ If you don't want to install this renewal task, you can turn off the "Renewal Ta
 
 <br/>
 
-### Office 2024
+### آفیس 2024
 
-| EditionID                    | Generic Volume License Key    |
+| EditionID                    | کلید مجوز حجمی عمومی    |
 | ---------------------------- | ----------------------------- |
 | ProPlus2024Volume-Preview    | 2TDPW-NDQ7G-FMG99-DXQ7M-TX3T2 |
 | ProjectPro2024Volume-Preview | D9GTG-NP7DV-T6JP3-B6B62-JB89R |
@@ -429,112 +429,109 @@ If you don't want to install this renewal task, you can turn off the "Renewal Ta
 | VisioStd2024Volume           | JMMVY-XFNQC-KK4HK-9H7R3-WQQTV |
 | Word2024Volume               | MQ84N-7VYDM-FXV7C-6K7CC-VFW9J |
 
-<hr/>
+<hr/><br/>
 
-::: tip INFO
+::: tip اطلاعات
 
-- Systems in all architectures (x86, x64 and arm64) are supported.
-- Office C2R retail products are converted to thier corresponding Volume products to enable KMS activation.
-- These editions are only KMS-activatable for _45_ days at max:
-  - Windows 10/11 Home edition variants
-  - Windows 8.1 Core edition variants, Pro with Media Center, Pro for Students  
-    These editions are only KMS-activatable for _30_ days at max:
-  - Windows 8 Core edition variants, Pro with Media Center
-
-:::
-
-## Unsupported Products
-
-- Office MSI Retail 2010/2013, Office 2010 C2R Retail
-- Any Evaluation version of Windows (i.e. 'EVAL' LTSB/C) [cannot be activated](./evaluation_editions) beyond the evaluation period. You can use TSforge option in MAS to reset the activation any given time.
-- Server Azure Datacenter (ServerTurbine) edition does not support activation on non-azure systems.
-- KMS activation on Windows 7 has a limitation related to OEM Activation 2.0 and Windows marker. For more info, see [support.microsoft.com][3] and here [technet.microsoft.com/activation-of-windows-oem-computers][4]
-- Windows editions that do not support KMS activation by design:  
-  Windows Evaluation Editions  
-  Windows 7 (Starter, HomeBasic, HomePremium, Ultimate)  
-  Windows 10 (Cloud "S", IoTEnterprise, ProfessionalSingleLanguage... etc)  
-  Windows Server (Server Foundation, Storage Server, Home Server 2011... etc)
-
-## How does it work?
-
-::: tip What is KMS activation?
-
-Key Management Service (KMS) is a genuine activation method provided by Microsoft for volume licensing customers (organizations, schools, or governments). The machines in those environments (called KMS clients) are activated via the Environment KMS Host Server (authorized Microsoft's licensing key), instead of Microsoft activation servers. By design, the KMS activation period lasts up to 180 Days (6 Months) at max, with the ability to renew and reinstate the period at any time. Activation renewal automatically happens every 7 days if the client can connect to the KMS host server. For more info, see [microsoft.com/licensing][5] and [technet.microsoft.com/kms-overview][6].
+- سیستم‌ها در تمام معماری‌ها (x86، x64 و arm64) پشتیبانی می‌شوند.
+- محصولات خرده‌فروشی Office C2R به محصولات حجمی مربوطه خود تبدیل می‌شوند تا فعال‌سازی KMS را فعال کنند.
+- این نسخه‌ها فقط برای حداکثر _45_ روز قابل فعال‌سازی با KMS هستند:
+  - انواع نسخه‌های خانگی ویندوز 10/11
+  - انواع نسخه‌های اصلی ویندوز 8.1، Pro با Media Center، Pro برای دانشجویان
+    این نسخه‌ها فقط برای حداکثر _30_ روز قابل فعال‌سازی با KMS هستند:
+  - انواع نسخه‌های اصلی ویندوز 8، Pro با Media Center
 
 :::
-
-::: tip How are we getting it for free
-
-Developers reverse-engineered the KMS Host Server setup, so now anyone can host a KMS server and activate the systems without any limitations. KMS activators such as KMSpico, MTK, KMS_VL_ALL, etc., locally create an emulated KMS Host Server and activate Windows and Office.
-
-This locally-emulated KMS server requires you to run binary files which often cause anti-virus alerts (false positives).
-
-Another method of KMS activation is a publicly-available Online KMS Host Server. In this method, the site hosts the emulated KMS server, and anyone can simply use this server to activate their systems, there is no requirement for running any software on your system.
-
-:::
-
-## Is Online KMS activation safe
-
-Yes.
-Let's go into the details. In the KMS protocol, there is a relationship between host and client. The client system asks the host system to grant the activation, and the host system grants the activation if it's eligible. In this process, the client system shares some of the system's data, which is not sensitive in nature. According to the [technet.microsoft.com/aspx#kms-overview][7], the client system shares the following data with the host system: Client FQDN, CMID, time-stamp, Product license state, expiration time, and IP address
-  In this shared info, the important part is your IP address. Below are some things regarding it which you should know.
-  - Sharing your IP while going online is not a security concern. You can not go online to visit any website without having to share your IP address.
-  - IP addresses do not necessarily represent a specific person. Internet Service Providers (ISPs) mostly use dynamic IP, which means the same IP address can be used by many different persons, and a dynamic IP address is periodically reassigned to different people all the time. But a static IP address is permanently assigned to a unique subscriber. The Internet Service Provider (ISP) won't reveal that information unless there is a legal reason to do so.
-  - Microsoft has never tried to go after Home users in legal cases for using a few pirated activations (not talking about stolen legal keys) simply because the cost of legal actions would be much higher than the amount of money gained by forcing a few people to purchase activations.
-  - No law enforcement is going to take action based on IPs from all over the world without the consent of Microsoft itself.
-
-Feel free to contact us in case you have a contradictory point of view.
 
 <br/>
 
-## How to remove Online KMS?
+## محصولات پشتیبانی نشده
 
-- In MAS, goto Online KMS activation and apply Uninstall option.
-- After that, In MAS, goto Troubleshoot and apply Fix Licensing option.
-- Done. <br/>
+- آفیس MSI Retail 2010/2013، آفیس 2010 C2R Retail
+- هر نسخه ارزیابی ویندوز (یعنی 'EVAL' LTSB/C) [نمی‌تواند فراتر از دوره ارزیابی فعال شود](./evaluation_editions). می‌توانید از گزینه TSforge در MAS برای بازنشانی فعال‌سازی در هر زمان معین استفاده کنید.
+- نسخه Server Azure Datacenter (ServerTurbine) از فعال‌سازی در سیستم‌های غیر azure پشتیبانی نمی‌کند.
+- فعال‌سازی KMS در ویندوز 7 محدودیتی مربوط به OEM Activation 2.0 و نشانگر ویندوز دارد. برای اطلاعات بیشتر، به [support.microsoft.com][3] و اینجا [technet.microsoft.com/activation-of-windows-oem-computers][4] مراجعه کنید.
+- نسخه‌های ویندوزی که از فعال‌سازی KMS پشتیبانی نمی‌کنند:
+  نسخه‌های ارزیابی ویندوز
+  ویندوز 7 (Starter، HomeBasic، HomePremium، Ultimate)
+  ویندوز 10 (Cloud "S"، IoTEnterprise، ProfessionalSingleLanguage... و غیره)
+  ویندوز سرور (Server Foundation، Storage Server، Home Server 2011... و غیره)
 
-### Office 'Non-genuine' Banner
+<br/>
 
-- Office Click-to-Run builds (since February 2021) that are activated with KMS check the existence of the KMS server name in the registry.
-- If KMS server is not present, a banner is shown in Office programs notifying that "Office isn't licensed properly".
-- Therefore in manual mode, `KeyManagementServiceName` value containing a non-existent IP address 10.0.0.10 will be kept in the below registry keys:
+## چگونه کار می‌کند
+
+- **فعال‌سازی KMS چیست؟**
+  سرویس مدیریت کلید (KMS) یک روش فعال‌سازی واقعی است که توسط مایکروسافت برای مشتریان مجوز حجمی (سازمان‌ها، مدارس یا دولت‌ها) ارائه می‌شود. ماشین‌ها در آن محیط‌ها (که مشتریان KMS نامیده می‌شوند) از طریق سرور میزبان KMS محیط (کلید صدور مجوز مجاز مایکروسافت) فعال می‌شوند، به جای سرورهای فعال‌سازی مایکروسافت. طبق طراحی، دوره فعال‌سازی KMS حداکثر تا 180 روز (6 ماه) طول می‌کشد، با قابلیت تمدید و بازگرداندن دوره در هر زمان. تمدید فعال‌سازی به طور خودکار هر 7 روز اتفاق می‌افتد اگر مشتری بتواند به سرور میزبان KMS متصل شود. برای اطلاعات بیشتر، به [microsoft.com/licensing][5] و [technet.microsoft.com/kms-overview][6] مراجعه کنید.
+
+<br/>
+
+- **چگونه آن را به صورت رایگان دریافت می‌کنیم؟**
+  توسعه‌دهندگان راه‌اندازی سرور میزبان KMS را مهندسی معکوس کرده‌اند، بنابراین اکنون هر کسی می‌تواند یک سرور KMS را میزبانی کند و سیستم‌ها را بدون هیچ محدودیتی فعال کند. فعال‌کننده‌های KMS مانند KMSpico، MTK، KMS_VL_ALL و غیره، به صورت محلی یک سرور میزبان KMS شبیه‌سازی شده ایجاد می‌کنند و ویندوز و آفیس را فعال می‌کنند.
+  این سرور KMS شبیه‌سازی شده محلی نیاز به اجرای فایل‌های باینری دارد که اغلب باعث هشدارهای آنتی‌ویروس (مثبت کاذب) می‌شود.
+  روش دیگر فعال‌سازی KMS، سرور میزبان آنلاین KMS در دسترس عموم است. در این روش، سایت سرور KMS شبیه‌سازی شده را میزبانی می‌کند و هر کسی می‌تواند به سادگی از این سرور برای فعال کردن سیستم‌های خود استفاده کند، نیازی به اجرای هیچ نرم‌افزاری روی سیستم شما نیست.
+
+<br/>
+
+- **آیا فعال‌سازی آنلاین KMS ایمن است؟**
+  بله.
+  بیایید به جزئیات بپردازیم. در پروتکل KMS، رابطه‌ای بین میزبان و مشتری وجود دارد. سیستم مشتری از سیستم میزبان می‌خواهد که فعال‌سازی را اعطا کند، و سیستم میزبان در صورت واجد شرایط بودن، فعال‌سازی را اعطا می‌کند. در این فرآیند، سیستم مشتری برخی از داده‌های سیستم را به اشتراک می‌گذارد که ماهیت حساسی ندارند. طبق [technet.microsoft.com/aspx#kms-overview][7]، سیستم مشتری داده‌های زیر را با سیستم میزبان به اشتراک می‌گذارد: FQDN مشتری، CMID، مهر زمانی، وضعیت مجوز محصول، زمان انقضا و آدرس IP
+  در این اطلاعات به اشتراک گذاشته شده، بخش مهم آدرس IP شما است. در زیر برخی از مواردی که باید در مورد آن بدانید آورده شده است.
+  - به اشتراک گذاشتن IP شما هنگام آنلاین شدن یک نگرانی امنیتی نیست. شما نمی‌توانید بدون به اشتراک گذاشتن آدرس IP خود به هیچ وب‌سایتی آنلاین بروید.
+  - آدرس‌های IP لزوماً نماینده یک شخص خاص نیستند. ارائه‌دهندگان خدمات اینترنت (ISP) بیشتر از IP پویا استفاده می‌کنند، به این معنی که همان آدرس IP می‌تواند توسط افراد مختلفی استفاده شود، و یک آدرس IP پویا به طور دوره‌ای به افراد مختلف اختصاص داده می‌شود. اما یک آدرس IP ثابت به طور دائم به یک مشترک منحصر به فرد اختصاص داده می‌شود. ارائه‌دهنده خدمات اینترنت (ISP) این اطلاعات را فاش نخواهد کرد مگر اینکه دلیل قانونی برای انجام این کار وجود داشته باشد.
+  - مایکروسافت هرگز سعی نکرده است کاربران خانگی را در موارد قانونی برای استفاده از چند فعال‌سازی غیرقانونی (نه در مورد کلیدهای قانونی دزدیده شده) تحت پیگرد قانونی قرار دهد، صرفاً به این دلیل که هزینه اقدامات قانونی بسیار بیشتر از مبلغی است که با مجبور کردن چند نفر به خرید فعال‌سازی به دست می‌آید.
+  - هیچ نیروی انتظامی قرار نیست بر اساس IP از سراسر جهان بدون رضایت خود مایکروسافت اقدامی انجام دهد.
+
+در صورتی که دیدگاه متناقضی دارید، با ما تماس بگیرید.
+
+<br/>
+
+## چگونه آنلاین KMS را حذف کنیم
+
+- در MAS، به فعال‌سازی آنلاین KMS بروید و گزینه Uninstall را اعمال کنید.
+- پس از آن، در MAS، به Troubleshoot بروید و گزینه Fix Licensing را اعمال کنید.
+- انجام شد. <br/>
+
+### بنر 'غیر اصلی' آفیس
+
+- بیلدهای Click-to-Run آفیس (از فوریه 2021) که با KMS فعال شده‌اند، وجود نام سرور KMS را در رجیستری بررسی می‌کنند.
+- اگر سرور KMS وجود نداشته باشد، بنری در برنامه‌های آفیس نمایش داده می‌شود که اطلاع می‌دهد "آفیس به درستی مجوز ندارد".
+- بنابراین در حالت دستی، مقدار `KeyManagementServiceName` حاوی یک آدرس IP غیرموجود 10.0.0.10 در کلیدهای رجیستری زیر نگهداری می‌شود:
 
 ```
 HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SoftwareProtectionPlatform
 HKLM\SOFTWARE\WOW6432Node\Microsoft\Windows NT\CurrentVersion\SoftwareProtectionPlatform
 ```
 
-- This is perfectly fine to keep, and it does not affect Windows or Office activation. For more explanation, visit [Office license is not genuine](./office-license-is-not-genuine).
+- نگهداری این کاملاً خوب است و بر فعال‌سازی ویندوز یا آفیس تأثیری نمی‌گذارد. برای توضیحات بیشتر، به [مجوز آفیس اصلی نیست](./office-license-is-not-genuine) مراجعه کنید. <br/>
 
-### Office Retail to Volume
+### آفیس Retail به Volume
 
-Office Retail must be converted to Volume first before it can be activated with KMS.  
-By default, this activation script will convert Office C2R Retail to Volume.
+آفیس Retail باید قبل از اینکه بتواند با KMS فعال شود، ابتدا به Volume تبدیل شود.
+به طور پیش‌فرض، این اسکریپت فعال‌سازی، آفیس C2R Retail را به Volume تبدیل می‌کند.
 
-- Supported Click-to-Run products: Office 365 (Microsoft 365 Apps), Office 2024 / 2021 / 2019 / 2016, Office 2013
-- Office 365 itself does not have volume licenses, therefore it will be converted to Office Mondo licenses
-- Office Professional suite will be converted with Office Professional Plus licenses
-- Office HomeBusiness/HomeStudent suites will be converted with Office Standard licenses
-- Office 2013 products follow the same logic
+- محصولات Click-to-Run پشتیبانی شده: Office 365 (Microsoft 365 Apps)، Office 2024 / 2021 / 2019 / 2016، Office 2013
+- خود Office 365 مجوزهای حجمی ندارد، بنابراین به مجوزهای Office Mondo تبدیل می‌شود
+- مجموعه Office Professional با مجوزهای Office Professional Plus تبدیل می‌شود
+- مجموعه‌های Office HomeBusiness/HomeStudent با مجوزهای Office Standard تبدیل می‌شوند
+- محصولات آفیس 2013 از همان منطق پیروی می‌کنند
 
-If you don't want the script to convert the Retail Office to Volume, you can turn off "Change Edition If Needed" option in the script. <br/>
+اگر نمی‌خواهید اسکریپت آفیس Retail را به Volume تبدیل کند، می‌توانید گزینه "Change Edition If Needed" را در اسکریپت خاموش کنید. <br/>
 
-### Command line Switches
+### سوئیچ‌های خط فرمان
 
-- Check [Command line switches](./command_line_switches).
+- [سوئیچ‌های خط فرمان](./command_line_switches) را بررسی کنید. <br/>
 
-### Setup Preactivate
+### راه‌اندازی پیش‌فعال‌سازی
 
-- Check the Extract OEM option in the MAS `Extras` section if you want pre-activated Windows installation.
-- Further read [OEM Folder](./oem-folder).
+- گزینه Extract OEM را در بخش `Extras` MAS بررسی کنید اگر می‌خواهید نصب ویندوز از قبل فعال شده داشته باشید.
+- بیشتر بخوانید [پوشه OEM](./oem-folder).
 
-## Troubleshoot  
+::: danger رفع مشکلات
 
-::: danger Troubleshoot
+اگر سوالی دارید، ابتدا صفحه [**سوالات پرتکرار**](./faq) را مرور کنید — به احتمال زیاد جواب‌تان اینجاست.
 
-- If you need any help regarding this, first review the [**FAQ section**](./faq) — your answer will most likely be there.  
-
-- If your issue persists — You can [**Contact Us**](./troubleshoot).
+اگر همچنان مشکل پابرجا بود — با ما [**در ارتباط**](./troubleshoot) باشید.
 
 :::
 

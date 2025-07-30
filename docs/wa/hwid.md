@@ -1,70 +1,71 @@
 ---
 layout: doc
 outline: deep
-title: 'HWID (digital license): Windows Activation Guide'
-description: 'Comprehensive open-source guide to safely activate Windows 10/11 using HWID in under 40 seconds. Includes troubleshooting tips and detailed comparisons.'
+title: 'HWID (مجوز دیجیتال): راهنمای فعال‌سازی ویندوز'
+description: 'راهنمای جامع منبع باز برای فعال‌سازی ایمن ویندوز 10/11 با استفاده از HWID در کمتر از 40 ثانیه. شامل نکات عیب‌یابی و مقایسه‌های دقیق.'
 date: 2025-05-04
 editLink: true
 head:
   - - meta
     - name: description
-      content: Safely activate Windows 10/11 using official open-source methods like HWID. Includes permanent and renewable options with full guides.
+      content: ویندوز 10/11 را با استفاده از روش‌های رسمی منبع باز مانند HWID به صورت ایمن فعال کنید. شامل گزینه‌های دائمی و قابل تمدید با راهنماهای کامل.
   - - meta
     - name: keywords
-      content: digital license generation without kms, windows activation, office activation, hwid, activate windows 11, activate office 2021, open-source tools
+      content: تولید مجوز دیجیتال بدون kms، فعال‌سازی ویندوز، فعال‌سازی آفیس، hwid، فعال‌سازی ویندوز 11، فعال‌سازی آفیس 2021، ابزارهای منبع باز
   - - meta
     - property: og:title
-      content: Safe and Permanent Activation for Windows
+      content: فعال‌سازی ایمن و دائمی برای ویندوز
   - - meta
     - property: og:description
-      content: A full open-source guide to activating Windows 10/11 using reliable tools like HWID
+      content: راهنمای کامل منبع باز برای فعال‌سازی ویندوز 10/11 با استفاده از ابزارهای قابل اعتماد مانند HWID
 ---
 
-# HWID Activation
+# فعال‌سازی HWID
 
-### Overview
+## بررسی اجمالی
 
-- How to use it? Please find the instructions [here](./index).
-- This activation method supports Windows 10/11 only.
-- This activation method does not store or modify any files in your system.
-- This activation method gives you permanent Windows activation for your system hardware.
-- All activations can be linked to a Microsoft account without any issues.
-- Once the system is activated, this activation cannot be removed because the license is stored on Microsoft's servers, not on the user's system. Microsoft checks the hardware ID (HWID), and if a license is found in their database, the system will automatically activate. This is how all digital licenses work.
-- Any significant changes to the hardware (such as a motherboard) may deactivate the system. It is possible to reactivate a system that was deactivated because of significant hardware changes, IF your activation, was linked to an online Microsoft account.
-- For activation to succeed, Internet connectivity must be enabled. If you are trying to activate without these conditions being met, then the system will auto-activate later when the conditions are met.
-- The following is required for Windows to reactivate itself after Windows reinstall:
-  - Internet connectivity is required. (Only at the time of activation)
-  - The system will auto-activate only if Retail (Consumer) media was used for installing Windows.
-  - The system will NOT auto-activate if VL (Business) media was used for the installation. In this case, the user will have to insert the generic Retail/OEM key corresponding to the Windows edition currently running to activate if the user doesn't want to use the script again. (Those keys can be found below on this page)
+- چگونه از آن استفاده کنیم؟ لطفاً دستورالعمل‌ها را [اینجا](./index#مرحله-۲) پیدا کنید.
+- این روش فعال‌سازی فقط از ویندوز 10/11 پشتیبانی می‌کند.
+- این روش فعال‌سازی هیچ فایلی را در سیستم شما ذخیره یا تغییر نمی‌دهد.
+- این روش فعال‌سازی به شما فعال‌سازی دائمی ویندوز را برای سخت‌افزار سیستم شما می‌دهد.
+- تمام فعال‌سازی‌ها می‌توانند بدون هیچ مشکلی به یک حساب مایکروسافت مرتبط شوند.
+- پس از فعال شدن سیستم، این فعال‌سازی قابل حذف نیست زیرا مجوز در سرورهای مایکروسافت ذخیره می‌شود، نه در سیستم کاربر. مایکروسافت شناسه سخت‌افزار (HWID) را بررسی می‌کند و اگر مجوزی در پایگاه داده خود پیدا شود، سیستم به طور خودکار فعال می‌شود. این روش کارکرد تمام مجوزهای دیجیتال است.
+- هرگونه تغییر قابل توجه در سخت‌افزار (مانند مادربرد) ممکن است سیستم را غیرفعال کند. امکان فعال‌سازی مجدد سیستمی که به دلیل تغییرات قابل توجه سخت‌افزاری غیرفعال شده است، وجود دارد، اگر فعال‌سازی شما به یک حساب آنلاین مایکروسافت مرتبط شده باشد.
+- برای موفقیت فعال‌سازی، اتصال به اینترنت باید فعال باشد. اگر در تلاش برای فعال‌سازی بدون این شرایط هستید، سیستم بعداً هنگامی که شرایط فراهم شود، به طور خودکار فعال می‌شود.
+- موارد زیر برای فعال‌سازی مجدد ویندوز پس از نصب مجدد ویندوز مورد نیاز است:
+  - اتصال به اینترنت مورد نیاز است. (فقط در زمان فعال‌سازی)
+  - سیستم تنها در صورتی به طور خودکار فعال می‌شود که از رسانه Retail (مصرف‌کننده) برای نصب ویندوز استفاده شده باشد.
+  - سیستم در صورتی که از رسانه VL (تجاری) برای نصب استفاده شده باشد، به طور خودکار فعال نمی‌شود. در این حالت، کاربر باید کلید عمومی Retail/OEM مربوط به نسخه ویندوز در حال اجرا را برای فعال‌سازی وارد کند، اگر کاربر نمی‌خواهد دوباره از اسکریپت استفاده کند. (این کلیدها را می‌توان در پایین این صفحه یافت)
 
-## HWID History — How does it work?
+## تاریخچه HWID
 
-#### HWID 1 (Now defunct) (Summer of 2018 - Sep 26 2023)
+## چگونه کار می‌کند؟
 
-- In the official upgrade process from Windows 7 to Windows 10, if your copy of Windows 7 was activated, Microsoft provided a digital license for Windows 10 without any cost.
-- In the background, the upgrade process runs a file named gatherosstate.exe (available in Windows 10/11 ISO) and it checks the license of the current Windows installation. If it detected that it is activated, it generates a valid GenuineTicket.xml **ticket** which is sent to Microsoft and in return, MS authorizes a license.
-- So, if we can convince the gatherosstate.exe file that the conditions are met for ticket generation by fooling it, it will generate a valid ticket, which can be used to get the valid digital license.
-- How to convince gatherosstate.exe that Windows is activated?  
-  There are two methods for it.  
-  **1-** Place a [custom slc.dll][1] file beside gatherosstate.exe:
-  gatherosstate.exe uses the system's `C:\Windows\System32\slc.dll` file to gather the system's info. If we place a custom slc.dll file beside gatherosstate.exe, it can send rubbish data to it, then it will simply accept it and generate a valid ticket.  
-  **2-** [Modify][2] the gatherosstate.exe file directly so that it doesn't check the system's activation status at all and create a valid ticket.
-- You can find the workings of this old method here: [MAS-Legacy-Methods][3]
-- Microsoft [made][4] server-side changes to their licensing servers to block the free upgrade, and with that server-side change, this method stopped working. To be clear, only new activation requests coming from new hardware were blocked, already established digital licenses with this method are fine.
+### HWID 1 (اکنون منسوخ شده) (تابستان 2018 - 26 سپتامبر 2023)
 
-#### HWID 2 (Currently working) (03 Oct 2023 - Current)
+- در فرآیند ارتقاء رسمی از ویندوز 7 به ویندوز 10، اگر نسخه ویندوز 7 شما فعال شده بود، مایکروسافت یک مجوز دیجیتال برای ویندوز 10 بدون هیچ هزینه‌ای ارائه می‌کرد.
+- در پس‌زمینه، فرآیند ارتقاء فایلی به نام gatherosstate.exe (موجود در ISO ویندوز 10/11) را اجرا می‌کند و مجوز نصب فعلی ویندوز را بررسی می‌کند. اگر تشخیص دهد که فعال شده است، یک **بلیط** GenuineTicket.xml معتبر تولید می‌کند که به مایکروسافت ارسال می‌شود و در مقابل، مایکروسافت یک مجوز را تأیید می‌کند.
+- بنابراین، اگر بتوانیم فایل gatherosstate.exe را متقاعد کنیم که شرایط برای تولید بلیط با فریب آن فراهم شده است، یک بلیط معتبر تولید می‌کند که می‌توان از آن برای دریافت مجوز دیجیتال معتبر استفاده کرد.
+- چگونه gatherosstate.exe را متقاعد کنیم که ویندوز فعال شده است؟
+  دو روش برای آن وجود دارد.
+  **1-** قرار دادن یک فایل [slc.dll سفارشی][1] در کنار gatherosstate.exe:
+  gatherosstate.exe از فایل `C:\Windows\System32\slc.dll` سیستم برای جمع‌آوری اطلاعات سیستم استفاده می‌کند. اگر یک فایل slc.dll سفارشی را در کنار gatherosstate.exe قرار دهیم، می‌تواند داده‌های بیهوده به آن ارسال کند، سپس به سادگی آن را می‌پذیرد و یک بلیط معتبر تولید می‌کند.
+  **2-** [تغییر][2] مستقیم فایل gatherosstate.exe به طوری که اصلاً وضعیت فعال‌سازی سیستم را بررسی نکند و یک بلیط معتبر ایجاد کند.
+- می‌توانید عملکرد این روش قدیمی را در اینجا پیدا کنید: [MAS-Legacy-Methods][3]
+- مایکروسافت تغییرات سمت سرور را در سرورهای صدور مجوز خود برای [مسدود کردن][4] ارتقاء رایگان اعمال کرد و با این تغییر سمت سرور، این روش از کار افتاد. برای روشن شدن، فقط درخواست‌های فعال‌سازی جدید از سخت‌افزارهای جدید مسدود شدند، مجوزهای دیجیتال قبلاً ایجاد شده با این روش خوب هستند.
 
-- When Microsoft stopped the free upgrade, it started requiring a genuine valid key in the ticket to authorize a digital license. In the new method, we use the Installation ID of a genuine, valid key. This gets accepted by the server and allows us to get a digital license for free. Check the manual activation process in below section to know how to make working universal tickets.
+#### HWID 2 (در حال حاضر کار می‌کند) (3 اکتبر 2023 - اکنون)
 
-<br/>
+- هنگامی که مایکروسافت ارتقاء رایگان را متوقف کرد، شروع به نیاز به یک کلید معتبر و اصلی در بلیط برای تأیید مجوز دیجیتال کرد. در روش جدید، ما از شناسه نصب یک کلید اصلی و معتبر استفاده می‌کنیم. این توسط سرور پذیرفته می‌شود و به ما امکان می‌دهد یک مجوز دیجیتال را به صورت رایگان دریافت کنیم. برای اطلاع از نحوه ساخت بلیط‌های جهانی کارآمد، فرآیند فعال‌سازی دستی را در بخش زیر بررسی کنید.
 
-Now a question, can Microsoft block the new requests or revoke already established digital licenses?
 
-- Revoking the licenses would be too extreme and will face many complications and create a risk of voiding valid licenses. However, they can very easily block the new activation requests for new hardware coming from the methods mentioned here.
+حالا یک سوال، آیا مایکروسافت می‌تواند درخواست‌های جدید را مسدود کند یا مجوزهای دیجیتال قبلاً ایجاد شده را لغو کند؟
 
-## Supported Products
+- لغو مجوزها بسیار افراطی خواهد بود و با عوارض بسیاری روبرو خواهد شد و خطر باطل کردن مجوزهای معتبر را ایجاد می‌کند. با این حال، آنها می‌توانند به راحتی درخواست‌های فعال‌سازی جدید برای سخت‌افزارهای جدید را که از روش‌های ذکر شده در اینجا می‌آیند، مسدود کنند.
 
-| Windows 10/11 Product Names           | EditionID                | Generic Retail/OEM/MAK Key    |
+## محصولات پشتیبانی شده
+
+| نام محصول ویندوز 10/11           | EditionID                | کلید عمومی Retail/OEM/MAK    |
 | ------------------------------------- | ------------------------ | ----------------------------- |
 | Education                             | Education                | YNMGQ-8RYV3-4PGQ3-C8XTP-7CFBY |
 | Education N                           | EducationN               | 84NGF-MHBT6-FXBX8-QWJK7-DRR8H |
@@ -98,64 +99,57 @@ Now a question, can Microsoft block the new requests or revoke already establish
 
 <br/>
 
-::: tip Info
+::: tip اطلاعات
 
-- Systems in all architectures (x86, x64 and arm64) are supported.
-- Any evaluation version of Windows (i.e. 'EVAL' LTSB/C) [cannot be activated](/evaluation_editions) beyond the evaluation period. You can use TSforge option in MAS to reset the activation any given time.
-- IoTEnterpriseS (LTSC) 2021 key will be used to activate the unsupported EnterpriseS (LTSC) 2021 edition.
-- IoTEnterpriseS (LTSC) 2024 key will be used to activate the unsupported EnterpriseS (LTSC) 2024 edition.
-- Windows Server does not support HWID activation.
-- Enterprise multi-session (ServerRdsh) edition can be activated with only a key NJCF7-PW8QT-3324D-688JX-2YV66, but it does not support real digital license activation.
+- سیستم‌ها در تمام معماری‌ها (x86، x64 و arm64) پشتیبانی می‌شوند.
+- هر نسخه ارزیابی ویندوز (یعنی 'EVAL' LTSB/C) [نمی‌تواند فراتر از دوره ارزیابی فعال شود](./evaluation_editions). می‌توانید از گزینه TSforge در MAS برای بازنشانی فعال‌سازی در هر زمان معین استفاده کنید.
+- کلید IoTEnterpriseS (LTSC) 2021 برای فعال‌سازی نسخه پشتیبانی نشده EnterpriseS (LTSC) 2021 استفاده خواهد شد.
+- کلید IoTEnterpriseS (LTSC) 2024 برای فعال‌سازی نسخه پشتیبانی نشده EnterpriseS (LTSC) 2024 استفاده خواهد شد.
+- ویندوز سرور از فعال‌سازی HWID پشتیبانی نمی‌کند.
+- نسخه Enterprise multi-session (ServerRdsh) فقط با کلید NJCF7-PW8QT-3324D-688JX-2YV66 قابل فعال‌سازی است، اما از فعال‌سازی مجوز دیجیتال واقعی پشتیبانی نمی‌کند.
 
 :::
 
-<br/>
+## چگونه HWID را حذف کنیم
 
-## How to remove HWID
+- **فعال‌سازی HWID (مجوز دیجیتال) قابل حذف نیست** زیرا مجوز در سرورهای مایکروسافت ذخیره می‌شود و نه در سیستم کاربر.
+- مایکروسافت شناسه سخت‌افزار (HWID) را بررسی می‌کند و اگر مجوزی در پایگاه داده خود پیدا شود، سیستم به طور خودکار فعال می‌شود. این روش کارکرد فرآیند رسمی فعال‌سازی مجوز دیجیتال است.
 
-- **HWID (Digital license) activation cannot be removed** because the license is stored in the Microsoft servers and not in the user's system.
-- Microsoft checks the hardware ID (HWID) and if a license is found in their database, the system will automatically activate. This is how the official digital license activation process works.
+**اگر هنوز می‌خواهید آن را حذف کنید چه؟**
 
-**What if you still want to remove it?**
+- همانطور که در بالا توضیح داده شد، شما نمی‌توانید آن را برای سخت‌افزار خود حذف کنید، فقط تغییرات عمده سخت‌افزاری مانند CPU، مادربرد می‌تواند فعال‌سازی را حذف کند.
 
-- As explained above, you cannot remove it for your hardware, only major hardware change such as CPU, motherboard can remove the activation.
+**اگر فقط می‌خواهید ویندوز را در مرحله غیرفعال نگه دارید چه؟**
 
-**What if you just want to keep Windows in the unactivated stage?**
+- برای انجام این کار، می‌توانید [کلید KMS](./kms38#محصولات-پشتیبانی-شده) را در صفحه فعال‌سازی تنظیمات ویندوز نصب کنید
+  یا
+- نسخه را با استفاده از گزینه تغییر نسخه ویندوز در MAS تغییر دهید.
+- **توجه:**
+  - تنظیمات ویندوز فوراً نشان می‌دهد که ویندوز فعال نیست اما معمولاً 3 ساعت طول می‌کشد تا واترمارک فعال‌سازی ظاهر شود.
+  - این گزینه‌ها به سادگی فعال‌سازی HWID را پنهان می‌کنند. اگر ویندوز را با همان نسخه دوباره نصب کنید یا کلیدهای عمومی Retail/OEM پیش‌فرض را بازیابی کنید، سیستم در صورت یافتن اتصال به اینترنت به طور خودکار دوباره فعال می‌شود.
 
-- To do that, you can install the [KMS key](/kms38#supported-products) in the Windows settings activation page
-  Or
-- Change the edition using Change Windows edition option in MAS.
-- **Note:**
-  - Windows settings will instantly show that Windows is not activated but it usually takes 3 hours for the Activation Watermark to appear.
-  - These options will simply hide the HWID activation. If you reinstall Windows with the same edition or restore the default generic Retail/OEM keys, the system will automatically activate again if an Internet connection is found.
+### سوئیچ‌های خط فرمان
 
-<br/>
+- [اینجا را بررسی کنید - سوئیچ‌های خط فرمان](./command_line_switches).
 
-### Command line Switches
 
-- Check [here - Command line switches](/command_line_switches).
+### فعال‌سازی دستی
 
-<br/>
+- [اینجا را بررسی کنید - فعال‌سازی دستی hwid](./manual_hwid_activation).
 
-### Manual Activation
+### تولید دستی بلیط
 
-- Check [here - Manual hwid activation](/manual_hwid_activation).
+این راهنما برای ایجاد دستی همان نوع بلیط‌هایی است که در اسکریپت MAS استفاده می‌شود.
 
-<br/>
-
-### Manual Ticket Generation
-
-This guide is for manually creating the same kind of tickets that are used in the MAS script.
-
-- Download the .cab file from the following official Microsoft link:  
+- فایل .cab را از لینک رسمی مایکروسافت زیر دانلود کنید:
   https://download.microsoft.com/download/9/A/E/9AE69DD5-BA93-44E0-864E-180F5E700AB4/adk/Installers/14f4df8a2a7fc82a4f415cf6a341415d.cab
-- Find the file named `filf8377e82b29deadca67bc4858ed3fba9` (Size: 330 KB) and rename it to `gatherosstate.exe`.
-- Make a folder named `Files` in the root of the C: drive (`C:\Files`) and copy the `gatherosstate.exe` file to that folder.
-- Make sure you have a working Internet connection.
-- Open Windows PowerShell as Administrator and enter the following commands.
-- Copy the entire block of code below and enter it in PowerShell to patch the `gatherosstate.exe` file. The patches are based on [GamersOsState][3].
+- فایل با نام `filf8377e82b29deadca67bc4858ed3fba9` (اندازه: 330 کیلوبایت) را پیدا کرده و نام آن را به `gatherosstate.exe` تغییر دهید.
+- یک پوشه به نام `Files` در ریشه درایو C: (`C:\Files`) ایجاد کرده و فایل `gatherosstate.exe` را در آن پوشه کپی کنید.
+- مطمئن شوید که اتصال به اینترنت کار می‌کند.
+- ویندوز پاورشل را به عنوان مدیر باز کرده و دستورات زیر را وارد کنید.
+- کل بلوک کد زیر را کپی کرده و در پاورشل وارد کنید تا فایل `gatherosstate.exe` را پچ کنید. پچ‌ها بر اساس [GamersOsState][5] هستند.
 
-```yaml
+```reg
 $bytes  = [System.IO.File]::ReadAllBytes("C:\Files\gatherosstate.exe")
 $bytes[320] = 0xf8
 $bytes[321] = 0xfb
@@ -226,8 +220,8 @@ $bytes[34377] = 0x63
 [System.IO.File]::WriteAllBytes("C:\Files\gatherosstatemodified.exe", $bytes)
 ```
 
-- Right click on the newly created file, `gatherosstatemodified.exe`, click the "Properties" option and set the Compatibility mode to Windows XP SP3.
-- To generate the ticket using our modified `gatherosstate.exe`, run these commands:
+- روی فایل تازه ایجاد شده، `gatherosstatemodified.exe`، کلیک راست کرده، گزینه "Properties" را کلیک کرده و حالت سازگاری را روی Windows XP SP3 تنظیم کنید.
+- برای تولید بلیط با استفاده از `gatherosstate.exe` تغییر یافته ما، این دستورات را اجرا کنید:
 
 ```
 $value = (Get-ItemProperty HKLM:\SYSTEM\CurrentControlSet\Control\ProductOptions).OSProductPfn
@@ -235,27 +229,23 @@ $value = (Get-ItemProperty HKLM:\SYSTEM\CurrentControlSet\Control\ProductOptions
 C:\Files\gatherosstatemodified.exe /c Pfn=$value`;PKeyIID=465145217131314304264339481117862266242033457260311819664735280
 ```
 
-- A GenuineTicket.xml file should be created in the `C:\Files\` folder.
+- یک فایل GenuineTicket.xml باید در پوشه `C:\Files\` ایجاد شود.
 
-**Notes:**
+**یادداشت‌ها:**
 
-- There are two types of tickets: Lockbox and Downlevel. If the system is already activated, then the created ticket will be a Lockbox ticket. If not, it will be a Downlevel ticket.
-- To make the exact ticket used by the MAS script for HWID activation, make sure the system is already activated and change the time with the below PowerShell command. Then, start the ticket generation process according to the steps above.\
+- دو نوع بلیط وجود دارد: Lockbox و Downlevel. اگر سیستم قبلاً فعال شده باشد، بلیط ایجاد شده یک بلیط Lockbox خواهد بود. در غیر این صورت، یک بلیط Downlevel خواهد بود.
+- برای ساخت بلیط دقیق مورد استفاده توسط اسکریپت MAS برای فعال‌سازی HWID، مطمئن شوید که سیستم قبلاً فعال شده است و زمان را با دستور پاورشل زیر تغییر دهید. سپس، فرآیند تولید بلیط را مطابق با مراحل بالا شروع کنید.
   `Set-TimeZone -Id "UTC"; $date=[datetime]"2022/10/11 12:00";while($true){set-date $date; start-sleep -milliseconds 10}`
 
-## Setup Preactivate
+## تنظیم پیش‌فعال‌سازی
 
-- Check the Extract OEM option in the MAS `Extras` section if you want pre-activated Windows installation.
-- Further, read [here - OEM Folder](/oem-folder).
+- گزینه Extract OEM را در بخش `Extras` MAS بررسی کنید اگر می‌خواهید نصب ویندوز پیش‌فعال‌شده داشته باشید.
+- بیشتر، [اینجا را بخوانید - پوشه OEM](./oem-folder).
 
-<hr/>
+::: danger رفع مشکلات
 
-## Troubleshooting
-
-::: danger Troubleshooting
-
-If you have any questions, first review the [**FAQ section**](./faq) - your answer will most likely be there.
-If your issue persists - [**contact us**](./troubleshoot).
+اگر سوالی دارید، ابتدا صفحه [**سوالات پرتکرار**](./faq) را مرور کنید — به احتمال زیاد جواب‌تان اینجاست.
+اگر همچنان مشکل پابرجا بود — با ما [**در ارتباط**](./troubleshoot) باشید.
 
 :::
 

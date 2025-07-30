@@ -3,8 +3,8 @@ layout: doc
 outline: deep
 lang: 'fa-IR'
 dir: 'rtl'
-title: 'Poker'
-description: 'Poker – Texas Holdem Guides'
+title: 'پوکر'
+description: 'راهنمای مقدماتی بازی پوکر - تگزاس هولدم آنلاین'
 date: 2025-07-17
 editLink: true
 ---

@@ -1,45 +1,46 @@
 ---
 layout: doc
 outline: deep
-title: 'Fix WPA Registry'
-description: 'fix corrupt WPA registry keys which can cause to not work activation.'
+title: 'تعمیر رجیستری WPA'
+description: 'تعمیر کلیدهای رجیستری WPA خراب که می‌تواند باعث عدم کارکرد فعال‌سازی شود.'
 date: 2025-01-07
 editLink: true
 head:
   - - meta
     - name: keywords
-      content: broken system registry, sppsvc, wpa
+      content: رجیستری سیستم خراب, sppsvc, wpa
 ---
 
-## Fix corrupt system wpa registry 
+## تعمیر رجیستری wpa سیستم خراب
 
 
-In some cases, the system may have corrupt WPA registry keys at `HKEY_LOCAL_MACHINE\SYSTEM\WPA` which can cause `sppsvc` to not work and activation to fail, it can also cause high CPU usage in `sppsvc` service.  
-This registry key is protected by the kernel and cannot be deleted normally. That is why we need to follow some more steps below to clear it. 
+در برخی موارد، سیستم ممکن است دارای کلیدهای رجیستری WPA خراب در `HKEY_LOCAL_MACHINE\SYSTEM\WPA` باشد که می‌تواند باعث عدم کارکرد `sppsvc` و شکست فعال‌سازی شود، همچنین می‌تواند باعث استفاده زیاد از CPU در سرویس `sppsvc` شود.
+این کلید رجیستری توسط هسته محافظت می‌شود و به طور معمول قابل حذف نیست. به همین دلیل باید مراحل زیر را برای پاک کردن آن دنبال کنیم.
 
-## Steps To Fix WPA Registry
+## مراحل تعمیر رجیستری WPA
 
--   Download https://github.com/asdcorp/rearm/archive/refs/heads/principalis.zip
--   Extract this zip file.
--   Copy `rearm.cmd` file to the root of the C drive, like `C:\rearm.cmd`
--   Open the command prompt as administrator and enter the below command  
+- ابتدا این فایل زیپ را دانلود کنید:
+- [github.com/archive/principalis.zip][1]
+-   فایل را از حالت فشرده را خارج کنید.
+-   فایل `rearm.cmd` را در ریشه درایو C کپی کنید، مانند `C:\rearm.cmd`
+-   خط فرمان را به عنوان مدیر باز کنید و دستور زیر را وارد کنید
     `Shutdown /f /r /o /t 0`
--   After the system restarts, select Troubleshoot > Advanced Options > Command Prompt.
--   Enter the following command  
+-   پس از راه‌اندازی مجدد سیستم، Troubleshoot > Advanced Options > Command Prompt را انتخاب کنید.
+-   دستور زیر را وارد کنید
     `C:\rearm.cmd`
--   If it says the command is not recognized, enter  
+-   اگر می‌گوید دستور شناسایی نشده است، وارد کنید
     `bcdedit | find "osdevice"`
--   It will show you the OS drive letter. Use that drive letter in the command, for example,  
+-   این به شما حرف درایو سیستم عامل را نشان می‌دهد. از آن حرف درایو در دستور استفاده کنید، به عنوان مثال،
     `E:\rearm.cmd`
--   Wait for it to finish. When it's finished, you will be able to type in the command prompt, If not then wait.
--   Once done, exit and then normally boot into Windows.
+-   منتظر بمانید تا تمام شود. وقتی تمام شد، می‌توانید در خط فرمان تایپ کنید، اگر نه، منتظر بمانید.
+-   پس از اتمام، خارج شوید و سپس به طور معمول وارد ویندوز شوید.
 
-## Video Tutorial
+## آموزش ویدیویی
 
-<br/> 
 
 <video class="video-js vjs-default-skin vjs-fluid" controls preload="auto" data-setup='{}'>
   <source src="/Fix_WPA_Registry.mp4" type="video/mp4" />
   <p class="vjs-no-js"></p>
 </video>
 
+[1]: https://github.com/asdcorp/rearm/archive/refs/heads/principalis.zip

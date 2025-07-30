@@ -1,13 +1,13 @@
-# In-place Repair Upgrade
+# ارتقاء تعمیری درجا
 
 
-In-place repair upgrade using Windows ISO file is a good way to fix system errors. Here's how you can perform it.
+ارتقاء تعمیری درجا با استفاده از فایل ISO ویندوز راه خوبی برای رفع خطاهای سیستم است. در اینجا نحوه انجام آن آمده است.
 
 
 
--   Download the Windows ISO, preferably from [MSDL][1] in the **same Windows language, and architecture**.
+- فایل ISO ویندوز را ترجیحاً از [MSDL][1] با **همان زبان و معماری ویندوز** دانلود کنید.
 
-    -   To check the installed Windows architecture, open Powershell as admin and enter,
+    - برای بررسی معماری ویندوز نصب شده، Powershell را به عنوان مدیر باز کنید و دستور زیر را وارد کنید،
 
         ```
 
@@ -15,9 +15,9 @@ In-place repair upgrade using Windows ISO file is a good way to fix system error
 
 		```
 
-        AMD64/x64 means 64 Bit, x86 means 32 Bit
+        AMD64/x64 به معنای 64 بیتی، x86 به معنای 32 بیتی است.
 
-    -   To check the installed Windows Language, enter this command,
+    - برای بررسی زبان ویندوز نصب شده، این دستور را وارد کنید،
 
         ```
 
@@ -25,7 +25,7 @@ In-place repair upgrade using Windows ISO file is a good way to fix system error
 
 		```
 
-		Alternatively, you can use this command,
+		از طرف دیگر، می‌توانید از این دستور استفاده کنید،
 
 		```
 
@@ -33,43 +33,43 @@ In-place repair upgrade using Windows ISO file is a good way to fix system error
 
 		```
 
-    -   Note: If you are running the Enterprise LTSC edition, you will need to download that edition's ISO file. Don't download Evaluation version, that can't be activated.
+    - توجه: اگر از نسخه Enterprise LTSC استفاده می‌کنید، باید فایل ISO آن نسخه را دانلود کنید. نسخه Evaluation را دانلود نکنید، آن قابل فعال‌سازی نیست.
 
--  Right-click on the downloaded ISO file, Open With > Windows Explorer
+- روی فایل ISO دانلود شده راست کلیک کنید، Open With > Windows Explorer را انتخاب کنید.
 
--  A new DVD drive will appear in Windows Explorer, which means the installation image has been mounted successfully.
+- یک درایو DVD جدید در Windows Explorer ظاهر می‌شود، که به این معنی است که ایمیج نصب با موفقیت مونت شده است.
 
-::: details Click here for info: Windows 11 on Unsupported Hardware
+::: details برای اطلاعات بیشتر اینجا کلیک کنید: ویندوز 11 روی سخت‌افزار پشتیبانی‌نشده
 
-- If you're using Windows 11 or upgrading from Windows 10, you may encounter errors due to unsupported hardware.
+- اگر از ویندوز 11 استفاده می‌کنید یا از ویندوز 10 ارتقا می‌دهید، ممکن است به دلیل سخت‌افزار پشتیبانی‌نشده با خطا مواجه شوید.
 
-- To resolve this, you need to install IoT Enterprise 24H2 (2024) edition which is [officially supported][2] on unsupported hardware.
+- برای حل این مشکل، باید نسخه IoT Enterprise 24H2 (2024) را که به طور [رسمی روی سخت‌افزار پشتیبانی‌نشده پشتیبانی می‌شود][2] نصب کنید.
 
-  - To do that, open the command prompt as admin and,
+  - برای انجام این کار، command prompt را به عنوان مدیر باز کنید و،
 
-  - Enter the below command if you are using normal Windows 11 24H2 ISO
+  - اگر از ISO معمولی ویندوز 11 24H2 استفاده می‌کنید، دستور زیر را وارد کنید:
 
 `reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion" /v EditionID /d IoTEnterprise /f`
 
-  - Enter the below command if you are using Windows 11 LTSC 2024 ISO
+  - اگر از ISO ویندوز 11 LTSC 2024 استفاده می‌کنید، دستور زیر را وارد کنید:
 
 `reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion" /v EditionID /d IoTEnterpriseS /f`
 
-- Now quickly run setup.exe as described below.
+- اکنون به سرعت setup.exe را همانطور که در زیر توضیح داده شده است اجرا کنید.
 
 :::
 
--   Go into that DVD drive and run setup.exe, just continue until you reach the final confirmation screen.
+- وارد آن درایو DVD شوید و setup.exe را اجرا کنید، فقط تا زمانی که به صفحه تأیید نهایی برسید ادامه دهید.
 
--   Make sure it says "**Keep personal files and apps**" on the final screen. Then you can continue the process and wait until it is done.
+- مطمئن شوید که در صفحه نهایی عبارت **«Keep personal files and apps»** را می‌بینید. سپس می‌توانید فرآیند را ادامه دهید و منتظر بمانید تا تمام شود.
 
 <br/>
 
-::: danger Troubleshoot
+::: danger عیب یابی
 
-- If you need any help regarding this, first review the [**FAQ section**](./faq) — Your answer will most likely be there.
+- اگر در این مورد به کمکی نیاز دارید، ابتدا بخش [**سوالات متداول**](./faq) را مرور کنید — به احتمال زیاد پاسخ شما در آنجا خواهد بود.
 
-- If you are not getting the option to keep files and apps, or the setup is showing any error — You can [**Contact us**](./troubleshoot).
+- اگر گزینه حفظ فایل‌ها و برنامه‌ها را دریافت نمی‌کنید، یا نصب خطایی نشان می‌دهد — می‌توانید [**با ما تماس بگیرید**](./troubleshoot).
 
 :::
 

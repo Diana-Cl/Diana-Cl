@@ -1,32 +1,32 @@
 ---
 layout: doc
 outline: deep
-title: 'Guide links'
-description: 'If you are facing any error, the script should tell you which guide you need to follow'
+title: 'لینک‌های راهنما'
+description: 'اگر با خطایی مواجه شدید، اسکریپت باید به شما بگوید که کدام راهنما را باید دنبال کنید'
 date: 2024-06-09
 ---
 
-# Guides
+# راهنماها
 
-::: danger If you are facing any error
+::: danger اگر با خطایی مواجه شدید
 
-The script should tell you which guide you need to follow. If you are unsure, we suggest getting help from [here](./troubleshoot) instead of blindly following the guides.
+اسکریپت باید به شما بگوید که کدام راهنما را باید دنبال کنید. اگر مطمئن نیستید، پیشنهاد می‌کنیم به جای دنبال کردن کورکورانه راهنماها، از [اینجا](./troubleshoot) کمک بگیرید.
 
 :::
 
-- [Windows 10 Updates After End-Of-Life](./windows10_eol)
-- [Office License Is Not Genuine](./office-license-is-not-genuine)
-- [Bypass Russian Geoblock][1]
-- [Fix WPA Registry](./fix-wpa-registry)
-- [Licensing Servers Issue](./licensing-servers-issue)
-- [Issues Due To Gaming Spoofers](./issues_due_to_gaming_spoofers)
-- [Fix Windows Services](./fix_service)
-- [Change Edition Issues](./change_edition_issues)
-- [Windows Evaluation Editions](./evaluation_editions)
-- [Fix Powershell](./fix_powershell)
-- [In-place Repair Upgrade](./in-place_repair_upgrade)
-- [Remove Malware](./remove_malware)
-- [Clean Install Windows](./clean_install_windows)
+- [به‌روزرسانی‌های ویندوز 10 پس از پایان عمر](./windows10_eol)
+- [لایسنس آفیس اصلی نیست](./office-license-is-not-genuine)
+- [دور زدن محدودیت جغرافیایی روسیه][1]
+- [تعمیر رجیستری WPA](./fix-wpa-registry)
+- [مشکل سرورهای لایسنس](./licensing-servers-issue)
+- [مشکلات ناشی از اسپوفرهای بازی](./issues_due_to_gaming_spoofers)
+- [تعمیر سرویس‌های ویندوز](./fix_service)
+- [مشکلات تغییر نسخه](./change_edition_issues)
+- [نسخه‌های ارزیابی ویندوز](./evaluation_editions)
+- [تعمیر پاورشل](./fix_powershell)
+- [ارتقاء تعمیری درجا](./in-place_repair_upgrade)
+- [حذف بدافزار](./remove_malware)
+- [نصب تمیز ویندوز](./clean_install_windows)
 
 <hr/>
 

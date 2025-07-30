@@ -1,117 +1,116 @@
 ---
 layout: doc
 outline: deep
-title: 'Windows Evaluation Editions'
-description: 'A complete guide to Windows Evaluation Editions for IT professionals, plus Persian translation.'
-date: 2023-02-05
+title: 'نسخه‌های ارزیابی ویندوز'
+description: 'راهنمای جامع نسخه‌های ارزیابی ویندوز برای متخصصان IT و ترجمه فارسی'
+date: 2023-02-5
 editLink: true
 ---
 
-# Windows Evaluation Editions
+# نسخه‌های ارزیابی ویندوز
 
-Windows Evaluation Editions are official trial versions of Windows operating systems released by Microsoft. They’re designed to help IT professionals and advanced users test the features and compatibility of Windows (Enterprise & Server) before committing to a purchase.
+::: danger نسخه‌های اریابی
 
-- **Where to get:** [Microsoft Eval Center][1]
-- **Available:** Windows 10/11 Enterprise & all current Server editions
+**نسخه‌های ارزیابی یا Evaluation Editions**
 
-::: danger Important
+- نسخه‌های آزمایشی و رسمی از سیستم‌عامل ویندوز هستند
+- توسط مایکروسافت منتشر می‌شوند
+-  این نسخه‌ها برای تست امکانات، سازگاری و آشنایی با ویژگی‌های ویندوز (نسخه اینترپرایز و سرور) پیش از خرید نهایی مناسب‌اند
 
-You _cannot_ activate evaluation editions after the trial period. For long-term use, always install a [genuine full version](./genuine-installation-media) instead.
+- **دریافت:** [مرکز ارزیابی مایکروسافت][1]
+- **در دسترس:** Windows 10/11 Enterprise و تمامی نسخه‌های Server
 
 :::
 
-### Main Differences: Full vs. Evaluation
+::: tip نکته مهم
 
-- **Trial Period:** 90 days for Enterprise, 180 days for Server.
-- **Activation:** Not possible with product keys, digital licenses, or KMS after the trial expires.
-- **Post-trial:** The system will display activation warnings and may restart automatically.
-- **Permanent Activation:** Not supported on evaluation builds.
+پس از پایان دوره آزمایشی، امکان فعال‌سازی این نسخه‌ها وجود ندارد. اگر نیاز به استفاده بلندمدت دارید، حتماً [نسخه اصلی](./genuine-installation-media) را نصب کنید.
 
----
+:::
 
-### How to Convert Evaluation to Full Version
+### تفاوت نسخه کامل و ارزیابی
 
-#### Windows 10/11 Enterprise
+- **دوره آزمایشی:** ۹۰ روز برای اینترپرایز، ۱۸۰ روز برای سرور
+- **فعال‌سازی:** پس از پایان دوره، هیچ کلید یا لایسنس دیجیتال/کی‌ام‌اس کار نمی‌کند
+- **پس از اتمام دوره:** هشدار فعال‌سازی نمایش داده می‌شود و سیستم ممکن است به صورت خودکار ری‌استارت شود
+- **فعال‌سازی دائم:** روی نسخه‌های ارزیابی پشتیبانی نمی‌شود
 
-Officially, you can’t directly convert evaluation to full.  
-However, you can upgrade using an ISO and a registry tweak:
+### تبدیل نسخه ارزیابی به نسخه کامل
+
+> ویندوز 10/11 اینترپرایز
+
+تبدیل مستقیم پشتیبانی نمی‌شود، اما با ارتقاء از طریق ISO و تغییر رجیستری ممکن است:
 
 :::tabs
 
 == Enterprise LTSC
 
-**Enterprise LTSC**
+For **Enterprise LTSC editions**
 
-**For LTSC editions:**
-
-1. Download the same-language/architecture LTSC ISO from [windows ltsc links][2]
-2. Mount the ISO (right-click → Open with Windows Explorer).
-3. As administrator, run:
+۱. فایل ISO مربوط به نسخه LTSC و زبان/معماری همان ویندوز را [از اینجا][2] دانلود کنید  
+۲. روی فایل ISO راست‌کلیک و گزینه Open with Windows Explorer را انتخاب کنید  
+۳. خط فرمان را با دسترسی ادمین باز کنید و دستور زیر را بزنید:
 
 ```reg
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion" /v EditionID /d EnterpriseS /f
 ```
 
- _(For Windows 11 on unsupported hardware, use `IoTEnterpriseS` instead of `EnterpriseS`)_  
- 
-4. Run `setup.exe` from the mounted ISO, make sure “Keep personal files and apps” is selected.
-5. Complete the upgrade.
+**(برای ویندوز ۱۱ روی سخت‌افزار ناسازگار، به جای `EnterpriseS` از `IoTEnterpriseS` استفاده کنید)**
+
+۴. از درایو مجازی، فایل setup.exe را اجرا کنید و گزینه "نگه داشتن فایل‌ها و برنامه‌ها" را انتخاب کنید  
+۵. مراحل ارتقاء را کامل کنید
 
 == Enterprise GAC
 
-**For General Availability Channel (GAC):**
+**Enterprise GAC**
 
-1. Download the ISO from [MSDL][3].
-2. Mount the ISO.
-3. As administrator, run:
+۱. فایل ISO نسخه عادی را از [MSDL][3] دانلود کنید.  
+۲. آن را مانت کنید.  
+۳. خط فرمان (CMD) را با مجوز ادمین اجرا و دستور زیر را اجرا کنید:
 
 ```reg
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion" /v EditionID /d Enterprise /f
 ```
 
-_(For Windows 11 on unsupported hardware, use `IoTEnterprise`)_
+**(برای ویندوز ۱۱ روی سخت‌افزار ناسازگار، از `IoTEnterprise` استفاده کنید)**
 
-4. Run `setup.exe` and use key `NPPR9-FWDCX-D2C8J-H872K-2YT43` if prompted.
-5. On the confirmation screen, ensure “Keep personal files and apps” is selected.
+۴. فایل setup.exe را اجرا و در صورت نیاز کلید `NPPR9-FWDCX-D2C8J-H872K-2YT43` را وارد کنید  
+۵. مطمئن شوید گزینه "نگه داشتن فایل‌ها و برنامه‌ها" انتخاب شده است
 
 :::
 
-#### Windows Server
+#### ویندوز سرور
 
-- Official conversion is supported. See [Microsoft guide][4] or use the [MAS script](./index).
+تبدیل رسمی پشتیبانی می‌شود. [راهنمای مایکروسافت][4] را ببینید یا از [اسکریپت MAS](./intro#مرحله-۲) استفاده کنید.
 
-### Extending the Evaluation Period
+### افزایش دوره ارزیابی
 
-- **Default:** 90 days (Enterprise), can be extended 2 more times (up to 270 days) with
+- **پیش‌فرض:** ۹۰ روز (Enterprise)، قابل تمدید تا ۲۷۰ روز با دستور
 
 ```reg
 slmgr /rearm
 ```
+  
+- **روش دیگر:** استفاده از گزینه TSforge در MAS یا ریست رجیستری [gravesoft.dev](./fix-wpa-registry)
 
-- **Other methods:** Use the TSforge option in MAS or reset WPA registry keys (see [gravesoft.dev][5]).
+### پرهیز از تغییر فایل لایسنس
 
-::: info Info
+جایگزینی فایل لایسنس نسخه کامل روی نسخه ارزیابی توصیه نمی‌شود، ممکن است به روزرسانی‌ها، شناسایی نسخه و ... را مختل کند.  
+همیشه از روش‌های رسمی برای ارتقاء یا تمدید استفاده کنید.
 
-- Evaluation activation for Windows 10 Enterprise LTSC 2021 may fail—use MAS TSforge to fix.
+::: tip نکته
 
-:::
-
-### Avoid License File Swapping
-
-::: tip Avoiding
-
-Applying full-version license files to eval builds is _not_ recommended and can break system updates, edition queries, and more.    
-Always use official upgrade or extension methods.
+- فعال‌سازی نسخه LTSC 2021 ممکن است به خاطر کلید نادرست خطا دهد — برای رفع مشکل از [TSforge](./tsforge) کمک بگیرید.
 
 :::
 
-::: danger Troubleshoot
+::: danger رفع مشکلات
 
-- If you need any help regarding this, first review the [**FAQ section**](./faq) — your answer will most likely be there.  
-
-- If your issue persists — You can [**Contact Us**](./troubleshoot).
+اگر سوالی دارید، ابتدا صفحه [**سوالات پرتکرار**](./faq) را مرور کنید — به احتمال زیاد جواب‌تان اینجاست.
+اگر همچنان مشکل پابرجا بود — با ما [**در ارتباط**](./troubleshoot) باشید.
 
 :::
+
 
 [1]: https://www.microsoft.com/en-us/evalcenter
 [2]: https://massgrave.dev/windows_ltsc_links

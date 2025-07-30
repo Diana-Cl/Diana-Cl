@@ -1,156 +1,152 @@
 ---
 layout: doc
 outline: deep
-title: 'Clean Install Windows'
-description: 'Guide on how to backup your data and clean install Windows'
-date: 2025-03-07
+title: 'نصب تمیز ویندوز'
+description: 'راهنمای پشتیبان‌گیری از اطلاعات و نصب تمیز ویندوز.'
+date: 2025-03-01
 editLink: true
 head:
   - - meta
     - name: keywords
-      content: clean install, infection, infected windows, malware, genuine, remove malware
+      content: نصب تمیز, ویندوز, نصب مجدد برنامه‌ها، بکاپ گیری از اطلاعات
 ---
 
-## Prerequisites  
+## پیش‌نیازها
 
-- A genuine Windows ISO file, you can download:
-  - from [Dear Gravesoft][1]
-  - OR Directly from [Microsoft][2]
-- The latest version of Rufus from [rufus][3]  
-- A minimum 8GB USB drive   
-- Follow this [guide](./remove_malware) before making a bootable USB if you think the system has malware.
+- یک فایل ISO اصلی ویندوز، می‌توانید از لینک‌های زیر دانلود کنید:
+  -   از [Dear Gravesoft][1]
+  -   یا مستقیماً از [Microsoft][2]
+- آخرین نسخه Rufus از [rufus][3]
+- یک درایو USB با حداقل حجم 8 گیگابایت
+- اگر فکر می‌کنید سیستم شما دارای بدافزار است، قبل از ساخت USB قابل بوت، این [راهنمای حذف بدافزار](./remove_malware) را دنبال کنید.
 
-::: details Another clean system if your current system is infected with File infector malware
+::: details یک سیستم تمیز دیگر اگر سیستم فعلی شما به بدافزار آلوده شده است
 
-**Why?**
-Because file infector malware can copy itself to the bootable USB that you are going to make to perform a clean installation.
+  **چرا؟**
+  زیرا بدافزار آلوده کننده فایل می‌تواند خود را به درایو USB قابل بوتی که برای نصب تمیز می‌سازید، کپی کند.
+  شما باید از یک سیستم تمیز دیگر برای ساخت USB قابل بوت استفاده کنید و آن را فقط زمانی به سیستم آلوده فعلی وصل کنید که ویندوز در حال اجرا نباشد.
+  **چگونه بررسی کنیم که آیا بدافزار آلوده کننده فایل دارید؟**
+  PowerShell را به عنوان مدیر باز کنید و وارد کنید
+  `sc.exe start "sppsvc" > $null 2>&1; Write-Host "Error code: $LASTEXITCODE"`
+  اگر خروجی 577 یا 225 باشد، به احتمال زیاد سیستم به بدافزار آلوده کننده فایل آلوده شده است.
 
-You need to use another clean system to make a bootable USB and plug it into the current infected system only when it's not running live Windows.
-
-**How to check if you have file infector malware?**
-Open PowerShell as admin and enter
-
-```reg
-sc.exe start "sppsvc" > $null 2>&1; Write-Host "Error code: $LASTEXITCODE"
-```
-
-If the output is 577 or 225, then most likely chances are that the system is infected with File infector malware.
-  
-**What if you don't have another clean system?**
-You can try Dr.Web [free.drweb.com/download][4] to remove file infector malware. However in some cases, it may miss to remove all, that's why its best to make bootable USB on another clean system.
+  **اگر سیستم تمیز دیگری ندارید چه؟**
+  می‌توانید Dr.Web [free.drweb.com/download][4] را برای حذف بدافزار آلوده کننده فایل امتحان کنید. با این حال در برخی موارد، ممکن است همه را حذف نکند، به همین دلیل بهتر است USB قابل بوت را روی یک سیستم تمیز دیگر بسازید.
 
 :::
 
-## Back up your data  
+## پشتیبان‌گیری از اطلاعات شما
 
-The clean installation process will format the C drive where Windows is installed; if you have any data in the C drive, you need to back it up.   
+فرآیند نصب تمیز، درایو C را که ویندوز در آن نصب شده است، فرمت می‌کند؛ اگر اطلاعاتی در درایو C دارید، باید از آن پشتیبان تهیه کنید.
 
-If you have multiple partitions on your drives, like `C:\ D:\`  
-- You can copy your data from C drive and paste it into other partitions.  
-- Your data is usually located in the below place on the C drive,    
-  - Go to this folder `C:\Users` and then select the user account that you are using.   
-  - Your data is saved in Desktop, Documents, Downloads, Music, Pictures, and Videos folders.      
-  - Save these folders in another partition to backup.  
+اگر چندین پارتیشن روی درایوهای خود دارید، مانند `C:\ D:\`
+- می‌توانید اطلاعات خود را از درایو C کپی کرده و در پارتیشن‌های دیگر جای‌گذاری کنید.
+- اطلاعات شما معمولاً در مکان زیر در درایو C قرار دارد،
+  - به این پوشه بروید `C:\Users` و سپس حساب کاربری که از آن استفاده می‌کنید را انتخاب کنید.
+  - اطلاعات شما در پوشه‌های Desktop، Documents، Downloads، Music، Pictures و Videos ذخیره شده است.
+  - این پوشه‌ها را برای پشتیبان‌گیری در پارتیشن دیگری ذخیره کنید.
 
-IF you have `C:\ drive only`     
-- Your data is usually located in the below place on the C drive,   
-  - Go to this folder `C:\Users` and then select the user account that you are using.    
-  - Your data is saved in Desktop, Documents, Downloads, Music, Pictures, and Videos folders.    
-- If you have a **small amount of data** to back up, save it on the below listed online drives or the USB drive after making it bootable with Rufus.   
-- If you have a **large amount of data** that you can't save on an external drive or online drive,     
-  - Create another partition using this [guide][5]      
-  - Save your data onto that other newly created partition.  
+اگر فقط `درایو C:\` دارید
+- اطلاعات شما معمولاً در مکان زیر در درایو C قرار دارد،
+  - به این پوشه بروید `C:\Users` و سپس حساب کاربری که از آن استفاده می‌کنید را انتخاب کنید.
+  - اطلاعات شما در پوشه‌های Desktop، Documents، Downloads، Music، Pictures و Videos ذخیره شده است.
+- اگر **مقدار کمی اطلاعات** برای پشتیبان‌گیری دارید، آن را در درایوهای آنلاین لیست شده در زیر یا درایو USB پس از قابل بوت کردن با Rufus ذخیره کنید.
+- اگر **مقدار زیادی اطلاعات** دارید که نمی‌توانید آن را در درایو خارجی یا درایو آنلاین ذخیره کنید،
+  - با استفاده از این [راهنما][5] یک پارتیشن دیگر ایجاد کنید
+  - اطلاعات خود را در آن پارتیشن تازه ایجاد شده ذخیره کنید.
+
+::: danger بسیار توصیه می‌شود
+
+توصیه می‌شود که از اطلاعات حیاتی خود در برخی از درایوهای آنلاین نیز پشتیبان تهیه کنید، به عنوان مثال،
+
+- [GoogleDrive][6] → 15 گیگابایت رایگان
+- [OneDrive][7] → 5 گیگابایت رایگان
+- [Mega][8] → 20 گیگابایت رایگان
+- [Filen][9] → 10 گیگابایت رایگان
+
+:::
 
 <br/>
 
-::: danger It's highly recommend
+## ایجاد یک USB قابل بوت با Rufus {#بووت}
 
-To backup your critical data on some online drive as well, for example,
+- درایو USB خود را به سیستم وصل کنید. (اطلاعات آن حذف خواهد شد.)
+- Rufus را که قبلاً دانلود کرده‌اید، اجرا کنید.
+- در منوی کشویی "Device"، درایو فلش USB خود را انتخاب کنید.
+- انتخاب بوت:
+  - روی "SELECT" کلیک کرده و فایل ISO ویندوز خود را انتخاب کنید. Rufus به طور خودکار تنظیمات بهینه را پیکربندی می‌کند.
+- روی "START" کلیک کنید.
+- منتظر بمانید تا Rufus USB قابل بوت را ایجاد کند. ممکن است چند دقیقه طول بکشد. پس از اتمام، "READY" را خواهید دید.
 
-- [GoogleDrive][6] → 15GB Free   
-- [OneDrive][7] → 5GB Free    
-- [Mega][8] → 20GB Free    
-- [Filen][9] → 10GB Free
+## ویندوز 11 روی سخت‌افزار پشتیبانی نشده {#پشتیبانی-نشده}
 
-:::
+::: details Rufus می‌تواند به شما کمک کند
 
-## Create a bootable USB with Rufus
+- Rufus می‌تواند به شما در نصب ویندوز 11 روی سخت‌افزار پشتیبانی نشده کمک کند، اما با به‌روزرسانی‌های ویژگی‌های آینده با مشکل مواجه خواهید شد زیرا مایکروسافت اجازه این کار را روی چنین سخت‌افزاری نمی‌دهد.
+- برای حل این مشکل، باید نسخه IoT Enterprise 24H2 (2024) را نصب کنید که به طور [رسمی پشتیبانی می‌شود][10] روی سخت‌افزار پشتیبانی نشده. نگران نباشید که این یک نسخه غیرمعمول است؛ از نظر باینری با سایر نسخه‌ها یکسان است و تفاوت اصلی در مجوز است.
+- این نسخه IoT Enterprise در 2 طعم ارائه می‌شود،
+  - IoT Enterprise (GAC، کانال در دسترس بودن عمومی)
+  - IoT Enterprise (LTSC، کانال سرویس‌دهی بلندمدت)
+- سوال بعدی، چگونه این نسخه را نصب کنیم؟
+  - برای نسخه GAC، نیازی به ISO IoT Enterprise ندارید، می‌توانید به سادگی از ISO مصرف‌کننده (لینک شده در بالا) یا تجاری معمولی ویندوز 11 24H2 استفاده کنید.
+  - برای نسخه LTSC، باید نسخه کامل ISO LTSC را دانلود کنید (از eval استفاده نکنید)، لازم نیست ISO IoT باشد، می‌توانید یک ISO LTSC معمولی را به زبان خود دانلود کنید.
+  - پس از فلش کردن ISO مورد نیاز با استفاده از Rufus، به پوشه `\sources\` در درایو USB بروید و یک فایل به نام `PID.txt` ایجاد کنید (اطمینان حاصل کنید که پسوند فایل صحیح است). این فایل را با Notepad باز کرده و متن زیر را وارد کنید.
+    - برای نسخه GAC
 
-- Plug your USB drive into the system. (Its data will be deleted.)
-- Launch Rufus which you downloaded earlier.
-- In the "Device" dropdown, select your USB flash drive.
-- Boot Selection:
-  - Click "SELECT" and choose your Windows ISO file. Rufus will auto-configure optimal settings.
-- Click "START."
-- Wait for Rufus to create the bootable USB. It may take several minutes. You'll see "READY" when done.   
-
-## Windows 11 on Unsupported Hardware   
-
-::: details Rufus can help you
-
-- Rufus can help you install Windows 11 on unsupported hardware, but you will encounter problems with future feature updates since Microsoft does not permit that on such hardware.
-- To resolve this issue, you need to install IoT Enterprise 24H2 (2024) edition which is [officially supported][10] on unsupported hardware. Don't worry about it being an unusual edition; it's binary identical to other editions, with the primary difference being the licensing.
-- This IoT Enterprise edition comes in 2 flavors,
-  - IoT Enterprise (GAC, General Availability Channel)  
-  - IoT Enterprise (LTSC, Long-Term Servicing Channel)  
-- Next question, how do we install this edition?  
-  - For GAC version, you don't need IoT Enterprise ISO, you can simply use regular Windows 11 24H2 consumer (linked at the top) or business ISO.  
-  - For LTSC version, you need to download the full version of LTSC ISO (don't use eval), it doesn't have to be IoT ISO, you can download a normal LTSC ISO in your language.  
-  - After flashing the required ISO using Rufus, navigate to the `\sources\` folder on the USB drive and create a file named `PID.txt` (ensure the file extension is correct). Open this file with Notepad and enter the text below.  
-    - For GAC version  
-	  ```
-	  [PID]
-	  Value=XQQYW-NFFMW-XJPBH-K8732-CKFFD
-	  ```
-    - For LTSC version  
-	  ```
-	  [PID]
-	  Value=CGK42-GYN6Y-VD22B-BX98W-J8JXD
-	  ```
-- When installing Windows, be sure not to use the old version of the installer.  
-- That's it. The setup will auto-pick the IoT Enterprise edition.  
-
-Alternatively, if you don't want to do that, you can install Windows normally and later change the edition to IoT Enterprise.  
-:::
-
-## Edition List During Windows Installation
-
-::: tip If your system has an OEM license
-
-- If your system has an OEM license installed by the manufacturer on the motherboard, then the Windows setup will not show the edition list and will automatically select the edition based on the license on the motherboard.  
-- If you have such hardware and want to view the list of available editions for Windows installation, follow the steps below.  
-- After flashing the required ISO using Rufus, navigate to the `\sources\` folder on the USB drive and create a file named `ei.cfg` (ensure the file extension is correct). Open this file with Notepad and enter the text below.   
-
+```reg
+  [PID]
+  Value=XQQYW-NFFMW-XJPBH-K8732-CKFFD
 ```
+
+    - برای نسخه LTSC
+
+```reg
+  [PID]
+  Value=CGK42-GYN6Y-VD22B-BX98W-J8JXD
+```
+
+- هنگام نصب ویندوز، مطمئن شوید که از نسخه قدیمی نصب‌کننده استفاده نمی‌کنید.
+- همین. نصب به طور خودکار نسخه IoT Enterprise را انتخاب می‌کند.
+
+در غیر این صورت، اگر نمی‌خواهید این کار را انجام دهید، می‌توانید ویندوز را به طور معمول نصب کرده و بعداً نسخه را به IoT Enterprise تغییر دهید.
+
+:::
+
+<br/>
+
+## لیست نسخه‌ها در حین نصب ویندوز
+
+::: details اگر سیستم شما دارای مجوز OEM است
+
+- اگر سیستم شما دارای مجوز OEM است که توسط سازنده روی مادربرد نصب شده است، نصب ویندوز لیست نسخه‌ها را نشان نمی‌دهد و به طور خودکار نسخه را بر اساس مجوز روی مادربرد انتخاب می‌کند.
+- اگر چنین سخت‌افزاری دارید و می‌خواهید لیست نسخه‌های موجود برای نصب ویندوز را مشاهده کنید، مراحل زیر را دنبال کنید.
+- پس از فلش کردن ISO مورد نیاز با استفاده از Rufus، به پوشه `\sources\` در درایو USB بروید و یک فایل به نام `ei.cfg` ایجاد کنید (اطمینان حاصل کنید که پسوند فایل صحیح است). این فایل را با Notepad باز کرده و متن زیر را وارد کنید.
+
+```reg
 [Channel]
 NoKeyChannel
 ```
 
-- Now you can view the edition list and pick the edition you want from Windows Vista to Windows 11. It also helps you avoid installing key in Windows 8/8.1 setup where key installation can not be skipped.   
-
-- In Windows 11 24H2, the new installer does not support this, so you need to select the "old" installer option when the setup starts.  
- 
-- If you are using PID.txt, please note that it will take precedence over ei.cfg.      
-:::
-
-## Clean Install Windows  
-
-- Disconnect all external or non-boot internal drives to reduce installation risks.  
-- Restart your PC and boot from the USB flash drive, typically accessed by pressing F11 or F12 during startup. If it's not working for you then Google the type of device you have followed by "boot menu key", for example, "Asus Zephyrus G14 boot menu key" and find the results for your model number.  
-- Follow on-screen instructions.  
-  - Choose "Custom: Install Windows only (advanced)" for a clean install.  
-  - Delete all partitions on the boot drive, or if you want to save data partitions then delete only the C drive and other small system partitions, and select the unallocated space created.  
-  - Click "Next" to start the installation. Windows will auto-create the necessary partitions.
-
-## Troubleshoot  
-
-::: danger Troubleshoot
-
-- If you need any help regarding this, first review the [**FAQ section**](./faq) — your answer will most likely be there.
-
-- If your issue persists — You can [**Contact us**](./troubleshoot).
+- اکنون می‌توانید لیست نسخه‌ها را مشاهده کرده و نسخه مورد نظر خود را از ویندوز ویستا تا ویندوز 11 انتخاب کنید. همچنین به شما کمک می‌کند تا از نصب کلید در نصب ویندوز 8/8.1 که در آن نمی‌توان از نصب کلید صرف‌نظر کرد، جلوگیری کنید.
+- در ویندوز 11 24H2، نصب‌کننده جدید از این پشتیبانی نمی‌کند، بنابراین باید گزینه "نصب‌کننده قدیمی" را هنگام شروع نصب انتخاب کنید.
+- اگر از PID.txt استفاده می‌کنید، لطفاً توجه داشته باشید که بر ei.cfg اولویت دارد.
 
 :::
+
+## نصب تمیز ویندوز {#تمیز}
+
+- تمام درایوهای خارجی یا داخلی غیر بوتی را برای کاهش خطرات نصب، قطع کنید.
+- کامپیوتر خود را مجدداً راه‌اندازی کرده و از درایو فلش USB بوت کنید، که معمولاً با فشار دادن F11 یا F12 در هنگام راه‌اندازی قابل دسترسی است. اگر برای شما کار نمی‌کند، نوع دستگاهی را که دارید و به دنبال آن "کلید منوی بوت" را در گوگل جستجو کنید، به عنوان مثال، "کلید منوی بوت Asus Zephyrus G14" و نتایج مربوط به شماره مدل خود را پیدا کنید.
+- دستورالعمل‌های روی صفحه را دنبال کنید.
+  - برای نصب تمیز، "Custom: Install Windows only (advanced)" را انتخاب کنید.
+  - تمام پارتیشن‌های روی درایو بوت را حذف کنید، یا اگر می‌خواهید پارتیشن‌های داده را ذخیره کنید، فقط درایو C و سایر پارتیشن‌های کوچک سیستم را حذف کرده و فضای تخصیص نیافته ایجاد شده را انتخاب کنید.
+  - برای شروع نصب روی "Next" کلیک کنید. ویندوز به طور خودکار پارتیشن‌های لازم را ایجاد می‌کند.
+
+## رفع مشکلات
+
+اگر سوالی دارید، ابتدا صفحه [**سوالات پرتکرار**](./faq) را مرور کنید — به احتمال زیاد جواب‌تان اینجاست.
+
+اگر همچنان مشکل پابرجا بود با ما [**در تماس**](./troubleshoot) باشید.
 
 
 [1]: https://msdl.gravesoft.dev/
@@ -161,7 +157,6 @@ NoKeyChannel
 [6]: https://drive.google.com/
 [7]: https://onedrive.live.com/
 [8]: https://mega.io/
-[9]: https://filen.io/  
+[9]: https://filen.io/
 [10]: https://learn.microsoft.com/en-us/windows/iot/iot-enterprise/Hardware/System_Requirements?tabs=Windows11LTSC#optional-minimum-requirements
 [11]: https://github.com/NiREvil/windows-activation/discussions/new/choose
-

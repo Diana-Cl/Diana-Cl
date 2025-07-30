@@ -1,26 +1,27 @@
 ---
 layout: doc
 outline: deep
-title: 'Windows 7 Download'
-description: 'All download links lead to genuine files only'
+title: 'دانلود ویندوز 7'
+description: 'تمام لینک‌های دانلود فقط به فایل‌های اصلی منتهی می‌شوند.'
 date: 2023-01-19
 editLink: true
 ---
 
 # Windows 7 Download
 
-> - All download links lead to genuine files only
+> - تمام لینک‌های دانلود فقط به فایل‌های اصلی منتهی می‌شوند.
 > 
-> - [FAQ](./genuine-installation-media#faq)
-> -   **You can permanently activate Windows 7 with [TSforge option in MAS](./index#step2)**
-> -   Ultimate, Professional, Home Premium, Home Basic and Starter ISOs contain all editions except Enterprise but by default they don't appear while installing Windows. You can easily choose any of them while installing and for that you need to delete or edit `sources\ei.cfg` file in the bootable USB or ISO.
-> -   To get latest updates on Windows 7 install, you can use [Simplix Pack][1] or activate ESU with TSforge option in MAS.
+> - [FAQ](./genuine-installation-media#سوالات-متداول)
+> -   **شما می‌توانید ویندوز ۷ را با [TSforge option in MAS](./index#مرحله-۲)** به طور دائم فعال کنید.
+> -   فایل‌های ISO نسخه‌های Ultimate، Professional، Home Premium، Home Basic و Starter شامل همه نسخه‌ها به جز Enterprise هستند، اما به طور پیش‌فرض هنگام نصب ویندوز نمایش داده نمی‌شوند. می‌توانید به راحتی هر یک از آنها را هنگام نصب انتخاب کنید و برای این کار باید آنها را حذف یا ویرایش کنید.`sources\ei.cfg` فایل را در USB یا ISO قابل بوت قرار دهید.
+> -   برای دریافت آخرین به‌روزرسانی‌ها در نصب ویندوز ۷، می‌توانید از [Simplix Pack][1]  ESU را با گزینه TSforge در MAS فعال کنید.
 
 ----
 
-## Download Links
+## لینک‌های دانلود
 
-**Windows 7 SP1**  
+**Windows 7 SP1**
+
 **Build - 7601.17514**
 
 :::tabs
@@ -270,9 +271,9 @@ editLink: true
 
 == Windows 7 Professional VL SP1
 
-**Windows 7 Professional VL SP1**  
+**Windows 7 Professional VL SP1**
 
-> This version contains only Professional edition index
+> این نسخه فقط شامل فهرست نسخه حرفه‌ای است
 
 | Language              | Arch | Link                                                                                                                                                             |
 |:----------------------|:-----|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -434,9 +435,10 @@ editLink: true
 
 == Windows 7 Home Basic SP1
 
-**Windows 7 Home Basic SP1**  
+**Windows 7 Home Basic SP1**
 
-> Available in x86 only on MVS
+> فقط در MVS به صورت x86 موجود است
+
 
 | Language              | Arch | Link                                                                                                                                       |
 |:----------------------|:-----|:-------------------------------------------------------------------------------------------------------------------------------------------|
@@ -481,9 +483,9 @@ editLink: true
 
 == Windows 7 Starter SP1
 
-**Windows 7 Starter SP1**  
+**Windows 7 Starter SP1**
 
-> Available in x86 only
+> فقط به صورت x86 موجود است
 
 | Language              | Arch | Link                                                                                                                                     |
 |:----------------------|:-----|:-----------------------------------------------------------------------------------------------------------------------------------------|
@@ -534,8 +536,6 @@ editLink: true
 > - [MVS Bot][3]
 > - [os.click/][4]
 > - [files.rg-adguard.net/5e876ce4d2c3][5]
-
-----
 
 :::
 

@@ -1,109 +1,123 @@
 ---
 layout: doc
 outline: deep
-title: 'Command Line Switches'
-description: 'You can use the switches in AEG AIO, separate files version and in Powershell one-liner to run in unattended mode.'
+title: 'سوئیچ‌های خط فرمان'
+description: 'می‌توانید از سوئیچ‌ها در MAS AIO، نسخه فایل‌های جداگانه و در یک خطی پاورشل برای اجرا در حالت بدون نظارت استفاده کنید.'
 date: 2023-02-06
 editLink: true
 ---
 
-# Command Line Switches
+# سوئیچ‌های خط فرمان
 
+::: info نکته
 
-::: info Notes
+- می‌توانید از سوئیچ‌های زیر در MAS AIO، نسخه فایل‌های جداگانه و در یک خطی پاورشل برای اجرا در حالت بدون نظارت استفاده کنید.
 
-- You can use the switches below in AEG AIO, separate files version and in Powershell one-liner to run in unattended mode.
-
-- If you want to use MAS to pre-activate Windows, check [oem-folder](./oem-folder) page for more details.
+- اگر می‌خواهید از MAS برای پیش‌فعال‌سازی ویندوز استفاده کنید، برای جزئیات بیشتر صفحه [oem-folder](./oem-folder) را بررسی کنید.
 
 :::
 
+<br/> 
+
 ### HWID
 
-| Switches                | Meaning                                                                                                                                                                                   |
+| سوئیچ‌ها                | معنی                                                                                                                                                                                   |
 | ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `/HWID`                 | Activate with HWID                                                                                                                                                                        |
-| `/HWID-NoEditionChange` | Some editions don't support HWID, so by default the script changes the edition to nearest available edition to enable activation. This switch runs HWID without allowing edition changes. |
+| `/HWID`                 | فعال‌سازی با HWID                                                                                                                                                                        |
+| `/HWID-NoEditionChange` | برخی از نسخه‌ها از HWID پشتیبانی نمی‌کنند، بنابراین به طور پیش‌فرض اسکریپت نسخه را به نزدیک‌ترین نسخه موجود برای فعال‌سازی تغییر می‌دهد. این سوئیچ HWID را بدون اجازه تغییر نسخه اجرا می‌کند. |
+
+<br/> 
 
 ### Ohook
 
-| Switches           | Meaning                          |
+| سوئیچ‌ها           | معنی                          |
 | ------------------ | -------------------------------- |
-| `/Ohook`           | Install Ohook to activate Office |
-| `/Ohook-Uninstall` | Uninstall Ohook                  |
+| `/Ohook`           | نصب Ohook برای فعال‌سازی آفیس |
+| `/Ohook-Uninstall` | حذف Ohook                  |
+
+<br/> 
 
 ### TSforge
 
-| Switches                     | Meaning                                                                                                                                                                                               |
+| سوئیچ‌ها                     | معنی                                                                                                                                                                                               |
 | ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `/Z-Windows`                 | Activate only Windows with TSforge                                                                                                                                                                    |
-| `/Z-ESU`                     | Activate only ESU with TSforge                                                                                                                                                                        |
-| `/Z-Office`                  | Activate only Office with TSforge                                                                                                                                                                     |
-| `/Z-ProjectVisio`            | Activate only Project/Visio with TSforge                                                                                                                                                              |
-| `/Z-WindowsESUOffice`        | Activate all Windows / ESU / Office with TSforge                                                                                                                                                      |
-| `/Z-WinHost`                 | Activate only Windows KMS Host with TSforge                                                                                                                                                           |
-| `/Z-OffHost`                 | Activate only Office KMS Host with TSforge                                                                                                                                                            |
-| `/Z-APPX`                    | Activate only 8/8.1 APPXLOB with TSforge                                                                                                                                                              |
-| `/Z-ID-ActivationIdGoesHere` | To specify an activation ID for activation, where ActivationIdGoesHere needs to be edited for Activation ID. If you want to add multiple through parameters, pass each of them in separate parameters |
-| `/Z-Reset`                   | Reset rearm counter, evaluation period and clear the tamper state, key lock                                                                                                                           |
+| `/Z-Windows`                 | فعال‌سازی فقط ویندوز با TSforge                                                                                                                                                                    |
+| `/Z-ESU`                     | فعال‌سازی فقط ESU با TSforge                                                                                                                                                                        |
+| `/Z-Office`                  | فعال‌سازی فقط آفیس با TSforge                                                                                                                                                                     |
+| `/Z-ProjectVisio`            | فعال‌سازی فقط Project/Visio با TSforge                                                                                                                                                              |
+| `/Z-WindowsESUOffice`        | فعال‌سازی همه ویندوز / ESU / آفیس با TSforge                                                                                                                                                      |
+| `/Z-WinHost`                 | فعال‌سازی فقط میزبان KMS ویندوز با TSforge                                                                                                                                                           |
+| `/Z-OffHost`                 | فعال‌سازی فقط میزبان KMS آفیس با TSforge                                                                                                                                                            |
+| `/Z-APPX`                    | فعال‌سازی فقط 8/8.1 APPXLOB با TSforge                                                                                                                                                              |
+| `/Z-ID-ActivationIdGoesHere` | برای مشخص کردن یک شناسه فعال‌سازی برای فعال‌سازی، که در آن ActivationIdGoesHere باید برای شناسه فعال‌سازی ویرایش شود. اگر می‌خواهید چندین مورد را از طریق پارامترها اضافه کنید، هر کدام را در پارامترهای جداگانه ارسال کنید |
+| `/Z-Reset`                   | بازنشانی شمارنده rearm، دوره ارزیابی و پاک کردن حالت دستکاری، قفل کلید                                                                                                                           |
 
-**Change activation method:**
+**تغییر روش فعال‌سازی:**
 
-For builds 19041 and later, the script automatically selects StaticCID (requires an internet connection). If no internet connection is detected, it automatically switches to the KMS4k method.  
-For builds earlier than 19041, the script automatically selects ZeroCID.
+برای بیلدهای 19041 و بالاتر، اسکریپت به طور خودکار StaticCID را انتخاب می‌کند (نیاز به اتصال به اینترنت دارد). اگر اتصال به اینترنت شناسایی نشود، به طور خودکار به روش KMS4k تغییر می‌کند.
+برای بیلدهای قبل از 19041، اسکریپت به طور خودکار ZeroCID را انتخاب می‌کند.
 
-To override this automatic selection and use a specific activation method, you can apply the following switches in combination with the switches listed above.
+برای لغو این انتخاب خودکار و استفاده از یک روش فعال‌سازی خاص، می‌توانید سوئیچ‌های زیر را در ترکیب با سوئیچ‌های ذکر شده در بالا اعمال کنید.
 
-| Switches   | Meaning                                                                                                                                                          |
+<br/>
+
+| سوئیچ‌ها   | معنی                                                                                                                                                          |
 | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `/Z-SCID`  | Force use StaticCID activation method. It needs Internet and does not work on Windows 7 and older versions.                                                      |
-| `/Z-ZCID`  | Force use ZeroCID activation method. Works reliably on builds below 19041, may break on builds between 19041-26100 and does not work on builds above 26100.4188. |
-| `/Z-KMS4k` | Volume licenses only. Activates for 4000+ years.                                                                                                                 |
+| `/Z-SCID`  | استفاده اجباری از روش فعال‌سازی StaticCID. به اینترنت نیاز دارد و روی ویندوز 7 و نسخه‌های قدیمی‌تر کار نمی‌کند.                                                      |
+| `/Z-ZCID`  | استفاده اجباری از روش فعال‌سازی ZeroCID. روی بیلدهای زیر 19041 به طور قابل اعتماد کار می‌کند، ممکن است روی بیلدهای بین 19041-26100 خراب شود و روی بیلدهای بالای 26100.4188 کار نمی‌کند. |
+| `/Z-KMS4k` | فقط مجوزهای حجمی. برای بیش از 4000 سال فعال می‌شود.                                                                                                                 |
+
+b<br/>
 
 ### KMS38
 
-| Switches                  | Meaning                                                                                                                                                                                     |
+| سوئیچ‌ها                  | معنی                                                                                                                                                                                     |
 | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `/KMS38`                  | Activate with KMS38                                                                                                                                                                         |
-| `/KMS38-NoEditionChange`  | Some editions don't support KMS38, so by default the script changes the edition to nearest available edition to enable activation. This switch runs KMS38 without allowing edition changes. |
-| `/KMS38-RemoveProtection` | Remove KMS38 protection                                                                                                                                                                     |
+| `/KMS38`                  | فعال‌سازی با KMS38                                                                                                                                                                         |
+| `/KMS38-NoEditionChange`  | برخی از نسخه‌ها از KMS38 پشتیبانی نمی‌کنند، بنابراین به طور پیش‌فرض اسکریپت نسخه را به نزدیک‌ترین نسخه موجود برای فعال‌سازی تغییر می‌دهد. این سوئیچ KMS38 را بدون اجازه تغییر نسخه اجرا می‌کند. |
+| `/KMS38-RemoveProtection` | حذف حفاظت KMS38                                                                                                                                                                     |
 
-### Online KMS
+### آنلاین KMS
 
-| Switches                      | Meaning                                                                                                                                                       |
+| سوئیچ‌ها                      | معنی                                                                                                                                                       |
 | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `/K-Windows`                  | Activate only Windows with Online KMS                                                                                                                         |
-| `/K-Office`                   | Activate only Office with Online KMS                                                                                                                          |
-| `/K-ProjectVisio`             | Activate only Project/Visio with Online KMS                                                                                                                   |
-| `/K-WindowsOffice`            | Activate all Windows and Office with Online KMS                                                                                                               |
-| `/K-NoEditionChange`          | Some editions don't support KMS, script by default change edition to nearest available to enable KMS activation. This switch can be used to stop this change. |
-| `/K-NoRenewalTask`            | Whenever you run any activation, the script installs the auto-renewal task by default. To NOT auto-install renewal task with activation, use this switch.     |
-| `/K-Uninstall`                | Uninstall Online KMS including renewal tasks                                                                                                                  |
-| `/K-Server-YOURKMSSERVERNAME` | To specify a server address for activation, where YOURKMSSERVERNAME needs to be edited for server name                                                        |
-| `/K-Port-YOURPORTNAME`        | To specify a port for activation, where YOURPORTNAME needs to be edited for port address                                                                      |
+| `/K-Windows`                  | فعال‌سازی فقط ویندوز با آنلاین KMS                                                                                                                         |
+| `/K-Office`                   | فعال‌سازی فقط آفیس با آنلاین KMS                                                                                                                          |
+| `/K-ProjectVisio`             | فعال‌سازی فقط Project/Visio با آنلاین KMS                                                                                                                   |
+| `/K-WindowsOffice`            | فعال‌سازی همه ویندوز و آفیس با آنلاین KMS                                                                                                               |
+| `/K-NoEditionChange`          | برخی از نسخه‌ها از KMS پشتیبانی نمی‌کنند، اسکریپت به طور پیش‌فرض نسخه را به نزدیک‌ترین نسخه موجود برای فعال‌سازی KMS تغییر می‌دهد. از این سوئیچ می‌توان برای متوقف کردن این تغییر استفاده کرد. |
+| `/K-NoRenewalTask`            | هر زمان که هرگونه فعال‌سازی را اجرا می‌کنید، اسکریپت به طور پیش‌فرض وظیفه تمدید خودکار را نصب می‌کند. برای عدم نصب خودکار وظیفه تمدید با فعال‌سازی، از این سوئیچ استفاده کنید.     |
+| `/K-Uninstall`                | حذف آنلاین KMS شامل وظایف تمدید                                                                                                                  |
+| `/K-Server-YOURKMSSERVERNAME` | برای مشخص کردن یک آدرس سرور برای فعال‌سازی، که در آن YOURKMSSERVERNAME باید برای نام سرور ویرایش شود                                                        |
+| `/K-Port-YOURPORTNAME`        | برای مشخص کردن یک پورت برای فعال‌سازی، که در آن YOURPORTNAME باید برای آدرس پورت ویرایش شود                                                                      |
 
 ```
 /S
-Run operations in silent mode (no output but the CMD window will still appear)
+عملیات را در حالت بی‌صدا اجرا کنید (بدون خروجی اما پنجره CMD همچنان ظاهر می‌شود)
 ```
 
 <br/>
 
-## Using in the Powershell One-Liner
+## استفاده در یک خطی پاورشل
 
-`& ([ScriptBlock]::Create((irm https://get.activated.win))) /para`
+```reg
+& ([ScriptBlock]::Create((irm https://get.activated.win))) /para
+```
 
-- Replace `/para` in this command with the switches from the above table. You can also use multiple switches. For example, `/HWID /Ohook`
-- This Powershell one-liner will only work on Windows 8.1 and later.
-- To change the edition through the command line, check [here](change_windows_edition.md#manual-edition-change). We didn't automate it in MAS because it requires a reboot in some cases.
+- `/para` را در این دستور با سوئیچ‌های جدول بالا جایگزین کنید. همچنین می‌توانید از چندین سوئیچ استفاده کنید. به عنوان مثال، `/HWID /Ohook`
+- این یک خطی پاورشل فقط روی ویندوز 8.1 و بالاتر کار می‌کند.
+- برای تغییر نسخه از طریق خط فرمان، [اینجا](./change_windows_edition#تغییر-نسخه-دستی) را بررسی کنید. ما آن را در MAS خودکار نکردیم زیرا در برخی موارد نیاز به راه‌اندازی مجدد دارد.
 
-<br/>
+## قوانین
 
-## Rules
+- اسکریپت در صورت استفاده از هر سوئیچ در حالت بدون نظارت اجرا می‌شود.
+- سوئیچ `/S` در اسکریپت‌های نسخه فایل‌های جداگانه MAS قابل استفاده نیست.
+- همه سوئیچ‌ها به حروف بزرگ و کوچک حساس نیستند و به هر ترتیبی کار می‌کنند، اما باید با فاصله از هم جدا شوند.
+- سوئیچ حذف KMS بر سایر سوئیچ‌های KMS اولویت دارد.
+- سوئیچ حذف حفاظت KMS38 بر فعال‌سازی KMS38 اولویت دارد.
 
-- The script will run in unattended mode if any switch is used.
-- `/S` switch is not applicable in MAS separate files version scripts.
-- All switches are case-insensitive and work in any order, but must be separated with spaces.
-- KMS Uninstall switch will take precedence over other KMS switches.
-- KMS38 remove protection switch will take precedence over KMS38 activation.
+::: danger رفع مشکلات
 
+اگر سوالی دارید، ابتدا صفحه [**سوالات متداول**](./faq) را مرور کنید — به احتمال زیاد جواب‌تان اینجاست.
+اگر همچنان مشکل پابرجا بود — با ما [**در ارتباط**](./troubleshoot) باشید.
+:::

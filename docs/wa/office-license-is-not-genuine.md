@@ -1,50 +1,61 @@
 ---
 layout: doc
 outline: deep
-title: 'Get genuine Office'
-description: 'Office Click-to-Run builds since February 2021, that are activated with KMS check the existence of a KMS server name in the registry'
+title: 'دریافت آفیس اصلی'
+description: 'از فوریه 2021، بیلدهای Office Click-to-Run که با KMS فعال می‌شوند، وجود نام سرور KMS را در رجیستری بررسی می‌کنند.'
 date: 2024-08-05
 editLink: true
 ---
 
-# 'Get genuine Office' banner
+# بنر «دریافت آفیس اصلی»
 
 <img width="1118" height="87" alt="image" src="https://github.com/user-attachments/assets/80014636-3c17-4509-a3fc-4a63e436a240" />
 
-To discourage the use of pirated Office, the Office team began implementing checks in Office C2R in February 2021 to display a banner prompting users to buy genuine Office. Since most piracy tutorials on YouTube used retail Office installers and then manually installed volume licenses and activated them with m-s-guides KMS server, the Office team started to show them banners to buy genuine licenses. Along the way, they added some more checks and mistakenly started showing it to Volume Office 2024 genuine users as well (MS forgot to update the checks). Below you can find more details on it.
 
-## When does the banner appear?
+::: tip توضیحات
 
-- Office Click-to-Run builds (since February 2021) that are activated with KMS check the existence of a KMS server name in the registry. If the KMS server is not present, a banner is shown in Office programs notifying that "Office isn't licensed properly"
-- If 32-bit Office is installed on 64-bit Windows, Office checks the KMS server existence in the corresponding WOW6432Node registry key as well.
-- Apart from this, they also detect if a registered KMS server is on their blacklist or not. As far as I know, the below 3 addresses are blacklisted.
-  `km-s8.MSG-uides.com` `km-s9.MSG-uides.com` `0.0.0.0` (Remove hyphen)
-  The first two are public KMS servers and the last one is not a real IP.
-- These above checks are not performed by Office if the proper installation of the Volume version of Office is done with the PerpetualVL2019 / PerpetualVL2021 channel.
-    However, with the release of the Office PerpetualVL2024 channel, they haven't updated the checks yet, and as a result, if any of the above conditions are met then Office will show a banner, even to the genuine customers.
+برای جلوگیری از استفاده از آفیس غیرقانونی، تیم آفیس از فوریه 2021 شروع به پیاده‌سازی بررسی‌هایی در Office C2R کرد تا بنری را نمایش دهد که کاربران را به خرید آفیس اصلی ترغیب می‌کند.  
+از آنجایی که اکثر آموزش‌های غیرقانونی در یوتیوب از نصب‌کننده‌های آفیس خرده‌فروشی استفاده می‌کردند و سپس به صورت دستی لایسنس‌های حجمی را نصب کرده و آنها را با سرور KMS m-s-guides فعال می‌کردند، تیم آفیس شروع به نمایش بنرهایی برای خرید لایسنس‌های اصلی به آنها کرد.  
+در این مسیر، آنها بررسی‌های بیشتری اضافه کردند و به اشتباه شروع به نمایش آن به کاربران اصلی Volume Office 2024 نیز کردند (مایکروسافت فراموش کرد بررسی‌ها را به‌روز کند). در زیر می‌توانید جزئیات بیشتری در این مورد پیدا کنید.
 
-## Solutions:
+:::
 
-Below, you can find various ways of avoiding this banner. The simplest option for you is to just use an Office activation tool mentioned here.
+## چه زمانی بنر ظاهر می‌شود؟
 
-### 1- Activation Tools
+- بیلدهای Office Click-to-Run (از فوریه 2021) که با KMS فعال می‌شوند، وجود نام سرور KMS را در رجیستری بررسی می‌کنند. اگر سرور KMS وجود نداشته باشد، بنری در برنامه‌های آفیس نمایش داده می‌شود که اطلاع می‌دهد «آفیس به درستی لایسنس نشده است».
+- اگر آفیس 32 بیتی روی ویندوز 64 بیتی نصب شده باشد، آفیس وجود سرور KMS را در کلید رجیستری مربوطه WOW6432Node نیز بررسی می‌کند.
+- علاوه بر این، آنها همچنین تشخیص می‌دهند که آیا یک سرور KMS ثبت شده در لیست سیاه آنها قرار دارد یا خیر. تا آنجا که من می‌دانم، 3 آدرس زیر در لیست سیاه قرار دارند.
+  `km-s8.MSG-uides.com` `km-s9.MSG-uides.com` `0.0.0.0` (خط تیره را حذف کنید)
+  دو مورد اول سرورهای KMS عمومی هستند و آخری یک IP واقعی نیست.
+- این بررسی‌های فوق توسط آفیس انجام نمی‌شود اگر نصب صحیح نسخه Volume آفیس با کانال PerpetualVL2019 / PerpetualVL2021 انجام شده باشد.
+    با این حال، با انتشار کانال Office PerpetualVL2024، آنها هنوز بررسی‌ها را به‌روز نکرده‌اند و در نتیجه، اگر هر یک از شرایط فوق برآورده شود، آفیس بنری را حتی به مشتریان اصلی نشان می‌دهد.
 
-- Use [MAS](./index#step2) or abbodi1406's [KMS_VL_ALL][1] to activate Office.
+---
+
+## راه‌حل‌ها:
+
+در زیر، می‌توانید راه‌های مختلفی برای جلوگیری از این بنر پیدا کنید. ساده‌ترین گزینه برای شما این است که فقط از یک ابزار فعال‌سازی آفیس که در اینجا ذکر شده است استفاده کنید.
 
 
-### 2- Manual Activation
 
-In this section, I'm only going to mention how to set up the KMS server in the registry properly.
+### 1- ابزارهای فعال‌سازی
 
-- **If using Public KMS server:**
-    Since they can put any public KMS server on the blacklist, as a permanent solution, we can instead use server IP instead of hostname.
+- از [MAS](./index#مرحله-۲) یا [KMS_VL_ALL][1] abbodi1406 برای فعال‌سازی آفیس استفاده کنید.
 
-- **If using private KMS server IP:**
-    Make sure to use a valid private IP address.
 
-Below, you can find how to set the KMS server address in the registry. For example, with a private IP `10.0.0.10`
+### 2- فعال‌سازی دستی
 
-```reg
+در این بخش، من فقط به نحوه تنظیم صحیح سرور KMS در رجیستری اشاره می‌کنم.
+
+- **اگر از سرور KMS عمومی استفاده می‌کنید:**
+    از آنجایی که آنها می‌توانند هر سرور KMS عمومی را در لیست سیاه قرار دهند، به عنوان یک راه‌حل دائمی، ما می‌توانیم به جای نام میزبان از IP سرور استفاده کنیم.
+
+- **اگر از IP سرور KMS خصوصی استفاده می‌کنید:**
+    مطمئن شوید که از یک آدرس IP خصوصی معتبر استفاده می‌کنید.
+
+در زیر، می‌توانید نحوه تنظیم آدرس سرور KMS در رجیستری را پیدا کنید. به عنوان مثال، با یک IP خصوصی `10.0.0.10`
+
+```
 reg delete "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SoftwareProtectionPlatform\0ff1ce15-a989-479d-af46-f275c6370663" /f
 
 reg delete "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SoftwareProtectionPlatform\0ff1ce15-a989-479d-af46-f275c6370663" /f /reg:32
@@ -54,27 +65,27 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SoftwareProtectionPla
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SoftwareProtectionPlatform" /f /v KeyManagementServiceName /t REG_SZ /d "10.0.0.10" /reg:32
 ```
 
-### 3- Install VL Office
+### 3- نصب آفیس VL
 
-As mentioned in the Reasons section, these checks are performed only if Retail Office is installed and was later converted to VL. The office doesn't perform any kind of related checks if the proper installation of the VL office is done. (Not applicable to PerpetualVL2024)
+همانطور که در بخش دلایل ذکر شد، این بررسی‌ها فقط در صورتی انجام می‌شوند که آفیس خرده‌فروشی نصب شده و بعداً به VL تبدیل شده باشد. آفیس هیچ نوع بررسی مرتبطی را انجام نمی‌دهد اگر نصب صحیح آفیس VL انجام شده باشد. (برای PerpetualVL2024 قابل اجرا نیست)
 
-Please see the guide [here][2] for VL Office installation.
+لطفاً راهنمای [اینجا][2] را برای نصب آفیس VL ببینید.
 
-### 4- Change Update Channel
+### 4- تغییر کانال به‌روزرسانی
 
-If we change the Insider or Current update channel **to** Monthly Enterprise or Semi-Annual channel then such non-genuine banners won't appear by default.
+اگر کانال به‌روزرسانی Insider یا Current را **به** کانال Monthly Enterprise یا Semi-Annual تغییر دهیم، چنین بنرهای غیر اصلی به طور پیش‌فرض ظاهر نمی‌شوند.
 
-You can find this option in [MAS](./index#step2) under Change Office edition option.
+می‌توانید این گزینه را در [MAS](./index#مرحله-۲) در زیر گزینه تغییر نسخه آفیس پیدا کنید.
 
-## Troubleshoot  
 
-::: danger Troubleshoot
+::: danger عیب یابی
 
-- If you need any help regarding this, first review the [**FAQ section**](./faq) — your answer will most likely be there.  
+اگر سوالی دارید، ابتدا بخش [**سوالات متداول**](./faq) را مرور کنید — به احتمال زیاد پاسخ شما در آنجا خواهد بود.
 
-- If your issue persists — You can [**Contact Us**](./troubleshoot).
+اگر مشکل شما همچنان ادامه داشت — [**با ما تماس بگیرید**](./troubleshoot).
 
 :::
+
 
 [1]: https://github.com/abbodi1406/KMS_VL_ALL_AIO/
 [2]: https://gravesoft.dev/office_c2r_custom

@@ -1,28 +1,29 @@
 ---
 layout: doc
 outline: deep
-title: 'Change Office Edition'
-description: 'This option is available in the main menu of MAS. You can use this script with Office C2R (Ver 16.0.9029.2167 and later) to change, add, and remove editions or change the current Office update channel'
+title: 'تغییر نسخه آفیس'
+description: 'این گزینه در منوی اصلی MAS موجود است. می‌توانید از این اسکریپت با Office C2R نسخه 16.0.9029.2167 و بالاتر برای تغییر، افزودن و حذف نسخه‌ها یا تغییر کانال به‌روزرسانی فعلی آفیس استفاده کنید.'
 date: 2024-01-05
 editLink: true
 ---
 
-# Change Office Edition
+# تغییر نسخه آفیس
 
-This option is available in the main menu of MAS. You can use this script with Office C2R (Ver 16.0.9029.2167 and later) to change, add, and remove editions or change the current Office update channel.
+این گزینه در منوی اصلی MAS موجود است. می‌توانید از این اسکریپت با Office C2R (نسخه 16.0.9029.2167 و بالاتر) برای تغییر، افزودن و حذف نسخه‌ها یا تغییر کانال به‌روزرسانی فعلی آفیس استفاده کنید.
 
-## How does it work?
+## چگونه کار می‌کند؟
 
-Office C2R (Click To Run) has a unified installation system, meaning that whether you download a single app like Word 2021 or a full package like ProPlus2021, the core files installed are nearly identical.
+Office C2R (Click To Run) یک سیستم نصب یکپارچه دارد، به این معنی که چه یک برنامه واحد مانند Word 2021 را دانلود کنید یا یک بسته کامل مانند ProPlus2021، فایل‌های اصلی نصب شده تقریباً یکسان هستند.
 
-The main management program for Office C2R is located at `C:\Program Files\Common Files\microsoft shared\ClickToRun\OfficeClickToRun.exe`
+برنامه مدیریت اصلی برای Office C2R در مسیر زیر قرار دارد:
+`C:\Program Files\Common Files\microsoft shared\ClickToRun\OfficeClickToRun.exe`
 
-The script leverages this program to add, remove, or change Office editions. Because of Office's unified installation and delta updates, adding new editions or apps does not require a large download.
+این اسکریپت از این برنامه برای افزودن، حذف یا تغییر نسخه‌های آفیس استفاده می‌کند. به دلیل نصب یکپارچه و به‌روزرسانی‌های دلتا در آفیس، افزودن نسخه‌ها یا برنامه‌های جدید به دانلود حجیمی نیاز ندارد.
 
 
-## Change Office update channel
+## تغییر کانال به‌روزرسانی آفیس
 
-This script can also change the current Office update channel.
+این اسکریپت همچنین می‌تواند کانال به‌روزرسانی فعلی آفیس را تغییر دهد.
 
 ```
 5440FD1F-7ECB-4221-8110-145EFAA6372F  -  Insider Fast [Beta]  -  Insiders::DevMain
@@ -41,32 +42,32 @@ F2E724C1-748F-4B47-8FB8-8E0D210E9208  -  Perpetual2019 VL     -  Production::LTS
 C02D8FE6-5242-4DA8-972F-82EE55E00671  -  Microsoft2024 VL     -  Microsoft::LTSC2024
 ```
 
-- The script has the above list in its database and only offers officially supported upgrades.
-- Learn more about Office update channels here https://learn.microsoft.com/en-us/microsoft-365-apps/updates/overview-update-channels
-- You can fetch the latest Office build numbers here https://github.com/ItzLevvie/Office16/blob/master/defconfig
-- The script uses an official method to change the update channel:
+- این اسکریپت لیست بالا را در پایگاه داده خود دارد و فقط ارتقاهای رسمی پشتیبانی شده را ارائه می‌دهد.
+- درباره کانال‌های به‌روزرسانی آفیس بیشتر بدانید: https://learn.microsoft.com/en-us/microsoft-365-apps/updates/overview-update-channels
+- می‌توانید آخرین شماره‌های ساخت آفیس را از اینجا دریافت کنید: https://github.com/ItzLevvie/Office16/blob/master/defconfig
+- این اسکریپت از یک روش رسمی برای تغییر کانال به‌روزرسانی استفاده می‌کند:
 https://techcommunity.microsoft.com/t5/office-365-blog/how-to-manage-office-365-proplus-channels-for-it-pros/ba-p/795813
 
-### VL (LTSC) channel limitations
-(Applicable to 2019/21/24 VL)
+### محدودیت‌های کانال VL (LTSC)
+(قابل اعمال برای نسخه‌های 2019/21/24 VL)
 
-Officially, the update channel can not be changed to or from a VL (LTSC) channel, so if the installed channel is a VL (LTSC) channel, only that channel will appear in the script.
-Also, if the installed channel is not an LTSC channel, the script won't offer to change to LTSC.
+به طور رسمی، کانال به‌روزرسانی را نمی‌توان به یا از یک کانال VL (LTSC) تغییر داد، بنابراین اگر کانال نصب شده یک کانال VL (LTSC) باشد، فقط آن کانال در اسکریپت ظاهر می‌شود.
+همچنین، اگر کانال نصب شده یک کانال LTSC نباشد، اسکریپت پیشنهاد تغییر به LTSC را نخواهد داد.
 
-### Windows 7/8/8.1 limitations
+### محدودیت‌های ویندوز 7/8/8.1
 
-Office C2R is no longer supported on Windows [7][1], [8][2], and [8.1][3].
-The last available build is fixed and won't get any updates. VL (LTSC) channels are not supported on these Windows versions so they won't appear in the script.
+Office C2R دیگر در ویندوز [7][1]، [8][2] و [8.1][3] پشتیبانی نمی‌شود.
+آخرین ساخت موجود ثابت است و هیچ به‌روزرسانی دریافت نخواهد کرد. کانال‌های VL (LTSC) در این نسخه‌های ویندوز پشتیبانی نمی‌شوند، بنابراین در اسکریپت ظاهر نخواهند شد.
 
 ---
 
-## Troubleshooting
+## عیب یابی
 
-::: danger Troubleshooting
+::: danger عیب یابی
 
-If you have any questions, first review the [**FAQ section**](./faq) - your answer will most likely be there.
+اگر سوالی دارید، ابتدا بخش [**سوالات متداول**](./faq) را مرور کنید - به احتمال زیاد پاسخ شما در آنجا خواهد بود.
 
-If your issue persists - [**Contact us**](./troubleshoot).
+اگر مشکل شما همچنان ادامه داشت - [**با ما تماس بگیرید**](./troubleshoot).
 
 :::
 

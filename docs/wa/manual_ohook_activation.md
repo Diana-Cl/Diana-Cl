@@ -1,43 +1,62 @@
 ---
 layout: doc
 outline: deep
-title: 'Manual Ohook Activation'
-description: 'This page is intended for users who do not want to use the script for any reason and would rather perform the Ohook activation process themselves.'
+title: 'فعالسازی دستی Ohook'
+description: 'این صفحه برای کاربرانی در نظر گرفته شده است که به هر دلیلی نمی‌خواهند از اسکریپت استفاده کنند و ترجیح می‌دهند خودشان فرآیند فعال‌سازی Ohook را انجام دهند.'
 date: 2024-02-11
 editLink: true
 ---
 
 # Ohook
 
-> This page is intended for users who do not want to use the script for any reason and would rather perform the Ohook activation process themselves. If you'd like to use a tool for this instead, please check [here](./index#step2).
+> این صفحه برای کاربرانی در نظر گرفته شده است که به هر دلیلی نمی‌خواهند از اسکریپت استفاده کنند و ترجیح می‌دهند خودشان فرآیند فعال‌سازی Ohook را انجام دهند. اگر مایل به استفاده از ابزاری برای این کار هستید، لطفاً [اینجا](./index) را بررسی کنید. 
 
 ::: tip Tip
 
-The steps below only apply to Office 16.0 (2016, 2019, 2021 and 365) C2R x64 bit versions running on an x64 bit Windows 8+ machine.  
-
-For older Office versions, please follow [this](./index#step2) instead.
+مراحل زیر فقط برای نسخه‌های ۶۴ بیتی C2R نسخه ۱۶.۰ (۲۰۱۶، ۲۰۱۹، ۲۰۲۱ و ۳۶۵) آفیس که روی دستگاه ویندوز ۸+ نسخه ۶۴ بیتی اجرا می‌شوند، اعمال می‌شود.
+برای ورژن‌های قدیمی‌تر لطفا [این پروسه](./index#مرحله-۲) را طی کنید.
 
 :::
 
 <br/>
 
-## Manually Activate Office
+## فعال‌سازی دستی آفیس
 
-To manually activate Office, follow these steps:
+برای فعال کردن دستی آفیس، مراحل زیر را دنبال کنید:
 
--   Download the Ohook sppc.dll files from [here][1] or compile the sppc.dll files yourself using [this guide](./ohook#custom-sppcdll-info).
--   Create a new folder called `ohook` in the root of your C: drive and extract the zip file to it. The path to the folder should be `C:\ohook`.
--   Open Command Prompt as Administrator and enter the following command to create a symlink of the system's sppc.dll as sppcs.dll in the Office C2R System directory:  
-    `mklink "%ProgramFiles%\Microsoft Office\root\vfs\System\sppcs.dll" "%windir%\System32\sppc.dll"`
--   Enter the following commands to copy the hook library `sppc64.dll` to the Office C2R system directory:    
-    `cd /d C:\ohook`  
-    `copy /y sppc64.dll "%ProgramFiles%\Microsoft Office\root\vfs\System\sppc.dll"`
--   Some Office 365 editions check the license status and display the banner "There was a problem checking this device's license status". To prevent this, enter the following command:  
-    `reg add HKCU\Software\Microsoft\Office\16.0\Common\Licensing\Resiliency /v "TimeOfLastHeartbeatFailure" /t REG_SZ /d "2040-01-01T00:00:00Z" /f`
--   Install the generic key which matches your Office edition and version:  
-    `slmgr /ipk <key>`  
-    *(Refer to the table below for the appropriate key.)*
--   Office should be activated now.
+- Download the Ohook sppc.dll files from [here][1] or compile the sppc.dll files yourself using [this guide](./ohook#سفارشی).
+- یک پوشه جدید به نام `ohook` در ریشه درایو C: خود ایجاد کنید و فایل زیپ را در آن استخراج کنید. مسیر پوشه باید `C:\ohook` باشد.
+- خط فرمان را به عنوان مدیر سیستم باز کنید و دستور زیر را برای ایجاد یک پیوند نمادین از sppc.dll سیستم به عنوان sppcs.dll در فهرست سیستم Office C2R وارد کنید:
+
+```reg
+mklink "%ProgramFiles%\Microsoft Office\root\vfs\System\sppcs.dll" "%windir%\System32\sppc.dll"
+```
+
+- دستورات زیر را برای کپی کردن کتابخانه قلاب `sppc64.dll` در دایرکتوری سیستم `Office C2R` وارد کنید:
+
+```reg
+cd /d C:\ohook
+```
+
+
+```reg
+copy /y sppc64.dll "%ProgramFiles%\Microsoft Office\root\vfs\System\sppc.dll"
+```
+
+- برخی از نسخه‌های آفیس ۳۶۵ وضعیت مجوز را بررسی می‌کنند و بنر "مشکلی در بررسی وضعیت مجوز این دستگاه وجود دارد" را نمایش می‌دهند. برای جلوگیری از این، دستور زیر را وارد کنید:
+
+```reg
+reg add HKCU\Software\Microsoft\Office\16.0\Common\Licensing\Resiliency /v "TimeOfLastHeartbeatFailure" /t REG_SZ /d "2040-01-01T00:00:00Z" /f
+```
+
+- کلید عمومی که با نسخه و ویرایش آفیس شما مطابقت دارد را نصب کنید:  
+
+```reg
+slmgr /ipk <key>
+```
+
+*(برای کلید مناسب به جدول زیر مراجعه کنید.)*
+- آفیس باید الان فعال شود.
 
 <br/>
 
@@ -224,14 +243,12 @@ To manually activate Office, follow these steps:
 
 <br/>
 
-## Troubleshoot  
+::: danger رفع مشکلات
 
-::: danger Troubleshoot
+اگر سوالی دارید، ابتدا صفحه [**سوالات متداول**](./faq) را مرور کنید — به احتمال زیاد جواب‌تان اینجاست.
 
-- If you need any help regarding this, first review the [**FAQ section**](./faq) — your answer will most likely be there.  
+اگر همچنان مشکل پابرجا بود — با ما [**در ارتباط**](./troubleshoot) باشید.
 
-- If your issue persists — You can [**Contact us**](./troubleshoot).
-
-:::
+::: 
 
 [1]: https://github.com/asdcorp/ohook/releases/download/0.5/ohook_0.5.zip

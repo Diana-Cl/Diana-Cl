@@ -2,30 +2,32 @@
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
 index: true
+lang: "fa-IR"
+dir: "rtl"
 
 hero:
   name: "Dìana"
-  text: "A Collection of My Notes"
-  tagline: Exploring technology, security, and everything in between.
+  text: "مجموعه‌ای از یادداشت‌های من"
+  tagline: کاوش در فناوری، امنیت و هر چیزی در این بین.
   actions:
     - theme: brand
-      text: Get Started with Gemini
-      link: /topics/Gemini
+      text: شروع با جمنای
+      link: /fa/topics/Gemini
     - theme: alt
-      text: View on GitHub
+      text: مشاهده در گیت‌هاب
       link: https://github.com/Diana-Cl/Diana-Cl
 
 features:
-  - title: "🔒 Security Research"
-    details: "Deep dives into malware analysis, security vulnerabilities, and threat intelligence."
-  - title: "⚙️ Development Guides"
-    details: "Practical guides for server configuration, web development and more."
-  - title: "🤖 AI & Technology"
-    details: "Exploring the latest in artificial intelligence, from language models to diffusion techniques."
+  - title: "🔒 تحقیقات امنیتی"
+    details: "بررسی‌های عمیق در زمینه تحلیل بدافزار، آسیب‌پذیری‌های امنیتی و اطلاعات تهدید."
+  - title: "⚙️ راهنماهای توسعه"
+    details: "راهنماهای کاربردی برای پیکربندی سرور، توسعه وب و موارد دیگر."
+  - title: "🤖 هوش مصنوعی و فناوری"
+    details: "کاوش در جدیدترین‌های هوش مصنوعی، از مدل‌های زبان تا تکنیک‌های دیفیوژن."
 ---
 
 <script setup>
-import { data } from '/.vitepress/posts.data.js'
+import { data } from '../.vitepress/posts.data.js'
 import { useData } from 'vitepress'
 const { lang } = useData()
 const posts = data[lang.value] ?? []

@@ -1,8 +1,8 @@
 ---
 layout: doc
 outline: deep
-title: 'Ohook Activation'
-description: 'Ohook activation method can activate all kinds of Office versions on Windows Vista and higher and their Server equivalent except Office UWP apps.'
+title: 'فعال‌سازی Ohook'
+description: 'روش فعال‌سازی Ohook می‌تواند انواع نسخه‌های آفیس را در ویندوز ویستا و بالاتر و معادل سرور آنها به جز برنامه‌های UWP آفیس فعال کند.'
 date: 2025-05-04
 editLink: true
 head:
@@ -11,51 +11,50 @@ head:
       content: ohook, activation office, office 365, office 2013, office 2019, office 2021, activate all kinds of Office versions
 ---
 
-# Ohook Activation
+# فعال‌سازی Ohook
 
-## Overview
+## نمای کلی
 
-::: tip How to use it?
+::: tip چگونه از آن استفاده کنیم؟
 
-- Please find the instructions [here](index#step2).
+- لطفاً دستورالعمل‌ها را [اینجا](./index#مرحله-۲) پیدا کنید.
 
-- This activation method can activate all kinds of Office versions on Windows Vista and higher and their Server equivalent except Office UWP apps.
-- This activation method works offline and activates Office permanently.
-- This activation method can survive Office repairs, Office updates, and even Windows major feature upgrades. You do not need to reactivate in these cases.
-- For the O365 subscription version, you can't get server side O365 specific features such as 1TB storage in Onedrive. However, almost all other features and 5GB storage in free onedrive account would work fine.
-- This activation method does not modify/patch any onboard system files, instead it installs a custom SPPC.dll (open source) file for the activation to work. Check further details in below "How does it work?" section.
+- این روش فعال‌سازی می‌تواند انواع نسخه‌های آفیس را در ویندوز ویستا و بالاتر و معادل سرور آنها به جز برنامه‌های UWP آفیس فعال کند.
+- این روش فعال‌سازی به صورت آفلاین کار می‌کند و آفیس را به طور دائم فعال می‌کند.
+- این روش فعال‌سازی می‌تواند از تعمیرات آفیس، به‌روزرسانی‌های آفیس و حتی ارتقاءهای اصلی ویندوز جان سالم به در ببرد. در این موارد نیازی به فعال‌سازی مجدد ندارید.
+- برای نسخه اشتراکی O365، نمی‌توانید ویژگی‌های خاص O365 سمت سرور مانند 1 ترابایت فضای ذخیره‌سازی در Onedrive را دریافت کنید. با این حال، تقریباً تمام ویژگی‌های دیگر و 5 گیگابایت فضای ذخیره‌سازی در حساب رایگان onedrive به خوبی کار می‌کنند.
+- این روش فعال‌سازی هیچ فایل سیستمی داخلی را تغییر نمی‌دهد/وصله نمی‌کند، در عوض یک فایل سفارشی SPPC.dll (منبع باز) را برای کارکرد فعال‌سازی نصب می‌کند. جزئیات بیشتر را در بخش «چگونه کار می‌کند؟» در زیر بررسی کنید.
 
 :::
 
-## How does it work?
+## چگونه کار می‌کند؟
 
-#### For SPP based Office:
+#### برای آفیس مبتنی بر SPP:
 
 ![beforohook](/mas_before_ohook.svg)
 
--   As illustrated in the above 1st image, in the Official activation process of SPP based Office, Office asks `C:\Windows\System32\sppc.dll` about the activation status and that file asks the same thing to SPP (Software Protection Platform) `C:\Windows\System32\sppsvc.exe` and returns the message back to Office.
+- همانطور که در تصویر اول بالا نشان داده شده است، در فرآیند فعال‌سازی رسمی آفیس مبتنی بر SPP، آفیس از `C:\Windows\System32\sppc.dll` در مورد وضعیت فعال‌سازی سؤال می‌کند و آن فایل همان چیز را از SPP (پلتفرم حفاظت از نرم‌افزار) `C:\Windows\System32\sppsvc.exe` می‌پرسد و پیام را به آفیس برمی‌گرداند.
 
 ![afterohook](/mas_after_ohook.svg)
 
--   As illustrated in the above 2nd image, we modify this behavior by placing a custom `sppc.dll` file in Office folder without touching system's `C:\Windows\System32\sppc.dll` file and that custom file always returns the message that Office is activated. This is how ohook activation works.
--   You can find the source code of ohook custom sppc.dll file [here][1].
+- همانطور که در تصویر دوم بالا نشان داده شده است، ما این رفتار را با قرار دادن یک فایل سفارشی `sppc.dll` در پوشه آفیس بدون دست زدن به فایل `C:\Windows\System32\sppc.dll` سیستم تغییر می‌دهیم و آن فایل سفارشی همیشه پیام فعال بودن آفیس را برمی‌گرداند. اینگونه است که فعال‌سازی ohook کار می‌کند.
+- می‌توانید کد منبع فایل سفارشی sppc.dll ohook را [اینجا][1] پیدا کنید.
 
+## محصولات پشتیبانی شده
 
-## Supported Products
+به طور خلاصه، انواع محصولات آفیس در ویندوز ویستا و بالاتر و معادل سرور آنها به جز برنامه‌های UWP آفیس پشتیبانی می‌شوند.
 
-TL;DR all kinds of Office products are supported on Windows Vista and higher and their Server equivalent except Office UWP apps.
+### آفیس 2010 (14.0)
 
-### Office 2010 (14.0)
+::: danger نکته
 
-::: warning Note
-
-You can use this `FJ44M-DX23P-QRWQ8-RXY39-HFQTC` ltFree OEM key to install any retail version of Office 2010.
+می‌توانید از این کلید OEM ltFree `FJ44M-DX23P-QRWQ8-RXY39-HFQTC` برای نصب هر نسخه خرده‌فروشی آفیس 2010 استفاده کنید.
 
 :::
 
 <br/>
 
-| Office Version | Office Product                                                      | Blocked keys sourced from the Internet | Key Type |
+| نسخه آفیس | محصول آفیس | کلیدهای مسدود شده از اینترنت | نوع کلید |
 |----------------|---------------------------------------------------------------------|----------------------------------------|----------|
 | v14.0 (2010)   | AccessR                                                             | 7KTYC-XR43P-C3MRW-BJKFD-XBYPG          | Retail   |
 | v14.0 (2010)   | AccessRuntimeR                                                      | 7XHPQ-BQMYG-YBP49-CY8B2-T8CGQ          | ByPass   |
@@ -89,7 +88,7 @@ You can use this `FJ44M-DX23P-QRWQ8-RXY39-HFQTC` ltFree OEM key to install any r
 | v14.0 (2010)   | VisioSIVL Prem[Pro,Std]                                             | 7PKFT-X2MKQ-GT6X2-8CB2W-CHC9K          | MAK      |
 | v14.0 (2010)   | WordVL                                                              | 6J3XK-DFKGK-X373V-QJHYM-V3FC2          | MAK      |
 
-We couldn't find any keys (blocked/generic doesn't matter) for these Office 2010 products. If you have them, please share with us.
+> - ما نتوانستیم هیچ کلیدی (مسدود شده/عمومی مهم نیست) برای این محصولات آفیس 2010 پیدا کنیم. اگر آنها را دارید، لطفاً با ما به اشتراک بگذارید.
 
 ```
 4eaff0d0-c6cb-4187-94f3-c7656d49a0aa    Retail      ExcelR_[HSExcelR]
@@ -100,7 +99,7 @@ db3bbc9c-ce52-41d1-a46f-1a1d68059119    Retail      WordR_[HSWordR]
 dbe3aee0-5183-4ff7-8142-66050173cb01    Retail      SmallBusBasicsR_[SmallBusBasicsMSDNR]
 ```
 
-These installers are not publicly available, so it doesn't matter if we don't have their keys.
+> - این نصب‌کننده‌ها به صورت عمومی در دسترس نیستند، بنابراین مهم نیست که کلیدهای آنها را نداریم.
 
 ```
 19316117-30a8-4773-8fd9-7f7231f4e060    SubPrepid   HomeBusinessSubR
@@ -112,9 +111,9 @@ e98ef0c0-71c4-42ce-8305-287d8721e26c    SubPrepid   ProPlusSubR
 
 <br/>
 
-### Office 2013 (15.0)
+### آفیس 2013 (15.0)
 
-| Office Version | Office Product           | Generated Generic Key         | Key Type     |
+| نسخه آفیس | محصول آفیس | کلید عمومی تولید شده | نوع کلید |
 |----------------|--------------------------|-------------------------------|--------------|
 | v15.0 (2013)   | AccessRetail             | B7RFY-7NXPK-Q4342-Y9X2H-3JX4X | Retail       |
 | v15.0 (2013)   | AccessRuntimeRetail      | X3XNB-HJB7K-66THH-8DWQ3-XHGJP | Bypass       |
@@ -167,9 +166,9 @@ e98ef0c0-71c4-42ce-8305-287d8721e26c    SubPrepid   ProPlusSubR
 
 <br/>
 
-### Office 365 (15.0)
+### آفیس 365 (15.0)
 
-| Office Version | Office Product         | Generated Generic Key         | Key Type      |
+| نسخه آفیس | محصول آفیس | کلید عمومی تولید شده | نوع کلید |
 |----------------|------------------------|-------------------------------|---------------|
 | v15.0 (O365)   | O365BusinessRetail     | Y9NF9-M2QWD-FF6RJ-QJW36-RRF2T | SubTest       |
 | v15.0 (O365)   | O365HomePremRetail     | 3NMDC-G7C3W-68RGP-CB4MH-4CXCH | SubTest1      |
@@ -178,9 +177,9 @@ e98ef0c0-71c4-42ce-8305-287d8721e26c    SubPrepid   ProPlusSubR
 
 <br/>
 
-### Office 365 (16.0)
+### آفیس 365 (16.0)
 
-| Office Version | Office Product         | Generated Generic Key         | Key Type      |
+| نسخه آفیس | محصول آفیس | کلید عمومی تولید شده | نوع کلید |
 |----------------|------------------------|-------------------------------|---------------|
 | v16.0 (O365)   | O365AppsBasicRetail    | 3HYJN-9KG99-F8VG9-V3DT8-JFMHV | Subscription  |
 | v16.0 (O365)   | O365BusinessRetail     | Y9NF9-M2QWD-FF6RJ-QJW36-RRF2T | SubTest       |
@@ -191,9 +190,9 @@ e98ef0c0-71c4-42ce-8305-287d8721e26c    SubPrepid   ProPlusSubR
 
 <br/>
 
-### Office 2016 (16.0)
+### آفیس 2016 (16.0)
 
-| Office Version | Office Product              | Generated Generic Key         | Key Type     |
+| نسخه آفیس | محصول آفیس | کلید عمومی تولید شده | نوع کلید |
 |----------------|-----------------------------|-------------------------------|--------------|
 | v16.0 (2016)   | AccessRetail                | WHK4N-YQGHB-XWXCC-G3HYC-6JF94 | Retail       |
 | v16.0 (2016)   | AccessRuntimeRetail         | RNB7V-P48F4-3FYY6-2P3R3-63BQV | PrepidBypass |
@@ -246,9 +245,9 @@ e98ef0c0-71c4-42ce-8305-287d8721e26c    SubPrepid   ProPlusSubR
 
 <br/>
 
-### Office 2019 (16.0)
+### آفیس 2019 (16.0)
 
-| Office Version | Office Product                  | Generated Generic Key         | Key Type     |
+| نسخه آفیس | محصول آفیس | کلید عمومی تولید شده | نوع کلید |
 |----------------|---------------------------------|-------------------------------|--------------|
 | v16.0 (2019)   | Access2019Retail                | WRYJ6-G3NP7-7VH94-8X7KP-JB7HC | Retail       |
 | v16.0 (2019)   | Access2019Volume                | 6FWHX-NKYXK-BW34Q-7XC9F-Q9PX7 | MAK-AE       |
@@ -287,9 +286,9 @@ e98ef0c0-71c4-42ce-8305-287d8721e26c    SubPrepid   ProPlusSubR
 
 <br/>
 
-### Office 2021 (16.0)
+### آفیس 2021 (16.0)
 
-| Office Version | Office Product             | Generated Generic Key         | Key Type     |
+| نسخه آفیس | محصول آفیس | کلید عمومی تولید شده | نوع کلید |
 |----------------|----------------------------|-------------------------------|--------------|
 | v16.0 (2021)   | Access2021Retail           | P286B-N3XYP-36QRQ-29CMP-RVX9M | Retail       |
 | v16.0 (2021)   | AccessRuntime2021Retail    | MNX9D-PB834-VCGY2-K2RW2-2DP3D | Bypass       |
@@ -330,9 +329,9 @@ e98ef0c0-71c4-42ce-8305-287d8721e26c    SubPrepid   ProPlusSubR
 
 <br/>
 
-### Office 2024 (16.0)
+### آفیس 2024 (16.0)
 
-| Office Version | Office Product             | Generated Generic Key         | Key Type |
+| نسخه آفیس | محصول آفیس | کلید عمومی تولید شده | نوع کلید |
 |----------------|----------------------------|-------------------------------|----------|
 | v16.0 (2024)   | Access2024Retail           | P6NMW-JMTRC-R6MQ6-HH3F2-BTHKB | Retail   |
 | v16.0 (2024)   | Access2024Volume           | CXNJT-98HPP-92HX7-MX6GY-2PVFR | MAK-AE   |
@@ -361,79 +360,86 @@ e98ef0c0-71c4-42ce-8305-287d8721e26c    SubPrepid   ProPlusSubR
 
 <br/>
 
-::: info Info
 
-- For the O365 subscription version, you can't get server side O365 specific features such as 1TB storage in Onedrive. However, almost all other features and 5GB storage in free onedrive account would work fine.
-- Script doesn't convert any product to Volume or vice-versa. All products are activated with their own licence.
-- For Office 2013 and later, key preference is given in this order, Retail:TB:Sub > Retail > OEM:NONSLP > Volume:MAK > Volume:GVLK
-- For Office 2010, key preference is given in this order, Retail > Volume:MAK
+::: info اطلاعات
 
-:::
-
-## How to remove Ohook?
-
-::: tip In MAS
-
-- goto Ohook Activation and apply Uninstall option.
-- After that, In MAS, goto Troubleshoot and apply Fix Licensing option. (Optional)
-- Done ✔️
+- برای نسخه اشتراکی O365، نمی‌توانید ویژگی‌های خاص O365 سمت سرور مانند 1 ترابایت فضای ذخیره‌سازی در Onedrive را دریافت کنید. با این حال، تقریباً تمام ویژگی‌های دیگر و 5 گیگابایت فضای ذخیره‌سازی در حساب رایگان onedrive به خوبی کار می‌کنند.
+- اسکریپت هیچ محصولی را به Volume یا بالعکس تبدیل نمی‌کند. همه محصولات با لایسنس خودشان فعال می‌شوند.
+- برای آفیس 2013 و بالاتر، اولویت کلید به این ترتیب است: Retail:TB:Sub > Retail > OEM:NONSLP > Volume:MAK > Volume:GVLK
+- برای آفیس 2010، اولویت کلید به این ترتیب است: Retail > Volume:MAK
 
 :::
 
-## Unsupported Products
 
-- Office UWP (Store apps)
-  Use TSforge activation option for this.
+## چگونه Ohook را حذف کنیم
 
-## Custom sppc.dll Info {#custom}
+::: tip راهنما
 
-- Custom sppc.dll source code (Ohook 0.5) is available [here][2].
-- SHA-256 checksums:
-```
+- در [MAS](./index#مرحله-۲)
+- به فعال‌سازی Ohook بروید و گزینه Uninstall را اعمال کنید.
+- پس از آن، در MAS، به Troubleshoot بروید و گزینه Fix Licensing را اعمال کنید. (اختیاری)
+- انجام شد ✔️
+
+:::
+
+<br/>
+
+## محصولات پشتیبانی نشده
+
+- Office UWP (برنامه‌های فروشگاه)
+  برای این کار از گزینه فعال‌سازی TSforge استفاده کنید.
+
+## اطلاعات سفارشی sppc.dll {#سفارشی}
+
+- کد منبع سفارشی sppc.dll (Ohook 0.5) در [اینجا][2] موجود است.
+- چک‌سام‌های SHA-256:
+
+```reg
 09865ea5993215965e8f27a74b8a41d15fd0f60f5f404cb7a8b3c7757acdab02 *sppc32.dll
 393a1fa26deb3663854e41f2b687c188a9eacd87b23f17ea09422c4715cb5a9f *sppc64.dll
 ```
-- In MAS AIO version, these 2 files are encoded in base64 to make MAS AIO version. In AIO script, [instructions][3] are mentioned on how to decode files from Base64 format.
-**How to create identical sppc.dll files from scratch?**
-- Download ohook 0.5 source code file from [here][4]
--   Extract this zip file to a folder named `C:\ohook`
--   Now download these two compiler archives, [mingw32][5] and [mingw64][5]
--   Extract both archives with 7-zip in C drive, so that path would look like this,
+
+- در نسخه MAS AIO، این 2 فایل برای ساخت نسخه MAS AIO به صورت base64 کدگذاری شده‌اند. در اسکریپت AIO، [دستورالعمل‌هایی][3] در مورد نحوه رمزگشایی فایل‌ها از فرمت Base64 ذکر شده است.
+**چگونه فایل‌های sppc.dll یکسان را از ابتدا ایجاد کنیم؟**
+- فایل کد منبع ohook 0.5 را از [اینجا][4] دانلود کنید.
+- این فایل فشرده را در پوشه‌ای به نام `C:\ohook` استخراج کنید.
+- اکنون این دو آرشیو کامپایلر را دانلود کنید، [mingw32][5] و [mingw64][5].
+- هر دو آرشیو را با 7-zip در درایو C استخراج کنید، به طوری که مسیر به این شکل باشد،
     `C:\mingw32`
     `C:\mingw64`
--   Open Powershell as admin and enter below command to set the time and date,
+- Powershell را به عنوان مدیر باز کنید و دستور زیر را برای تنظیم زمان و تاریخ وارد کنید،
     `Set-TimeZone -Id 'UTC'; $date=[datetime]'2023/8/7 12:00';while($true){set-date $date; start-sleep -milliseconds 10;}`
--   Now open another window for Powershell and enter below commands to create sppc.dll files,
+- اکنون پنجره دیگری برای Powershell باز کنید و دستورات زیر را برای ایجاد فایل‌های sppc.dll وارد کنید،
     `Set-Location -Path C:\ohook`
     `C:\mingw64\bin\mingw32-make.exe`
--   Calculate the SHA-256 of the created sppc64.dll and sppc32.dll files using 7-zip or Powershell, it would be same as mentioned above.
--   Done, you can now close Powershell windows and correct the date now.
-
-### Manual Activation
-
-- Check [here](./manual_ohook_activation)
+- SHA-256 فایل‌های sppc64.dll و sppc32.dll ایجاد شده را با استفاده از 7-zip یا Powershell محاسبه کنید، باید همانند موارد ذکر شده در بالا باشد.
+- انجام شد، اکنون می‌توانید پنجره‌های Powershell را ببندید و تاریخ را اصلاح کنید.
 
 
-### Command line Switches
+### فعال‌سازی دستی
 
-- Check [here](./command_line_switches).
+- [اینجا](./manual_ohook_activation) را بررسی کنید.
 
 
-### Setup Preactivate
+### سوئیچ‌های خط فرمان
 
-- Check the Extract OEM option in the MAS `Extras` section if you want pre-activated Windows installation.
-- Further read [here](./oem-folder).
+- [اینجا](./command_line_switches) را بررسی کنید.
 
-## Troubleshoot  
 
-::: danger Troubleshoot
+### تنظیم پیش‌فعال‌سازی
 
-- If you need any help regarding this, first review the [**FAQ section**](./faq) — your answer will most likely be there.  
+- اگر می‌خواهید نصب ویندوز از پیش فعال شده باشد، گزینه Extract OEM را در بخش `Extras` MAS بررسی کنید.
+- ادامه مطلب را [اینجا](./oem-folder) بخوانید.
 
-- If your issue persists — You can [**Contact Us**](./troubleshoot).
+<br/>
+
+::: danger عیب یابی
+
+اگر سوالی دارید، ابتدا بخش [**سوالات متداول**](./faq) را مرور کنید — به احتمال زیاد پاسخ شما در آنجا خواهد بود.
+
+اگر مشکل شما همچنان ادامه داشت — [**با ما تماس بگیرید**](./troubleshoot).
 
 :::
-
 
 [1]: https://github.com/asdcorp/ohook
 [2]: https://stackoverflow.com/a/35335273

@@ -1,172 +1,178 @@
 ---
 layout: doc
 outline: deep
-title: 'FAQ'
-description: 'Frequently Asked Questions about Activation Methods' 
-date: 2025-02-04
+title: 'سوالات متداول'
+description: 'پاسخ به پرتکرارترین سوالات کاربران'
+date: 2025-05-04
 editLink: true
 ---
 
-# Frequently Asked Questions (FAQ)
+# سوالات متداول (FAQ)
 
-Welcome to the MAS FAQ! Here you'll find answers to the most common questions. If you don't see your question here, feel free to [Contact Us](#contact-us) — we're happy to help!
-
-<br/><br/>
-
-## Getting Started
-
-### How do I use MAS?
-
-For a full guide on permanent activation with HWID, see [this section](./index#step2).
+به بخش سوالات متداول MAS خوش آمدید! اگر سوالی دارید، ابتدا این صفحه را مرور کنید — احتمال زیاد جواب‌تان اینجاست. اگر هنوز سوالی داشتید، [در تماس باشید](#در-تماس-باشید) تا راهنمایی‌تان کنیم.
 
 <br/>
 
-### How can I activate Windows permanently?
+## شروع به کار با **M A S**
 
-Select the HWID activation option in MAS.
+> Microsoft Activation Scripts
 
-<br/>
+### چطور از MAS استفاده کنم؟
 
-### How do I download and install Office?
-
-Follow the steps in the [genuine installation media guide](./genuine-installation-media).
+برای راه‌اندازی دائمی ویندوز با HWID، راهنمای [فعالسازی دائمی با HWID](./index#مرحله-۲) را بخوانید.
 
 <br/>
 
-### How do I activate Office permanently?
+### فعال‌سازی دائمی ویندوز چگونه انجام می‌شود؟
 
-Choose the Ohook activation method within MAS.
-
-<br/>
-
-## Troubleshooting
-
-### Activation failed — what should I do?
-
-See our [troubleshooting guide](./troubleshoot) for common solutions.
+در فعال‌ساز، گزینه `HWID` را انتخاب کنید.
 
 <br/>
 
-### Is MAS safe? How do I know it’s not malware?
+### دانلود و نصب آفیس به چه صورت است؟
 
-MAS is fully open-source, with over 125K stars on [GitHub][1] and millions of users worldwide. You can inspect the batch files in any text editor, or use ChatGPT for code review.  
-If you prefer, you can also perform manual activation — see [this guide](./manual_hwid_activation).
-
-<br/>
-
-### How can I remove HWID, Ohook, TSforge, KMS38, or Online KMS activations?
-
-Check out these guides for removing each activation type:
-
-- [❌Remove HWID](./hwid#how-to-remove-hwid)
-- [❌Remove Ohook](./ohook#how-to-remove-ohook)
-- [❌Remove TSforge](./tsforge#how-to-remove-tsforge)
-- [❌Remove KMS38](./kms38#how-to-remove-kms38)
-- [❌Remove Online KMS](./online_kms#how-to-remove-online-kms)
+راهنمای [نصب رسانه اصل آفیس](./genuine-installation-media) را دنبال کنید.
 
 <br/>
 
-## Windows & Office Questions
+### فعال‌سازی دائمی آفیس چطور انجام می‌شود؟
 
-### How do I download the full Windows 10/11 Enterprise LTSC version?
-
-Refer to the [genuine installation media guide](./genuine-installation-media).
+در فعال‌ساز، گزینه `Ohook` را انتخاب کنید.
 
 <br/>
 
-### Can I upgrade Windows from Home to Pro?
+## مشکلات رایج و راه‌حل‌ها
 
-Yes! In MAS, select the “Change Windows Edition” option.
+### اگر فعال‌سازی با خطا مواجه شد، چه کنم؟
 
-<br/>
-
-### Will I lose my files when upgrading from Home to Pro?
-
-No, your data will remain safe.
+راهنمای [عیب‌یابی](./troubleshoot) را ببینید.
 
 <br/>
 
-### I changed my Windows edition, and now it’s deactivated — what now?
+### آیا MAS امن است؟ چطور مطمئن شوم که ویروس ندارد؟
 
-Just run HWID activation again. Each Windows edition needs its own activation.
-
-<br/>
-
-### Is it safe to connect my Microsoft account after activating with MAS?
-
-Absolutely, it’s safe.
+پروژه کاملاً متن‌باز است، بیش از ۱۲۵ هزار ستاره در [GitHub][1] دارد و میلیون‌ها کاربر از آن استفاده می‌کنند. می‌توانید کد را با Notepad یا کمک ChatGPT بررسی کنید.  
+اگر مایل بودید، فعال‌سازی دستی را مطابق [این راهنما](./manual_hwid_activation) انجام دهید.
 
 <br/>
 
-### Can I update Windows/Office after activation?
+### چطور فعال‌سازی HWID، Ohook، TSforge، KMS38 یا Online KMS را حذف کنم؟
 
-Yes — updates will work as usual.
+راهنماهای حذف تمامی روش‌ها را اینجا پیدا کنید:
 
-<hr/><br/>
+[❌حذف HWID](./hwid#چگونه-hwid-را-حذف-کنیم)
 
-## Office-Specific
+[❌حذف Ohook](./ohook#چگونه-ohook-را-حذف-کنیم)
 
-### I’m in Russia and can’t download Office. Any workaround?
+[❌حذف TSforge](./tsforge#چگونه-tsforge-را-حذف-کنیم)
 
-See [this guide][2] for bypassing regional restrictions.
+[❌حذف KMS38](./kms38#چگونه-kms38-را-حذف-کنیم)
 
-<br/>
+[❌حذف Online KMS](./online_kms#چگونه-آنلاین-kms-را-حذف-کنیم)
 
-### Can I activate Office 365?
+<br><br/>
 
-Yes, with the `Ohook` activation. Note: MAS does not unlock server-side Office 365 features such as 1TB OneDrive, but you get almost all other features and 5GB of free OneDrive storage.
+## سوالات مربوط به ویندوز و آفیس
 
-<br/>
+### چطور نسخه کامل Windows 10/11 Enterprise LTSC را دانلود کنم؟
 
-### Can I get the Copilot feature in Office with MAS?
-
-No. [Copilot][3] is an add-on available only to official Microsoft 365 subscribers.
-
-<br/>
-
-### Can I use Python in Excel after MAS activation?
-
-No. [Python in Excel][4] is a cloud feature for Microsoft 365 subscribers.
-
-<br/>
-
-### I see an “Office is not genuine” banner — what should I do?
-
-Simply re-run the Ohook activation from the latest MAS version.
-
-<br/>
-
-## Other Common Questions
+راهنمای [دریافت رسانه اصل](./genuine-installation-media) را ببینید.
 
 <br/> 
 
-### Can I delete the MAS folder after activation?
+### آیا می‌توانم ویرایش ویندوز را از Home به Pro تغییر دهم؟
 
-Yes, it’s safe to delete the MAS folder once activation is complete.
-
-<br/>
-
-### How does MAS activation actually work?
-
-See the Docs section for detailed info.
+بله، در فعال‌ساز، گزینه `Change Windows Edition` را انتخاب کنید.
 
 <br/>
 
-### Does MAS work for Windows Vista/7/8.1?
+### آیا با تغییر نسخه ویندوز (مثلاً از Home به Pro) اطلاعاتم پاک می‌شود؟
 
-Yes, TSforge, Ohook, and Online KMS options work for these versions.
-
-<br/>
-
-### Can I donate or support the project?
-
-This project doesn’t accept donations and is completely free. It’s a community-driven project, and profiting from piracy is not supported.
+خیر، اطلاعات شما حذف نمی‌شود.
 
 <br/>
 
-::: danger Troubleshoot
+### بعد از تغییر نسخه ویندوز، غیر فعال شده است؛ چه کنم؟
 
-- Need any help regarding this — feel free to [**Contact Us**](./troubleshoot), We're happy to help!
+کافیست فعال‌سازی `HWID` را برای نسخه جدید انجام دهید؛ هر نسخه نیاز به فعال‌سازی مجزا دارد.
+
+<br/>
+
+### آیا می‌توانم اکانت مایکروسافت را با MAS فعال نگه دارم؟
+
+بله، این کار بدون مشکل و امن است.
+
+<br/>
+
+### آیا بعد از فعال‌سازی، ویندوز و آفیس آپدیت می‌شوند؟
+
+بله، به‌روزرسانی‌ها بدون مشکل ادامه پیدا می‌کنند.
+
+<br/>
+
+## سوالات ویژه آفیس
+
+### من در روسیه هستم و آفیس دانلود نمی‌شود؛ راه‌حل چیست؟
+
+راهنمای [دور زدن محدودیت][2] را مطالعه کنید.
+
+<br/>
+
+### آیا می‌توانم Office 365 را فعال کنم؟
+
+بله؛ از گزینه `Ohook` استفاده کنید. توجه داشته باشید برخی قابلیت‌های سروری (مانند ۱ ترابایت OneDrive) فقط برای مشترکین رسمی فعال است، اما اکثر امکانات و ۵ گیگابایت فضای رایگان فعال می‌شود.
+
+<br/>
+
+### آیا می‌توانم Copilot را در آفیس داشته باشم؟
+
+خیر؛ [Copilot][3] یک سرویس اضافه برای مشترکین رسمی مایکروسافت ۳۶۵ است.
+
+<br/>
+
+### آیا امکان استفاده از Python در Excel با MAS هست؟
+
+خیر؛ [Python در Excel][4] فقط برای حساب‌های رسمی مایکروسافت ۳۶۵ فعال است.
+
+<br/>
+
+### اگر پیام "Office is not genuine" دریافت کردم چه کنم؟
+
+روش جدید `Ohook` را امتحان کنید.
+
+<hr/><br/>
+
+## سایر سوالات
+
+### آیا بعد از فعال‌سازی می‌توانم پوشه MAS را حذف کنم؟
+
+بله، پس از فعال‌سازی مشکلی نیست.
+
+<br/>
+
+### چطور فعال‌سازی توسط MAS کار می‌کند؟
+
+توضیحات دقیق‌تر در بخش مستندات (Docs) آمده است؛ برای اطلاعات بیشتر به آن مراجعه کنید.
+
+<br/>
+
+### آیا MAS برای ویندوز ویستا/۷/۸.۱ هم کار می‌کند؟
+
+بله؛ گزینه‌های `TSforge`، `Ohook` و `Online KMS` روی نسخه‌های Vista/7/8.1 هم قابل استفاده است.
+
+<br/>
+
+### چطور می‌توانم به پروژه کمک کنم یا کمک مالی کنم؟
+
+پروژه تماما رایگان است و کمک مالی نمی‌پذیرد؛ چون توسط جامعه توسعه‌دهندگان مدیریت می‌شود و تقسیم کمک‌ها عملی نیست. همچنین کسب درآمد از ابزارهای فعال‌سازی صحیح نیست.
+
+<br/>
+
+### در تماس باشید
+
+::: tip
+
+اگر سوالی دارید که پاسخش در این صفحه نیست — با ما [**در ارتباط**](./troubleshoot) باشید.
 
 :::
 

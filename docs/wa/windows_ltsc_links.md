@@ -9,8 +9,7 @@ editLink: true
 
 # Windows LTSC Download
 
-All download links lead to genuine files only.
-
+> - All download links lead to genuine files only.
 > - [FAQ](./genuine-installation-media#faq)
 > - Microsoft provides Evaluation ISO public [links][1] for Windows LTSC releases, but as the name states, those ISOs are for evaluation purposes and can not be activated for more than 90 days. Below listed ISOs are full version that can be activated.
 
@@ -18,7 +17,7 @@ All download links lead to genuine files only.
 
 ::: info Info
 
-::: details Click here
+::: details Click here to see details 
 
 If you're uncertain, avoid LTSC and choose the general availability channel and its editions (Home, Pro, Enterprise, etc).
 
@@ -40,25 +39,27 @@ Microsoft releases Windows 10 and 11 through two servicing channels.
 
 ---
 
-**Reasons to use LTSC:**
+#### Reasons to ...
 
-- You don't like annual Windows feature upgrades.
-- You don't like preinstalled Store (UWP) apps as well.
-- You want longer update support for Windows 10.
+::: tip **Reasons to use LTSC**
 
-**Reasons to avoid using LTSC:**  
+> - You don't like annual Windows feature upgrades
+> - You don't like preinstalled Store (UWP) apps as well
+> - You want longer update support for Windows 10
 
-- As stated above, many games and software might not support LTSC once that same build has reached the end of life in GAC.
-- Games might not work out of the box and you will manually need to install store and Xbox apps.
-- New hardware might not be fully supported by a 2-3 year-old LTSC build (A new version of LTSC is released every 3 years).
-- You might miss new features added in GAC that aren't available in LTSC.
+**Reasons to avoid using LTSC:**
+
+> - As stated above, many games and software might not support LTSC once that same build has reached the end of life in GAC
+> - Games might not work out of the box and you will manually need to install store and Xbox apps
+> - New hardware might not be fully supported by a 2-3 year-old LTSC build (A new version of LTSC is released every 3 years)
+> - You might miss new features added in GAC that aren't available in LTSC
 
 **Common misconceptions**
 
-- LTSC is fast.  
-  It's not fast, although there might be a bit more RAM available because of no store apps running in the background, and you can achieve the same result in GAC channel editions by [turning off][6] background apps and startup apps.
-- It's more privacy-oriented.  
-  No, [telemetry options][7] are the same as GAC Enterprise.
+> - LTSC is fast  
+>   It's not fast, although there might be a bit more RAM available because of no store apps running in the background, and you can achieve the same result in GAC channel editions by [turning off][6] background apps and startup apps
+> - It's more privacy-oriented   
+>   No, [telemetry options][7] are the same as GAC Enterprise
 
 :::
 
@@ -72,27 +73,28 @@ Applicable on Windows 11 LTSC 2024 and Windows 10 LTSC 2021.
 
 LTSC editions do not come with store apps pre-installed. To install them, follow the steps below.
 
-- Make sure the Internet is connected.
-- Open Powershell as admin and enter,  
-
-```
-wsreset -i
-```
-  
-- Wait for a notification to appear that the store app is installed, it may take a few minutes.
-
-On Windows 10 2021 LTSC, you might encounter an error indicating that cliprenew.exe cannot be found. This error can be safely ignored.
+> - Make sure the Internet is connected.
+> - Open Powershell as admin and enter: 
+> 
+> ```reg
+> wsreset -i
+> ```
+> 
+> - Wait for a notification to appear that the store app is installed, it may take a few minutes.
+> 
+> - On Windows 10 2021 LTSC, you might encounter an error indicating that cliprenew.exe cannot be found. This error can be safely ignored.
 
 **App Installer**
 
-This app is very useful; it includes WinGet, enabling easy installation of .appx packages. After installing the Store app, install the App installer from this URL.
-
-[apps.microsoft.com/detail/9nb][8]
+> - This app is very useful; it includes WinGet, enabling easy installation of .appx packages. After installing the Store app, install the App installer from this URL.
+> 
+> - [apps.microsoft.com/detail/9nb][8]
 
 **It didn't work. What should I do next?**
 
-You can install them using the package provided by abbodi1406.  
-https://github.com/stdin82/htfx/releases/tag/v0.0.24
+> - You can install them using the package provided by abbodi1406.
+> 
+> - [github.com/htfx/releases/v0.0.24][9]
 
 :::
 
@@ -118,9 +120,9 @@ https://github.com/stdin82/htfx/releases/tag/v0.0.24
 | **2 Simultaneous RDP Sessions**        | No              | Yes                                                                                                                                                                                                                                       |
 
 
-- IoT Enterprise LTSC is a winner.
-- The only difference between IoT Enterprise LTSC and IoT Enterprise Subscription LTSC is that the subscription edition supports a subscription license.
-- You can change the editions to each other (IoT and Non-IoT Windows Enterprise LTSC) only by inserting the corresponding edition key on the activation page in the Windows settings.
+> - IoT Enterprise LTSC is a winner.
+> - The only difference between IoT Enterprise LTSC and IoT Enterprise Subscription LTSC is that the subscription edition supports a subscription license.
+> - You can change the editions to each other (IoT and Non-IoT Windows Enterprise LTSC) only by inserting the corresponding edition key on the activation page in the Windows settings.
 
 |                          |                |                               |
 |--------------------------|----------------|-------------------------------|
@@ -142,8 +144,8 @@ https://github.com/stdin82/htfx/releases/tag/v0.0.24
 | **$OEM$ Folder Support**     | Yes                                                                                                   | No [(More Info)](./oem-folder)                                                                            |
 
 
-- IoT Enterprise LTSC is a winner.
-- You can change the editions to each other (IoT and Non-IoT Windows Enterprise LTSC) only by inserting the corresponding edition key on the activation page in the Windows settings.
+> - IoT Enterprise LTSC is a winner.
+> - You can change the editions to each other (IoT and Non-IoT Windows Enterprise LTSC) only by inserting the corresponding edition key on the activation page in the Windows settings.
 
 |                          |                |                               |
 |--------------------------|----------------|-------------------------------|
@@ -155,7 +157,7 @@ https://github.com/stdin82/htfx/releases/tag/v0.0.24
 **Old Versions**
 
 
-- There are ISOs available for IoT Enterprise LTSC/LTSB 2019, 2016, and 2015, but they only have the Non-IoT LTSC OEM key (generic, not-activated) preinstalled. The installed key is the only difference. There is no real, different IoT edition available for these versions.
+> - There are ISOs available for IoT Enterprise LTSC/LTSB 2019, 2016, and 2015, but they only have the Non-IoT LTSC OEM key (generic, not-activated) preinstalled. The installed key is the only difference. There is no real, different IoT edition available for these versions.
 
 ::: 
 
@@ -173,10 +175,10 @@ You might want to check [Windows 10 EOL guide](./windows10_eol).
 
 IoT LTSC edition ISOs are available in English language only. However, you can follow the below steps to clean install it.
 
-- Download the non-IoT LTSC 2024 ISO in the desired language from the section below.
-- Follow [PID.txt method](./clean_install_windows#windows-11-on-unsupported-hardware) to install IoT version from scratch.
-
-Alternatively, You can install Non-IoT LTSC in another language and later install IoT LTSC 2024 key `KBN8V-HFGQ4-MGXVD-347P6-PDQGT` in activation page in Windows settings to change the edition.
+> - Download the non-IoT LTSC 2024 ISO in the desired language from the section below.
+> - Follow [PID.txt method](./clean_install_windows#windows-11-on-unsupported-hardware) to install IoT version from scratch.
+> 
+> - Alternatively, You can install Non-IoT LTSC in another language and later install IoT LTSC 2024 key `KBN8V-HFGQ4-MGXVD-347P6-PDQGT` in activation page in Windows settings to change the edition.
 
 ::: 
 
@@ -188,11 +190,11 @@ IoT LTSC edition ISOs are available in English language only.
 
 When installing Windows 11 IoT Enterprise LTSC 2024 from scratch, one advantage is its relaxed hardware requirements. However, there isn't much benefit to doing the same with the 2021 IoT version, since you can easily change the Windows edition later. Additionally, the PID.txt method for installing the virtual edition from scratch is only applicable to Windows 11 24H2 and later versions. While there are other methods to install from scratch, they are more complex, and the results do not justify the effort.
 
-Our recommendation is as follows:
-
-- Download the non-IoT LTSC 2021 ISO in the desired language from the section below.
-- Install Windows using this [clean installation guide](./clean_install_windows).
-- After installing Windows, to change the edition, enter the IoT LTSC 2021 key `QPM6N-7J2WJ-P88HH-P3YRH-YY74H` on the activation page in the Windows settings.
+> - Our recommendation is as follows:
+> 
+> -  Download the non-IoT LTSC 2021 ISO in the desired language from the section below.  
+> -  Install Windows using this [clean installation guide](./clean_install_windows).  
+> -  After installing Windows, to change the edition, enter the IoT LTSC 2021 key `QPM6N-7J2WJ-P88HH-P3YRH-YY74H` on the activation page in the Windows settings.
 
 ::: 
 
@@ -208,10 +210,10 @@ Our recommendation is as follows:
 
 Build - 26100.1742
 
-These ISOs contain below editions  
-Windows 11 Enterprise LTSC  
-Windows 11 IoT Enterprise LTSC    
-Windows 11 IoT Enterprise Subscription LTSC
+> - These ISOs contain below editions  
+> - Windows 11 Enterprise LTSC  
+> - Windows 11 IoT Enterprise LTSC    
+> - Windows 11 IoT Enterprise Subscription LTSC
 
 | Language | Arch | Link                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 |:---------|:-----|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -272,9 +274,9 @@ Build - 26100.1742
 
 (Build - 19044.1288)
 
-These ISOs contain below editions    
-Windows 10 Enterprise LTSC  
-Windows 10 IoT Enterprise LTSC   
+> - These ISOs contain below editions    
+> - Windows 10 Enterprise LTSC  
+> - Windows 10 IoT Enterprise LTSC   
 
 | Language | Arch | Link                                                                                                                                                         |
 |:---------|:-----|:-------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -371,8 +373,9 @@ Windows 10 IoT Enterprise LTSC
 
 **Windows 10 IoT Enterprise LTSC 2019**
 
-(Build - 17763.107)  
-It doesn't have the actual IotEnterpriseS edition, it's just EnterpriseS with OEM key (generic, not-activated) installed.
+(Build - 17763.107)
+
+> It doesn't have the actual IotEnterpriseS edition, it's just EnterpriseS with OEM key (generic, not-activated) installed.
 
 | Language | Arch | Link                                                                                                                                                   |
 |:---------|:-----|:-------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -650,7 +653,6 @@ Check [Windows arm links](./windows_arm_links).
 
 :::
 
-
 [1]: https://www.microsoft.com/en-us/evalcenter
 [2]: https://learn.microsoft.com/en-us/lifecycle/products/windows-11-home-and-pro
 [3]: https://learn.microsoft.com/en-us/lifecycle/products/windows-11-enterprise-and-education
@@ -659,3 +661,4 @@ Check [Windows arm links](./windows_arm_links).
 [6]: https://www.elevenforum.com/t/enable-or-disable-background-apps-in-windows-11.923/
 [7]: https://gist.github.com/ave9858/a2153957afb053f7d0e7ffdd6c3dcb89
 [8]: https://apps.microsoft.com/detail/9nblggh4nns1
+[9]: https://github.com/stdin82/htfx/releases/tag/v0.0.24

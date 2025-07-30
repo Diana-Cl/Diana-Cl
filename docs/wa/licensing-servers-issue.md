@@ -1,32 +1,32 @@
 ---
 layout: doc
 outline: deep
-title: 'Licensing Servers Issue'
-description: 'In some cases, HWID activation may fail because the system couldnt connect to HWID licensing servers'
+title: 'مشکل سرورهای لایسنس'
+description: 'در برخی موارد، فعال‌سازی HWID ممکن است به دلیل عدم اتصال سیستم به سرورهای لایسنس HWID با شکست مواجه شود.'
 date: 2023-02-11
 editLink: true
 ---
 
-# Licensing Servers Issue
+# مشکل سرورهای لایسنس
 
-In some cases, **HWID activation** may fail because the system couldn't connect to HWID licensing servers. The activation script will inform you about this if that is the case.
-We suggest following the below guide only when the script tells you to do so.
+در برخی موارد، **فعال‌سازی HWID** ممکن است به دلیل عدم اتصال سیستم به سرورهای لایسنس HWID با شکست مواجه شود. اسکریپت فعال‌سازی در این صورت به شما اطلاع خواهد داد.
+پیشنهاد می‌کنیم راهنمای زیر را فقط زمانی دنبال کنید که اسکریپت به شما بگوید.
 
 <hr/><br/>
 
-## Network Reset
+## بازنشانی شبکه
 
-::: tip Tip
+::: tip نکته
 
-- In Windows 10/11, go to settings and search for Network Reset, then apply this option.
-- Restart your system and try HWID Activation.
-- If it's showing the same Internet error then follow the below option.
+- در ویندوز 10/11، به تنظیمات بروید و بازنشانی شبکه را جستجو کنید، سپس این گزینه را اعمال کنید.
+- سیستم خود را مجدداً راه‌اندازی کنید و فعال‌سازی HWID را امتحان کنید.
+- اگر همان خطای اینترنت را نشان می‌دهد، گزینه زیر را دنبال کنید.
 
 :::
 
-## Firewall / Proxy Reset
+## بازنشانی فایروال / پروکسی
 
-- Open Powershell as admin and enter below commands:
+- Powershell را به عنوان مدیر باز کنید و دستورات زیر را وارد کنید:
 
 ```shell
 Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Internet Settings" -Name ProxyEnable -Type DWord -Value 0
@@ -45,21 +45,21 @@ bitsadmin /util /setieproxy localsystem NO_PROXY RESET
 ipconfig /flushdns
 ```
 
-- Restart your system and try HWID Activation.
-- If it's showing the same Internet error then follow the below option.
+- سیستم خود را مجدداً راه‌اندازی کنید و فعال‌سازی HWID را امتحان کنید.
+- اگر همان خطای اینترنت را نشان می‌دهد، گزینه زیر را دنبال کنید.
 
-## VPN / Another Internet Connection
+## VPN / اتصال اینترنت دیگر
 
-- Install Cloudflare WARP VPN - https://1.1.1.1/
-  Connect the VPN and try HWID activation.
+- VPN Cloudflare WARP را نصب کنید - https://1.1.1.1/
+  VPN را وصل کنید و فعال‌سازی HWID را امتحان کنید.
 
-- If it's not working, try a different internet connection or use your phone's internet through USB tethering.
+- اگر کار نمی‌کند، از یک اتصال اینترنت دیگر استفاده کنید یا از اینترنت تلفن همراه خود از طریق اتصال USB استفاده کنید.
 
 
-::: danger Troubleshoot
+::: danger عیب یابی
 
-- If you need any help regarding this, first review the [**FAQ section**](./faq) — your answer will most likely be there.
+- اگر در این مورد به کمکی نیاز دارید، ابتدا بخش [**سوالات متداول**](./faq) را مرور کنید — به احتمال زیاد پاسخ شما در آنجا خواهد بود.
 
-- If HWID activation is still not working — You can [**Contact us**](./troubleshoot).
+- اگر فعال‌سازی HWID هنوز کار نمی‌کند — می‌توانید [**با ما تماس بگیرید**](./troubleshoot).
 
 :::

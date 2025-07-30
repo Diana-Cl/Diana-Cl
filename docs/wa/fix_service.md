@@ -1,33 +1,33 @@
 ---
 layout: doc
 outline: deep
-title: 'Fix Windows Services'
-description: 'if the script shows that -sppsvc service- is corrupt, Follow the steps'
+title: 'تعمیر سرویس‌های ویندوز'
+description: 'اگر اسکریپت نشان داد که سرویس -sppsvc- خراب است، مراحل را دنبال کنید'
 date: 2024-02-05
 editLink: true
 ---
 
-# Fix Windows Services
+# تعمیر سرویس‌های ویندوز
 
-### Corrupt service - sppsvc
+### سرویس خراب - sppsvc
 
-- Follow the steps below only if the script shows that `sppsvc` **service** is corrupt. Do not follow otherwise.
-- Download and extract the `sppsvc` registry zip file for [Windows 10][1] / [Windows 11][2]
-- Be careful, run these files only if they are matching with your Windows version, if not then ask for help [here](./troubleshoot).
-- Run the file, restart the system (using the restart button), and try the activation script again.
-- If the issue persists, contact us [here](./troubleshoot).
+- مراحل زیر را فقط در صورتی دنبال کنید که اسکریپت نشان دهد سرویس `sppsvc` خراب است. در غیر این صورت دنبال نکنید.
+- فایل فشرده رجیستری `sppsvc` را برای [ویندوز 10][1] / [ویندوز 11][2] دانلود و استخراج کنید.
+- مراقب باشید، این فایل‌ها را فقط در صورتی اجرا کنید که با نسخه ویندوز شما مطابقت داشته باشند، در غیر این صورت از [اینجا](./troubleshoot) کمک بخواهید.
+- فایل را اجرا کنید، سیستم را مجدداً راه‌اندازی کنید (با استفاده از دکمه restart) و دوباره اسکریپت فعال‌سازی را امتحان کنید.
+- اگر مشکل همچنان ادامه داشت، از [اینجا](./troubleshoot) با ما تماس بگیرید.
 
 
-## Corrupt service
+## سرویس خراب
 
 ::: danger - Null
 
-- The script may show that `Null service is not running, script may crash...`
-- Follow these steps only if the script crashes after that.
-- Download and extract this Null service registry zip [file][3].
-- Run the file, restart the system (using the restart button), and try the activation script again.
-- If the issue persists, check if you are using `Comodo Antivirus` or any type of `sandboxing` security software. If so, temporarily disable it and run the script again.
-- If the issue persists, contact us [here](./troubleshoot).
+- اسکریپت ممکن است نشان دهد که `سرویس Null در حال اجرا نیست، اسکریپت ممکن است از کار بیفتد...`
+- این مراحل را فقط در صورتی دنبال کنید که اسکریپت پس از آن از کار بیفتد.
+- این فایل فشرده رجیستری سرویس Null را [دانلود][3] و استخراج کنید.
+- فایل را اجرا کنید، سیستم را مجدداً راه‌اندازی کنید (با استفاده از دکمه restart) و دوباره اسکریپت فعال‌سازی را امتحان کنید.
+- اگر مشکل همچنان ادامه داشت، بررسی کنید که آیا از `آنتی ویروس Comodo` یا هر نوع نرم‌افزار امنیتی `sandboxing` استفاده می‌کنید. اگر چنین است، آن را به طور موقت غیرفعال کنید و دوباره اسکریپت را اجرا کنید.
+- اگر مشکل همچنان ادامه داشت، از [اینجا](./troubleshoot) با ما تماس بگیرید.
 
 :::
 

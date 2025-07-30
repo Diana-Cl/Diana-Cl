@@ -1,168 +1,171 @@
 ---
 layout: doc
 outline: deep
-title: 'TSforge'
-description: 'A comparison of activation methods for Microsoft Corporation like windows and office.'
-date: 2025-05-04
+title: 'متود فعال‌سازی TSforge'
+description: 'مقایسه روش‌های فعال‌سازی برای شرکت مایکروسافت مانند ویندوز و آفیس.'
+date: 2025-04-06
 editLink: true
 head:
   - - meta
     - name: keywords
-      content: windows activation, office 2013, windows 10, windows 11, hwid or kms, kms, hwid, tsforge
+      content: فعال‌سازی ویندوز, آفیس 2013, ویندوز 10, ویندوز 11, hwid یا kms, kms, hwid, tsforge
 ---
 
-# TSforge Activation  
+# فعال‌سازی TSforge
 
-> Welcome to the `tsforge` document. This has some details about the TSForge activation method.
+### به سند `tsforge` خوش آمدید. این سند شامل جزئیاتی در مورد روش فعال‌سازی TSForge است.
 
-::: tip Notes
+::: tip یادداشت‌ها
 
-> How to use it?  
-> Please find the instructions [Intro](./index#step2)
-
-## Overview  
--   This activation is permanent until a Windows reinstall or a major feature upgrade (not to be confused with small enablement upgrades or monthly cumulative updates).  
--   This activation method **Doesn't modify any Windows components and doesn't install any new files.**   
--   Once the system is activated, hardware can be changed arbitrarily without triggering de-activation.  
--   Internet is not required for ZeroCID or KMS4k, but it is required for StaticCID. The script uses the StaticCID method from Windows 10 20H1 (19041) and later versions.   
--   This activation method can activate any of the following products if a phone license is available and licensing is managed by the system's SPP. For example,   
-    *   Windows Vista and later
-    *   Windows Server 2008 and later
-    *   Office 2013 and later (requires Windows 8 or later)
-    *   Windows addons (ESU, APPXLOB, etc.)
-    *   Windows and Office KMS Hosts (CSVLK)
--   Online validation (WAT) is bypassed on Windows 7.  
--   In addition to the permanent activation of Windows and Office KMS Hosts, it also charges the KMS server with 25 clients (required for KMS client activation) for 30 days (maximum).
--	In addition to activation, it can reset the rearm count and evaluation period, clear the tamper state, and remove the evaluation key lock.
+> چگونه از آن استفاده کنیم؟
+> لطفاً دستورالعمل‌ها را در [مقدمه](./index#مرحله-۲) بیابید
 
 :::
 
-## How does it work?   
+## بررسی اجمالی
+-   این فعال‌سازی تا زمان نصب مجدد ویندوز یا یک ارتقاء عمده ویژگی (با ارتقاءهای کوچک فعال‌سازی یا به‌روزرسانی‌های تجمعی ماهانه اشتباه نشود) دائمی است.
+-   این روش فعال‌سازی **هیچ یک از اجزای ویندوز را تغییر نمی‌دهد و هیچ فایل جدیدی نصب نمی‌کند.**
+-   پس از فعال شدن سیستم، سخت‌افزار را می‌توان به طور دلخواه بدون ایجاد غیرفعال‌سازی تغییر داد.
+-   برای ZeroCID یا KMS4k نیازی به اینترنت نیست، اما برای StaticCID لازم است. اسکریپت از روش StaticCID از ویندوز 10 20H1 (19041) و نسخه‌های جدیدتر استفاده می‌کند.
+-   این روش فعال‌سازی می‌تواند هر یک از محصولات زیر را در صورت وجود مجوز تلفنی و مدیریت صدور مجوز توسط SPP سیستم فعال کند. به عنوان مثال،
+    *   ویندوز ویستا و بالاتر
+    *   ویندوز سرور 2008 و بالاتر
+    *   آفیس 2013 و بالاتر (نیاز به ویندوز 8 یا بالاتر دارد)
+    *   افزونه‌های ویندوز (ESU، APPXLOB و غیره)
+    *   میزبان‌های KMS ویندوز و آفیس (CSVLK)
+-   اعتبارسنجی آنلاین (WAT) در ویندوز 7 دور زده می‌شود.
+-   علاوه بر فعال‌سازی دائمی میزبان‌های KMS ویندوز و آفیس، سرور KMS را با 25 کلاینت (مورد نیاز برای فعال‌سازی کلاینت KMS) برای 30 روز (حداکثر) شارژ می‌کند.
+-	علاوه بر فعال‌سازی، می‌تواند شمارنده rearm و دوره ارزیابی را بازنشانی کند، حالت دستکاری را پاک کند و قفل کلید ارزیابی را حذف کند.
+
+
+## چگونه کار می‌کند؟
 
 ### ZeroCID
 
-**Process on Windows Vista and 7**
+**فرآیند در ویندوز ویستا و 7**
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/bda35f60-d1ba-4318-a65e-6843fdd11e41" width="540px">
-</p>   
+</p>
 
-**Process on Windows 8 and later** 
+**فرآیند در ویندوز 8 و بالاتر**
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/770e6df6-74bc-40e0-b790-6f8e9273d000" width="540px">
 </p><
 
-- Windows activation is managed by a subsystem called the Software Protection Platform (SPP).
-- SPP stores information about the activation state in files called the "physical store" and "token store".
-- The physical store's contents are cryptographically protected and integrity-checked by SPPSvc/SPSys, preventing users from easily modifying it.
-- The physical store is usually found at these locations:
-  - Windows Vista - `C:\Windows\System32\7B296FB0-376B-497e-B012-9C450E1B7327-2P-0.C7483456-A289-439d-8115-601632D005A0` and `C:\Windows\System32\7B296FB0-376B-497e-B012-9C450E1B7327-2P-1.C7483456-A289-439d-8115-601632D005A0`
-  - Windows 7 - `C:\Windows\System32\7B296FB0-376B-497e-B012-9C450E1B7327-5P-0.C7483456-A289-439d-8115-601632D005A0` and `C:\Windows\System32\7B296FB0-376B-497e-B012-9C450E1B7327-5P-1.C7483456-A289-439d-8115-601632D005A0`
-  - Windows 8 - `C:\Windows\System32\spp\store\data.dat`
-  - Windows 8.1/10/11 - `C:\Windows\System32\spp\store\2.0\data.dat`
-- The token store is usually found at these locations:
-  - Windows Vista - `C:\Windows\ServiceProfiles\NetworkService\AppData\Roaming\Microsoft\SoftwareLicensing\tokens.dat`
-  - Windows 7 - `C:\Windows\ServiceProfiles\NetworkService\AppData\Roaming\Microsoft\SoftwareProtectionPlatform\tokens.dat`
-  - Windows 8 - `C:\Windows\System32\spp\store\tokens.dat`
-  - Windows 8.1/10/11 - `C:\Windows\System32\spp\store\2.0\tokens.dat`
-- In normal product key installation and phone activation, associated cache data is written to the physical store and token store. Said phone activation data is [cryptographically checked][1] against the Installation ID before being written. When SPP relaunches, it is only given a very basic check against the current Hardware ID.
-- By writing forged cache data directly to the physical store and token store, we can bypass both checks, causing SPP to believe it installed a fake product key and/or confirmation ID.
-- To bypass checks for hardware changes, a [Hardware ID](./Hwid#hardware-id) with a threshold of 0 is included in this forged data.
-- On Windows 7, the fake product key data does not contain a value known as the "Key Unique ID". This value is required for both WAT and online activation, so removing it causes both to be non-functional, preventing WAT from triggering de-activation.
-- The presence of valid product key and confirmation ID data causes SPP to activate the specified product as long as it is capable of phone activation.
-- This process is implemented as the ZeroCID option in [TSforge][2]
+- فعال‌سازی ویندوز توسط یک زیرسیستم به نام پلتفرم حفاظت از نرم‌افزار (SPP) مدیریت می‌شود.
+- SPP اطلاعات مربوط به وضعیت فعال‌سازی را در فایل‌هایی به نام "فروشگاه فیزیکی" و "فروشگاه توکن" ذخیره می‌کند.
+- محتویات فروشگاه فیزیکی به صورت رمزنگاری شده محافظت و یکپارچگی آن توسط SPPSvc/SPSys بررسی می‌شود و از تغییر آسان آن توسط کاربران جلوگیری می‌کند.
+- فروشگاه فیزیکی معمولاً در این مکان‌ها یافت می‌شود:
+  - ویندوز ویستا - `C:\Windows\System32\7B296FB0-376B-497e-B012-9C450E1B7327-2P-0.C7483456-A289-439d-8115-601632D005A0` و `C:\Windows\System32\7B296FB0-376B-497e-B012-9C450E1B7327-2P-1.C7483456-A289-439d-8115-601632D005A0`
+  - ویندوز 7 - `C:\Windows\System32\7B296FB0-376B-497e-B012-9C450E1B7327-5P-0.C7483456-A289-439d-8115-601632D005A0` و `C:\Windows\System32\7B296FB0-376B-497e-B012-9C450E1B7327-5P-1.C7483456-A289-439d-8115-601632D005A0`
+  - ویندوز 8 - `C:\Windows\System32\spp\store\data.dat`
+  - ویندوز 8.1/10/11 - `C:\Windows\System32\spp\store\2.0\data.dat`
+- فروشگاه توکن معمولاً در این مکان‌ها یافت می‌شود:
+  - ویندوز ویستا - `C:\Windows\ServiceProfiles\NetworkService\AppData\Roaming\Microsoft\SoftwareLicensing\tokens.dat`
+  - ویندوز 7 - `C:\Windows\ServiceProfiles\NetworkService\AppData\Roaming\Microsoft\SoftwareProtectionPlatform\tokens.dat`
+  - ویندوز 8 - `C:\Windows\System32\spp\store\tokens.dat`
+  - ویندوز 8.1/10/11 - `C:\Windows\System32\spp\store\2.0\tokens.dat`
+- در نصب کلید محصول معمولی و فعال‌سازی تلفنی، داده‌های کش مرتبط در فروشگاه فیزیکی و فروشگاه توکن نوشته می‌شود. داده‌های فعال‌سازی تلفنی مذکور قبل از نوشته شدن، [به صورت رمزنگاری شده][1] در برابر شناسه نصب بررسی می‌شود. هنگامی که SPP دوباره راه‌اندازی می‌شود، فقط یک بررسی بسیار ابتدایی در برابر شناسه سخت‌افزار فعلی انجام می‌شود.
+- با نوشتن مستقیم داده‌های کش جعلی در فروشگاه فیزیکی و فروشگاه توکن، می‌توانیم هر دو بررسی را دور بزنیم و باعث شویم SPP باور کند که یک کلید محصول و/یا شناسه تأیید جعلی نصب کرده است.
+- برای دور زدن بررسی‌ها برای تغییرات سخت‌افزاری، یک [شناسه سخت‌افزار](./Hwid#hardware-id) با آستانه 0 در این داده‌های جعلی گنجانده شده است.
+- در ویندوز 7، داده‌های کلید محصول جعلی حاوی مقداری به نام "شناسه منحصر به فرد کلید" نیست. این مقدار برای WAT و فعال‌سازی آنلاین مورد نیاز است، بنابراین حذف آن باعث می‌شود هر دو غیرفعال شوند و از ایجاد غیرفعال‌سازی توسط WAT جلوگیری می‌کند.
+- وجود داده‌های معتبر کلید محصول و شناسه تأیید باعث می‌شود SPP محصول مشخص شده را تا زمانی که قادر به فعال‌سازی تلفنی باشد، فعال کند.
+- این فرآیند به عنوان گزینه ZeroCID در [TSforge][2] پیاده‌سازی شده است
 
 ### StaticCID
 
-- In [Windows 11 build 27802][3], Microsoft introduced a bug that causes Confirmation ID cache validation to always fail, forcing validation directly from the stored Confirmation ID each time the license status is checked.
-- Because of this, ZeroCID does not work in any Windows 11/Server 2025 Insider Canary builds released afterwards, or any Windows 11/Server 2025 retail/release preview builds newer than 26100.4188.
-- To circumvent this bug, TSforge is used to set the current Installation ID to that of a known key that can be used to generate valid Confirmation IDs.
-- Confirmation IDs are then obtained over the internet using [a client][4] for the [VAMT][5] API.
-- Depositing this CID causes activation, since the CID matches the IID and SPP never checks if the IID matches the installed product key.
-- The following product keys are used in StaticCID:
-  - RTM Licenses - `744NM-C4FXY-YGM8B-7MVJC-BBFB9`
-  - Test Licenses - `PCPHN-JH4DV-KW84V-JTWT3-VXHBC`
+- در [ویندوز 11 بیلد 27802][3]، مایکروسافت یک باگ را معرفی کرد که باعث می‌شود اعتبارسنجی کش شناسه تأیید همیشه با شکست مواجه شود و اعتبارسنجی را مستقیماً از شناسه تأیید ذخیره شده هر بار که وضعیت مجوز بررسی می‌شود، مجبور کند.
+- به همین دلیل، ZeroCID در هیچ یک از بیلدهای Canary Insider ویندوز 11/سرور 2025 که پس از آن منتشر شده‌اند، یا هر بیلد خرده‌فروشی/پیش‌نمایش انتشار ویندوز 11/سرور 2025 جدیدتر از 26100.4188 کار نمی‌کند.
+- برای دور زدن این باگ، از TSforge برای تنظیم شناسه نصب فعلی به شناسه یک کلید شناخته شده که می‌توان از آن برای تولید شناسه‌های تأیید معتبر استفاده کرد، استفاده می‌شود.
+- سپس شناسه‌های تأیید از طریق اینترنت با استفاده از [یک کلاینت][4] برای API [VAMT][5] به دست می‌آیند.
+- واریز این CID باعث فعال‌سازی می‌شود، زیرا CID با IID مطابقت دارد و SPP هرگز بررسی نمی‌کند که آیا IID با کلید محصول نصب شده مطابقت دارد یا خیر.
+- کلیدهای محصول زیر در StaticCID استفاده می‌شوند:
+  - مجوزهای RTM - `744NM-C4FXY-YGM8B-7MVJC-BBFB9`
+  - مجوزهای آزمایشی - `PCPHN-JH4DV-KW84V-JTWT3-VXHBC`
 
 ### KMS4k
 
-- In KMS4k, fake cached KMS server response data is written to the trusted store.
-- Unlike via normal KMS emulators, this method can arbitrarily set the activation expiration up to a maximum of 2147483640 (2^31 - 8) minutes, or 4083 years.
-- This allows for offline KMS activation that is effectively infinite for all practical purposes.
+- در KMS4k، داده‌های پاسخ سرور KMS کش شده جعلی در فروشگاه معتبر نوشته می‌شود.
+- برخلاف شبیه‌سازهای KMS معمولی، این روش می‌تواند به طور دلخواه انقضای فعال‌سازی را تا حداکثر 2147483640 (2^31 - 8) دقیقه یا 4083 سال تنظیم کند.
+- این امکان فعال‌سازی KMS آفلاین را فراهم می‌کند که برای همه اهداف عملی عملاً بی‌نهایت است.
 
-## Supported Products
+<br/>
 
-This activation method can activate any of the following products if a phone license is available and licensing is managed by the system's SPP.
+## محصولات پشتیبانی شده
 
-- **Windows**
-  - Windows Vista
-  - Windows 7
-  - Windows 8
-  - Windows 8.1
-  - Windows 10
-  - Windows 11 (Does not support ZeroCID since 26100.4188)
-- **Windows Server**
-  - Windows Server 2008
-  - Windows Server 2008 R2
-  - Windows Server 2012
-  - Windows Server 2012 R2
-  - Windows Server 2016
-  - Windows Server 2019
-  - Windows Server 2022
-  - Windows Server 2025 (Does not support ZeroCID since 26100.4188)
-- **Microsoft Office** (Requires Windows 8 or later) (Also supports UWP version of Office)
-  - Office 2013
-  - Office 2016
-  - Office 2019
-  - Office 2021
-  - Office 2024
-- **Windows Addons**
-  - **Commercial Extended Security Updates (ESU)**
-    - **Windows 7** (Enterprise, Professional, Ultimate and their E/N variants)
+این روش فعال‌سازی می‌تواند هر یک از محصولات زیر را در صورت وجود مجوز تلفنی و مدیریت صدور مجوز توسط SPP سیستم فعال کند.
+
+- **ویندوز**
+  - ویندوز ویستا
+  - ویندوز 7
+  - ویندوز 8
+  - ویندوز 8.1
+  - ویندوز 10
+  - ویندوز 11 (از 26100.4188 از ZeroCID پشتیبانی نمی‌کند)
+- **ویندوز سرور**
+  - ویندوز سرور 2008
+  - ویندوز سرور 2008 R2
+  - ویندوز سرور 2012
+  - ویندوز سرور 2012 R2
+  - ویندوز سرور 2016
+  - ویندوز سرور 2019
+  - ویندوز سرور 2022
+  - ویندوز سرور 2025 (از 26100.4188 از ZeroCID پشتیبانی نمی‌کند)
+- **مایکروسافت آفیس** (نیاز به ویندوز 8 یا بالاتر دارد) (همچنین از نسخه UWP آفیس پشتیبانی می‌کند)
+  - آفیس 2013
+  - آفیس 2016
+  - آفیس 2019
+  - آفیس 2021
+  - آفیس 2024
+- **افزونه‌های ویندوز**
+  - **به‌روزرسانی‌های امنیتی تمدید شده تجاری (ESU)**
+    - **ویندوز 7** (Enterprise، Professional، Ultimate و انواع E/N آنها)
     - **Windows Embedded POSReady 7** (Embedded)
     - **Windows Embedded Standard 7** (Embedded)
-    - **Windows Server 2008** (ServerDatacenter, ServerStandard, ServerEnterprise and their V/Core/VCore variants)
-    - **Windows Server 2008 R2** (ServerDatacenter, ServerStandard, ServerEnterprise and their V/Core/VCore variants)
-    - **Windows Server 2012** (ServerDatacenter, ServerStandard and their Core variants)
-	- **Windows 8.1** (Enterprise, Professional, EmbeddedIndustry and their E/N variants)
-    - **Windows Server 2012 R2** (ServerDatacenter, ServerStandard and their Core variants)
-    - **Windows 10** (Education, Enterprise, IoTEnterprise, Professional, ProfessionalEducation, ProfessionalWorkstation and their N variants)
+    - **ویندوز سرور 2008** (ServerDatacenter، ServerStandard، ServerEnterprise و انواع V/Core/VCore آنها)
+    - **ویندوز سرور 2008 R2** (ServerDatacenter، ServerStandard، ServerEnterprise و انواع V/Core/VCore آنها)
+    - **ویندوز سرور 2012** (ServerDatacenter، ServerStandard و انواع Core آنها)
+	- **ویندوز 8.1** (Enterprise، Professional، EmbeddedIndustry و انواع E/N آنها)
+    - **ویندوز سرور 2012 R2** (ServerDatacenter، ServerStandard و انواع Core آنها)
+    - **ویندوز 10** (Education، Enterprise، IoTEnterprise، Professional، ProfessionalEducation، ProfessionalWorkstation و انواع N آنها)
   - **8/8.1 APPXLOB**
-	- Client
-	- Embedded Industry
-	- Embedded Standard
-	- Server 2012
-  - **Others** (Can be selected from the manual option)
+	- کلاینت
+	- صنعت تعبیه‌شده
+	- استاندارد تعبیه‌شده
+	- سرور 2012
+  - **سایر** (می‌توان از گزینه دستی انتخاب کرد)
     - OCUR
-- **KMS Hosts** (CSVLK)
-  - Windows Vista and later
-  - Windows Server 2008 and later
-  - Office 2010 and later
+- **میزبان‌های KMS** (CSVLK)
+  - ویندوز ویستا و بالاتر
+  - ویندوز سرور 2008 و بالاتر
+  - آفیس 2010 و بالاتر
 
-::: tip Note
+::: tip توجه
 
-- All architectures (x86, x64 and arm64) are supported.
-- For Windows, the script's key preference is: OEM_DM > OEM_COA_SLP > OEM_COA_NSLP > MAK > RETAIL
-- For Office, the script's key preference is: OEM_COA_NSLP > MAK > RETAIL
+> تمام معماری‌ها (x86، x64 و arm64) پشتیبانی می‌شوند.
+> برای ویندوز، اولویت کلید اسکریپت این است: OEM_DM > OEM_COA_SLP > OEM_COA_NSLP > MAK > RETAIL
+> برای آفیس، اولویت کلید اسکریپت این است: OEM_COA_NSLP > MAK > RETAIL
 
 :::
 
-### Keys
 
-TSforge activation generates keys for PKey2009-based products and sets product key data for PKey2005-based products.  
-However, it cannot handle keys for Windows Vista and Windows Server 2008. That is why only the keys for these products are listed here.  
 
-Keys aren't available for these editions, but since the editions themselves aren't publicly available, it doesn't matter.  
+### کلیدها
+
+فعال‌سازی TSforge کلیدهایی برای محصولات مبتنی بر PKey2009 تولید می‌کند و داده‌های کلید محصول را برای محصولات مبتنی بر PKey2005 تنظیم می‌کند.
+با این حال، نمی‌تواند کلیدهای ویندوز ویستا و ویندوز سرور 2008 را مدیریت کند. به همین دلیل فقط کلیدهای این محصولات در اینجا لیست شده‌اند.
+
+کلیدها برای این نسخه‌ها در دسترس نیستند، اما از آنجایی که خود نسخه‌ها به صورت عمومی در دسترس نیستند، مهم نیست.
 
 ```reg
 a797d61e-1475-470b-86c8-f737a72c188d   StarterN
 5e9f548a-c8a9-44e6-a6c2-3f8d0a7a99dd   ServerComputeClusterV
 ```
 
-<br/>
-
-### Windows Vista 
-| Edition      | Generic Key                   | Key Type |
+### ویندوز ویستا
+| نسخه      | کلید عمومی                   | نوع کلید |
 |--------------|-------------------------------|----------|
 | Business     | 4D2XH-PRBMM-8Q22B-K8BM3-MRW4W | Retail   |
 | BusinessN    | 76884-QXFY2-6Q2WX-2QTQ8-QXX44 | Retail   |
@@ -178,8 +181,8 @@ a797d61e-1475-470b-86c8-f737a72c188d   StarterN
 
 <br/>
 
-### Windows Server 2008
-| Edition                        | Generic Key                   | Key Type   |
+### ویندوز سرور 2008
+| نسخه                        | کلید عمومی                   | نوع کلید   |
 |--------------------------------|-------------------------------|------------|
 | ServerComputeCluster           | 24FV9-H7JW8-C8Q6X-BQKMK-K977J | Retail     |
 | ServerDatacenter               | 6QBHY-DXTPJ-T9W3P-DTJXX-4VQMB | Retail     |
@@ -207,212 +210,232 @@ a797d61e-1475-470b-86c8-f737a72c188d   StarterN
 
 <br/>
 
-### Windows Server 2008 ESU
-| ESU Version   | Blocked key sourced from the Internet | Key Type   |
+### ویندوز سرور 2008 ESU
+| نسخه ESU   | کلید مسدود شده از اینترنت | نوع کلید   |
 |---------------|---------------------------------------|------------|
 | Server-ESU-PA | 9FPV7-MWGT8-7XPDF-JC23W-WT7TW         | Volume:MAK |
 
 <br/>
 
-### KMS Host - Windows Vista
-| Editions                                  | Blocked keys sourced from the Internet | Key Type     |
+### میزبان KMS - ویندوز ویستا
+| نسخه‌ها                                  | کلیدهای مسدود شده از اینترنت | نوع کلید     |
 |-------------------------------------------|----------------------------------------|--------------|
-| Business, Enterprise and their N editions | TWVG3-9Q4P8-W9XJF-Y76FJ-DWQ4R          | Volume:CSVLK |
+| Business، Enterprise و نسخه‌های N آنها | TWVG3-9Q4P8-W9XJF-Y76FJ-DWQ4R          | Volume:CSVLK |
 
 <br/>
 
-### KMS Host - Windows Server 2008
-| Editions                                                                                                                                            | Blocked keys sourced from the Internet | Key Type     |
+### میزبان KMS - ویندوز سرور 2008
+| نسخه‌ها                                                                                                                                            | کلیدهای مسدود شده از اینترنت | نوع کلید     |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------|--------------|
-| ServerComputeCluster, ServerDatacenter, <br /> ServerEnterprise, ServerEnterpriseIA64, <br /> ServerStandard, ServerWeb <br /> and their V editions | BHC4Q-6D7B7-QMVH7-4MKQH-Y9VK7          | Volume:CSVLK |
-| ServerComputeCluster, ServerEnterprise, <br /> ServerStandard, ServerWeb <br /> and their V editions                                                | PVGKG-2R7XQ-7WTFD-FXTJR-DQBQ3          | Volume:CSVLK |
-| ServerComputeCluster, ServerWeb                                                                                                                     | KH4PC-KJFX6-XFVHQ-GDK2G-JCJY9          | Volume:CSVLK |
+| ServerComputeCluster، ServerDatacenter، <br /> ServerEnterprise، ServerEnterpriseIA64، <br /> ServerStandard، ServerWeb <br /> و نسخه‌های V آنها | BHC4Q-6D7B7-QMVH7-4MKQH-Y9VK7          | Volume:CSVLK |
+| ServerComputeCluster، ServerEnterprise، <br /> ServerStandard، ServerWeb <br /> و نسخه‌های V آنها                                                | PVGKG-2R7XQ-7WTFD-FXTJR-DQBQ3          | Volume:CSVLK |
+| ServerComputeCluster، ServerWeb                                                                                                                     | KH4PC-KJFX6-XFVHQ-GDK2G-JCJY9          | Volume:CSVLK |
 
-<br/>
+<hr/><br/>
 
-::: danger Important
+::: info محصولات پشتیبانی نشده
 
-- **Unsupported Products**
-- This activation method does not work if a phone license is not available or if licensing is not managed by the system's SPP.
+> **محصولات پشتیبانی نشده**
+> این روش فعال‌سازی در صورتی که مجوز تلفنی در دسترس نباشد یا صدور مجوز توسط SPP سیستم مدیریت نشود، کار نمی‌کند.
 
-- **Office on Windows 7**
-  - Its licensing is based on OSPP, not SPP.
-  - You can use Ohook option in MAS to activate it.
-- **Office 2010**
-  - Its licensing is based on OSPP, not SPP.
-  - You can use Ohook option in MAS to activate it.
-- **Office 365**
-  - Phone activation license is not available. TSforge option will install Mondo 2016 license (feature-wise equivalent to 365) instead to activate Office.
-  - You can use Ohook option in MAS to activate it.
-- **Windows Evaluation editions** (Windows 8 / Server 2012 and later)
-  - Permanent activation license is not available. TSforge option will reset the evaluation period instead.
-- **Windows Evaluation editions** (Windows 7 / Server 2008 R2)
-  - WLMS service protects the SPPSVC service and prevents it from stopping. Although permanent activation license is available, its officially not supported.
-- **Server Azure Datacenter (ServerTurbine) edition**
-  - It does not support activation on non-azure systems.
-- **Windows 10 Consumer ESU (1 Year)**
-  - Its licensing is based on CLIP, not SPP.
-  - You can activate commercial ESU for 3 years on Pro and higher level editions with TSforge.
- 
+- **آفیس در ویندوز 7**
+  - صدور مجوز آن مبتنی بر OSPP است، نه SPP.
+  - می‌توانید از گزینه Ohook در MAS برای فعال کردن آن استفاده کنید.
+- **آفیس 2010**
+  - صدور مجوز آن مبتنی بر OSPP است، نه SPP.
+  - می‌توانید از گزینه Ohook در MAS برای فعال کردن آن استفاده کنید.
+- **آفیس 365**
+  - مجوز فعال‌سازی تلفنی در دسترس نیست. گزینه TSforge به جای آن مجوز Mondo 2016 (از نظر ویژگی معادل 365) را برای فعال کردن آفیس نصب می‌کند.
+  - می‌توانید از گزینه Ohook در MAS برای فعال کردن آن استفاده کنید.
+- **نسخه‌های ارزیابی ویندوز** (ویندوز 8 / سرور 2012 و بالاتر)
+  - مجوز فعال‌سازی دائمی در دسترس نیست. گزینه TSforge به جای آن دوره ارزیابی را بازنشانی می‌کند.
+- **نسخه‌های ارزیابی ویندوز** (ویندوز 7 / سرور 2008 R2)
+  - سرویس WLMS از سرویس SPPSVC محافظت می‌کند و از توقف آن جلوگیری می‌کند. اگرچه مجوز فعال‌سازی دائمی در دسترس است، اما به طور رسمی پشتیبانی نمی‌شود.
+- **نسخه Server Azure Datacenter (ServerTurbine)**
+  - از فعال‌سازی در سیستم‌های غیر azure پشتیبانی نمی‌کند.
+- **ویندوز 10 Consumer ESU (1 سال)**
+  - صدور مجوز آن مبتنی بر CLIP است، نه SPP.
+  - می‌توانید ESU تجاری را برای 3 سال در نسخه‌های Pro و بالاتر با TSforge فعال کنید.
+
 :::
 
-::: info Note
+::: danger توجه
 
-**OSPP based Office:** Physical store is stored in the registry in a format that has not yet been reverse engineered.
+**آفیس مبتنی بر OSPP:** فروشگاه فیزیکی در رجیستری در قالبی ذخیره می‌شود که هنوز مهندسی معکوس نشده است.
 
 :::
 
 
 ## ZeroCID / KMS4k / AVMA4k
 
-- TSforge is included in MAS and it also has its own [standalone release][6].
-- TSforge includes the ZeroCID / KMS4k / AVMA4k activation methods.
-- AVMA4k is a proof-of-concept method with many limitations, so we do not recommend using it.
-- MAS only uses the ZeroCID and KMS4k method and does not include AVMA4k, as ZeroCID can already activate all available products permanently.
+- TSforge در MAS گنجانده شده است و همچنین [انتشار مستقل][6] خود را دارد.
+- TSforge شامل روش‌های فعال‌سازی ZeroCID / KMS4k / AVMA4k است.
+- AVMA4k یک روش اثبات مفهوم با محدودیت‌های فراوان است، بنابراین استفاده از آن را توصیه نمی‌کنیم.
+- MAS فقط از روش ZeroCID و KMS4k استفاده می‌کند و شامل AVMA4k نمی‌شود، زیرا ZeroCID قبلاً می‌تواند تمام محصولات موجود را به طور دائم فعال کند.
 
-| Methods | Info                                                                                                 |
+| روش‌ها | اطلاعات                                                                                                 |
 |---------|------------------------------------------------------------------------------------------------------|
-| ZeroCID | Offline permanent activation / until reinstall/feature upgrade                                       |
-| KMS4k   | Offline KMS activation for over 4000 years / until reinstall/feature upgrade                         |
-| AVMA4k  | Offline AVMA activation for over 4000 years (Server 2012 R2+ only) / until reinstall/feature upgrade |
+| ZeroCID | فعال‌سازی دائمی آفلاین / تا زمان نصب مجدد/ارتقاء ویژگی                                       |
+| KMS4k   | فعال‌سازی KMS آفلاین برای بیش از 4000 سال / تا زمان نصب مجدد/ارتقاء ویژگی                         |
+| AVMA4k  | فعال‌سازی AVMA آفلاین برای بیش از 4000 سال (فقط سرور 2012 R2 به بعد) / تا زمان نصب مجدد/ارتقاء ویژگی |
 
 <br/>
 
-## Windows ESU
-
-- Microsoft offers paid [Extended Security Updates][7] (ESU) for several Windows versions after their product lifecycle ends.
-- You can activate the Windows ESU / Premium Assurance license using the TSforge option in MAS.
-
-| Windows Version              | Supported Editions List                                                                                                                           | ESU Period                                                                                                                                                                                                                                                   | Minimum Required Updates                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-|------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Windows Server 2008          | ServerDatacenter, ServerStandard, ServerEnterprise <br /> and their V/Core/VCore variants                                                         | [6 Years](https://web.archive.org/web/20170331081347/https://blogs.technet.microsoft.com/hybridcloud/2017/03/01/now-available-windows-server-premium-assurance-and-sql-server-premium-assurance/) with Premium Assurance License <br /> Jan 2020 to Jan 2026 | Windows Server 2008 SP2 <br /> + <br /> KB4493730 [x64](https://catalog.s.download.windowsupdate.com/d/msdownload/update/software/secu/2019/04/windows6.0-kb4493730-x64_5cb91f4e9000383f061b80f88feffdf228c2443c.msu)-[x86](https://catalog.s.download.windowsupdate.com/d/msdownload/update/software/secu/2019/04/windows6.0-kb4493730-x86_ab4368f19db796680ff445a7769886c4cdc009a0.msu) <br /> KB4474419 [x64](https://catalog.s.download.windowsupdate.com/d/msdownload/update/software/secu/2019/09/windows6.0-kb4474419-v4-x64_09cb148f6ef10779d7352b7269d66a7f23019207.msu)-[x86](https://catalog.s.download.windowsupdate.com/d/msdownload/update/software/secu/2019/09/windows6.0-kb4474419-v4-x86_fd568cb47870cd8ed5ba10e1dd3c49061894030e.msu) <br /> **Reboot**  <br /> KB5016891 [x64](https://catalog.s.download.windowsupdate.com/c/msdownload/update/software/secu/2022/08/windows6.0-kb5016891-x64_1b5f7e1030f5d229a7618c09f1617fd1ed00e90f.msu)-[x86](https://catalog.s.download.windowsupdate.com/c/msdownload/update/software/secu/2022/08/windows6.0-kb5016891-x86_cf3aef17f12a6dc85dd20a06e5ba9f4c882e286f.msu)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| Windows 7                    | Enterprise, Professional, Ultimate <br /> and their E/N variants                                                                                  | [3 Years](https://learn.microsoft.com/en-us/lifecycle/products/windows-7) <br /> Jan 2020 to Jan 2023 <br /><br /> 4-6 Years ESU is not officially supported, <br /> but you can manually install Server 2008 R2 x64 updates until Jan 2026                  | Windows 7 SP1 <br /> + <br /> KB4490628 [x64](https://catalog.s.download.windowsupdate.com/c/msdownload/update/software/secu/2019/03/windows6.1-kb4490628-x64_d3de52d6987f7c8bdc2c015dca69eac96047c76e.msu)-[x86](https://catalog.s.download.windowsupdate.com/c/msdownload/update/software/secu/2019/03/windows6.1-kb4490628-x86_3cdb3df55b9cd7ef7fcb24fc4e237ea287ad0992.msu) <br /> KB4474419-v3 [x64](https://catalog.s.download.windowsupdate.com/c/msdownload/update/software/secu/2019/09/windows6.1-kb4474419-v3-x64_b5614c6cea5cb4e198717789633dca16308ef79c.msu)-[x86](https://catalog.s.download.windowsupdate.com/c/msdownload/update/software/secu/2019/09/windows6.1-kb4474419-v3-x86_0f687d50402790f340087c576886501b3223bec6.msu) <br /> **Reboot**  <br /> KB5039339 [x64](https://catalog.s.download.windowsupdate.com/d/msdownload/update/software/secu/2024/06/windows6.1-kb5039339-x64_f62846508976a6e5325ab1dca0783f9b3a60a564.msu)-[x86](https://catalog.s.download.windowsupdate.com/d/msdownload/update/software/secu/2024/06/windows6.1-kb5039339-x86_fa942048bba2a167242451236f9daf00940588aa.msu) <br /> KB4575903 [x64](https://catalog.s.download.windowsupdate.com/d/msdownload/update/software/secu/2020/07/windows6.1-kb4575903-x64_b4d5cf045a03034201ff108c2802fa6ac79459a1.msu)-[x86](https://catalog.s.download.windowsupdate.com/d/msdownload/update/software/secu/2020/07/windows6.1-kb4575903-x86_5905c774f806205b5d25b04523bb716e1966306d.msu) <br /> KB3138612 [x64](https://catalog.s.download.windowsupdate.com/d/msdownload/update/software/updt/2016/02/windows6.1-kb3138612-x64_f7b1de8ea7cf8faf57b0138c4068d2e899e2b266.msu)-[x86](https://catalog.s.download.windowsupdate.com/d/msdownload/update/software/updt/2016/02/windows6.1-kb3138612-x86_6e90531daffc13bc4e92ecea890e501e807c621f.msu) <br /> KB5016892 [x64](https://catalog.s.download.windowsupdate.com/c/msdownload/update/software/secu/2022/08/windows6.1-kb5016892-x64_52b68ba8744cb47ddfcecd19238087625e1a5fbd.msu)-[x86](https://catalog.s.download.windowsupdate.com/c/msdownload/update/software/secu/2022/08/windows6.1-kb5016892-x86_ffb5b83149833e7f969f69e4f152fee5c1fdbc68.msu) |
-| Windows 7 Embedded POSReady7 | Embedded                                                                                                                                          | [3 Years](https://learn.microsoft.com/en-us/lifecycle/products/windows-embedded-posready-7) <br /> Oct 2021 to Oct 2024                                                                                                                                      | Same as Windows 7 minus KB5016892                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| Windows 7 Embedded Standard  | Embedded                                                                                                                                          | [3 years](https://learn.microsoft.com/en-us/lifecycle/products/windows-embedded-standard-7) <br /> Oct 2020 to Oct 2023                                                                                                                                      | Same as Windows 7 minus KB5016892                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| Windows Server 2008 R2       | ServerDatacenter, ServerStandard, ServerEnterprise <br /> and their V/Core/VCore variants                                                         | [6 Years](https://web.archive.org/web/20170331081347/https://blogs.technet.microsoft.com/hybridcloud/2017/03/01/now-available-windows-server-premium-assurance-and-sql-server-premium-assurance/) with Premium Assurance License <br /> Jan 2020 to Jan 2026 | Same as Windows 7                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| Windows Server 2012          | ServerDatacenter, ServerStandard and their Core variants                                                                                          | [3 Years](https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2012) <br /> Oct 2023 to Oct 2026                                                                                                                                              | KB5017221 [x64](https://catalog.s.download.windowsupdate.com/c/msdownload/update/software/secu/2022/08/windows8-rt-kb5017221-x64_d01e9b9b910f5f1e374bc1b89a8d00c1a97e215f.msu) <br /> KB2937636 [x64](https://catalog.s.download.windowsupdate.com/c/msdownload/update/software/crup/2014/07/windows8-rt-kb2937636-x64_29e0b587c8f09bcf635c1b79d09c00eef33113ec.msu)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| Windows 8.1                  | Enterprise, Professional, EmbeddedIndustry and their E/N variants                                                                                 | ESU is not officially supported, <br /> but you can manually install Server 2012 R2 (for x64) updates until Jan 2024, <br /> and Embedded 8.1 (for x86) updates until July 2023                                                                              | Build 9600.17415 <br /> + <br /> KB3021910 [x64](https://catalog.s.download.windowsupdate.com/c/msdownload/update/software/updt/2015/04/windows8.1-kb3021910-x64_e291c0c339586e79c36ebfc0211678df91656c3d.msu)-[x86](https://catalog.s.download.windowsupdate.com/c/msdownload/update/software/updt/2015/04/windows8.1-kb3021910-x86_7e70173bec00c3d4fe3b0b8cba17b095b4ed2d20.msu) <br /> KB3172614 [x64](https://catalog.s.download.windowsupdate.com/c/msdownload/update/software/updt/2016/07/windows8.1-kb3172614-x64_e41365e643b98ab745c21dba17d1d3b6bb73cfcc.msu)-[x86](https://catalog.s.download.windowsupdate.com/c/msdownload/update/software/updt/2016/07/windows8.1-kb3172614-x86_d11c233c8598b734de72665e0d0a3f2ef007b91f.msu) <br /> KB5017220 [x64](https://catalog.s.download.windowsupdate.com/c/msdownload/update/software/secu/2022/08/windows8.1-kb5017220-x64_d771111b22ec71560b207a6735d5ecebd47c4f38.msu)-[x86](https://catalog.s.download.windowsupdate.com/d/msdownload/update/software/secu/2022/08/windows8.1-kb5017220-x86_3134a18dac1b1fe4f656c9e25d0e4aaa75619d16.msu)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| Windows Server 2012 R2       | ServerDatacenter, ServerStandard and their Core variants                                                                                          | [3 Years](https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2012-r2) <br /> Oct 2023 to Oct 2026                                                                                                                                           | Same as Windows 8.1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| Windows 10                   | Education, Enterprise, IoTEnterprise, <br /> Professional, ProfessionalEducation, <br /> ProfessionalWorkstation, ServerRdsh and their N variants | [3 Years](https://learn.microsoft.com/en-us/windows/whats-new/extended-security-updates) <br /> Oct 2025 to Oct 2028                                                                                                                                         | Windows 10 22H2 (19045.4957) <br /> Just run Windows Update                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-
 ----
+## ویندوز ESU
 
-## Windows KMS Host
+- مایکروسافت [به‌روزرسانی‌های امنیتی تمدید شده][7] (ESU) پولی را برای چندین نسخه ویندوز پس از پایان چرخه عمر محصولشان ارائه می‌دهد.
+- می‌توانید مجوز Windows ESU / Premium Assurance را با استفاده از گزینه TSforge در MAS فعال کنید.
 
-- You can activate the Windows KMS host license using the TSforge option in MAS.
-- Script will auto-select the available CSVLK with most KMS Counted IDs.
-- Along with activation it will also charge the host with 25 clients which is a minimum required threshold for a working KMS host.
-- With Windows KMS host, you can activate the KMS client in your network.
-- This option is for the advanced users, you can [check the guides][8] to understand more about it.  
+| نسخه ویندوز              | لیست نسخه‌های پشتیبانی شده                                                                                                                           | دوره ESU                                                                                                                                                                                                                                                   | حداقل به‌روزرسانی‌های مورد نیاز                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+|------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ویندوز سرور 2008          | ServerDatacenter، ServerStandard، ServerEnterprise <br /> و انواع V/Core/VCore آنها                                                         | [6 سال](https://web.archive.org/web/20170331081347/https://blogs.technet.microsoft.com/hybridcloud/2017/03/01/now-available-windows-server-premium-assurance-and-sql-server-premium-assurance/) با مجوز Premium Assurance <br /> ژانویه 2020 تا ژانویه 2026 | ویندوز سرور 2008 SP2 <br /> + <br /> KB4493730 [x64](https://catalog.s.download.windowsupdate.com/d/msdownload/update/software/secu/2019/04/windows6.0-kb4493730-x64_5cb91f4e9000383f061b80f88feffdf228c2443c.msu)-[x86](https://catalog.s.download.windowsupdate.com/d/msdownload/update/software/secu/2019/04/windows6.0-kb4493730-x86_ab4368f19db796680ff445a7769886c4cdc009a0.msu) <br /> KB4474419 [x64](https://catalog.s.download.windowsupdate.com/d/msdownload/update/software/secu/2019/09/windows6.0-kb4474419-v4-x64_09cb148f6ef10779d7352b7269d66a7f23019207.msu)-[x86](https://catalog.s.download.windowsupdate.com/d/msdownload/update/software/secu/2019/09/windows6.0-kb4474419-v4-x86_fd568cb47870cd8ed5ba10e1dd3c49061894030e.msu) <br /> **راه‌اندازی مجدد**  <br /> KB5016891 [x64](https://catalog.s.download.windowsupdate.com/c/msdownload/update/software/secu/2022/08/windows6.0-kb5016891-x64_1b5f7e1030f5d229a7618c09f1617fd1ed00e90f.msu)-[x86](https://catalog.s.download.windowsupdate.com/c/msdownload/update/software/secu/2022/08/windows6.0-kb5016891-x86_cf3aef17f12a6dc85dd20a06e5ba9f4c882e286f.msu)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| ویندوز 7                    | Enterprise، Professional، Ultimate <br /> و انواع E/N آنها                                                                                  | [3 سال](https://learn.microsoft.com/en-us/lifecycle/products/windows-7) <br /> ژانویه 2020 تا ژانویه 2023 <br /><br /> ESU 4-6 ساله به طور رسمی پشتیبانی نمی‌شود، <br /> اما می‌توانید به‌روزرسانی‌های سرور 2008 R2 x64 را تا ژانویه 2026 به صورت دستی نصب کنید                  | ویندوز 7 SP1 <br /> + <br /> KB4490628 [x64](https://catalog.s.download.windowsupdate.com/c/msdownload/update/software/secu/2019/03/windows6.1-kb4490628-x64_d3de52d6987f7c8bdc2c015dca69eac96047c76e.msu)-[x86](https://catalog.s.download.windowsupdate.com/c/msdownload/update/software/secu/2019/03/windows6.1-kb4490628-x86_3cdb3df55b9cd7ef7fcb24fc4e237ea287ad0992.msu) <br /> KB4474419-v3 [x64](https://catalog.s.download.windowsupdate.com/c/msdownload/update/software/secu/2019/09/windows6.1-kb4474419-v3-x64_b5614c6cea5cb4e198717789633dca16308ef79c.msu)-[x86](https://catalog.s.download.windowsupdate.com/c/msdownload/update/software/secu/2019/09/windows6.1-kb4474419-v3-x86_0f687d50402790f340087c576886501b3223bec6.msu) <br /> **راه‌اندازی مجدد**  <br /> KB5039339 [x64](https://catalog.s.download.windowsupdate.com/d/msdownload/update/software/secu/2024/06/windows6.1-kb5039339-x64_f62846508976a6e5325ab1dca0783f9b3a60a564.msu)-[x86](https://catalog.s.download.windowsupdate.com/d/msdownload/update/software/secu/2024/06/windows6.1-kb5039339-x86_fa942048bba2a167242451236f9daf00940588aa.msu) <br /> KB4575903 [x64](https://catalog.s.download.windowsupdate.com/d/msdownload/update/software/secu/2020/07/windows6.1-kb4575903-x64_b4d5cf045a03034201ff108c2802fa6ac79459a1.msu)-[x86](https://catalog.s.download.windowsupdate.com/d/msdownload/update/software/secu/2020/07/windows6.1-kb4575903-x86_5905c774f806205b5d25b04523bb716e1966306d.msu) <br /> KB3138612 [x64](https://catalog.s.download.windowsupdate.com/d/msdownload/update/software/updt/2016/02/windows6.1-kb3138612-x64_f7b1de8ea7cf8faf57b0138c4068d2e899e2b266.msu)-[x86](https://catalog.s.download.windowsupdate.com/d/msdownload/update/software/updt/2016/02/windows6.1-kb3138612-x86_6e90531daffc13bc4e92ecea890e501e807c621f.msu) <br /> KB5016892 [x64](https://catalog.s.download.windowsupdate.com/c/msdownload/update/software/secu/2022/08/windows6.1-kb5016892-x64_52b68ba8744cb47ddfcecd19238087625e1a5fbd.msu)-[x86](https://catalog.s.download.windowsupdate.com/c/msdownload/update/software/secu/2022/08/windows6.1-kb5016892-x86_ffb5b83149833e7f969f69e4f152fee5c1fdbc68.msu) |
+| Windows 7 Embedded POSReady7 | Embedded                                                                                                                                          | [3 سال](https://learn.microsoft.com/en-us/lifecycle/products/windows-embedded-posready-7) <br /> اکتبر 2021 تا اکتبر 2024                                                                                                                                      | همانند ویندوز 7 منهای KB5016892                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| Windows 7 Embedded Standard  | Embedded                                                                                                                                          | [3 سال](https://learn.microsoft.com/en-us/lifecycle/products/windows-embedded-standard-7) <br /> اکتبر 2020 تا اکتبر 2023                                                                                                                                      | همانند ویندوز 7 منهای KB5016892                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| ویندوز سرور 2008 R2       | ServerDatacenter، ServerStandard، ServerEnterprise <br /> و انواع V/Core/VCore آنها                                                         | [6 سال](https://web.archive.org/web/20170331081347/https://blogs.technet.microsoft.com/hybridcloud/2017/03/01/now-available-windows-server-premium-assurance-and-sql-server-premium-assurance/) با مجوز Premium Assurance <br /> ژانویه 2020 تا ژانویه 2026 | همانند ویندوز 7                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| ویندوز سرور 2012          | ServerDatacenter، ServerStandard و انواع Core آنها                                                                                          | [3 سال](https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2012) <br /> اکتبر 2023 تا اکتبر 2026                                                                                                                                              | KB5017221 [x64](https://catalog.s.download.windowsupdate.com/c/msdownload/update/software/secu/2022/08/windows8-rt-kb5017221-x64_d01e9b9b910f5f1e374bc1b89a8d00c1a97e215f.msu) <br /> KB2937636 [x64](https://catalog.s.download.windowsupdate.com/c/msdownload/update/software/crup/2014/07/windows8-rt-kb2937636-x64_29e0b587c8f09bcf635c1b79d09c00eef33113ec.msu)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| ویندوز 8.1                  | Enterprise، Professional، EmbeddedIndustry و انواع E/N آنها                                                                                 | ESU به طور رسمی پشتیبانی نمی‌شود، <br /> اما می‌توانید به‌روزرسانی‌های سرور 2012 R2 (برای x64) را تا ژانویه 2024، <br /> و به‌روزرسانی‌های Embedded 8.1 (برای x86) را تا ژوئیه 2023 به صورت دستی نصب کنید                                                                              | بیلد 9600.17415 <br /> + <br /> KB3021910 [x64](https://catalog.s.download.windowsupdate.com/c/msdownload/update/software/updt/2015/04/windows8.1-kb3021910-x64_e291c0c339586e79c36ebfc0211678df91656c3d.msu)-[x86](https://catalog.s.download.windowsupdate.com/c/msdownload/update/software/updt/2015/04/windows8.1-kb3021910-x86_7e70173bec00c3d4fe3b0b8cba17b095b4ed2d20.msu) <br /> KB3172614 [x64](https://catalog.s.download.windowsupdate.com/c/msdownload/update/software/updt/2016/07/windows8.1-kb3172614-x64_e41365e643b98ab745c21dba17d1d3b6bb73cfcc.msu)-[x86](https://catalog.s.download.windowsupdate.com/c/msdownload/update/software/updt/2016/07/windows8.1-kb3172614-x86_d11c233c8598b734de72665e0d0a3f2ef007b91f.msu) <br /> KB5017220 [x64](https://catalog.s.download.windowsupdate.com/c/msdownload/update/software/secu/2022/08/windows8.1-kb5017220-x64_d771111b22ec71560b207a6735d5ecebd47c4f38.msu)-[x86](https://catalog.s.download.windowsupdate.com/d/msdownload/update/software/secu/2022/08/windows8.1-kb5017220-x86_3134a18dac1b1fe4f656c9e25d0e4aaa75619d16.msu)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| ویندوز سرور 2012 R2       | ServerDatacenter، ServerStandard و انواع Core آنها                                                                                          | [3 سال](https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2012-r2) <br /> اکتبر 2023 تا اکتبر 2026                                                                                                                                           | همانند ویندوز 8.1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| ویندوز 10                   | Education، Enterprise، IoTEnterprise، <br /> Professional، ProfessionalEducation، <br /> ProfessionalWorkstation، ServerRdsh و انواع N آنها | [3 سال](https://learn.microsoft.com/en-us/windows/whats-new/extended-security-updates) <br /> اکتبر 2025 تا اکتبر 2028                                                                                                                                         | ویندوز 10 22H2 (19045.4957) <br /> فقط به‌روزرسانی ویندوز را اجرا کنید                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 
+<br/>
 
-::: warning Notes
+## میزبان KMS ویندوز
 
-- **Use this activation only when necessary.**
-- On Windows 10/11, the system may randomly change the Windows edition later. This is a Windows issue and can be safely ignored.
-- KMS host license causes the sppsvc service to run continuously.
+- می‌توانید مجوز میزبان KMS ویندوز را با استفاده از گزینه TSforge در MAS فعال کنید.
+- اسکریپت به طور خودکار CSVLK موجود را با بیشترین تعداد شناسه‌های شمارش شده KMS انتخاب می‌کند.
+- همراه با فعال‌سازی، میزبان را با 25 کلاینت که حداقل آستانه مورد نیاز برای یک میزبان KMS در حال کار است، شارژ می‌کند.
+- با میزبان KMS ویندوز، می‌توانید کلاینت KMS را در شبکه خود فعال کنید.
+- این گزینه برای کاربران پیشرفته است، می‌توانید [راهنماها][8] را برای درک بیشتر در مورد آن بررسی کنید.
+
+<br/>
+
+::: tip یادداشت‌ها
+>
+> **فقط در مواقع ضروری از این فعال‌سازی استفاده کنید.**
+> در ویندوز 10/11، سیستم ممکن است بعداً نسخه ویندوز را به طور تصادفی تغییر دهد. این یک مشکل ویندوز است و می‌توان آن را با خیال راحت نادیده گرفت.
+> مجوز میزبان KMS باعث می‌شود سرویس sppsvc به طور مداوم اجرا شود.
 
 :::
 
 
-## Office KMS Host
+## میزبان KMS آفیس
 
-- You can activate the Office KMS host license using the TSforge option in MAS.  
-- To activate an Office KMS host, you will need to download and run the installer for the appropriate license pack.
-- Along with activation it will also charge the host with 25 clients for a working KMS host.  
-- With Office KMS host, you can activate the Office KMS client in your network. 
-- This option is for the advanced users, you can [check the guides][9] to understand more about it.  
+- می‌توانید مجوز میزبان KMS آفیس را با استفاده از گزینه TSforge در MAS فعال کنید.
+- برای فعال کردن یک میزبان KMS آفیس، باید نصب‌کننده بسته مجوز مناسب را دانلود و اجرا کنید.
+- همراه با فعال‌سازی، میزبان را با 25 کلاینت برای یک میزبان KMS در حال کار شارژ می‌کند.
+- با میزبان KMS آفیس، می‌توانید کلاینت KMS آفیس را در شبکه خود فعال کنید.
+- این گزینه برای کاربران پیشرفته است، می‌توانید [راهنماها][9] را برای درک بیشتر در مورد آن بررسی کنید.
 
-::: danger Note
+<br/>
 
-- **Use this activation only when necessary.**
-- KMS host license causes the sppsvc service to run continuously.
+::: tip توجه
+
+> **فقط در مواقع ضروری از این فعال‌سازی استفاده کنید.**
+> مجوز میزبان KMS باعث می‌شود سرویس sppsvc به طور مداوم اجرا شود.
 
 :::
 
-::: details Office KMS Host Links
+::: details لینک‌های میزبان KMS آفیس
 
-All links given below are official links hosted by Microsoft.
+تمام لینک‌های ارائه شده در زیر لینک‌های رسمی هستند که توسط مایکروسافت میزبانی می‌شوند.
 
-| Version              | Link                                                                                                                                     |
+| نسخه              | لینک                                                                                                                                     |
 |----------------------|------------------------------------------------------------------------------------------------------------------------------------------|
-| Office 2010 KMS host | `https://download.microsoft.com/download/E/4/E/E4EF2B72-9F16-4D5F-9A1D-D9BE39A1C127/KeyManagementServiceHost_en-us.exe`                  |
-| Office 2013 KMS host | `https://download.microsoft.com/download/3/4/2/342F1FEA-CCB2-4F68-A6DE-041934383C18/office2013volumelicensepack_4701-1000_en-us_x86.exe` |
-| Office 2016 KMS host | `https://download.microsoft.com/download/5/E/3/5E329B97-6DC5-4AA7-9AA7-A5B5D46AF82F/office2016volumelicensepack_4324-1002_en-us_x86.exe` |
-| Office 2019 KMS host | `https://download.microsoft.com/download/F/6/0/F60CA746-5F03-482D-A331-15F38FB4AACA/office2019volumelicensepack_x86.exe`                 |
-| Office 2021 KMS host | `https://download.microsoft.com/download/8/e/e/8eef6160-396a-4c26-830d-9e2a24c00309/Office2021VolumeLicensePack_x86.exe`                 |
-| Office 2024 KMS host | `https://download.microsoft.com/download/1/4/0/140c97ae-7360-4dfc-9ba0-5f509600a06e/Office2024VolumeLicensePack_x86.exe`                 |
+| میزبان KMS آفیس 2010 | `https://download.microsoft.com/download/E/4/E/E4EF2B72-9F16-4D5F-9A1D-D9BE39A1C127/KeyManagementServiceHost_en-us.exe`                  |
+| میزبان KMS آفیس 2013 | `https://download.microsoft.com/download/3/4/2/342F1FEA-CCB2-4F68-A6DE-041934383C18/office2013volumelicensepack_4701-1000_en-us_x86.exe` |
+| میزبان KMS آفیس 2016 | `https://download.microsoft.com/download/5/E/3/5E329B97-6DC5-4AA7-9AA7-A5B5D46AF82F/office2016volumelicensepack_4324-1002_en-us_x86.exe` |
+| میزبان KMS آفیس 2019 | `https://download.microsoft.com/download/F/6/0/F60CA746-5F03-482D-A331-15F38FB4AACA/office2019volumelicensepack_x86.exe`                 |
+| میزبان KMS آفیس 2021 | `https://download.microsoft.com/download/8/e/e/8eef6160-396a-4c26-830d-9e2a24c00309/Office2021VolumeLicensePack_x86.exe`                 |
+| میزبان KMS آفیس 2024 | `https://download.microsoft.com/download/1/4/0/140c97ae-7360-4dfc-9ba0-5f509600a06e/Office2024VolumeLicensePack_x86.exe`                 |
 
- - When prompted for a KMS host product key during installation, select "No".
- - On Windows 11 24H2/Server 2025 and newer, the VBScript FoD must be enabled for these installers to work.
- - Office 2019-2024 packs are only supported on Windows 8/Server 2012 and newer. 
- - If installing multiple license packs on the same machine, make sure to install older versions before newer versions (ex. Install Office 2016 before Office 2024).
-
-:::
-
-::: details  Office 2010 KMS Host Installer Workaround
-
- - Office 2010 license installer requires a workaround to install on Windows 10/11/Server 2016-2025:
-   - Run the installer, and dismiss the resulting error message.
-   - Launch Command Prompt as Administrator.
-   - If you are using 32-bit Windows, run `notepad "%programfiles%\MSECache\OfficeKMS\kms_host.vbs"`.
-   - If you are using 64-bit or ARM64 Windows, run `notepad "%programfiles(x86)%\MSECache\OfficeKMS\kms_host.vbs"`
-   - Click `Edit > Replace`.
-   - In the "Find" textbox type `>= "7"`, in the "Replace" textbox type `>= 1`.
-   - Click "Replace All".
-   - Save the file and close Notepad.
-   - If you are using 32-bit Windows, run `cscript "%programfiles%\MSECache\OfficeKMS\kms_host.vbs"`.
-   - If you are using 64-bit or ARM64 Windows, run `cscript "%programfiles(x86)%\MSECache\OfficeKMS\kms_host.vbs"`
+ - هنگامی که در حین نصب از شما کلید محصول میزبان KMS خواسته شد، "No" را انتخاب کنید.
+ - در ویندوز 11 24H2/سرور 2025 و جدیدتر، FoD VBScript باید برای کار کردن این نصب‌کننده‌ها فعال باشد.
+ - بسته‌های آفیس 2019-2024 فقط در ویندوز 8/سرور 2012 و جدیدتر پشتیبانی می‌شوند.
+ - اگر چندین بسته مجوز را روی یک دستگاه نصب می‌کنید، مطمئن شوید که نسخه‌های قدیمی‌تر را قبل از نسخه‌های جدیدتر نصب کنید (مثلاً آفیس 2016 را قبل از آفیس 2024 نصب کنید).
 
 :::
 
+<br/>
 
-::: details Workaround to install on Non-Volume licensed Windows
+::: details  راه‌حل نصب‌کننده میزبان KMS آفیس 2010
 
- - All installers normally require volume-licensed Windows, but this can be worked around as well:
-   - Follow the same procedure as for the above Office 2010 workaround, but replace `If isVL = False` with `If False`.
-   - For Office 2019-2024 packs, the installer script to edit is named after the Office version (ex. `kms_host19.vbs` for Office 2019).
-  
+ - نصب‌کننده مجوز آفیس 2010 برای نصب در ویندوز 10/11/سرور 2016-2025 به یک راه‌حل نیاز دارد:
+   - نصب‌کننده را اجرا کنید و پیام خطای حاصل را رد کنید.
+   - Command Prompt را به عنوان Administrator راه‌اندازی کنید.
+   - اگر از ویندوز 32 بیتی استفاده می‌کنید، `notepad "%programfiles%\MSECache\OfficeKMS\kms_host.vbs"` را اجرا کنید.
+   - اگر از ویندوز 64 بیتی یا ARM64 استفاده می‌کنید، `notepad "%programfiles(x86)%\MSECache\OfficeKMS\kms_host.vbs"` را اجرا کنید
+   - روی `Edit > Replace` کلیک کنید.
+   - در کادر متنی "Find" تایپ کنید `>= "7"`، در کادر متنی "Replace" تایپ کنید `>= 1`.
+   - روی "Replace All" کلیک کنید.
+   - فایل را ذخیره کرده و Notepad را ببندید.
+   - اگر از ویندوز 32 بیتی استفاده می‌کنید، `cscript "%programfiles%\MSECache\OfficeKMS\kms_host.vbs"` را اجرا کنید.
+   - اگر از ویندوز 64 بیتی یا ARM64 استفاده می‌کنید، `cscript "%programfiles(x86)%\MSECache\OfficeKMS\kms_host.vbs"` را اجرا کنید
+
 :::
 
-## Reset of Rearm / Timers / Tamper / Lock
+<br/>
 
-- You can use this feature in TSforge option in MAS.
+::: details راه‌حل نصب در ویندوز دارای مجوز غیر حجمی
 
-| Features                   | Info                                                               |
+ - همه نصب‌کننده‌ها به طور معمول به ویندوز دارای مجوز حجمی نیاز دارند، اما این را نیز می‌توان دور زد:
+   - همان روشی را که برای راه‌حل آفیس 2010 در بالا دنبال کردید، دنبال کنید، اما `If isVL = False` را با `If False` جایگزین کنید.
+   - برای بسته‌های آفیس 2019-2024، اسکریپت نصب‌کننده برای ویرایش به نام نسخه آفیس نامگذاری شده است (مثلاً `kms_host19.vbs` برای آفیس 2019).
+
+:::
+
+## بازنشانی Rearm / تایمرها / دستکاری / قفل
+
+- می‌توانید از این ویژگی در گزینه TSforge در MAS استفاده کنید.
+
+| ویژگی‌ها                   | اطلاعات                                                               |
 |----------------------------|--------------------------------------------------------------------|
-| Reset Rearm Count          | Reset rearm counter for infinite evaluation                        |
-| Reset Eval Period          | Reset evaluation period for infinite evaluation                    |
-| Clear Tamper State         | Clear the tamper state set due to store corruption or deletion     |
-| Remove Evaluation Key Lock | Remove the product key change lock set for evaluation product keys |
+| بازنشانی شمارنده Rearm          | بازنشانی شمارنده rearm برای ارزیابی بی‌نهایت                        |
+| بازنشانی دوره ارزیابی          | بازنشانی دوره ارزیابی برای ارزیابی بی‌نهایت                    |
+| پاک کردن حالت دستکاری         | پاک کردن حالت دستکاری تنظیم شده به دلیل خرابی یا حذف فروشگاه     |
+| حذف قفل کلید ارزیابی | حذف قفل تغییر کلید محصول تنظیم شده برای کلیدهای محصول ارزیابی |
 
+<br/>
 
-## How to remove TSforge
+## چگونه TSforge را حذف کنیم
 
-- This activation method doesn't modify any Windows components and doesn't install any new files.
-- Instead, it appends data to one of data files used by Software Protection Platform.
-- If you want to reset the activation status,
-- In MAS script, goto Troubleshoot and apply Fix Licensing option.
-- Done ✔️
+::: danger راهنما
 
-## Manual Activation
-
-See the [TSforge README][2] for information on manually using TSforge.
-
-## Setup Preactivation
-
--   Check the Extract OEM option in the MAS Extras section if you want pre-activated Windows installation.
--   Read more [here](./oem-folder).
-
-## Troubleshoot  
-
-::: danger Troubleshoot
-
-- If you need any help regarding this, first review the [**FAQ section**](./faq) — your answer will most likely be there.  
-
-- If your issue persists — You can [**Contact Us**](./troubleshoot).
+> این روش فعال‌سازی هیچ یک از اجزای ویندوز را تغییر نمی‌دهد و هیچ فایل جدیدی نصب نمی‌کند.
+> در عوض، داده‌ها را به یکی از فایل‌های داده مورد استفاده توسط پلتفرم حفاظت از نرم‌افزار اضافه می‌کند.
+> اگر می‌خواهید وضعیت فعال‌سازی را بازنشانی کنید،
+> در اسکریپت MAS، به Troubleshoot بروید و گزینه Fix Licensing را اعمال کنید.
+> انجام شد ✔️
 
 :::
+
+
+## فعال‌سازی دستی
+
+برای اطلاعات در مورد استفاده دستی از TSforge، به [README TSforge][2] مراجعه کنید.
+
+
+## راه‌اندازی پیش‌فعال‌سازی
+
+- گزینه Extract OEM را در بخش Extras MAS بررسی کنید اگر می‌خواهید نصب ویندوز از قبل فعال شده داشته باشید.
+- بیشتر بخوانید [اینجا](./oem-folder).
+
+
+::: danger رفع مشکلات
+
+اگر سوالی دارید، ابتدا صفحه [**سوالات پرتکرار**](./faq) را مرور کنید — به احتمال زیاد جواب‌تان اینجاست.
+
+اگر همچنان مشکل پابرجا بود — با ما [**در ارتباط**](./troubleshoot) باشید.
+
+:::
+
+## قدردانی
+
+از شما برای ارائه این پروژه فوق‌العاده سپاسگزاریم 🤍
+
+[massgrave.dev][2]
+
 
 [N]: https://github.com/NiREvil/windows-activation/
 [1]: https://github.com/UMSKT/writeups/blob/main/PKEY2005.md

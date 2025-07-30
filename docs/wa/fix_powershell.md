@@ -1,22 +1,23 @@
 ---
 layout: doc
 outline: deep
-title: 'Fix PowerShell'
-description: 'Scripts may show an error related to Powershell not working.'
+title: 'رفع مشکلات Powershell'
+description: 'اسکریپت‌ها ممکن است خطایی مربوط به عدم کارکرد پاورشل نشان دهند.'
 date: 2024-04-12
 editelink: true
 ---
 
-# Fix PowerShell
+# رفع مشکل PowerShell
 
-### Scripts may show an error related to Powershell not working.
+
+### اسکریپت‌ها اغلب ممکن است خطایی مربوط به عدم کارکرد پاورشل نشان دهند.
 
 <br><br/>
 
-## ConstrainedLanguage
+## حالت زبان محدود شده
 
--  If the script is showing `ConstrainedLanguage` in error output then open the `ConstrainedLanguage`
-- Open the <Badge type="danger" text="Command Prompt" /> as an <Badge type="info" text="Administrator" /> and ENTER:
+-  اکر اسکریپت در خروجی خطای مذکور را نشان داد: `ConstrainedLanguage`
+-  خط فرمان <Badge type="danger" text="Command Prompt" /> را در حالت <Badge type="info" text="Administrator" /> اجرا کرده و سپس دستور زیر را وارد کنید:
 
 ```reg
 
@@ -24,13 +25,11 @@ reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /
 
 ```
 
-----
+-  در صورت لزوم دستور را چندبار تکرار کنید، خطا باید رفع شود
 
-> - Retry the script, the error should be fixed.
+::: danger رفع مشکلات
 
-::: danger Troubleshooting
-
-If you have any questions, first review the [**FAQ section**](./faq) - your answer will most likely be there.
-If your issue persists - [**contact us**](./troubleshoot).
+اگر سوالی دارید، ابتدا صفحه [**سوالات پرتکرار**](./faq) را مرور کنید — به احتمال زیاد جواب‌تان اینجاست.
+اگر همچنان مشکل پابرجا بود — با ما [**در ارتباط**](./troubleshoot) باشید.
 
 :::

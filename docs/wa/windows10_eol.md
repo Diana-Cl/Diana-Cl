@@ -1,175 +1,174 @@
 ---
 layout: doc
 outline: deep
-title: 'Windows 10 Updates After End-Of-Life'
-description: 'This document explains how users can receive official updates after the retirement date of Windows 10 on October 14, 2025'
+title: 'به‌روزرسانی‌های ویندوز 10 پس از پایان عمر'
+description: 'این سند توضیح می‌دهد که چگونه کاربران می‌توانند پس از تاریخ بازنشستگی ویندوز 10 در 14 اکتبر 2025، به‌روزرسانی‌های رسمی را دریافت کنند.'
 date: 2025-04-30
 editLink: true
 ---
 
-# Windows 10 Updates After End-Of-Life
+# به‌روزرسانی‌های ویندوز 10 پس از پایان عمر
 
-> This document explains how users can receive official updates after the retirement date of Windows 10 on October 14, 2025.
+این سند توضیح می‌دهد که چگونه کاربران می‌توانند پس از تاریخ بازنشستگی ویندوز 10 در 14 اکتبر 2025، به‌روزرسانی‌های رسمی را دریافت کنند.
 
-::: tip For many people
+::: tip برای بسیاری از مردم
 
-the most obvious solution would be to just upgrade to Windows 11, but they can not because the hardware is not supported for Windows 11. Some users might also not like Windows 11
-and would like to stay on Windows 10 as long as they can.
+واضح‌ترین راه‌حل ارتقا به ویندوز 11 خواهد بود، اما آنها نمی‌توانند زیرا سخت‌افزار برای ویندوز 11 پشتیبانی نمی‌شود. برخی از کاربران نیز ممکن است ویندوز 11 را دوست نداشته باشند
+و می‌خواهند تا زمانی که می‌توانند روی ویندوز 10 بمانند.
 
-- Here are several solutions for you to choose from; feel free to select the one you prefer the most.
-
-:::
-
-## Windows 10 ESU updates 🤍
-
-Microsoft announced [Extended Security Updates (ESU)][1] where users can buy the ESU subscription to receive Windows updates. These updates will begin to roll out in November 2025.
-
-**You can use [TSforge option in MAS](./index#step2) to activate 3 Years ESU (Oct 2025 to Oct 2028).**
-
-## Windows 10 (IoT) Enterprise LTSC 2021
-
-Microsoft releases Windows 10/11 in two servicing channels.
-
-1- GAC (General Availability Channel) (i.e. Home, Pro, Enterprise). It will reach the end of support on [October 14, 2025][2].
-2- LTSC (Long-Term Servicing Channel) (i.e. Enterprise LTSC, IoT Enterprise LTSC). Windows 10 Enterprise LTSC 2021 will reach the end of support on [Jan 12, 2027][3]
-and Windows 10 IoT Enterprise LTSC 2021 will reach the end of support on [Jan 13, 2032][4]
-
-The solution is simple. You can just use the Official Windows 10 IoT Enterprise LTSC 2021 edition to get updates till Jan 13, 2032.
-
-::: details Clean install Windows 10 (IoT) Enterprise LTSC 2021
-
-The IoT edition ISO is available in English language only, but don't worry.
-
-- Download [Enterprise LTSC 2021][5] ISO in your desired language.
-- Install Windows using this [clean installation guide](./clean_install_windows).
-- After installing Windows, to change the edition, enter the IoT LTSC 2021 key `QPM6N-7J2WJ-P88HH-P3YRH-YY74H` on the activation page in the Windows settings.
+- در اینجا چندین راه‌حل برای انتخاب شما وجود دارد؛ هر کدام را که بیشتر ترجیح می‌دهید انتخاب کنید.
 
 :::
 
-::: details Upgrade Windows 10 Home, Pro, etc editions to Windows 10 IoT Enterprise LTSC 2021 while keeping files and apps
+## به‌روزرسانی‌های ESU ویندوز 10 🤍
 
-- Download Windows 10 Enterprise LTSC ISO from [here][5] in the **same Windows language and architecture**.
-  - To check the installed Windows architecture, open Powershell as admin and enter,
+مایکروسافت [به‌روزرسانی‌های امنیتی تمدید شده (ESU)][1] را اعلام کرد که در آن کاربران می‌توانند اشتراک ESU را برای دریافت به‌روزرسانی‌های ویندوز خریداری کنند. این به‌روزرسانی‌ها از نوامبر 2025 شروع به انتشار می‌کنند.
+
+**می‌توانید از [گزینه TSforge در MAS](./index#مرحله-۲)  برای فعال‌سازی 3 سال ESU (اکتبر 2025 تا اکتبر 2028) استفاده کنید.**
+
+<br/>
+
+## ویندوز 10 (IoT) Enterprise LTSC 2021
+
+مایکروسافت ویندوز 10/11 را در دو کانال سرویس‌دهی منتشر می‌کند.
+
+1- GAC (کانال دسترسی عمومی) (یعنی Home، Pro، Enterprise). این کانال در [14 اکتبر 2025][2] به پایان پشتیبانی خود می‌رسد.
+2- LTSC (کانال سرویس‌دهی بلندمدت) (یعنی Enterprise LTSC، IoT Enterprise LTSC). ویندوز 10 Enterprise LTSC 2021 در [12 ژانویه 2027][3] به پایان پشتیبانی خود می‌رسد.
+و ویندوز 10 IoT Enterprise LTSC 2021 در [13 ژانویه 2032][4] به پایان پشتیبانی خود می‌رسد.
+
+راه‌حل ساده است. شما می‌توانید فقط از نسخه رسمی Windows 10 IoT Enterprise LTSC 2021 برای دریافت به‌روزرسانی تا 13 ژانویه 2032 استفاده کنید.
+
+::: details نصب تمیز ویندوز 10 (IoT) Enterprise LTSC 2021
+
+ISO نسخه IoT فقط به زبان انگلیسی موجود است، اما نگران نباشید.
+
+- ISO [Enterprise LTSC 2021][5] را به زبان مورد نظر خود دانلود کنید.
+- ویندوز را با استفاده از [این راهنمای نصب تمیز](./clean_install_windows) نصب کنید.
+- پس از نصب ویندوز، برای تغییر نسخه، کلید IoT LTSC 2021 `QPM6N-7J2WJ-P88HH-P3YRH-YY74H` را در صفحه فعال‌سازی در تنظیمات ویندوز وارد کنید.
+
+:::
+
+::: details ارتقاء نسخه‌های ویندوز 10 Home، Pro و غیره به Windows 10 IoT Enterprise LTSC 2021 با حفظ فایل‌ها و برنامه‌ها
+
+- ISO ویندوز 10 Enterprise LTSC را از [اینجا][5] با **همان زبان و معماری ویندوز** دانلود کنید.
+  - برای بررسی معماری ویندوز نصب شده، Powershell را به عنوان مدیر باز کنید و دستور زیر را وارد کنید،
 
 ```reg
 Get-WmiObject -Class Win32_OperatingSystem | Format-List OSArchitecture
 ```
 
-x64 means 64 Bit, x86 means 32 Bit
-- To check the installed Windows Language, open Powershell as admin and enter;
+x64 به معنای 64 بیتی، x86 به معنای 32 بیتی است.
+  - برای بررسی زبان ویندوز نصب شده، Powershell را به عنوان مدیر باز کنید و دستور زیر را وارد کنید؛
 
-```reg
+```
 dism /english /online /get-intl | find /i "Default system UI language"
 ```
 
-- Right-click on the downloaded ISO file, Open With → Windows Explorer
-- A new DVD drive will appear in Windows Explorer, which means the installation image has been mounted successfully.
-- Now open the command prompt as admin and enter:
+- روی فایل ISO دانلود شده راست کلیک کنید، Open With → Windows Explorer را انتخاب کنید.
+- یک درایو DVD جدید در Windows Explorer ظاهر می‌شود، که به این معنی است که ایمیج نصب با موفقیت مونت شده است.
+- اکنون command prompt را به عنوان مدیر باز کنید و دستور زیر را وارد کنید:
 
 ```reg
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion" /v EditionID /d IoTEnterpriseS /f
 ```
 
-- Now quickly go into that DVD drive and run setup.exe, and continue until you reach the final confirmation screen. (Don't delay at this step, otherwise it won't show an option to keep files and apps)
-- Make sure it says "**Keep personal files and apps**" on the final screen. Then you can continue the process and wait until it is done.
+- اکنون به سرعت وارد آن درایو DVD شوید و setup.exe را اجرا کنید، و تا زمانی که به صفحه تأیید نهایی برسید ادامه دهید. (در این مرحله تأخیر نکنید، در غیر این صورت گزینه‌ای برای حفظ فایل‌ها و برنامه‌ها نشان داده نمی‌شود)
+- مطمئن شوید که در صفحه نهایی عبارت **«Keep personal files and apps»** را می‌بینید. سپس می‌توانید فرآیند را ادامه دهید و منتظر بمانید تا تمام شود.
 
-That's all.
-
-:::
-
-::: details Notes
-
-- LTSC editions do not have Store apps installed by default. However, if you upgrade from GAC to LTSC, all your Store apps will be retained. In contrast, if you perform a clean installation of Windows LTSC, Store apps will not be installed. For instructions on how to install them manually, please refer to this [page][6]
-- IoT editions are [binary identical][7] to Enterprise editions. The difference is in licensing. You can use it just fine on a general-purpose device.
-- To learn about the advantages and disadvantages of LTSC, click [here][8]
+همین.
 
 :::
 
-## Windows 11 IoT Enterprise 24H2
+::: details نکات
 
-## Windows 11 IoT Enterprise LTSC 2024
-
-Many users choose not to use Windows 11 due to hardware limitations, such as a lack of TPM, Secure Boot, or UEFI support. While it is possible to bypass these limitations, doing so is officially unsupported and may lead to issues with future updates.
-
-However, a promising alternative is available.
-
-In 2024, Microsoft released Windows 11 IoT Enterprise 24H2 (GAC) / IoT Enterprise LTSC 2024 (LTSC) which has [relaxed hardware requirements][9].
-
-You can officially install these Windows 11 editions without meeting the usual hardware requirements, such as TPM, Secure Boot, and UEFI, while still receiving continued support in the future.
-
-::: details Clean install Windows
-
-Clean install Windows 11 IoT Enterprise (GAC/LTSC) 2024
-
-The IoT edition ISO is available in English language only, but don't worry.
-
-- Download any [Windows 11 24H2][10] (For GAC) or [Enterprise LTSC 2024][11] (For LTSC) ISO in your desired language.
-- Follow [normal clean installation guide](./clean_install_windows) if you are using IoT edition English language ISO.
-- Follow [PID.txt method](./clean_install_windows#windows-11-on-unsupported-hardware) to install IoT edition from scratch if you are using Non-IoT ISO.
-
-Alternatively, you can install any Windows 11 24H2 (For GAC) or Enterprise LTSC 2024 (For LTSC) ISO file with [Rufus](./clean_install_windows#create-a-bootable-usb-with-rufus) and once the installation is done, you can use the change edition option in MAS to switch the edition to IoT Enterprise and enjoy official support on unsupported hardware.
+- نسخه‌های LTSC به طور پیش‌فرض برنامه‌های فروشگاه را نصب نمی‌کنند. با این حال، اگر از GAC به LTSC ارتقا دهید، تمام برنامه‌های فروشگاه شما حفظ خواهند شد. در مقابل، اگر نصب تمیز ویندوز LTSC را انجام دهید، برنامه‌های فروشگاه نصب نخواهند شد. برای دستورالعمل‌های نحوه نصب دستی آنها، لطفاً به این [صفحه][6] مراجعه کنید.
+- نسخه‌های IoT از نظر [باینری با نسخه‌های Enterprise یکسان هستند][7]. تفاوت در لایسنس است. شما می‌توانید از آن به خوبی در یک دستگاه با کاربرد عمومی استفاده کنید.
+- برای آشنایی با مزایا و معایب LTSC، [اینجا][8] کلیک کنید.
 
 :::
 
-::: details Upgrade Windows 10 Home, Pro, etc editions to Windows 11 IoT Enterprise (GAC/LTSC) 2024 while keeping files and apps
+## ویندوز 11 IoT Enterprise 24H2
+## ویندوز 11 IoT Enterprise LTSC 2024
 
-The IoT edition is available in English language only, but don't worry.
+بسیاری از کاربران به دلیل محدودیت‌های سخت‌افزاری، مانند عدم وجود TPM، Secure Boot یا پشتیبانی از UEFI، از ویندوز 11 استفاده نمی‌کنند. در حالی که امکان دور زدن این محدودیت‌ها وجود دارد، انجام این کار به طور رسمی پشتیبانی نمی‌شود و ممکن است منجر به مشکلاتی در به‌روزرسانی‌های آینده شود.
 
-- Download any [Windows 11 24H2][10] (For GAC) or [Enterprise LTSC 2024][11] (For LTSC) ISO in the **same Windows language and architecture**.
-  - To check the installed Windows architecture, open Powershell as admin and enter:
+با این حال، یک جایگزین امیدوارکننده در دسترس است.
+
+در سال 2024، مایکروسافت Windows 11 IoT Enterprise 24H2 (GAC) / IoT Enterprise LTSC 2024 (LTSC) را منتشر کرد که دارای [نیازمندی‌های سخت‌افزاری آرام‌تری][9] است.
+
+شما می‌توانید به طور رسمی این نسخه‌های ویندوز 11 را بدون برآورده کردن نیازمندی‌های سخت‌افزاری معمول، مانند TPM، Secure Boot و UEFI، نصب کنید و همچنان در آینده پشتیبانی مداوم دریافت کنید.
+
+::: details نصب تمیز ویندوز 11 IoT Enterprise (GAC/LTSC) 2024
+
+ISO نسخه IoT فقط به زبان انگلیسی موجود است، اما نگران نباشید.
+
+- هر ISO [ویندوز 11 24H2][10] (برای GAC) یا [Enterprise LTSC 2024][11] (برای LTSC) را به زبان مورد نظر خود دانلود کنید.
+- اگر از ISO زبان انگلیسی نسخه IoT استفاده می‌کنید، [راهنمای نصب تمیز معمولی](./clean_install_windows) را دنبال کنید.
+- اگر از ISO غیر IoT استفاده می‌کنید، برای نصب نسخه IoT از ابتدا، [روش PID.txt](./clean_install_windows#پشتیبانی-نشده) را دنبال کنید.
+
+از طرف دیگر، می‌توانید هر فایل ISO ویندوز 11 24H2 (برای GAC) یا Enterprise LTSC 2024 (برای LTSC) را با [Rufus](./clean_install_windows#بووت) نصب کنید و پس از اتمام نصب، می‌توانید از گزینه تغییر نسخه در MAS برای تغییر نسخه به IoT Enterprise استفاده کنید و از پشتیبانی رسمی روی سخت‌افزار پشتیبانی‌نشده لذت ببرید.
+
+:::
+
+::: details ارتقاء نسخه‌های ویندوز 10 Home، Pro و غیره به Windows 11 IoT Enterprise (GAC/LTSC) 2024 با حفظ فایل‌ها و برنامه‌ها
+
+نسخه IoT فقط به زبان انگلیسی موجود است، اما نگران نباشید.
+
+- هر ISO [ویندوز 11 24H2][10] (برای GAC) یا [Enterprise LTSC 2024][11] (برای LTSC) را با **همان زبان و معماری ویندوز** دانلود کنید.
+  - برای بررسی معماری ویندوز نصب شده، Powershell را به عنوان مدیر باز کنید و دستور زیر را وارد کنید:
 
 ```reg
 Get-WmiObject -Class Win32_OperatingSystem | Format-List OSArchitecture
 ```
 
-x64 means 64 Bit, x86 means 32 Bit
-  - To check the installed Windows Language, open Powershell as admin and enter,
+x64 به معنای 64 بیتی، x86 به معنای 32 بیتی است.
+  - برای بررسی زبان ویندوز نصب شده، Powershell را به عنوان مدیر باز کنید و دستور زیر را وارد کنید،
 
 ```reg
 dism /english /online /get-intl | find /i "Default system UI language"
 ```
 
-- Right-click on the downloaded ISO file, Open With → Windows Explorer
-- A new DVD drive will appear in Windows Explorer, which means the installation image has been mounted successfully.
-- Now open the command prompt as admin and enter:
+- روی فایل ISO دانلود شده راست کلیک کنید، Open With → Windows Explorer را انتخاب کنید.
+- یک درایو DVD جدید در Windows Explorer ظاهر می‌شود، که به این معنی است که ایمیج نصب با موفقیت مونت شده است.
+- اکنون command prompt را به عنوان مدیر باز کنید و دستور زیر را وارد کنید:
 
-**For GAC**
+**برای GAC**
 
 ```reg
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion" /v EditionID /d IoTEnterprise /f
 ```
 
-**For LTSC**
+**برای LTSC**
 
 ```reg
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion" /v EditionID /d IoTEnterpriseS /f
 ```
 
-- Now quickly go into that DVD drive and run setup.exe, and continue until you reach the final confirmation screen. (Don't delay at this step, otherwise it won't show an option to keep files and apps)
-- Make sure it says "**Keep personal files and apps**" on the final screen. Then you can continue the process and wait until it is done.
+- اکنون به سرعت وارد آن درایو DVD شوید و setup.exe را اجرا کنید، و تا زمانی که به صفحه تأیید نهایی برسید ادامه دهید. (در این مرحله تأخیر نکنید، در غیر این صورت گزینه‌ای برای حفظ فایل‌ها و برنامه‌ها نشان داده نمی‌شود)
+- مطمئن شوید که در صفحه نهایی عبارت **«Keep personal files and apps»** را می‌بینید. سپس می‌توانید فرآیند را ادامه دهید و منتظر بمانید تا تمام شود.
 
-That's all.
-
-:::
-
-::: details Notes
-
-- Many tools can let you install Windows 11 if the hardware is not supported and monthly updates would work fine. However yearly feature updates will fail to install if hardware requirements are not met.
-- This is why IoT (24H2/2024) editions are mentioned so that you can get official support on future feature upgrades.
-- LTSC editions do not have Store apps installed by default. However, if you upgrade from GAC to LTSC, all your Store apps will be retained. In contrast, if you perform a clean installation of Windows LTSC, Store apps will not be installed. For instructions on how to install them manually, please refer to this [page][6]
-- Windows 11 24H2 / 2024 requires CPUs that support SSE4.2 and POPCNT instructions.
-- IoT editions are [binary identical][12] to Enterprise editions. The difference is in licensing. You can use it just fine on a general-purpose device.
-
-- To learn about the advantages and disadvantages of LTSC, click [here][8]
-- You can install the [officially supported][13] Windows 11 24H2 IoT editions on a system without TPM; however, some games may not allow you to play if your system lacks TPM on Windows 11. In that case, you will need to stick with Windows 10.
+همین.
 
 :::
 
-::: danger Troubleshoot
+::: details نکات
 
-- If you need any help regarding this, first review the [**FAQ section**](./faq) — your answer will most likely be there.
+- بسیاری از ابزارها می‌توانند به شما اجازه دهند ویندوز 11 را نصب کنید اگر سخت‌افزار پشتیبانی نشود و به‌روزرسانی‌های ماهانه به خوبی کار کنند. با این حال، به‌روزرسانی‌های ویژگی سالانه در صورت عدم برآورده شدن نیازمندی‌های سخت‌افزاری، نصب نخواهند شد.
+- به همین دلیل است که نسخه‌های IoT (24H2/2024) ذکر شده‌اند تا بتوانید از پشتیبانی رسمی در ارتقاءهای ویژگی آینده برخوردار شوید.
+- نسخه‌های LTSC به طور پیش‌فرض برنامه‌های فروشگاه را نصب نمی‌کنند. با این حال، اگر از GAC به LTSC ارتقا دهید، تمام برنامه‌های فروشگاه شما حفظ خواهند شد. در مقابل، اگر نصب تمیز ویندوز LTSC را انجام دهید، برنامه‌های فروشگاه نصب نخواهند شد. برای دستورالعمل‌های نحوه نصب دستی آنها، لطفاً به این [صفحه][6] مراجعه کنید.
+- ویندوز 11 24H2 / 2024 به پردازنده‌هایی نیاز دارد که از دستورالعمل‌های SSE4.2 و POPCNT پشتیبانی کنند.
+- نسخه‌های IoT از نظر [باینری با نسخه‌های Enterprise یکسان هستند][12]. تفاوت در لایسنس است. شما می‌توانید از آن به خوبی در یک دستگاه با کاربرد عمومی استفاده کنید.
 
-- If your issue persists — You can [**Contact us**](./troubleshoot).
+- برای آشنایی با مزایا و معایب LTSC، [اینجا][8] کلیک کنید.
+- شما می‌توانید نسخه‌های [رسماً پشتیبانی شده][13] ویندوز 11 24H2 IoT را روی سیستمی بدون TPM نصب کنید؛ با این حال، برخی از بازی‌ها ممکن است به شما اجازه ندهند اگر سیستم شما در ویندوز 11 فاقد TPM باشد، بازی کنید. در این صورت، باید با ویندوز 10 بمانید.
+
+:::
+
+::: danger عیب یابی
+
+- اگر در این مورد به کمکی نیاز دارید، ابتدا بخش [**سوالات متداول**](./faq) را مرور کنید — به احتمال زیاد پاسخ شما در آنجا خواهد بود.
+
+- اگر مشکل شما همچنان ادامه داشت — می‌توانید [**با ما تماس بگیرید**](./troubleshoot).
 
 :::
 

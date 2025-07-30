@@ -1,61 +1,62 @@
 ---
 layout: doc
 outline: deep
-title: 'KMS38 Activation'
-description: 'Discover KMS38 Activation – a secure, open-source solution for activating Windows and Office products.'
-date: 2025-04-06
+title: 'فعال‌سازی KMS38'
+description: 'فعال‌سازی KMS38 را کشف کنید - یک راه‌حل امن و منبع باز برای فعال‌سازی محصولات ویندوز و آفیس.'
+date: 2025-03-06
 editLink: true
 ---
 
-# KMS38 Activation
+# فعال‌سازی KMS38
 
-> Discover KMS38 Activation – a secure, open-source solution for activating Windows and Office products.
+> فعال‌سازی KMS38 را کشف کنید - یک راه‌حل امن و منبع باز برای فعال‌سازی محصولات ویندوز و آفیس
 >
-> KMS38 provides offline activation for Windows 10/11 and Server (build 14393+) with validity until 2038, without leaving any files on your system.
+> KMS38 فعال‌سازی آفلاین برای ویندوز 10/11 و سرور (بیلد 14393+) با اعتبار تا سال 2038 را فراهم می‌کند، بدون اینکه هیچ فایلی در سیستم شما باقی بگذارد.
 >
-> Learn how this clever method extends Microsoft's KMS technology for permanent offline activation.
+> یاد بگیرید که چگونه این روش هوشمندانه فناوری KMS مایکروسافت را برای فعال‌سازی دائمی آفلاین گسترش می‌دهد.
 
-::: tip Overview
+::: tip بررسی اجمالی
 
-- This activation method activates Windows 10/11 and Windows Server (14393 and later builds), until January 19, 2038, 03:14:07 UTC.
-- This activation method does not store any files on the system.
-- This activation method works offline.
-- Unlike HWID and Online KMS activation options, KMS38 does not match with any official activation method.
+- این روش فعال‌سازی ویندوز 10/11 و ویندوز سرور (بیلدهای 14393 و بالاتر) را تا 19 ژانویه 2038، 03:14:07 UTC فعال می‌کند.
+- این روش فعال‌سازی هیچ فایلی را در سیستم ذخیره نمی‌کند.
+- این روش فعال‌سازی به صورت آفلاین کار می‌کند.
+- برخلاف گزینه‌های فعال‌سازی HWID و آنلاین KMS، KMS38 با هیچ روش فعال‌سازی رسمی مطابقت ندارد.
 
 :::
 
-## How does it work?
 
-- In a genuine [KMS][1] activation environment, activation lasts a maximum of up to 180 days. This is done using a valid license and server setup.
-  - In the Windows major upgrade process, the system uses `gatherosstate.exe` to carry over the remaining KMS activation period. It does this by creating a ticket that can be used offline.
+## چگونه کار می‌کند؟
 
-- The trick is that we can fool the `gatherosstate.exe` about the remaining KMS activation period and manually put the desired period maximum up to January 19, 2038, 03:14:07 UTC.
+- در یک محیط فعال‌سازی [KMS][1] واقعی، فعال‌سازی حداکثر تا 180 روز طول می‌کشد. این کار با استفاده از یک مجوز معتبر و راه‌اندازی سرور انجام می‌شود.
+  - در فرآیند ارتقاء عمده ویندوز، سیستم از `gatherosstate.exe` برای انتقال دوره فعال‌سازی KMS باقی‌مانده استفاده می‌کند. این کار را با ایجاد یک بلیط که می‌تواند به صورت آفلاین استفاده شود، انجام می‌دهد.
 
-- **Why is it limited to the year 2038?**
-  - This is due to the [Y2K38 problem][2]. This date (19 January 2038, 03:14:07 UTC) is the maximum value that can fit into a signed 32 bit integer.
+- ترفند این است که ما می‌توانیم `gatherosstate.exe` را در مورد دوره فعال‌سازی KMS باقی‌مانده فریب دهیم و به صورت دستی دوره مورد نظر را تا حداکثر 19 ژانویه 2038، 03:14:07 UTC قرار دهیم.
 
-- **How can we convince the gatherosstate.exe?**
-  - There are two methods for it.
-    - **1-** Place a [custom slc.dll][3] file beside gatherosstate.exe: gatherosstate.exe uses the system's `C:\Windows\System32\slc.dll` file to gather the system's info. If we place a custom slc.dll file beside gatherosstate.exe which can send the rubbish data to it, then it will simply accept it and generate a valid ticket allowing activation up to January 19, 2038, 03:14:07 UTC.
-    - **2-** [Modify][4] the gatherosstate.exe file itself so that it doesn't check the system's activation status and we can put the activation period as we wish.
+- **چرا تا سال 2038 محدود شده است؟**
+  - این به دلیل [مشکل سال 2038][2] است. این تاریخ (19 ژانویه 2038، 03:14:07 UTC) حداکثر مقداری است که می‌تواند در یک عدد صحیح 32 بیتی علامت‌دار قرار گیرد.
 
- ### Important
+- **چگونه می‌توانیم gatherosstate.exe را متقاعد کنیم؟**
+  - دو روش برای آن وجود دارد.
+    - **1-** قرار دادن یک فایل [slc.dll سفارشی][3] در کنار gatherosstate.exe: gatherosstate.exe از فایل `C:\Windows\System32\slc.dll` سیستم برای جمع‌آوری اطلاعات سیستم استفاده می‌کند. اگر یک فایل slc.dll سفارشی را در کنار gatherosstate.exe قرار دهیم که بتواند داده‌های بیهوده به آن ارسال کند، آنگاه به سادگی آن را می‌پذیرد و یک بلیط معتبر تولید می‌کند که امکان فعال‌سازی تا 19 ژانویه 2038، 03:14:07 UTC را فراهم می‌کند.
+    - **2-** [تغییر][4] خود فایل gatherosstate.exe به طوری که وضعیت فعال‌سازی سیستم را بررسی نکند و ما بتوانیم دوره فعال‌سازی را به دلخواه خود قرار دهیم.
 
-::: important **To be Clear,**
+ ### مهم
 
-- we are **not modifying/patching any on-board system file** to get the ticket.
-- Gatherosstate.exe is a part of the ISO file and not available in C drive system files. The system's slc.dll file is not touched; instead, we use custom slc.dll only for a brief moment of ticket generation.
-  - Latest MAS doesn't use any of these methods; instead, it uses ready-to-use Universal Tickets (check below for manual activation info).
-    - **Q:** Can Microsoft block this kind of activation?
-    - **A:** Not directly. They could only update Clipup to allow for a maximum activation period of 180 days. Not much besides that can be done on their part. The tickets are not sent to Microsoft at all, so they can't block them or take action directly.
-   
+::: important **جهت شفاف سازی**
+
+- ما **هیچ فایل سیستمی روی برد را برای دریافت بلیط تغییر/پچ نمی‌کنیم**.
+- Gatherosstate.exe بخشی از فایل ISO است و در فایل‌های سیستمی درایو C موجود نیست. فایل slc.dll سیستم دست نخورده باقی می‌ماند؛ در عوض، ما از slc.dll سفارشی فقط برای یک لحظه کوتاه تولید بلیط استفاده می‌کنیم.
+  - آخرین نسخه MAS از هیچ یک از این روش‌ها استفاده نمی‌کند؛ در عوض، از بلیط‌های جهانی آماده استفاده می‌کند (برای اطلاعات فعال‌سازی دستی به زیر مراجعه کنید).
+    - **س:** آیا مایکروسافت می‌تواند این نوع فعال‌سازی را مسدود کند؟
+    - **ج:** نه به طور مستقیم. آنها فقط می‌توانند Clipup را به‌روزرسانی کنند تا حداکثر دوره فعال‌سازی 180 روز را مجاز کند. کار زیادی از طرف آنها نمی‌تواند انجام شود. بلیط‌ها اصلاً به مایکروسافت ارسال نمی‌شوند، بنابراین آنها نمی‌توانند آنها را مسدود کنند یا مستقیماً اقدامی انجام دهند.
+
 :::
 
-## Supported Products
+## محصولات پشتیبانی شده
 
-### Windows 10 / 11
+### ویندوز 10 / 11
 
-|                     Product Names                     |        EditionID         |  Generic Volume License Key   |
+|                     نام‌های محصول                     |        EditionID         |  کلید مجوز حجمی عمومی   |
 | :---------------------------------------------------: | :----------------------: | :---------------------------: |
 |                       Education                       |        Education         | NW6C2-QMPVW-D7KKK-3GKT6-VCFB2 |
 |                      Education N                      |        EducationN        | 2WH4N-8QGBV-H22JP-CT43Q-MDWWJ |
@@ -71,15 +72,15 @@ editLink: true
 |                Enterprise N LTSC 2019                 |       EnterpriseSN       | 92NFX-8DJQP-P6BBQ-THF9C-7CG2H |
 |                Enterprise N LTSC 2021                 |       EnterpriseSN       | 92NFX-8DJQP-P6BBQ-THF9C-7CG2H |
 |                Enterprise N LTSC 2024                 |       EnterpriseSN       | 92NFX-8DJQP-P6BBQ-THF9C-7CG2H |
-| IoT Enterprise LTSC 2021 <br/> (19044.2788 and later) |      IoTEnterpriseS      | KBN8V-HFGQ4-MGXVD-347P6-PDQGT |
+| IoT Enterprise LTSC 2021 <br/> (19044.2788 و بالاتر) |      IoTEnterpriseS      | KBN8V-HFGQ4-MGXVD-347P6-PDQGT |
 |               IoT Enterprise LTSC 2024                |      IoTEnterpriseS      | KBN8V-HFGQ4-MGXVD-347P6-PDQGT |
 |                         Home                          |           Core           | TX9XD-98N7V-6WMQ6-BX7FG-H8Q99 |
 |                        Home N                         |          CoreN           | 3KHY7-WNT83-DGQKR-F7HPR-844BM |
 |                      Home China                       |   CoreCountrySpecific    | PVMJN-6DFY6-9CCP6-7BKTT-D3WVR |
 |                 Home Single Language                  |    CoreSingleLanguage    | 7HNRX-D7KGG-3K4RQ-4WPJ4-YTDFH |
 |                         Lean                          |          CloudE          | NBTWJ-3DR69-3C4V8-C26MC-GQ9M6 |
-|   Enterprise multi-session <br/> (17763 and later)    |        ServerRdsh        | CPWHC-NT2C7-VYW78-DHDB2-PG3GK |
-|   Enterprise multi-session <br/> (17134 and before)   |        ServerRdsh        | 7NBT4-WGBQX-MP4H7-QXFF8-YP3KX |
+|   Enterprise multi-session <br/> (17763 و بالاتر)    |        ServerRdsh        | CPWHC-NT2C7-VYW78-DHDB2-PG3GK |
+|   Enterprise multi-session <br/> (17134 و قبل)   |        ServerRdsh        | 7NBT4-WGBQX-MP4H7-QXFF8-YP3KX |
 |                          Pro                          |       Professional       | W269N-WFGWX-YVC9B-4J6C9-T83GX |
 |                         Pro N                         |      ProfessionalN       | MH37W-N47XK-V7XM9-C7227-GCQG9 |
 |                     Pro Education                     |  ProfessionalEducation   | 6TP4R-GNPTD-KYYHQ-7B7DP-J447Y |
@@ -91,9 +92,9 @@ editLink: true
 
 <br/>
 
-### Windows Server 2025 (LTSC)
+### ویندوز سرور 2025 (LTSC)
 
-|            Product Names             |    EditionID     |  Generic Volume License Key   |
+|            نام‌های محصول             |    EditionID     |  کلید مجوز حجمی عمومی   |
 | :----------------------------------: | :--------------: | :---------------------------: |
 |     Windows Server 2025 Standard     |  ServerStandard  | TVRH6-WHNXV-R9WG3-9XRFY-MY832 |
 |    Windows Server 2025 Datacenter    | ServerDatacenter | D764K-2NDRG-47T6Q-P8T8W-YP6DF |
@@ -102,9 +103,9 @@ editLink: true
 
 <br/>
 
-### Windows Server 2022 (LTSC)
+### ویندوز سرور 2022 (LTSC)
 
-|            Product Names             |    EditionID     |  Generic Volume License Key   |
+|            نام‌های محصول             |    EditionID     |  کلید مجوز حجمی عمومی   |
 | :----------------------------------: | :--------------: | :---------------------------: |
 |    Windows Server 2022 Datacenter    | ServerDatacenter | WX4NM-KYWYW-QJJR4-XV3QB-6VM33 |
 |     Windows Server 2022 Standard     |  ServerStandard  | VDYBN-27WPP-V4HQT-9VMD4-VMK7H |
@@ -113,9 +114,9 @@ editLink: true
 
 <br/>
 
-### Windows Server 2019 (LTSC)
+### ویندوز سرور 2019 (LTSC)
 
-|         Product Names          |    EditionID     |  Generic Volume License Key   |
+|         نام‌های محصول          |    EditionID     |  کلید مجوز حجمی عمومی   |
 | :----------------------------: | :--------------: | :---------------------------: |
 | Windows Server 2019 Datacenter | ServerDatacenter | WMDGN-G9PQG-XVVXX-R3X43-63DFG |
 |  Windows Server 2019 Standard  |  ServerStandard  | N69G4-B89J2-4G8F4-WWYCC-J464C |
@@ -125,9 +126,9 @@ editLink: true
 
 <br/>
 
-### Windows Server 2016 (LTSC)
+### ویندوز سرور 2016 (LTSC)
 
-| Product Names                     | EditionID          | Generic Volume License Key    |
+| نام‌های محصول                     | EditionID          | کلید مجوز حجمی عمومی    |
 | --------------------------------- | ------------------ | ----------------------------- |
 | Windows Server 2016 ARM64         | ServerARM64        | K9FYF-G6NCK-73M32-XMVPY-F9DRR |
 | Windows Server 2016 Datacenter    | ServerDatacenter   | CB7KF-BWN84-R7R2Y-793K2-8XDDG |
@@ -138,96 +139,90 @@ editLink: true
 
 <br/>
 
-### Windows Server 23H2 (Annual Channel)
+### ویندوز سرور 23H2 (کانال سالانه)
 
-| Product Names             | EditionID        | Generic Volume License Key    |
+| نام‌های محصول             | EditionID        | کلید مجوز حجمی عمومی    |
 | ------------------------- | ---------------- | ----------------------------- |
 | Windows Server Datacenter | ServerDatacenter | WX4NM-KYWYW-QJJR4-XV3QB-6VM33 |
 
 <br/>
 
-### Windows Server 20H2, 2004, 1909, 1903, and 1809 (Semi-Annual Channel)
+### ویندوز سرور 20H2، 2004، 1909، 1903 و 1809 (کانال نیمه سالانه)
 
-| Product Names             | EditionID            | Generic Volume License Key    |
+| نام‌های محصول             | EditionID            | کلید مجوز حجمی عمومی    |
 | ------------------------- | -------------------- | ----------------------------- |
 | Windows Server Datacenter | ServerDatacenterACor | 6NMRW-2C8FM-D24W7-TQWMY-CWH2D |
 | Windows Server Standard   | ServerStandardACor   | N2KJX-J94YW-TQVFB-DG9YT-724CC |
 
 <br/>
 
-### Windows Server 1803 (Semi-Annual Channel)
+### ویندوز سرور 1803 (کانال نیمه سالانه)
 
-| Product Names             | EditionID            | Generic Volume License Key    |
+| نام‌های محصول             | EditionID            | کلید مجوز حجمی عمومی    |
 | ------------------------- | -------------------- | ----------------------------- |
 | Windows Server Datacenter | ServerDatacenterACor | 2HXDN-KRXHB-GPYC7-YCKFJ-7FVDG |
 | Windows Server Standard   | ServerStandardACor   | PTXN8-JFHJM-4WC78-MPCBR-9W4KR |
 
 <br/>
 
-### Windows Server 1709 (Semi-Annual Channel)
+### ویندوز سرور 1709 (کانال نیمه سالانه)
 
-| Product Names             | EditionID            | Generic Volume License Key    |
+| نام‌های محصول             | EditionID            | کلید مجوز حجمی عمومی    |
 | ------------------------- | -------------------- | ----------------------------- |
 | Windows Server Datacenter | ServerDatacenterACor | 6Y6KB-N82V8-D8CQV-23MJW-BWTG6 |
 | Windows Server Standard   | ServerStandardACor   | DPCNP-XQFKJ-BJF7R-FRC8D-GF6G4 |
 
 <br/>
 
-::: tip Note
+::: tip توجه
 
-- Systems in all architectures (x86, x64 and arm64) are supported.
-- Any evaluation version of Windows (i.e. 'EVAL' LTSB/C) beyond the evaluation period. You can use the TSforge option in MAS to reset the activation at any time.
-- KMS38 only supports Windows/server version 14393 (1607) and newer versions.
-- Initial release (19044.1288) of Iot LTSC 2021 doesn't support KMS license and it was added later in update 19044.2788.
-- Server Azure Datacenter (ServerTurbine) edition does not support activation on non-azure systems.
+- سیستم‌ها در تمام معماری‌ها (x86، x64 و arm64) پشتیبانی می‌شوند.
+- هر نسخه ارزیابی ویندوز (یعنی 'EVAL' LTSB/C) فراتر از دوره ارزیابی. می‌توانید از گزینه TSforge در MAS برای بازنشانی فعال‌سازی در هر زمان استفاده کنید.
+- KMS38 فقط از نسخه 14393 (1607) و نسخه‌های جدیدتر ویندوز/سرور پشتیبانی می‌کند.
+- نسخه اولیه (19044.1288) Iot LTSC 2021 از مجوز KMS پشتیبانی نمی‌کند و بعداً در به‌روزرسانی 19044.2788 اضافه شد.
+- نسخه Server Azure Datacenter (ServerTurbine) از فعال‌سازی در سیستم‌های غیر azure پشتیبانی نمی‌کند.
 
 :::
 
-## How to remove kms38
+<br/>
 
-::: danger How to remove KMS38
+## چگونه kms38 را حذف کنیم
 
-- In AEG, go to KMS38 Activation and apply the Remove KM38 Protection option.
-- After that, In MAS, go to Troubleshoot and apply the Fix Licensing option.
-  - Done ✔️
+::: danger چگونه KMS38 را حذف کنیم
+
+- در MAS، به بخش فعال‌سازی KMS38 بروید و گزینه Remove KM38 Protection را اعمال کنید.
+- پس از آن، در MAS، به Troubleshoot بروید و گزینه Fix Licensing را اعمال کنید.
+- انجام شد ✔️
 
 :::
 
 ## KMS38 - Server Cor/Acor
 
-- Windows Server Cor/Acor (No GUI) editions don't have the `clipup.exe` file.
-- To KMS38 activate it, you need to download the `ClipUp.exe` file from this link [app.box.com/s/][5].  
-   `File: ClipUp.exe`  
-   `SHA-256: 0d6e9f6bbd0321eda149658d96040cb4f79e0bd93ba60061f25b28fecbf4d4ef`  
-   This file has digital signatures that can be verified. You can also get this file from the official [Windows Server 2016 x64 RTM ISO.download][6].
-- Put the `ClipUp.exe` file beside the KMS38 Activation script. That would be either `MAS_AIO.cmd` or `KMS38_Activation.cmd`  
-   The activation script will check for `ClipUp.exe` in the current folder (from where the script is running) and will use it accordingly.
+- نسخه‌های Windows Server Cor/Acor (بدون رابط کاربری گرافیکی) فایل `clipup.exe` را ندارند.
+- برای فعال‌سازی KMS38 آن، باید فایل `ClipUp.exe` را از این لینک [app.box.com/s/][5] دانلود کنید.
+   `فایل: ClipUp.exe`
+   `SHA-256: 0d6e9f6bbd0321eda149658d96040cb4f79e0bd93ba60061f25b28fecbf4d4ef`
+   این فایل دارای امضای دیجیتالی است که قابل تأیید است. همچنین می‌توانید این فایل را از [ISO رسمی Windows Server 2016 x64 RTM.download][6] دریافت کنید.
+- فایل `ClipUp.exe` را در کنار اسکریپت فعال‌سازی KMS38 قرار دهید. این یا `MAS_AIO.cmd` یا `KMS38_Activation.cmd` خواهد بود
+   اسکریپت فعال‌سازی `ClipUp.exe` را در پوشه فعلی (از جایی که اسکریپت در حال اجرا است) بررسی می‌کند و بر اساس آن از آن استفاده می‌کند.
 
-### KMS38 Protection
+<br/>
 
-- KMS38 Activation is vulnerable to unintended replacement by a 180-Day KMS Activator.
-- From MAS 1.7, the script will enable KMS38 protection by default.
+### حفاظت KMS38
 
-- If you are going to use KMS_VL_ALL by abbodi1406 or [AEG][7] (Online KMS option) for **Office activation**, then you can choose to remove this protection.
-- Below is the explanation for how the script protect KMS38.
-- In the KMS activation method, Windows first checks the KMS IP registered as a specific KMS, and if that is not defined, then it checks the Global KMS IP.
-  - Another fact is that if Localhost (IP range 127.0.0.0/8) is defined as the KMS IP in Windows 8 and later OS, then Windows will not accept it as a valid KMS IP.
-  - This script simply utilizes the above facts to protect the KMS38 activation from being overwritten by any alternative 'normal' 180-Day KMS Activation, and at the same time, that KMS activator can be used for Office activation.
-  - Script steps
-  - Set the Windows edition-specific KMS IP to Localhost (127.0.0.2)
-  - Protect the below Registry from edit and delete  
+- فعال‌سازی KMS38 در برابر جایگزینی ناخواسته توسط یک فعال‌کننده KMS 180 روزه آسیب‌پذیر است.
+- از MAS 1.7، اسکریپت به طور پیش‌فرض حفاظت KMS38 را فعال می‌کند.
+
+- اگر قصد دارید از KMS_VL_ALL توسط abbodi1406 یا [MAS][7] (گزینه آنلاین KMS) برای **فعال‌سازی آفیس** استفاده کنید، می‌توانید این حفاظت را حذف کنید.
+- در زیر توضیح داده شده است که چگونه اسکریپت از KMS38 محافظت می‌کند.
+- در روش فعال‌سازی KMS، ویندوز ابتدا IP KMS ثبت شده به عنوان یک KMS خاص را بررسی می‌کند، و اگر تعریف نشده باشد، سپس IP KMS جهانی را بررسی می‌کند.
+  - واقعیت دیگر این است که اگر Localhost (محدوده IP 127.0.0.0/8) به عنوان IP KMS در ویندوز 8 و سیستم عامل‌های بعدی تعریف شود، ویندوز آن را به عنوان یک IP KMS معتبر نمی‌پذیرد.
+  - این اسکریپت به سادگی از واقعیت‌های فوق برای محافظت از فعال‌سازی KMS38 در برابر بازنویسی توسط هر فعال‌سازی KMS 180 روزه جایگزین و 'عادی' استفاده می‌کند، و در عین حال، آن فعال‌کننده KMS می‌تواند برای فعال‌سازی آفیس استفاده شود.
+  - مراحل اسکریپت
+  - IP KMS خاص نسخه ویندوز را روی Localhost (127.0.0.2) تنظیم کنید
+  - از رجیستری زیر در برابر ویرایش و حذف محافظت کنید
     `HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SoftwareProtectionPlatform\55c92734-d682-4d71-983e-d6ec3f16059f\XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX\`
-- Done ✔️
-
-----
-
-::: danger Troubleshooting
-
-If you have any questions, first review the [**FAQ section**](./faq) - your answer will most likely be there.
-If your issue persists - [**Contact us**](./troubleshoot).
-
-:::
-
+- انجام شد ✔️
 
 [1]: https://docs.microsoft.com/en-us/previous-versions/tn-archive/ee939272(v=technet.10)?redirectedfrom=MSDN#kms-overview
 [2]: https://en.wikipedia.org/wiki/Year_2038_problem

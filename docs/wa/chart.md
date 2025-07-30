@@ -1,67 +1,65 @@
 ---
 layout: doc
 outline: deep
-title: Activation Methods Chart
-description: 'A comparison of activation methods offered by Microsoft Activation Scripts.'
-date: 2025-05-06
+title: 'نمودار روش‌های فعال‌سازی'
+description: 'نمودار کلی از روش های فعال‌سازی که مایکروسافت برای محصولات خود ارائه کرده است.'
+date: 2025-02-06
 editLink: true
 head:
   - - meta
     - name: keywords
-      content: chart, comparison, which one is the best, hwid or kms, kms, hwid, tsforge, ohook, online kms
+      content: chart, چارت فعال‌سازی ,انواع روش‌ها,  hwid or kms, kms, hwid, tsforge
 ---
 
-# Activation Methods Chart
+## جدول روش‌های فعال‌سازی
 
-> Below is a comparison of activation methods offered by Microsoft Activation Scripts.
+> در جدول‌های زیر، مقایسه‌ای از روش‌های فعال‌سازی ارائه شده توسط اسکریپت‌های فعال‌سازی مایکروسافت ارائه شده است.
 
-<br/>
 
-## Basics
+## اصول پایه
 
 |                                                                      | HWID | Ohook | KMS38  | Online KMS | ZeroCID[^1] | StaticCID[^1] | KMS4k[^1] |
 | -------------------------------------------------------------------- | :--: | :---: | :----: | :--------: | :---------: | :-----------: | :-------: |
-| Works offline                                                        |  🔴  |  🟢   |   🟢   |     🔴     |     🟢      |      🔴       |    🟢     |
-| Activation is permanent                                              |  🟢  |  🟢   | 🟢[^2] |   🟢[^3]   |     🟢      |      🟢       |  🟢[^4]   |
-| Does not leave any files in the system to maintain activation status |  🟢  |  🔴   |   🟢   |     🔴     |     🟢      |      🟢       |    🟢     |
+| بدون اینترنت کار میکند                                                        |  🔴  |  🟢   |   🟢   |     🔴     |     🟢      |      🔴       |    🟢     |
+| فعال‌سازی دائمی است                                              |  🟢  |  🟢   | 🟢[^2] |   🟢[^3]   |     🟢      |      🟢       |  🟢[^4]   |
+| هیچ فایلی در سیستم برای حفظ وضعیت فعال‌سازی نمی‌گذارد |  🟢  |  🔴   |   🟢   |     🔴     |     🟢      |      🟢       |    🟢     |
 
-<br/> 
-
-## Persistence
+## پایداری
 
 |                                                           | HWID | Ohook | KMS38 | Online KMS | ZeroCID[^1] | StaticCID[^1] | KMS4k[^1] |
 | --------------------------------------------------------- | :--: | :---: | :---: | :--------: | :---------: | :-----------: | :-------: |
-| Persists between hardware changes                         |  🔴  |  🟢   |  🔴   |     🟢     |     🟢      |      🔴       |    🟢     |
-| Persists between clean installations on the same hardware |  🟢  |  🔴   |  🔴   |     🔴     |     🔴      |      🔴       |    🔴     |
-| Persists between Windows 10 / 11 feature upgrades         |  🟢  |  🟢   |  🟢   |     🟢     |     🔴      |      🔴       |    🔴     |
+| پایداری بین تغییرات سخت‌افزاری                         |  🔴  |  🟢   |  🔴   |     🟢     |     🟢      |      🔴       |    🟢     |
+| پایداری پس از نصب مجدد ویندوز بدون تغییر دادن سخت‌افزار |  🟢  |  🔴   |  🔴   |     🔴     |     🔴      |      🔴       |    🔴     |
+| پایداری بین بروزرسانی‌های گسترده در ویندوز 10 / 11         |  🟢  |  🟢   |  🟢   |     🟢     |     🔴      |      🔴       |    🔴     |
 
-<br/> 
-
-## Support
+## پشتیبانی
 
 |                                   | HWID | Ohook | KMS38  | Online KMS | ZeroCID[^1] | StaticCID[^1] |  KMS4k[^1]  |
 | --------------------------------- | :--: | :---: | :----: | :--------: | :---------: | :-----------: | :---------: |
-| Windows Vista / 7                 |  🔴  |  🔴   |   🔴   |   🟢[^5]   |     🟢      |      🔴       |   🟢[^5]    |
-| Windows 8 / 8.1                   |  🔴  |  🔴   |   🔴   |   🟢[^5]   |     🟢      |      🟢       |   🟢[^5]    |
-| Windows 10 / 11                   |  🟢  |  🔴   | 🟢[^5] |   🟢[^5]   |     🟢      |      🟢       |   🟢[^5]    |
-| Windows 11 (26100.4188 and later) |  🟢  |  🔴   | 🟢[^5] |   🟢[^5]   |     🔴      |      🟢       |   🟢[^5]    |
-| Windows Server 2008 / 2008 R2     |  🔴  |  🔴   |   🔴   |     🟢     |     🟢      |      🔴       |     🟢      |
-| Windows Server 2012 / 2012 R2     |  🔴  |  🔴   |   🔴   |     🟢     |     🟢      |      🟢       |     🟢      |
-| Windows Server 2016 and later     |  🔴  |  🔴   |   🟢   |     🟢     |     🟢      |      🟢       |     🟢      |
-| Office 2010                       |  🔴  |  🟢   |   🔴   |   🟢[^5]   |     🔴      |      🔴       |     🔴      |
-| Office 2013 and later             |  🔴  |  🟢   |   🔴   |   🟢[^5]   |   🟢[^6]    |    🟢[^6]     | 🟢[^5] [^6] |
-| Windows / Office KMS Host         |  🔴  |  🔴   |   🔴   |     🔴     |     🟢      |      🟢       |     🔴      |
-| Windows Extended Security Updates |  🔴  |  🔴   |   🔴   |     🔴     |     🟢      |      🟢       |     🔴      |
+| ویندوز / 7                 |  🔴  |  🔴   |   🔴   |   🟢[^5]   |     🟢      |      🔴       |   🟢[^5]    |
+| ویندوز 8 / 8.1                   |  🔴  |  🔴   |   🔴   |   🟢[^5]   |     🟢      |      🟢       |   🟢[^5]    |
+| ویندوز 10 / 11                   |  🟢  |  🔴   | 🟢[^5] |   🟢[^5]   |     🟢      |      🟢       |   🟢[^5]    |
+| ویندوز 11 (26100.4188 و بعد) |  🟢  |  🔴   | 🟢[^5] |   🟢[^5]   |     🔴      |      🟢       |   🟢[^5]    |
+| سرور ویندوز 2008 / 2008 R2     |  🔴  |  🔴   |   🔴   |     🟢     |     🟢      |      🔴       |     🟢      |
+| سرور ویندوز 2012 / 2012 R2     |  🔴  |  🔴   |   🔴   |     🟢     |     🟢      |      🟢       |     🟢      |
+| سرور ویندوز 2016 و بعد     |  🔴  |  🔴   |   🟢   |     🟢     |     🟢      |      🟢       |     🟢      |
+| آفیس 2010                       |  🔴  |  🟢   |   🔴   |   🟢[^5]   |     🔴      |      🔴       |     🔴      |
+| آفیس 2013 و بالاتر              |  🔴  |  🟢   |   🔴   |   🟢[^5]   |   🟢[^6]    |    🟢[^6]     | 🟢[^5] [^6] |
+| ویندوز / آفیس KMS هاست         |  🔴  |  🔴   |   🔴   |     🔴     |     🟢      |      🟢       |     🔴      |
+| بروزرسانی‌های امنیتی گسترده‌ی ویندوز |  🔴  |  🔴   |   🔴   |     🔴     |     🟢      |      🟢       |     🔴      |
 | OCUR / RP / APPXLOB addons        |  🔴  |  🔴   |   🔴   |     🔴     |     🟢      |      🟢       |     🔴      |
 
-[^1]: Provided by [TSforge](./tsforge).
 
-[^2]: Valid until the year 2038.
 
-[^3]: Valid for 180 days by default. Permanent with renewal task installed.
 
-[^4]: Valid for 4083 years.
+[^1]: ارائه شده توسط [TSforge](./tsforge).
 
-[^5]: Volume activation capable editions only.
+[^2]: تا سال 2038 معتبر است.
 
-[^6]: Supported only on Windows 8 and later; subscription editions are not supported.
+[^3]: به طور پیش‌فرض برای 180 روز معتبر است. با نصب وظیفه‌ی تجدید دائم است.
+
+[^4]: برای 4083 سال معتبر است.
+
+[^5]: فقط ویرایش‌های capable of volume activation.
+
+[^6]: فقط در ویندوز 8 و بعدی پشتیبانی می‌شود؛ ویرایش‌های اشتراکی پشتیبانی نمی‌شوند.

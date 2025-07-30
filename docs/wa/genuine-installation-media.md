@@ -1,151 +1,151 @@
 ---
 layout: doc
 outline: deep
-title: 'Download Windows / Office'
-description: 'All download links available on our website lead to genuine files only'
+title: 'دانلود ویندوز / آفیس'
+description: 'تمام لینک‌های دانلود موجود در وب‌سایت ما فقط به فایل‌های اصلی منتهی می‌شوند'
 date: 2025-01-05
 editLink: true
 ---
 
-# Download Windows / Office
+# دانلود ویندوز / آفیس
 
-::: info Note
+::: info نکته
 
-All download links available on our website lead to genuine files only.
-
-:::
-
-## Download Windows
--  [Windows 11](./windows_11_links)
--  [Windows 10](./windows_10_links)
--  [Windows 10 / 11 Enterprise **LTSC**](./windows_ltsc_links)
--  [Windows ARM64](./windows_arm_links)
--  [Windows 8.1](./windows_8.1_links)
--  [Windows 7](./windows_7_links)
--  [Windows Vista][winvist]
--  [Windows XP](./windows_xp_links)
--  [Windows Server][winserv]
--  Windows Insider [10-11][1] - [Server][2] / [Registration][3] is needed to download.
-
-## Download Office
-
-Activation with [MAS](./index#step2) is required after the installation of Office.
-
--  [Office C2R Installers][4] 🤍 (O365 / 2024 / 2021 / 2019 / 2016 / 2013)
--  [Office C2R Custom Install][5] (O365 / 2024 / 2021 / 2019 / 2016)
--  [Office MSI VL (Old versions)][winmsi] (2016 / 2013 / 2010 / 2007)
--  [Office For **Mac**][winmac]
-
-<hr/><br/>
-
-## FAQ
-
-#### Guides
-
-- [Clean Install Windows](./clean_install_windows)
-- [In-place Repair Upgrade (Keeping files and apps)](./in-place_repair_upgrade)
-- [Windows 11 on Unsupported Hardware](./clean_install_windows#windows-11-on-unsupported-hardware)
-- [Edition List During Windows Installation](./clean_install_windows#edition-list-during-windows-installation)
-- [Windows 10 Updates After End-Of-Life](./windows10_eol)
-
-#### Why are we hosting files on our server when we can download them from Microsoft?
-
-::: details Click here for info
-
-Microsoft provides consumer ISOs for free on their [site][6], but business, enterprise, and older ISOs are behind paywalls such as [MVS][7] and [M365 Admin Center][8]. That's why we need to host files on our servers.
+تمام لینک‌های دانلود موجود در وب‌سایت ما فقط به فایل‌های اصلی منتهی می‌شوند.
 
 :::
 
-#### How to ensure that these files are genuine?
+## دانلود ویندوز
+-  [ویندوز 11](./windows_11_links)
+-  [ویندوز 10](./windows_10_links)
+-  [ویندوز 10 / 11 Enterprise **LTSC**](./windows_ltsc_links)
+-  [ویندوز ARM64](./windows_arm_links)
+-  [ویندوز 8.1](./windows_8.1_links)
+-  [ویندوز 7](./windows_7_links)
+-  [ویندوز ویستا][winvist]
+-  [ویندوز XP](./windows_xp_links)
+-  [ویندوز سرور][winserv]
+-  ویندوز اینسایدر [10-11][1] - [سرور][2] / برای دانلود نیاز به [ثبت نام][3] است.
 
-::: details Click here for info
+## دانلود آفیس
 
-You can check [here](./genuine-installation-media#verify-authenticity-of-files) on how to be sure that files are genuine by verifying the checksum available on the official Microsoft website.
+پس از نصب آفیس، فعال‌سازی با [MAS](./index#مرحله-۲) مورد نیاز است.
+
+-  [نصب کننده‌های Office C2R][4] 🤍 (O365 / 2024 / 2021 / 2019 / 2016 / 2013)
+-  [نصب سفارشی Office C2R][5] (O365 / 2024 / 2021 / 2019 / 2016)
+-  [Office MSI VL (نسخه‌های قدیمی)][winmsi] (2016 / 2013 / 2010 / 2007)
+-  [آفیس برای **مک**][winmac]
+
+<br/>
+
+## سوالات متداول
+
+#### راهنماها
+
+- [نصب تمیز ویندوز](./clean_install_windows)
+- [ارتقاء تعمیری درجا (حفظ فایل‌ها و برنامه‌ها)](./in-place_repair_upgrade)
+- [ویندوز 11 روی سخت‌افزار پشتیبانی‌نشده](./clean_install_windows#ویندوز-11-روی-سختافزار-پشتیبانی-نشده)#ویندوز-11-روی-سختافزار-پشتیبانی-نشده
+- [لیست نسخه‌ها در حین نصب ویندوز](./clean_install_windows#لیست-نسخهها-در-حین-نصب-ویندوز)
+- [به‌روزرسانی‌های ویندوز 10 پس از پایان عمر](./windows10_eol)
+
+#### چرا فایل‌ها را روی سرور خود میزبانی می‌کنیم در حالی که می‌توانیم آنها را از مایکروسافت دانلود کنیم؟
+
+::: details برای اطلاعات بیشتر اینجا کلیک کنید
+
+مایکروسافت ISOهای مصرف‌کننده را به صورت رایگان در [سایت][6] خود ارائه می‌دهد، اما ISOهای تجاری، سازمانی و قدیمی‌تر پشت دیوارهای پرداخت مانند [MVS][7] و [مرکز مدیریت M365][8] قرار دارند. به همین دلیل است که ما نیاز به میزبانی فایل‌ها روی سرورهای خود داریم.
 
 :::
 
-#### There are both consumer and business ISOs listed here. What is the difference between them?
+#### چگونه از اصالت این فایل‌ها اطمینان حاصل کنیم؟
 
-::: details Click here for info
+::: details برای اطلاعات بیشتر اینجا کلیک کنید
 
-For Windows 10/11 General Availability Channel (GAC) releases (i.e., Home and Pro), Microsoft produces two types of ISO files: Consumer and Business.
-
-The Consumer ISO includes all editions such as Home, Pro, and Education, but excludes the Enterprise edition. In contrast, the Business ISO contains all editions except for the Home-level editions, and these ISO files come with a KMS key pre-installed (not activated) by default.
+می‌توانید [اینجا](./genuine-installation-media#چگونه-از-اصالت-این-فایلها-اطمینان-حاصل-کنیم) نحوه اطمینان از اصالت فایل‌ها را با تأیید چک‌سام موجود در وب‌سایت رسمی مایکروسافت بررسی کنید.
 
 :::
 
-#### How can I obtain an official Microsoft ISO that is not available here?
+#### در اینجا هم ISOهای مصرف‌کننده و هم تجاری لیست شده‌اند. تفاوت بین آنها چیست؟
 
-::: details Click here for info
+::: details برای اطلاعات بیشتر اینجا کلیک کنید
 
-You can request the file [Discord][9].
+برای نسخه‌های کانال دسترسی عمومی (GAC) ویندوز 10/11 (یعنی Home و Pro)، مایکروسافت دو نوع فایل ISO تولید می‌کند: مصرف‌کننده و تجاری.
+
+ISO مصرف‌کننده شامل تمام نسخه‌ها مانند Home، Pro و Education است، اما نسخه Enterprise را شامل نمی‌شود. در مقابل، ISO تجاری شامل تمام نسخه‌ها به جز نسخه‌های سطح Home است و این فایل‌های ISO به طور پیش‌فرض با یک کلید KMS از پیش نصب شده (فعال نشده) ارائه می‌شوند.
+
+:::
+
+#### چگونه می‌توانم یک ISO رسمی مایکروسافت را که در اینجا موجود نیست، تهیه کنم؟
+
+::: details برای اطلاعات بیشتر اینجا کلیک کنید
+
+می‌توانید فایل را در [Discord][9] درخواست کنید.
 
 :::
 
 
-## Verify Authenticity Of Files
+## تأیید اصالت فایل‌ها
 
-You can use the [file hashing method][10] to verify if a file is genuine. This can be done using tools like [7-Zip][11] (After installing 7-Zip, right-click on the ISO file and go to 7-Zip > CRC SHA).
+می‌توانید از [روش هش کردن فایل][10] برای تأیید اصالت یک فایل استفاده کنید. این کار را می‌توان با استفاده از ابزارهایی مانند [7-Zip][11] انجام داد (پس از نصب 7-Zip، روی فایل ISO راست کلیک کرده و به 7-Zip > CRC SHA بروید).
 
-There are many places where you can find these checksums for verification. Examples can be found below.
+مکان‌های زیادی وجود دارد که می‌توانید این چک‌سام‌ها را برای تأیید پیدا کنید. نمونه‌ها را می‌توانید در زیر پیدا کنید.
 
-- [files.rg-adguard][12] (the most complete collection)
+- [files.rg-adguard][12] (کامل‌ترین مجموعه)
 - [MVS dump][13]
 - [genuine-iso-verifier][14]
 - [msdn.rg-adguard][15]
 - [sha1.rg-adguard][16]
-- Google
+- گوگل
 
-Microsoft's Official free links for checksums:
+لینک‌های رسمی رایگان مایکروسافت برای چک‌سام‌ها:
 
 - [MVS][17]
-- [Windows 11][18]
-- [Windows 10][19]
+- [ویندوز 11][18]
+- [ویندوز 10][19]
 
 
-::: details More info on Official links!
+::: details اطلاعات بیشتر در مورد لینک‌های رسمی!
 
 **MVS**  
-- On MVS, you need to login and click on 'All Downloads' button and then search the product name.
+در MVS، باید وارد شوید و روی دکمه 'All Downloads' کلیک کنید و سپس نام محصول را جستجو کنید.
 
-**MVS Limitations:**  
-- They used to publish only SHA-1, but later started publishing SHA-1 and SHA-256 both and from 2022 they now publish only SHA-256.
+**محدودیت‌های MVS:**
+ - آنها قبلاً فقط SHA-1 را منتشر می‌کردند، اما بعداً شروع به انتشار هم SHA-1 و هم SHA-256 کردند و از سال 2022 اکنون فقط SHA-256 را منتشر می‌کنند.
+ - با این حال، آنها تمام داده‌های SHA-1 را حذف کردند و در نتیجه، چک‌سام‌های فایل‌های قدیمی به سادگی در سایت MVS موجود نیستند.
+ - همچنین، در حدود زمانی که هم SHA-1 و هم SHA-256 را منتشر می‌کردند، برخی از داده‌های SHA-256 را به هم ریختند، به عنوان مثال
 
-- However they removed all the SHA-1 data and as a result, old files checksums are simply not available on MVS site.
-
-- Also, around the time when they were publishing SHA-1 and SHA-256 both, they messed up some SHA-256 data, for example
-
-```shell
-Incorrect SHA-256 example
-SHA256: BDB3D0C5C933B201ECE736A172FB604AA5D7D0705DD75681F9FCC4B1EE79FAC8
-File name: en-uk_windows_10_enterprise_ltsc_2019_x64_dvd_723dfbc1.iso
+```
+	مثال SHA-256 نادرست
+	SHA256: BDB3D0C5C933B201ECE736A172FB604AA5D7D0705DD75681F9FCC4B1EE79FAC8
+	نام فایل: en-uk_windows_10_enterprise_ltsc_2019_x64_dvd_723dfbc1.iso
 ```
 
-- So its useful only for the latest files.
+ - بنابراین فقط برای آخرین فایل‌ها مفید است.
 
-**Windows 11**
-- SHA-256 list will appear if you download the ISO file.
+**ویندوز 11**
+لیست SHA-256 در صورتی ظاهر می‌شود که فایل ISO را دانلود کنید.
 
-**Windows 10**
-- Microsoft doesn't allow you to download ISO file directly if browser's useragent is Windows OS. So you need to change it to something else like Android or IOS and then download the ISO file to see the list.
+**ویندوز 10**
+مایکروسافت به شما اجازه نمی‌دهد فایل ISO را مستقیماً دانلود کنید اگر عامل کاربری مرورگر سیستم عامل ویندوز باشد. بنابراین باید آن را به چیز دیگری مانند Android یا IOS تغییر دهید و سپس فایل ISO را دانلود کنید تا لیست را ببینید.
 
 :::
 
-
-#### Video Tutorial
+#### آموزش ویدیویی
 
 <video class="video-js vjs-default-skin vjs-fluid" controls preload="auto" data-setup='{}'>
   <source src="/how_to_verify_files.mp4" type="video/mp4" />
   <p class="vjs-no-js"></p>
 </video>
 
-::: danger Troubleshoot
+<br/>
 
-- If you need any help regarding this, first review the [**FAQ section**](./faq) — your answer will most likely be there.  
+::: danger رفع مشکلات
 
-- If your issue persists — You can [**Contact us**](./troubleshoot).
+اگر سوالی دارید، ابتدا صفحه [**سوالات متداول**](./faq) را مرور کنید — به احتمال زیاد جواب‌تان اینجاست.  
 
-:::
+اگر همچنان مشکل پابرجا بود — با ما [**در ارتباط**](./troubleshoot) باشید.
+
+::: 
+
 
 [1]: https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewiso
 [2]: https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewserver

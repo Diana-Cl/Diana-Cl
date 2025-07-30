@@ -2,8 +2,8 @@
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
 index: true
-lang: "en-US"
-dir: "ltr"
+lang: "fa-IR"
+dir: "rtl"
 
 hero:
   name: "Dìana"
@@ -27,7 +27,7 @@ features:
 ---
 
 <script setup>
-import { data as posts } from '../.vitepress/posts.data.js'
+import { data as posts } from '../../.vitepress/posts.data.js'
 </script>
 
 <div class="latest-posts-section">

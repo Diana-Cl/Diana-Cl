@@ -1,197 +1,178 @@
 ---
 layout: doc
 outline: deep
-title: 'All-in-One — Microsoft Activation Scripts'
-description: 'MAS: Microsoft Activation Script — Comprehensive open-source guide to safely activate Windows 10/11 and Office using HWID, KMS, TSforge, Ohook in under 40 seconds. Includes troubleshooting tips and detailed comparisons'
-date: 2025-05-05
+title: 'راهنمای جامع فعال‌سازی ویندوز با روش‌های رسمی'
+description: 'یک جعبه ابزار متن‌باز و ایمن حاوی آموزش گام‌به‌گام فعال‌سازی دائم ویندوز ۱۰/۱۱. بررسی تفاوت روش‌ها، حل مشکلات احتمالی، و روش‌های حذف فعال‌سازی نیز پوشش داده شده است.'
+date: 2025-05-07
 editLink: true
 head:
   - - meta
     - name: description
-      content: Safely activate Windows 10/11 and Microsoft Office using official open-source methods like HWID, KMS, TSforge, and more. Includes permanent and renewable options with full guides.
+      content: راهنمای کامل و مطمئن برای فعال‌سازی ویندوز ۱۰/۱۱ و آفیس با روش‌های متن‌باز مانند HWID, KMS, TSforge و Ohook, شامل روش‌های دائمی و قابل تمدید
   - - meta
     - name: keywords
-      content: windows activation, office activation, hwid, kms, tsforge, ohook, kms38, digital license, activate windows 11, activate office 2021, open-source activation
+      content: فعال سازی ویندوز, فعال‌سازی آفیس, فعال سازی قانونی ویندوز, فعال‌سازی دائم, HWID, KMS, TSforge, Ohook, فعال‌سازی ویندوز ۱۱, لایسنس دیجیتال
   - - meta
     - property: og:title
-      content: Safe and Permanent Activation for Windows and Office
+      content: آموزش فعال‌سازی ایمن و دائمی ویندوز و آفیس
   - - meta
     - property: og:description
-      content: A full open-source guide to activating Windows 10/11 and Microsoft Office using reliable tools like HWID, KMS, and TSforge.
+      content: فعال‌سازی قانونی ویندوز و آفیس با ابزارهای مطمئن و متن‌باز, مناسب برای ویندوز ۱۰, ویندوز ۱۱, و نسخه‌های مختلف آفیس
 ---
 
-# All-in-One — Microsoft Activation Scripts
+# راهنمای جامع فعال‌سازی ویندوز و آفیس با روش‌های رسمی
 
-> All-in One, This comprehensive guide walks you through reliable, open-source methods — like HWID, KMS, TSforge, and more to activate your `Windows` and `Office` safely and permanently in under 40–seconds. Includes troubleshooting tips and detailed comparisons.
+> در این راهنما، با روش‌های متن‌باز و قابل اطمینانی مانند HWID، KMS، TSforge و سایر ابزارهای رسمی آشنا می‌شوید که امکان فعال‌سازی سریع، ایمن و بدون دردسر را برای ویندوز و آفیس فراهم می‌کنند.
 
+<br/> 
 
-### Welcome to the ultimate guide for activating Windows and Office
+::: info سورس کامل مطلب
 
-<br/>
+سورس کامل روش‌های فعال‌سازی محصولات مایکروسافت در [این مخزن][5]>
 
-::: tip **Why Freedom to Dream**
-
-::: details Click here
-
-Freedom to Dream isn’t just a name, It’s the spirit behind this project, This isn’t only about activating Windows or Office.
-It’s about breaking artificial limitations, and empowering every user—student, freelancer, or creator to unlock their full potential.
-
-We believe everyone deserves access to essential tools, regardless of where they live or what they can afford.
-When your tools are free, your ideas are free, too.
-
-This project reflects our mission to enable creativity, productivity, and ambition by removing digital barriers—so you can focus on what truly matters: your work, your goals, and your dreams.
+ذاتا واسه‌ غریبه نیست، اونم خودم می‌نویسمش 🤪
 
 :::
 
-<br/>
+## خلاصه‌ روش‌های فعال‌‌سازی {#جدول}
 
-<div class="rtl">
+برای یک نمای کلی، در ادامه خلاصه‌ای از روش‌های فعال‌سازی موجود آمده است:
 
-**[من انگلیسی می‌فهمم ولی متوجه نمیشم ✋🤧😅](/fa/wa/index)**
-
-</div>
-
-## Activation Methods Summary {#summary}
-
-For a quick overview, here is a summary of the activation methods available:
-
-| Activation Type | Supported Product      | Activation Period                | Internet Needed?      | More Info               |
-| :-------------: | :--------------------- | :------------------------------- | :-------------------- | :---------------------- |
-|    **HWID**     | Windows 10-11          | Permanent                        | Yes                   | [Details](./hwid)       |
-|     **KMS**     | Windows 10-11          | 180 Days (Manual)                | Yes                   | [Details](./kms)        |
-|    **Ohook**    | Office                 | Permanent                        | No                    | [Details](./ohook)                     |
-|   **TSforge**   | Windows / ESU / Office | Permanent                        | Yes (on build 19041+) | [Details](./tsforge)    |
-|    **KMS38**    | Windows 10-11-Server   | Until 2038                       | No                    | [Details](./kms38)      |
-| **Online KMS**  | Windows / Office       | 180 Days (Lifetime with Renewal) | Yes                   | [Details](./online_kms) |
+| نوع فعال‌سازی  | محصولات پشتیبانی شده |       مدت زمان فعال‌سازی       |      نیاز به اینترنت؟      |       اطلاعات بیشتر       |
+| :------------: | :------------------: | :----------------------------: | :------------------------: | :-----------------------: |
+|    **HWID**    |     ویندوز ۱۰-۱۱     |             دائمی              |            بله             |    [جزئیات](./hwid)    |
+|    **KMS**     |     ویندوز ۱۰-۱۱     |         ۱۸۰ روز (دستی)         |            بله             |    [جزئیات](./kms)     |
+|   **Ohook**    |         آفیس         |             دائمی              |            خیر             |             [جزئیات](./ohook)             |
+|  **TSforge**   | ویندوز / ESU / آفیس  |             دائمی              | بله (در بیلد ۱۹۰۴۱ به بعد) |  [جزئیات](./tsforge)   |
+|   **KMS38**    | ویندوز ۱۰-۱۱-Server  |          تا سال ۲۰۳۸           |            خیر             |   [جزئیات](./kms38)    |
+| **Online KMS** |    ویندوز / آفیس     | ۱۸۰ روز (مادام‌العمر با تمدید) |            بله             | [جزئیات](./online_kms) |
 
 <p style="text-align: center;">
-  For a detailed comparison of all methods, check out the <a href="./chart">Activation Methods Chart</a>.</p>
+  برای مقایسه دقیق تمام روش‌ها، به <a href="./chart">جدول مقایسه روش‌های فعال‌سازی</a> مراجعه کنید. </p>
+
+<br/><br/>
+
+# روش 1. فعال‌سازی دائمی با HWID
+
+برای اکثر کاربران، روش HWID <Badge type="info" text="Hardware ID" /> ساده‌ترین راه برای دریافت لایسنس دیجیتال برای ویندوز ۱۰ و ۱۱ است.
 
 <br/>
 
-# Method 1. Permanent Activation with HWID
+## مرحله ۱. باز کردن PowerShell به عنوان مدیر
 
-For most users, the HWID <Badge type="info" text="Hardware ID" /> method is the simplest way to get a permanent digital license for Windows 10 and 11. 
+### روش الف: استفاده از نوار جستجو <Badge type="tip" text="پیشنهادی" />
 
-<br/>
-
-## Step 1. Open PowerShell as Administrator
-
-### Option A: Using Search Bar <Badge type="danger" text="Recommend" />  
-1. Click on windows "Start" button or "Search" icon in the taskbar  
-2. Type `powershell`  
-3. Select `Run as administrator` <br/>  
+1. روی دکمه "Start" یا آیکون "Search" در نوار وظیف کلیک کنید
+2. تایپ کنید: `powershell`
+3. در نهایت روی `Run as administrator` کلیک کنید
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/9b27cd4b-21d8-4970-98bb-3c97010e09bf" alt="open-powershell-as-admin" width="540px" />
+  <img src="https://github.com/user-attachments/assets/9b27cd4b-21d8-4970-98bb-3c97010e09bf" alt="اجرای-پاورشل-با-حالت-ادمین" width="540px" />
 </p>
 
-<br/>
-  
-::: tip To run PowerShell
-
-::: details To view additional methods, please click here 
-
-### Option B: Using Run Box
-
-1. Open the Run dialog box: Press `Win (⊞) + R` keys simultaneously  
-2. Type `powershell`  
-3. Press `Ctrl + Shift + Enter` to run as administrator  
-4. If prompted by User Account Control, click `Yes`
-
-<br/>  
-
-### Option C: Using Power User Menu
-
-1. Right-click on the "Start menu" (or press `Win (⊞) + X`)  
-2. Select "Windows Terminal (Admin)" on Windows 11 or "Windows PowerShell (Admin)" on Windows 10
+<p style="text-align: center;">
+  برای بزرگنمایی تصویر بر روی آن کلیک کنید </p>
 
 <br/>
 
-Or You can visit [this Link][1] to see 10 ways to run **PowerShell** And [this link][2] For Running CMD in your windows.
+::: tip به منظور اجرای Powershell
+
+::: details برای مشاهده روش‌های جایگزین، لطفاً اینجا کلیک کنید.
+
+### روش ب: استفاده از Run Box
+
+1. پنجره Run را باز کنید: کلیدهای `Win (⊞) + R` را همزمان فشار دهید
+2. تایپ کنید: `powershell`
+3. برای اجرا به عنوان مدیر، `Ctrl + Shift + Enter` را فشار دهید
+4. اگر پیغام User Account Control ظاهر شد، `Yes` را کلیک کنید
+
+<br/>
+
+### روش ج: استفاده از Power User Menu
+
+1. روی منوی "Start" کلیک راست کنید یا `Win (⊞) + X` را فشار دهید
+2. در ویندوز ۱۱ "Windows Terminal (Admin)" یا در ویندوز ۱۰ "Windows PowerShell (Admin)" را انتخاب کنید
+
+<br/>
+
+همچنین می‌توانید از توضیحات داخل [این لینک][1] برای اجرای **Powershell** به 10 روش مختلف و از [این لینک][2] برای اجرای CMD به 8 روش مختلف در ویندوز استفاده کنید.
 
 :::
 
 <br/>
 
-## Step 2. Run the Activation Script {#step2}
+## مرحله ۲. اجرای اسکریپت فعال‌سازی {#مرحله-۲}
 
-Copy the following command, paste it (via Right-click) into the PowerShell window and press `Enter` key
-
-<br/>
+دستور زیر را کپی کرده و، در پنجره PowerShell جای‌گذاری (با راست-کلیک) و سپس کلید "Enter" را فشار دهید.
 
 ::: code-group
 
-```reg [Recommended]
+```reg [پیشنهادی]
 irm https://get.activated.win | iex
 ```
 
-```reg [Alternative]
+```reg [جایگزین]
 irm https://massgrave.dev/get | iex
 ```
 
 :::
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/6b72787e-f5ad-47a2-ab2b-ae93de9f70bc" alt="Paste command in PowerShell" width="540px" />
+  <img src="https://github.com/user-attachments/assets/6b72787e-f5ad-47a2-ab2b-ae93de9f70bc" alt="جای‌گذاری-دستور-در-PowerShell" width="540px" />
 </p>
 
 <br/>
 
-## Step 3. Choose the HWID Option
+## مرحله ۳. انتخاب گزینه HWID
 
-A menu will appear in a new window. Press `1` number on your keyboard to select **HWID Activation** and wait a few moments for the process to complete.
+در منوی ظاهر شده. عدد `1` را فشار دهید تاHWID" Activation" انتخاب شود، سپس چند لحظه منتظر بمانید تا فرآیند کامل شود.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/8b119e05-d506-4c42-91cb-ac58c9a2f189" alt="Select HWID Activation" width="540px" />
+  <img src="https://github.com/user-attachments/assets/8b119e05-d506-4c42-91cb-ac58c9a2f189" alt="انتخاب-متود-hwid" width="580px" />
 </p>
 
-**Congratulations!** <Badge type="tip" text="Done" />
-Your Windows is now permanently activated with a digital license.
+تبریک! <Badge type="info" text="Done" />
+ 
+ویندوز شما اکنون با لایسنس دیجیتال به صورت دائمی فعال شده است.
 
-<br/>
-
-To check the activation status of "Windows 10" Navigate to:  
+برای بررسی وضعیت فعال‌سازی `ویندوز ۱۰` از این طریق اقدام کنید:  
 Settings > Update & Security > Activation [^1]
 
-To check the activation status of "Windows 11" Navigate to:  
+برای بررسی وضعیت فعال‌سازی `ویندوز ۱۱`، از این طریق اقدام کنید:  
 Settings > System > Activation [^2]
 
 <br/>
 
-::: info Notes
+::: info برخی نکات
 
-::: details Click here to see the details
+::: details برای مشاهده کلیک کنید
 
-- **For Windows:** I personally use the **KMS method** [[see guides](./kms)] or [[Online KMS](./online_kms) for my Windows 10/11 activations. It's official, leaves no files on the system, and takes less than 3 minutes. If for some reason that fails, HWID is my go-to, as it's also official and file-less.
-- **For Office:** I use Ohook, or TSforge, The small differences are noted in the [summary table 👆🏿](#summary)
-
-:::
-
-<br/>
-
-## How to Remove Activations
-
-::: danger Additional Information
-
-- **HWID:**
-A digital license is stored on Microsoft's servers and tied to your hardware. It `cannot be removed` in the traditional sense. A major hardware change (like the motherboard) will invalidate it. To return to an unactivated state, you can install a generic KMS key. [Extended hwid details](./hwid#how-to-remove-hwid)
-
-- **Online KMS / Ohook / KMS38:**
-Use the corresponding `Uninstall` or `Remove` option within the [MAS script](#step2) menu, then run the "Fix Licensing" option from the Troubleshoot menu. [Online KMS Details](./online_kms#how-to-remove-online-kms) and [KMS38 details](./kms38#how-to-remove-kms38)
-
-- **TSforge:**
-This method only appends data and doesn't install files. To reset it, simply run the `Fix Licensing` option from the Troubleshoot menu in the MAS script. [Ohook](./ohook#how-to-remove-ohook) [TSforge details](./tsforge#how-to-remove-tsforge)
+- **برای ویندوز:** شخصاً از روش `KMS` ([راهنمای kms](./kms)) و یا [[Online KMS](./online_kms)برای فعال‌سازی ویندوز 10 / 11 خودم استفاده می‌کنم. این روش رسمی است، هیچ فایلی روی سیستم ذخیره نمی‌کند و کمتر از 3 دقیقه زمان می‌برد. اگر به هر دلیلی این روش کار نکرد و ناموفق بود، انتخاب بعدی من HWID است، زیرا آن هم رسمی و بدون ذخیره داده‌ای در لوکال سیستم ما است.
+- **برای آفیس:** من از Ohook، TSforge یاOnline KMS استفاده می‌کنم. تفاوت‌های جزئی بین آن‌ها وجود دارد که در [جدول فوق 👆🏿](#جدول) ذکر شده است.
 
 :::
 
 <br/>
 
-::: info Supported Windows 10/11 Products for HWID
+## چگونه فعال‌سازی را حذف کنیم
 
-::: details Click here to see products
+::: danger راهنمای حذف یا لغو اشتراک‌ها
 
-|      Windows 10/11 Product Names      |        EditionID         |  Generic Retail/OEM/MAK Key   |
+- **HWID:** لایسنس دیجیتال روی سرورهای مایکروسافت ذخیره شده و به سخت‌افزار شما متصل است. این نمی‌تواند به معنای سنتی `حذف` شود. تغییر عمده سخت‌افزار (مانند مادربرد) آن را `باطل` می‌کند. برای بازگشت به حالت غیرفعال، می‌توانید یک کلید عمومی [KMS](./kms38) نصب کنید. [جزئیات تکمیلی hwid](./hwid)
+
+- **Online KMS / Ohook / KMS38:** از گزینه متناظر `Uninstall` یا `Remove` در منوی اسکریپت [MAS](#مرحله-۲) استفاده کنید، سپس گزینه "Fix Licensing" را از منوی Troubleshoot اجرا کنید. [جزئیات KMS آنلاین](./online_kms) و [جزئیات KMS38](./kms38)
+
+- **TSforge:** این روش فقط داده‌ها را اضافه می‌کند و فایلی نصب نمی‌کند. برای بازنشانی آن، کافی است گزینه `Fix Licensing` را از منوی Troubleshoot در اسکریپت MAS اجرا کنید. [جزئیات TSforge](./tsforge) و [جزئیات Ohook](./ohook)
+
+:::
+
+<br/> 
+
+::: info محصولات پشتیبانی شده ویندوز ۱۰/۱۱ برای HWID
+
+::: details برای مشاهده محصولات کلیک کنید
+
+|       نام محصولات ویندوز ۱۰/۱۱        |        EditionID         |   کلید عمومی Retail/OEM/MAK   |
 | :-----------------------------------: | :----------------------: | :---------------------------: |
 |               Education               |        Education         | YNMGQ-8RYV3-4PGQ3-C8XTP-7CFBY |
 |              Education N              |        EducationN        | 84NGF-MHBT6-FXBX8-QWJK7-DRR8H |
@@ -223,34 +204,35 @@ This method only appends data and doesn't install files. To reset it, simply run
 |                 SE N                  |      CloudEditionN       | K9VKN-3BGWV-Y624W-MCRMQ-BHDCD |
 |                 Team                  |          PPIPro          | XKCNC-J26Q9-KFHD2-FKTHY-KD72Y |
 
-_A generic key is automatically applied by the script where needed._
+_کلید عمومی به صورت خودکار توسط اسکریپت در صورت نیاز اعمال می‌شود._
 
 :::
 
-<hr/><br/>
+<br/>
 
-::: danger Troubleshoot
+::: danger رفع مشکلات
 
-- If you need any help regarding this, first review the [**FAQ section**](./faq) — your answer will most likely be there.  
+اگر سوالی دارید، ابتدا صفحه [**سوالات متداول**](./faq) را مرور کنید — به احتمال زیاد جواب‌تان اینجاست.
 
-- If your issue persists — You can [**Contact us**](./troubleshoot).
+اگر همچنان مشکل پابرجا بود — با ما [**در ارتباط**](./troubleshoot) باشید.
 
 :::
 
-[^1]: To check the activation status of Windows 10, Navigate to <br/> Settings → Update & Security → Activation. <br/> You will see your activation status listed there. If Windows is activated, you should see "Activated" with a green checkmark.
+[^1]: برای بررسی وضعیت فعال‌سازی ویندوز ۱۰، به مسیر زیر بروید: <br/> Settings → Update & Security → Activation <br/> وضعیت فعال‌سازی ویندوز در آنجا قابل مشاهده خواهد بود. اگر ویندوز فعال باشد، باید "Activated" را با تیک سبز ببینید.
 
-[^2]: To check the activation status of Windows 11, Navigate to <br/> Settings → System → Activation. <br/> The activation status will be displayed, Showing whether Windows is activated, along with details about the activation method and any linked Microsoft account.
+[^2]: برای بررسی وضعیت فعال‌سازی ویندوز ۱۱، به مسیر زیر بروید: 
+<br/> Settings → System → Activation <br/> وضعیت فعال‌سازی و جزئیات روش فعال‌سازی و حساب مایکروسافت و جزئیات مرتبط را مشاهده خواهید کرد.
 
-[^3]: Home China Country Specific version.
+[^3]: نسخه مخصوص کشور چین.
 
-[^4]: Home Single language version.
+[^4]: نسخه تک‌زبانه.
 
-[^5]: Professional for Workstations
+[^5]: Professional for Workstations.
 
 [^6]: Professional N for Workstations.
 
 [1]: https://www.minitool.com/news/open-windows-11-powershell.html
 [2]: https://www.minitool.com/news/open-command-prompt-windows-11.html
-[3]: https://github.com/NiREvil/windows-activation/discussions
+[3]: https://github.com/NiREvil/windows-activation/discussions/
 [4]: mailto:diana.clk01@gmail.com
-[rainbow]: https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256
+[5]: https://github.com/NiREvil/windows-activation/tree/main?tab=readme-ov-file#-documentation

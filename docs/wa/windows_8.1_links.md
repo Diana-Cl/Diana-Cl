@@ -1,29 +1,29 @@
 ---
 layout: doc
 outline: deep
-title: 'Windows 8.1 Download'
-description: 'All download links lead to genuine files only'
-date: 2025-04-19
+title: 'دانلود ویندوز 8.1'
+description: 'تمام لینک‌های دانلود فقط به فایل‌های اصلی منتهی می‌شوند'
+date: 2024-04-19
 editLink: true
 ---
 
-# Windows 8.1 Download
+# دانلود ویندوز 8.1
 
-All download links lead to genuine files only.
-
-> - [FAQ](./genuine-installation-media#faq)
-> -   In the install process of Windows 8.1 (Core / Pro) ISO, setup will ask to enter the key, you can enter below generic keys for the desired edition.  
->     `Windows 8.1 Core: 334NH-RXG76-64THK-C7CKG-D3VPT`  
->     `Windows 8.1 Core N: 6NPQ8-PK64X-W4WMM-MF84V-RGB89`  
->     `Windows 8.1 Core Single Language: Y9NXP-XT8MV-PT9TG-97CT3-9D6TC`  
->     `Windows 8.1 Pro: XHQ8N-C3MCJ-RQXB6-WCHYG-C9WKB`  
->     `Windows 8.1 Pro N: JRBBN-4Q997-H4RM2-H3B7W-Q68KC`  
-> -   **Windows 8.1 can be permanently activated with TSforge option in MAS.**
-> -   Windows 8.1 Embedded editions don't come with preinstalled store apps.
+تمام لینک‌های دانلود فقط به فایل‌های اصلی منتهی می‌شوند.
+> [سوالات متداول](./genuine-installation-media#سوالات-متداول)
+> در فرآیند نصب فایل ISO ویندوز ۸.۱ (Core / Pro)، از شما خواسته می‌شود که کلید را وارد کنید، می‌توانید کلیدهای عمومی زیر را برای نسخه مورد نظر وارد کنید.
+> 
+> - `Windows 8.1 Core: 334NH-RXG76-64THK-C7CKG-D3VPT`  
+> - `Windows 8.1 Core N: 6NPQ8-PK64X-W4WMM-MF84V-RGB89`  
+> - `Windows 8.1 Core Single Language: Y9NXP-XT8MV-PT9TG-97CT3-9D6TC`  
+> - `Windows 8.1 Pro: XHQ8N-C3MCJ-RQXB6-WCHYG-C9WKB`  
+> - `Windows 8.1 Pro N: JRBBN-4Q997-H4RM2-H3B7W-Q68KC`  
+> **ویندوز ۸.۱ را می‌توان با گزینه TSforge در MAS به طور دائم فعال کرد.**
+> نسخه‌های ویندوز ۸.۱ (Embedded) با برنامه‌های از پیش نصب‌شده‌ی فروشگاه ارائه نمی‌شوند.
 
 ----
 
-## Download Links
+## لینک‌های دانلود
 ### Windows 8.1
 
 :::tabs
@@ -33,7 +33,7 @@ All download links lead to genuine files only.
 **Windows 8.1 Core / Pro**  
 (Build - 9600.17415)  
 
-[MSDL][MSDL] provides official links directly from Microsoft.
+[MSDL][MSDL] پیوندهای رسمی را مستقیماً از مایکروسافت ارائه می‌دهد.
 
 ----
 

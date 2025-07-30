@@ -1,34 +1,34 @@
 ---
 layout: doc
 outline: deep
-title: 'Windows 10 Download'
-description: 'All download links lead to genuine files only'
-date: 2025-04-19
+title: 'دانلود ویندور 10'
+description: 'تمام لینک‌های دانلود فقط به فایل‌های اصلی منتهی می‌شوند.'
+date: 2025-01-19
 editLink: true
 ---
 
-# Windows 10 Download
+# دانلود ویندور 10
 
-All download links lead to genuine files only.
+> - تمام لینک‌های دانلود فقط به فایل‌های اصلی منتهی می‌شوند.
+> 
+> - [سوالات متداول](./genuine-installation-media#سوالات-متداول)
+> - [ویندوز 10 پس از پایان عمر](./windows10_eol)
 
-> - [FAQ](./genuine-installation-media#faq)
-> - [Windows 10 Updates After End-Of-Life](./windows10_eol)
-
-## Download Links
+## لینک های دانلود
 
 :::tabs
 
 == Windows 10 Consumer 22H2 🤍
 
 <details>
-  <summary>Info on Official links</summary>
+  <summary>اطلاعات لینک های رسمی</summary>
 
-Microsoft provides Official public links for Windows 10 22H2 (Build 19045.2965) and that build is old and has an issue where Windows update may fail to install [KB5028997][1].  
-That is why we recommend getting the latest Windows 10 ISO file from the table below, those ISOs are taken from the Official MVS site.
+مایکروسافت لینک‌های عمومی رسمی برای ویندوز ۱۰ نسخه ۲۲H2 (بیلد ۱۹۰۴۵.۲۹۶۵) ارائه می‌دهد و این بیلد قدیمی است و مشکلی دارد که ممکن است در آن به‌روزرسانی ویندوز نصب نشود. [KB5028997][1].
+به همین دلیل توصیه می‌کنیم آخرین فایل ISO ویندوز ۱۰ را از جدول زیر دریافت کنید، این ISOها از سایت رسمی MVS گرفته شده‌اند.
 
-However, if you want direct Official links only then check
-[MSDL] It provides Official links straight from Microsoft and works even if Microsoft is blocking the download to Russian/VPN users.
-Windows 10 download from [microsoft.com/en-us/software-download][8] isn't recommended because it uses an ESD file to generate ISO and that process sometimes may generate corrupt ISO which can not be verified with known checksums.
+با این حال، اگر فقط لینک‌های رسمی مستقیم می‌خواهید، بررسی کنید.
+این برنامه [MSDL] لینک‌های رسمی را مستقیماً از مایکروسافت ارائه می‌دهد و حتی اگر مایکروسافت دانلود را برای کاربران روسی/VPN مسدود کرده باشد، کار می‌کند.
+دانلود ویندوز ۱۰ از [microsoft.com/en-us/software-download][8] توصیه نمی‌شود زیرا از یک فایل ESD برای تولید ISO استفاده می‌کند و این فرآیند گاهی اوقات ممکن است ISO خراب تولید کند که با چک‌سام‌های شناخته‌شده قابل تأیید نیست.
 
 </details>
 
@@ -216,13 +216,11 @@ Updated Oct 2022 (Build - 19045.2006) (This ISO file is not updated every month)
 |:---------|:-----|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | English  | x64  | [en-us_windows_10_iot_enterprise_version_22h2_x64_dvd_51cc370f.iso](https://drive.massgrave.dev/en-us_windows_10_iot_enterprise_version_22h2_x64_dvd_51cc370f.iso) |
 
-
 == Windows 10 ARM64 22H2
 
 **Windows 10 ARM64 22H2**
 
 Check [Windows arm links](./windows_arm_links).
-
 
 == Windows 10 Enterprise LTSC
 

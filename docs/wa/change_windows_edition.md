@@ -1,57 +1,57 @@
 ---
 layout: doc
 outline: deep
-title: 'Change Windows Edition'
-description: 'This option can be found in the main menu of MAS, It can change Windows versions 7 through 11 and the equivalent server editions'
+title: 'تغییر نسخه ویندوز'
+description: 'این گزینه را می‌توان در منوی اصلی MAS یافت، این اسکریپت می‌تواند نسخه‌های ویندوز 7 تا 11 و نسخه‌های سرور معادل را تغییر دهد.'
 date: 2024-06-05
 editLink: true
 ---
 
-# Change Windows Edition
+# تغییر نسخه ویندوز
 
--   This option can be found in the main menu of MAS.
--   It can change Windows versions 7 through 11 and the equivalent server editions.
--   The script incorporates four methods for edition changing:
-    -   May's DISM Api Method - Used in Windows 10/11 Core to Non-Core edition change
-    -   [slmgr /ipk Method][1] - Used for Windows 10/11 virtual editions
-    -   [DISM Method][2] - Used in Server 2016 and later server versions
-    -   [CBS Upgrade Method][3] - Used in Windows versions before 10
--   The script will show editions available via any of the four methods.
--   The script is future-proof, which means that it won't need an update upon the release of new editions because it can get the required product key from the system itself.
--   The script blocks changing to CountrySpecific and ServerRdsh, and to/from CloudEdition editions since this is not officially supported and it may cause issues.
--   The script cannot change:
-    -   Non-Core editions to Core editions. (For example, Pro to Home isn't available.)
-    -   GAC editions to LTSC editions. (For example, Enterprise to Enterprise LTSC isn't available.)
+- این گزینه را می‌توان در منوی اصلی MAS یافت.
+- این اسکریپت می‌تواند نسخه‌های ویندوز 7 تا 11 و نسخه‌های سرور معادل را تغییر دهد.
+- اسکریپت شامل چهار روش برای تغییر نسخه است:
+    - روش May's DISM Api - در تغییر نسخه از Core به Non-Core در ویندوز 10/11 استفاده می‌شود.
+    - [روش slmgr /ipk][1] - برای نسخه‌های مجازی ویندوز 10/11 استفاده می‌شود.
+    - [روش DISM][2] - در سرور 2016 و نسخه‌های بعدی سرور استفاده می‌شود.
+    - [روش ارتقاء CBS][3] - در نسخه‌های ویندوز قبل از 10 استفاده می‌شود.
+- اسکریپت نسخه‌های موجود را از طریق هر یک از چهار روش نشان می‌دهد.
+- اسکریپت آینده‌نگر است، به این معنی که با انتشار نسخه‌های جدید نیازی به به‌روزرسانی نخواهد داشت زیرا می‌تواند کلید محصول مورد نیاز را از خود سیستم دریافت کند.
+- اسکریپت تغییر به نسخه‌های CountrySpecific و ServerRdsh و به/از نسخه‌های CloudEdition را مسدود می‌کند زیرا این کار به طور رسمی پشتیبانی نمی‌شود و ممکن است باعث ایجاد مشکل شود.
+- اسکریپت نمی‌تواند موارد زیر را تغییر دهد:
+    - نسخه‌های Non-Core به نسخه‌های Core. (به عنوان مثال، Pro به Home در دسترس نیست.)
+    - نسخه‌های GAC به نسخه‌های LTSC. (به عنوان مثال، Enterprise به Enterprise LTSC در دسترس نیست.)
 
 
-## Manual Edition Change
+## تغییر نسخه دستی
 
-If you want to manually change the edition instead of using the script, please follow the steps below.
+اگر می‌خواهید به جای استفاده از اسکریپت، نسخه را به صورت دستی تغییر دهید، لطفاً مراحل زیر را دنبال کنید.
 
-### Windows 10/11
+### ویندوز 10/11
 
--   To view the list of available editions, open the command prompt as admin and enter
-    `dism /online /english /Get-TargetEditions`
--   Get a key for the desired edition from [here](./hwid#supported-products)
--   If you are upgrading from Home to Pro, you will need to disable the Internet before performing the upgrade.
--   Now enter that product key with this command, replace `<product_key>` with the actual key.
-    `changepk.exe /ProductKey <product_key>`
--   In a Home to Pro upgrade, it may show an error, restart the system anyway. (Use the script if it's still not working)
--   Activate the changed edition with MAS, that's all.
+- برای مشاهده لیست نسخه‌های موجود، command prompt را به عنوان مدیر باز کنید و دستور زیر را وارد کنید:
 
-### Windows Server 2016 and Later
+```reg
+dism /online /english /Get-TargetEditions
+```
 
--   Follow the [official Microsoft guide][2]. You can get the required keys from [here](./kms38#supported-products).
+- یک کلید برای نسخه مورد نظر از [اینجا](./hwid#محصولات-پشتیبانی-شده) دریافت کنید.
+- اگر از نسخه Home به Pro ارتقا می‌دهید، قبل از انجام ارتقا باید اینترنت را غیرفعال کنید.
+- اکنون آن کلید محصول را با این دستور وارد کنید، `<product_key>` را با کلید واقعی جایگزین کنید.
+  `changepk.exe /ProductKey <product_key>`
+- در ارتقاء از Home به Pro، ممکن است خطایی نشان دهد، به هر حال سیستم را مجدداً راه‌اندازی کنید. (اگر هنوز کار نمی‌کند از اسکریپت استفاده کنید)
+- نسخه تغییر یافته را با MAS فعال کنید، همین.
 
----
+### ویندوز سرور 2016 و بالاتر
 
-## Troubleshooting
+- [راهنمای رسمی مایکروسافت][2] را دنبال کنید. می‌توانید کلیدهای مورد نیاز را از [اینجا](./kms38#محصولات-پشتیبانی-شده) دریافت کنید.
 
-::: danger Troubleshooting
+::: danger عیب یابی
 
-Check [here](./change_edition_issues)
+[اینجا](./change_edition_issues) را بررسی کنید.
 
-If your issue persists - [**Contact us**](./troubleshoot)
+اگر مشکل شما همچنان ادامه داشت - [**با ما تماس بگیرید**](./troubleshoot).
 
 :::
 

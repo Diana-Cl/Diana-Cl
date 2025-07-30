@@ -1,39 +1,39 @@
 ---
 layout: doc
 outline: deep
-title: 'Change Edition Issues'
-description: 'During a Home to Pro upgrade, the script may show some errors'
+title: 'مشکلات تغییر نسخه'
+description: 'در حین ارتقاء از نسخه Home به Pro، اسکریپت ممکن است خطاهایی را نشان دهد'
 date: 2024-04-05
 editLink: true
 ---
 
-# Change Edition Issues
+# مشکلات تغییر نسخه
 
-## Error 0x80070490
+## خطای 0x80070490
 
-- During a Home to Pro upgrade, the script may show the below error:
+- در حین ارتقاء از نسخه Home به Pro، اسکریپت ممکن است خطای زیر را نشان دهد:
 ```
 Exception calling "_DismSet Edition" with "6" argument(s): "Element not found. (Exception from HRESULT: 0x80070490)"
 ```
-- This issue often appears when .NET Framework 3.5 is installed.
-- To solve this, it needs to be disabled. To do that, open Command Prompt as admin and enter
+- این مشکل اغلب زمانی رخ می‌دهد که NET Framework 3.5. نصب شده باشد.
+- برای حل این مشکل، باید آن را غیرفعال کنید. برای این کار، Command Prompt را به عنوان مدیر باز کنید و دستور زیر را وارد کنید:
   `DISM /Online /English /Disable-Feature /FeatureName:"NetFx3"`
-- Once that's done, try to change the edition again.
-- After the edition change, you can enable .NET 3.5 again:
+- پس از انجام این کار، دوباره سعی کنید نسخه را تغییر دهید.
+- پس از تغییر نسخه، می‌توانید دوباره NET 3.5. را فعال کنید:
   `DISM /Online /English /Enable-Feature /FeatureName:"NetFx3"`
 
 ---
 
-## Other Errors
+## خطاهای دیگر
 
-::: danger Troubleshooting
+::: danger عیب یابی
 
-- Restart the system and then try to change the edition again.
-- If it's still not resolved then follow [this guide][1].
+- سیستم را مجدداً راه‌اندازی کنید و سپس دوباره سعی کنید نسخه را تغییر دهید.
+- اگر هنوز مشکل حل نشده است، [این راهنما](./in-place_repair_upgrade) را دنبال کنید.
 
-- If you have any questions, first review the [**FAQ section**](./faq) - your answer will most likely be there.
+- اگر سوالی دارید، ابتدا بخش [**سوالات متداول**](./faq) را مرور کنید - به احتمال زیاد پاسخ شما در آنجا خواهد بود.
 
-- If your issue persists - [**Contact us**](./troubleshoot).
+- اگر مشکل شما همچنان ادامه داشت - [**با ما تماس بگیرید**](./troubleshoot).
 
 :::
 
