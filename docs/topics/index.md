@@ -1,4 +1,3 @@
-  GNU nano 8.3                 index.md
 ---
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
