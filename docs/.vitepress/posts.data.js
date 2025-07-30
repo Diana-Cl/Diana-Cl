@@ -72,8 +72,8 @@ export default createContentLoader(
         .sort((a, b) => b.date.time - a.date.time);
 
       return {
-        'fa-IR': posts.filter((p) => p.lang === 'fa'),
-        'en-US': posts.filter((p) => p.lang === 'en'),
+        'fa-IR': posts.filter((p) => p.lang === 'fa').slice(0, MAX_TOTAL_POSTS),
+        'en-US': posts.filter((p) => p.lang === 'en').slice(0, MAX_TOTAL_POSTS),
       };
     },
   }
