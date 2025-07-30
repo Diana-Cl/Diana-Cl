@@ -335,11 +335,11 @@ editLink: true
 
 ::: raw
 <div class="poker-hand viewer-no">
-  <img src="/poker/9-c.png">
-  <img src="/poker/8-c.png">
-  <img src="/poker/7-c.png">
-  <img src="/poker/6-c.png">
-  <img src="/poker/5-c.png">
+  <img src="/poker/9-c.png" class="highlight">
+  <img src="/poker/8-c.png" class="highlight">
+  <img src="/poker/7-c.png" class="highlight">
+  <img src="/poker/6-c.png" class="highlight">
+  <img src="/poker/5-c.png" class="highlight">
 </div>
 :::
 
@@ -349,7 +349,8 @@ editLink: true
 
 ### 1. Royal Flush <Badge type="info" text="رویال فلاش" />
 
-قوی‌ترین ترکیب ممکن در پوکر:  
+قوی‌ترین ترکیب ممکن در پوکر:
+
 پنج کارت متوالی از A تا 10 و همشون یه رنگ:
 
 ::: raw
@@ -393,12 +394,12 @@ Pot Odds یعنی اینکه ببینی **نسبت مقدار پاتی که قر
 
 فرض کن توی فلاپ فقط یه کارت کم داری تا Flush بشی (چهار تا پیک داری، دنبال پیک پنجمی هستی).
 
-- مقدار پات الان هست 100 تا ژتون  
+- مقدار پات الان هست 100 تا ژتون
 - حریف شرط بسته و تو باید 20 تا ژتون بدی تا ادامه بدی
 
 **خب حالا:**
 - احتمال اینکه توی کارت بعدی اون پیک بیاد چقدره؟ تقریبا 9 کارت پیک از 47 تا کارت مونده = ینی حدود **19٪**
-- حالا Pot Odds چنده؟؟  
+- حالا Pot Odds چنده؟؟
   تو باید 20 تا ژتون بدی که شانس ببری 100 تا (پات)، پس 20 / (100+20) = **16.6٪**
 
 ✅ چون **19٪ > 16.6٪**، ادامه دادن به صرفه‌ست! چون احتمال موفقیتت از ریسکت بیشتره.
