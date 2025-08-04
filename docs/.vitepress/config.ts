@@ -153,7 +153,7 @@ export default defineConfig({
           ],
         },
         editLink: {
-          pattern: 'https://github.com/Diana,-Cl/Diana-Cl/edit/main/docs/:path',
+          pattern: 'https://github.com/Diana-Cl/Diana-Cl/edit/main/docs/:path',
           text: 'این صفحه را در گیت‌هاب ویرایش کنید',
         },
         docFooter: { prev: 'صفحه قبلی', next: 'صفحه بعدی' },
