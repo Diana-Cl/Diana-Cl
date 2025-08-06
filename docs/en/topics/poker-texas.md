@@ -497,15 +497,20 @@ https://opal.withgoogle.com/landing/
 
 <br><br/> 
 
+<div dir="ltr">
+
 Texas Hold'em for Dummies (Who Want to Be Poker Geniuses! 😉
 
 Your Ultimate Beginner's Guide
+
+</div>
 
 <br/>
 <p align="center">
   <img src="/poker/all-in.jpg" alt="All in" width="820px" />
 </p><br><br/>
 
+<div dir="ltr">
 
 Ever sat there, nursing a lukewarm beverage, watching a poker game unfold, and wondered what all the fuss is about with Texas Hold'em? It's not just for grizzled pros lurking in dimly lit backrooms anymore, you know. Texas Hold'em isn't merely a card game; it's a cultural phenomenon, a crucible where strategy, psychology, and a bit of luck collide.
 
@@ -572,6 +577,8 @@ Conclusion: Ready to Shuffle Up and Deal?
 Texas Hold'em is more than just a game; it's a microcosm of life itself, a tapestry woven with strategy, psychology, and a dash of chance. It has a rich past, a vibrant present, and an endlessly fascinating future.
 
 So, take a deep breath, dive in, start small, learn constantly, and, most importantly, have fun. The table awaits.
+
+</div>
 
 :::
 
