@@ -230,7 +230,7 @@ transition: transform 0.2s ease;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
-.poker-hand img.highlight {
+.dark .poker-hand img.highlight {
   outline: 1px solid gold;
   outline-offset: -1px;
   box-shadow: 0 0 20px gold;
