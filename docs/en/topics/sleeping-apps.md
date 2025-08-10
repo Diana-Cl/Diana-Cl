@@ -24,9 +24,6 @@ editelink: true
 
 <br/> 
 
-این جمله با لینک.[<CitationLink url="https://www.reddit.com/r/GalaxyS22/comments/12ba345/app_battery_options_samsung_background_usage/" label="[1]" />]
-
-
 ## بخش اول: Background Usage Limits (محدودیت‌های استفاده پس‌زمینه)
 این بخش در تنظیمات دستگاه > Battery قرار دارد. هدف آن مدیریت اپ‌هایی است که در پس‌زمینه فعال می‌مانند و باتری مصرف می‌کنند. اسکرین‌شات مربوطه نشان‌دهنده گزینه‌های زیر است:
 

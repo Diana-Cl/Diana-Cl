@@ -68,6 +68,7 @@ export default defineConfig({
       title: '',
       description: '',
       themeConfig: {
+        logo: '/logo-h.svg',
         nav: [
           { text: '🏠 خانه', link: '/' },
           { text: '📚 یادداشت‌ها', link: '/topics/' },
@@ -169,9 +170,10 @@ export default defineConfig({
       label: 'English',
       lang: 'en-US',
       dir: 'ltr',
-      title: 'Dìana',
+      title: '',
       description: 'My personal notes and articles about technology, security, and AI',
       themeConfig: {
+        logo: '/logo-h.svg',
         nav: [
           { text: '🏠 Home', link: '/en/' },
           { text: '📚 Notes', link: '/en/topics/' },
@@ -185,6 +187,7 @@ export default defineConfig({
                 { text: 'Google Gemini', link: '/en/topics/Gemini' },
                 { text: 'Poker – Texas Holdem', link: '/en/topics/poker-texas' },
                 { text: 'Ai Agents', link: '/en/topics/ai-agents' },
+                { text: 'Sleeping Apps', link: 'en/topics/sleeping-app' },
                 { text: 'Stable Diffusion', link: '/en/topics/Stable-Diffusion' },
                 { text: 'REvil', link: '/en/topics/REvil' },
                 { text: 'Cloudflare Back-end Selector', link: '/en/topics/cf-backend-selector' },
@@ -263,7 +266,6 @@ export default defineConfig({
             },
           ],
         },
-        logo: '/logo-h.svg',
         search: { provider: 'local' },
         docFooter: { prev: 'Previous page', next: 'Next page' },
         lastUpdated: {

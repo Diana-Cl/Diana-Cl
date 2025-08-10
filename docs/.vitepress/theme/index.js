@@ -9,6 +9,7 @@ import { enhanceAppWithTabs } from 'vitepress-plugin-tabs/client'
 import PokerHand from './components/PokerHand.vue'
 import { NolebaseInlineLinkPreview } from '@nolebase/vitepress-plugin-inline-link-preview/client'
 import '@nolebase/vitepress-plugin-inline-link-preview/client/style.css'
+import CitationLink from './components/CitationLink.vue'
 
 export default {
   ...DefaultTheme,
@@ -18,6 +19,7 @@ export default {
     enhanceAppWithTabs(ctx.app)
     ctx.app.component('NolebaseInlineLinkPreview', NolebaseInlineLinkPreview) // <-- اصلاح شد
     ctx.app.component('PokerHand', PokerHand)
+    ctx.app.component('CitationLink', CitationLink)
   },
   setup() {
     const route = useRoute()
