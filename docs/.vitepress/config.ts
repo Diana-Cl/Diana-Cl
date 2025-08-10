@@ -4,6 +4,7 @@ import mathjax3 from 'markdown-it-mathjax3';
 import attrs from 'markdown-it-attrs';
 import { mermaid } from 'vitepress-plugin-mermaid';
 import { tabsMarkdownPlugin } from 'vitepress-plugin-tabs';
+import { InlineLinkPreviewElementTransform } from '@nolebase/vitepress-plugin-inline-link-preview/markdown-it';
 
 const base = '/Diana-Cl/';
 const siteUrl = `https://Diana-Cl.github.io${base}`;
@@ -50,6 +51,9 @@ export default defineConfig({
       md.use(mathjax3);
       md.use(attrs);
       md.use(tabsMarkdownPlugin);
+      md.use(InlineLinkPreviewElementTransform, {
+        tag: 'NolebaseInlineLinkPreview'
+      });
     },
     lineNumbers: true,
   },
@@ -61,7 +65,7 @@ export default defineConfig({
       label: 'فارسی',
       lang: 'fa-IR',
       dir: 'rtl',
-      title: 'Dìana',
+      title: '',
       description: '',
       themeConfig: {
         nav: [
@@ -77,6 +81,7 @@ export default defineConfig({
                 { text: 'گوگل جمنای', link: '/topics/Gemini' },
                 { text: 'پوکر – تگزاس هولدم', link: '/topics/poker-texas' },
                 { text: 'دستیارهای هوش مصنوعی', link: '/topics/ai-agents' },
+                { text: 'خواب عمیق اپلیکیشن‌ها', link: '/topics/sleeping-apps' },
                 { text: 'استیبل دیفیوژن', link: '/topics/Stable-Diffusion' },
                 { text: 'REvil', link: '/topics/REvil' },
                 { text: 'انتخابگر بک‌اند کلادفلر', link: '/topics/cf-backend-selector' },
@@ -209,7 +214,7 @@ export default defineConfig({
                 { text: 'Online KMS Method Details', link: '/en/wa/online_kms' },
                 { text: 'Change Windows Edition', link: '/en/wa/change_windows_edition' },
                 { text: 'Change Office Edition', link: '/en/wa/change_office_edition' },
-                { text: '$OEM$ Folders', link: '/en/wa/oem-folder' },
+                { text: ' $OEM$ Folders', link: '/en/wa/oem-folder' },
                 { text: 'Switches in Command line', link: '/en/wa/command_line_switches' },
               ],
             },
@@ -283,7 +288,16 @@ export default defineConfig({
 
   vite: {
     optimizeDeps: {
-      exclude: ['video.js'],
+      exclude: [
+        'video.js',
+        '@nolebase/vitepress-plugin-inline-link-preview/client',
+      ],
+    },
+    ssr: {
+      noExternal: [
+        /@nolebase\/vitepress-plugin-.*/,
+        '@nolebase/ui',
+      ],
     },
   },
 });
