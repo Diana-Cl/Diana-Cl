@@ -82,9 +82,10 @@ export default defineConfig({
                 { text: 'گوگل جمنای', link: '/topics/Gemini' },
                 { text: 'پوکر – تگزاس هولدم', link: '/topics/poker-texas' },
                 { text: 'دستیارهای هوش مصنوعی', link: '/topics/ai-agents' },
+                { text: 'ترماکس', link: '/topics/termux' },
                 { text: 'خواب عمیق اپلیکیشن‌ها', link: '/topics/sleeping-apps' },
                 { text: 'استیبل دیفیوژن', link: '/topics/Stable-Diffusion' },
-                { text: 'REvil', link: '/topics/REvil' },
+                { text: 'امپراتوری سایبری', link: '/topics/REvil' },
                 { text: 'انتخابگر بک‌اند کلادفلر', link: '/topics/cf-backend-selector' },
                 { text: 'آپگرید PHP روی CentOS 7', link: '/topics/Upgrade-PHP-version-on-CentOS-7' },
               ]
@@ -187,9 +188,10 @@ export default defineConfig({
                 { text: 'Google Gemini', link: '/en/topics/Gemini' },
                 { text: 'Poker – Texas Holdem', link: '/en/topics/poker-texas' },
                 { text: 'Ai Agents', link: '/en/topics/ai-agents' },
+                { text: 'Termux', link: '/en/topics/termux' },
                 { text: 'Sleeping Apps', link: 'en/topics/sleeping-app' },
                 { text: 'Stable Diffusion', link: '/en/topics/Stable-Diffusion' },
-                { text: 'REvil', link: '/en/topics/REvil' },
+                { text: 'The Fallen Crown', link: '/en/topics/REvil' },
                 { text: 'Cloudflare Back-end Selector', link: '/en/topics/cf-backend-selector' },
                 { text: 'Upgrade PHP On CentOS 7', link: '/en/topics/Upgrade-PHP-version-on-CentOS-7' },
               ]
