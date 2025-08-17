@@ -4,7 +4,7 @@ outline: deep
 lang: "en-US"
 dir: "ltr"
 title: "Termux"
-description: "Complete Termux Guide — Basic and Advanced Commands"
+description: "Complete Termux Guide - Basic and Advanced Commands"
 date: 2023-06-26
 editLink: true
 head:
@@ -13,33 +13,42 @@ head:
       content: Termux, Linux, Terminal, CMD, Powershell, Windows, Python, Bash, Shell script
 ---
 
-# Complete Termux Guide — Basic and Advanced Commands
+# Complete Termux Guide - Basic and Advanced Commands
 
-<br/> 
+Termux [^1] is a powerful **Linux Terminal Emulator** for **Android** that allows you to run Linux commands and install various packages. This guide includes both basic and advanced commands for working with Termux.
 
-## Introduction
+<br/>
 
-Termux [^1] is a powerful **Linux terminal emulator** for **Android** that allows you to run Linux commands and install various packages. This guide includes both basic and advanced commands for working with **Termux**.
+<p align="center">
+  <img src="/termux/termux-2.jpg" alt="Debian" width="2560px" />
+</p>
 
-<br><br/>
-
-## Initial Setup (Highly Recommended!)
-
-### Installing Fish Shell - Better Command Line Experience
+## Installing Fish Shell - Better Command Line Experience
 
 Before starting, it is recommended to install `Fish Shell`. **Fish** is an intelligent and user-friendly **shell** that makes working with the command line much easier.
 
-#### Advantages of Fish Shell
+### Advantages of Fish Shell
 
-- **Advanced autocomplete**: Suggests commands based on history
-- **Syntax highlighting**: Correct commands appear green, errors appear red
-- **Smart suggestions**: Likely commands are shown while typing
-- **Advanced history**: Easily search through command history
-- **Easy configuration**: No complex setup required
+**Advanced autocomplete**  
+Suggests commands based on history
 
-#### Install Fish
+**Syntax highlighting**  
+Correct commands appear green, errors appear red
 
-**To install Fish Shell, run the following command:**
+**Smart suggestions**  
+Likely commands are shown while typing
+
+**Advanced history**  
+Easily search through command history
+
+**Easy configuration**  
+No complex setup required
+
+<br/>
+
+### Install Fish <Badge type="danger" text="Highly Recommended!" />
+
+To install Fish Shell, run the following command:
 
 ```bash
 pkg install fish
@@ -56,16 +65,18 @@ pkg install fish
 chsh -s fish
 ```
 
-#### Using Fish
+### Using Fish
 
 - **Autocomplete**: Press Tab
 - **Command suggestion**: Use ← → keys to accept suggestions
 - **History**: Use ↑ ↓ to search history
 - **Exit Fish**: Type `exit` or press `Ctrl + D`
 
-### Other Alternatives (Optional)
+<br/>
 
-#### Zsh with Oh-My-Zsh
+#### Other Alternatives <Badge type="danger" text="Optional" />
+
+**Zsh with Oh-My-Zsh**
 
 ```bash
 # Install Zsh
@@ -76,6 +87,14 @@ pkg install curl
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
+<br/>
+
+<p align="center">
+  <img src="/termux/termux-3.jpg" alt="Commands" width="3840px" />
+</p>
+
+## Basic Commands
+
 ### Initial Update
 
 If you return to Termux after a long time, it is better to upgrade the system and packages to the latest version first.
@@ -85,18 +104,18 @@ If you return to Termux after a long time, it is better to upgrade the system an
 apt update && apt upgrade
 ```
 
-<br/>
-
-## Basic Commands
-
 ### Exit Termux
+
 There are two ways to close Termux:
-- Press `Ctrl + D`
-- Type `exit` and press Enter
 
-### File and Directory Management
+1. Press `Ctrl + D`  
+2. Type `exit` and press Enter
 
-#### View Directory Contents
+<br/> 
+
+## File and Directory Management
+
+### View Directory Contents
 
 ```bash
 # Show visible files and folders
@@ -109,14 +128,14 @@ ls -a
 ls -a storage/downloads/diana
 ```
 
-#### Show Current Location
+### Show Current Location
 
 ```bash
 # Show current path
 pwd
 ```
 
-#### Navigate Between Directories
+### Navigate Between Directories
 
 ```bash
 # Go back to the home directory
@@ -129,7 +148,7 @@ cd ..
 cd storage/downloads/diana
 ```
 
-#### Access Internal Storage
+### Access Internal Storage
 
 If you encounter a permission error when accessing internal storage, use:
 
@@ -137,9 +156,11 @@ If you encounter a permission error when accessing internal storage, use:
 termux-setup-storage
 ```
 
-After running this command, a confirmation dialog will appear. Allow access.
+**After running this command, a confirmation dialog will appear. Allow access.**
 
-#### Delete File or Directory
+<br/>
+
+### Delete File or Directory
 
 ```bash
 # Delete a file
@@ -149,9 +170,7 @@ rm FileName
 rm -rf FolderName
 ```
 
-<br/>
-
-::: danger ⚠️ Warning
+::: danger <Badge type="danger" text="⚠️ Warning" />
 
 Be very careful when using `rm -rf`, as it deletes files permanently with no recovery.
 
@@ -159,15 +178,15 @@ Be very careful when using `rm -rf`, as it deletes files permanently with no rec
 
 <br/>
 
-### Create and Edit Files
+## Create and Edit Files
 
-#### Install nano Text Editor
+### Install nano Text Editor
 
 ```bash
 pkg install nano
 ```
 
-#### Create a New File
+### Create a New File
 
 ```bash
 # Create new file
@@ -177,23 +196,32 @@ nano diana
 nano diana.py
 ```
 
-#### nano Control Keys
+### Create a New directory 
+
+```bash
+# Create new Folder/Directory
+mkdir diana
+```
+
+### nano Control Keys
 
 - `Ctrl + X` Exit editor
 - `Y` Save file
 - `N` Don’t save changes
 - `Ctrl + O` Save without exiting
 
-### Copy and Move Files
+<br/>
 
-#### Copy File
+## Copy and Move Files
+
+### Copy File
 
 ```bash
 # Copy file to destination
 cp diana.txt storage/downloads
 ```
 
-#### Move File (Cut & Paste)
+### Move File <Badge type="danger" text="Cut & Paste" />
 
 ```bash
 # Move file to destination
@@ -210,7 +238,7 @@ mv diana.txt storage/downloads
 pkg install dnsutils
 ```
 
-### Connectivity Test (Ping)
+### Connectivity Test <Badge type="danger" text="Ping" />
 
 ```bash
 # Ping an IP address
@@ -227,7 +255,7 @@ ping -c 10 8.8.8.8
 
 ```bash
 # Get IP of domain
-nslookup nginx.nirevil.ir
+nslookup nginx.nscl.ir
 
 # Get full DNS info
 dig aparat.com
@@ -250,10 +278,10 @@ pkg install nmap
 nmap YourIP/Domain
 
 # Quick scan common ports
-nmap -F target.com
+nmap -F example.com
 
 # OS detection scan
-nmap -O target.com
+nmap -O example.com
 ```
 
 <br/>
@@ -334,9 +362,13 @@ pkg install git
 
 <br/>
 
+<p align="center">
+  <img src="/termux/termux-4.jpg" alt="CCrown" width="7559px" />
+</p>
+
 ## Code Management with Git
 
-::: info Git
+::: info <Badge type="info" text="Git" />
 
 Git is a distributed version control system used for managing code and collaborating on projects.
 
@@ -416,8 +448,6 @@ git merge new-feature
 git branch -d new-feature
 ```
 
-<br/>
-
 ### Manage Remote Repository
 
 ```bash
@@ -468,9 +498,7 @@ git clone https://token@github.com/username/private-repo.git
 git config --global credential.helper store
 ```
 
-<br/>
-
-::: danger Important Note
+::: danger <Badge type="danger" text="Important Note" />
 
 For cloning large repositories from GitHub, it is recommended to use `--depth 1` to download only the latest commit.
 
@@ -539,18 +567,21 @@ top
 - `Ctrl + Z` Suspend process
 - `Ctrl + L` Clear terminal
 - `Tab` Autocomplete
-- `↑/↓`: Browse command history
+- `↑/↓` Browse command history
 
 <br/>
 
 ## Common Issues Fixes
 
 ### Storage Access Issue  
+
 If you cannot access internal storage:
 
 1. Run `termux-setup-storage`
 2. Allow access in confirmation dialog
 3. Try again
+
+<br/>
 
 ### Package Installation Issue
 
@@ -571,17 +602,21 @@ df -h
 pkg install tzdata
 ```
 
-<br><br/>
+<br/>
+
+<p align="center">
+  <img src="/termux/termux-1.jpg" alt="Termux" width="1380px" />
+</p>
 
 ## Download Links
 
-|  **Source**  |     **Download Link**    |
-|:--------:| -------------------:|
+| **Source** |  **Download Link**  |
+|:----------:|:---------------------:|
 | F-Droid  | [Get it Now][1] |
 | GitHub | [Get it Now][2] |
 | Google Play | [Get it Now][3] |
 | ISH Shell for IOS | [Get it Now][4] |
-| How to fix the installation error of Termux packages on Android 5/6 | [Fix Error s][5] |
+| How to fix the installation error of Termux packages on Android 5/6 | [Fix Errors][5] |
 
 > I strongly recommend installing Termux only from the project’s GitHub repo or at most from F-Droid. The Google Play version is a complete disaster: full of strange bugs, commands don’t execute properly, packages don’t update, it’s frustrating. The best choice for any open-source app is always GitHub. Just look for the **Releases** section in the repo.
 
@@ -589,7 +624,7 @@ pkg install tzdata
 
 ## Additional Resources
 
-**For further learning:**
+<Badge type="info" text="For further learning" />
 
 - [Official Docs][6]
 - [GitHub Repo][7]
