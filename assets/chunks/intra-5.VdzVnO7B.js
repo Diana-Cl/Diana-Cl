@@ -1,0 +1,1 @@
+const n="/Diana-Cl/dns/bts.jpg",s="/Diana-Cl/dns/bts-2.jpeg",a="/Diana-Cl/dns/DNS-1.png",t="/Diana-Cl/dns/DNS-2.png",i="/Diana-Cl/dns/DNS-3.png",o="/Diana-Cl/dns/intra-1.png",p="/Diana-Cl/dns/intra-2.png",_="/Diana-Cl/dns/intra-3.png",r="/Diana-Cl/dns/intra-4.png",D="/Diana-Cl/dns/intra-5.png";export{n as _,s as a,a as b,t as c,i as d,o as e,p as f,_ as g,r as h,D as i};
