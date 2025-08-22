@@ -48,7 +48,7 @@ head:
 
 <br/>
 <p align="center">
-  <img src="/dns/bts-2.jpeg" alt="bts-2" width="736px" />
+  <img src="/dns/bts-2.png" alt="bts-2" width="2500px" />
 </p><br/>
 
 :::
