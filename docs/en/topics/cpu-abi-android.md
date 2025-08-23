@@ -1,140 +1,138 @@
 ---
 layout: doc
 outline: deep
-lang: fa-IR
-dir: rtl
-title: تفاوت نسخه‌های arm64-v8a و armeabi-v7a و X86 در اندروید
-description: راهنمای کامل انتخاب نسخه صحیح اپلیکیشن اندروید متناسب با معماری CPU گوشی (arm64-v8a، armeabi-v7a، x86 و x86_64) همراه با روش‌های تشخیص
+lang: en-US
+dir: ltr
+title: Difference Between arm64-v8a, armeabi-v7a, and X86 on Android
+description: Complete guide to choosing the right Android app version based on CPU architecture (arm64-v8a, armeabi-v7a, x86, x86_64) + how to check your device
 date: 2025-06-01
 editLink: true
 tags:
-  - اندروید
+  - Android
   - CPU Architecture
   - arm64-v8a
   - armeabi-v7a
   - x86
 ---
 
-# تفاوت نسخه‌های arm64-v8a و armeabi-v7a و X86 در اندروید
+# Difference Between arm64-v8a, armeabi-v7a, and X86 in Android
 
-بعضی اپلیکیشن‌ها به صورت **`Universal`** منتشر میشن یعنی روی همه‌ی پردازنده‌ها اجرا میشن، اما خیلی وقت‌ها برای **معماری‌های مختلف CPU** به‌طور جداگانه بیلد میشن. مثل:
+Some apps are released as **`Universal`**, meaning they run on every type of CPU.  
+But many apps are built separately for different **CPU architectures**, such as:
 
-<div class="ltr">
+- **`arm64-v8a – arm64 – aarch64`** → modern ARM 64-bit processors  
+- **`armeabi-v7a – arm – aarch`** → older ARM 32-bit processors  
+- **`x86`** → for Intel 32-bit devices (almost extinct)  
+- **`x86_64`** → for Intel 64-bit devices (basically 🦖)  
 
-- `arm64-v8a – arm64 – aarch64` → پردازنده‌های ARM جدیدتر ۶۴بیتی
-- `armeabi-v7a – arm – aarch`  → پردازنده‌های ARM قدیمی‌تر ۳۲بیتی
-- `x86` → مخصوص دستگاه‌های اینتل ۳۲بیتی (در حال انقراض)
-- `x86_64` → مخصوص دستگاه‌های اینتل ۶۴بیتی (خیلی 🦖)
+## Key differences
 
-</div><hr/><br/> 
+### armeabi-v7a <Badge type="tip" text="32bit" />
+- Runs only on 32-bit CPUs  
+- RAM usage limited to around 3~4 GB  
+- Slower compared to 64-bit versions  
 
-## تفاوت اصلی این نسخه‌ها
-- **armeabi-v7a <Badge type="danger" text="32bit" />:**  
-  فقط روی CPUهای ۳۲بیتی کار می‌کنه، مصرف رم محدود حدود 3 الی 4GB، سرعت کمتر نسبت به نسخه ۶۴بیت.
+### arm64-v8a <Badge type="tip" text="64bit" />
+- More complete and faster  
+- Can run both 64-bit and 32-bit apps  
+- Access to 4GB and higher RAM and better performance  
+- Almost all devices from the last 5 years are this architecture  
 
-- **arm64-v8a <Badge type="danger" text="64bit" />:**  
-  نسخه کامل‌تر و سریع‌تر، هم اپ‌های ۶۴بیت و هم ۳۲بیت رو اجرا می‌کنه.  
-  دسترسی به رم بیشتر از 4GB و عملکرد بهینه‌تری داره.   
-  گوشی‌های تولید ۵ سال اخیر اکثراً از همین معماری هستن.
+### x86 and x86_64
+- For Intel-based processors  
+- Belong to the 🦖 dinosaur era of phones/tablets  
+- Thankfully, extinct now
 
-- **x86 و x86_64:**  
-  مخصوص پردازنده‌های اینتل، هم‌دوره‌ی 🦖 های تیرِکس بودن اون گوشی‌ و تبلت‌ها، منقرض شدن.
 
-<br/> 
+## Cross-installation
 
-## نصب متقابل
-- گوشی **arm64-v8a <Badge type="danger" text="۶۴بیتی" />:**
-- می‌تونه هم نسخه‌ی **arm64-v8a** رو نصب کنه بهینه‌تر و هم **armeabi-v7a** بدون مشکل، فقط کمی کندتر.
-- گوشی **armeabi-v7a <Badge type="danger" text="۳۲بیتی" />:**
-- به هیچ‌وجه نمی‌تونه اپ **arm64-v8a** رو نصب کنه.  
-- نسخه **universal:** هم همه‌ی کتابخونه‌ها‌رو داره، ولی فقط موقع دانلود کردنش دوبرابر بیشتر اینترنت مصرف می‌کنی و دوبرابر فضای بیشتری از حافظه گوشی یا تبلت رو اشغال می‌کنه، وقتی معماری پردازنده گوشیت arm64-v8a یا armeabi-v7a هستش مگه مرض داری میای universal که دوبرابر سنگین تره نصب می‌کنی؟ داخلش همه کتابخونه‌هارو جا دادن حتی x86 هارو که حتی یک هزارم درصد هم بهشون نیاز نداری، پس یکبار [چک کن](#چک) ببین معماری پردازنده گوشیت چیه و از این به‌ بعد همون نسخه رو نصب کن راحت.
+### On an arm64-v8a phone <Badge type="tip" text="64bit" />
+- Can install **arm64-v8a** (recommended, optimized)  
+- Can also run **armeabi-v7a**, just slightly slower  
 
-<br/> 
+### On an armeabi-v7a phone <Badge type="tip" text="32bit" />
+- Cannot install **arm64-v8a** apps  
+- Cannot install **x86** versions either  
 
-## کیفیت اجرا
-اگه گوشی‌ت ۶۴بیتی باشه و نسخه‌ی ۳۲بیتی نصب کنی:
-- اپ اجرا میشه ✔️
-- ولی کمی سرعت کمتره، 10 الی 30 درصد توی کارای سنگین مثل بازی یا پردازش‌ها.  
-- مصرف رم محدود میشه به ماکسیمم 4GB.
-- امنیت هم پایین‌تر از نسخه‌ی ۶۴بیت هست.
+### Universal version
+- Includes all libraries (arm64, armeabi, x86, x86_64)  
+- But file size is larger, takes longer to download, and uses more storage  
 
-<br/> 
+::: tip Suggestion
 
-##  چطوری نوع معماری پردازنده دستگاه رو بفهمیم؟ {#چک}
-1. **از داخل تلگرام:**  
-   برو تلگرام، صفحه تنظیمات یا همون Settings رو باز کن، ← مستقیم برو انتهای صفحه** ← اونجا نوع معماری نوشته شده مثل این اسکرین شات:
+If your phone is `arm64-v8a` or `armeabi-v7a`, why bother downloading a **Universal** version which is twice as heavy and contains even **x86** libraries that you’ll never use?  
+Check your CPU architecture [here](#check) once, and always download only the optimized version.
+
+:::
+
+## Performance impact
+- **If your phone is 64-bit, but you install the 32-bit version:**  
+- The app will **run**, ✔️  
+- But performance is reduced (10–30% slower in games or heavy processing).  
+- RAM usage is capped at 4GB.  
+- Less secure than the 64-bit version.  
+
+##  How to check your phone’s CPU architecture {#check}
+
+### 1. From inside Telegram
+   Open Telegram → go to `Settings` → scroll to the bottom → you can see the CPU architecture listed (marked in this screenshot):  
 
 <br/>
 <p align="center">
   <img src="/dns/Telegram.png" alt="Telegram" width="1080px" />
 </p>
 
-<br/>
+### 2. Using helper apps
+   - [CPU-Z]  
+   - [CPU-X]  
+   - [Device Checker]  
 
-##  چطور معماری Cl
-
-2. **اپلیکیشن کمکی**
-   - [CPU-Z]
-   - [CPU-X] 
-   - [Device Checker]
-
-   توی تب **SYSTEM** دنبال فیلد *Processor Architecture* بگرد.
+   In the `SYSTEM` tab, look for the field `Kernel Architecture`.  
 
 <br/>
 <p align="center">
   <img src="/dns/CPU-Z.png" alt="CPU-Z" width="1052px" />
 </p><br/>
 
+### 3. With Termux
+   Run this command in Termux to display the primary CPU ABI:  
 
-3. **با Termux**
+```bash
+getprop ro.product.cpu.abi
+```
 
-دستور زیر رو توی ترموکس اجرا کنی نوع معماری پردازنده دستگاهت رو بهت میگه:
+   Or for more details, run:  
 
-   ```bash
-   getprop ro.product.cpu.abi
-   ```
-
-یا برای مشاهده جزئیات بیشتر این دستور رو اجرا کن:
- 
-   ```bash
-   getprop | grep abi
-   ```
+```bash
+getprop | grep abi
+```
 
 <br/>
 <p align="center">
   <img src="/dns/Termux.png" alt="Termux" width="1080px" />
-</p>
+</p><br/> 
 
-<hr/><br/> 
+## Compatibility table
 
-## جدول سازگاری سریع
+| CPU Architecture     | Compatible Installs 🟢 | Incompatible Installs 🔴 |
+|:--------------------:|:----------------------:|:-----------------------:|
+| armeabi-v7a (32bit)  | armeabi-v7a 🟢         | arm64-v8a 🔴 <br/> x86 🔴 <br/> x86_64 🔴 |
+| arm64-v8a (64bit)    | arm64-v8a 🟢 <br/> armeabi-v7a 🟢 | x86 🔴 <br/> x86_64 🔴 |
+| x86 (32bit Intel)    | x86 🟢                 | others 🔴 |
+| x86_64 (64bit Intel) | x86_64 🟢 <br/> x86 🟢 | others 🔴 |
 
-<div class="ltt">
+<br/> 
 
+### Conclusion
 
-|    معماری پردازنده    |    گوشی قابل نصب  🟢   |   غیرقابل نصب 🔴   |
-|:---------------------:|:----------------------:|:------------------:|
-|  armeabi-v7a (32bit)  | armeabi-v7a 🟢         | arm64-v8a 🔴 <br/> x86 🔴 <br/> x86_64 🔴 |
-|  arm64-v8a (64bit)    | arm64-v8a 🟢 <br/> armeabi-v7a 🟢 | x86 🔴 <br/> x86_64 🔴 |
-|  x86 (32bit Intel)    | x86 🟢                 | بقیه 🔴  |
-|  x86_64 (64bit Intel) | x86_64 🟢 <br/> x86 🟢 | بقیه 🔴  |
+- **Old phones** <Badge type="danger" text="32bit" /> → Only use `armeabi-v7a`  
+- **Modern phones** <Badge type="danger" text="64bit" /> → Prefer `arm64-v8a` (fallback to armeabi-v7a if needed)  
+- **Universal version** → Mostly useless, just wastes download size + storage  
 
-</div><br/> 
-
-### نتیجه‌گیری
-
-گوشی قدیمی <Badge type="danger" text="۳۲بیتی" /> ← فقط نسخه armeabi-v7a
-
-گوشی جدید <Badge type="danger" text="۶۴بیتی" /> ← ترجیحاً arm64-v8a، در صورت نبود نسخه، armeabi-v7a هم مشکلی نداره.
-
-نسخه universal ← مناسب پیرمردها، فقط حجم اینترنت بیخودی پای دانلود کردنش حروم میشه و کلی فضا از حافظه‌ی دستکاه اشغال میشه.
-
-
-
-✋🏿🩶 کنجکاو باشید
+**Stay curious 🩶✋🏿**
 
 <br/>
 
-[CPU-Z]: https://www.farsroid.com/cpu-z-android/
-[CPU-X]: https://www.farsroid.com/cpu-x-pacific-developer/
+[CPU-Z]: https://www.farsroid.com/cpu-z-android/  
+[CPU-X]: https://www.farsroid.com/cpu-x-pacific-developer/  
 [Device Checker]: https://t.me/new_folder_revil/138
