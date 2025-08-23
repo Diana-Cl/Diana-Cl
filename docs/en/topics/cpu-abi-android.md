@@ -17,6 +17,12 @@ tags:
 
 # Difference Between arm64-v8a, armeabi-v7a, and X86 in Android
 
+
+<br/>
+<p align="center">
+  <img src="/dns/Android.webp" alt="Android kernel" width="1000px" />>
+</p>
+
 Some apps are released as **`Universal`**, meaning they run on every type of CPU.  
 But many apps are built separately for different **CPU architectures**, such as:
 
