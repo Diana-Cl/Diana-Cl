@@ -8,7 +8,7 @@ dir: "rtl"
 hero:
   name: "Dìana"
   text: "یادداشت‌های من"
-  tagline: "کاوش در فناوری، امنیت و هر چیزی در این بین."
+  tagline: "کاوش در فناوری، امنیت و هر چیزی در این بین"
   actions:
     - theme: brand
       text: شروع با جمنای

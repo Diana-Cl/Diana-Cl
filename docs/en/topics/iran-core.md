@@ -95,7 +95,7 @@ This depends heavily on your ISP. (For example, one DNS may work great with Shat
 
 For fixed-line (MKB) and Shatel mobile, I personally recommend the DoH server by the **[Xstack group][XS]**. It’s really solid:
 
-```ruby
+```rust
 https://rustdns.devefun.org/dns-query
 ```
 
@@ -145,7 +145,7 @@ Then simply copy the DNS that had the best ping and paste it into the **Intra** 
 <br/>
 
 Don’t forget to fork and star the repo ✋🏿  
-[Link to Mansour’s GitHub][TD]
+[Link to DarknessShade GitHub][TD]
 
 <br/>
 
@@ -160,7 +160,7 @@ Now that you’ve found the best DNS for your connection (using Darkness’s tes
 4. Tap **Custom server URL**.
 5. Paste your chosen **DoH** link. For example, mine worked best with:
 
-```ruby
+```rust
 https://rustdns.devefun.org/dns-query
 ```
 
@@ -220,7 +220,7 @@ Official safe download links:
 <br/>
 
 |  **Platform**   |    **Download Link**     |
-|:---------------:|:-------------------------|
+|:---------------:|:------------------------:|
 |  Android        | [Google Play – Intra][1] |
 |  Android - APK  | [APKMirror – Intra][2]   |
 |  Github Repo    | [Jigsaw-Code/Intra][3]   |

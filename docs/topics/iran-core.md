@@ -95,7 +95,7 @@ head:
 
 من برای نت ثابت مخابرات و شاتل موبایل، DoH اختصاصی گروه **[Xstack][XS]** رو پیشنهاد می‌کنم چون واقعا محشره
 
-```ruby
+```rust
 https://rustdns.devefun.org/dns-query
 ```
 
@@ -169,7 +169,7 @@ https://dns-tester.pages.dev
 4. روی **Custom server URL** بزنید.
 5. لینک **DoH** که از تستر کپی کردیم رو وارد کنید مثلاً واسه‌ی من پیشنهاد اول تستر این بود:
 
-```ruby
+```rust
 https://rustdns.devefun.org/dns-query
 ```
 
@@ -230,7 +230,7 @@ https://free.shecan.ir/dns-query
 <br/>
 
 |     **پلتفرم**     |   **لینک‌های دانلود**     |
-|:------------------:|:-------------------------|
+|:------------------:|:------------------------:|
 |  اندروید           | [Google Play – Intra][1] |
 |  فایل نصبی اندروید | [APKMirror – Intra][2]   |
 |  مخزن گیت‌هال پروژه | [Jigsaw-Code/Intra][3]   |
