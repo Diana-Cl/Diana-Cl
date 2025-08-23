@@ -6,8 +6,8 @@ lang: "en-US"
 dir: "ltr"
 
 hero:
-  name: "Dìana"
-  text: "A Collection of My Notes"
+  name: "A Collection of My Notes"
+  text: "I'm Dìana"
   tagline: Exploring technology, security, and everything in between.
   actions:
     - theme: brand

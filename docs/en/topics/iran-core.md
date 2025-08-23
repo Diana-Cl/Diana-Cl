@@ -32,15 +32,15 @@ When the power goes out, they rely only on their backup batteries.
 <br/>
 
 ## Why do cell towers fail?
-- **Limited battery capacity:** Most towers’ backup batteries last only 1–2 hours.  
+- **Limited battery capacity:** Most towers  backup batteries last only 1–2 hours.
 - **Partial recharging:** If outages are frequent and prolonged, batteries don’t get enough time to fully recharge.  
 - **Aging batteries:** Many of these batteries are too old and cannot handle keeping the equipment running anymore.  
 
 ## The result?
 
 **Towers start shutting down one by one.**  
-Your phone has to connect to towers that are further away (in other neighborhoods that still have electricity)  .
-A farther tower means ← weaker signal ← more congestion on the remaining towers ← very low bandwidth ← slow internet ← frequent drops ← frustrating user experience.
+Your phone has to connect to towers that are further away (in other neighborhoods that still have electricity).   
+A farther tower means → weaker signal → more congestion on the remaining towers → very low bandwidth → slow internet → frequent drops → frustrating user experience.
 
 ::: danger Tip
 
@@ -59,7 +59,7 @@ If your phone doesn’t switch to another tower and you’re stuck on a weak one
 
 We already explained why the signal quality drops during outages. When internet weakens, VPNs stop working properly. Since almost everything in our online life is either censored or sanctioned, it feels like we can’t even rely on VPNs anymore.  
 
-My suggestion: at least use a **DNS solution**. It won’t fix everything, but it’s lighter and often bypasses some restrictions applied by ISPs.
+**My suggestion:** at least use a **`DNS solution`**. It won’t fix everything, but it’s lighter and often bypasses some restrictions applied by ISPs.
 
 ## Why DNS can sometimes still work while VPN cannot?  
 
@@ -71,7 +71,7 @@ My suggestion: at least use a **DNS solution**. It won’t fix everything, but i
 <br/> 
 
 ### Why VPN is so bad over weak connections?
-- VPN encrypts *all* your traffic ← heavy load ← needs a stable and persistent connection ← requires more bandwidth.
+- VPN encrypts **all** your traffic → heavy load → needs a stable and persistent connection → requires more bandwidth.
 - If coverage and internet are weak, VPN constantly disconnects.
 
 ### Why DNS works better?
@@ -79,11 +79,10 @@ My suggestion: at least use a **DNS solution**. It won’t fix everything, but i
 - It doesn’t create a heavy persistent tunnel like VPN.
 - It can bypass DNS-level censorship by sending queries over `HTTPS` to servers like Cloudflare or Google that are outside of ISP restrictions. That way you get the **real site address** and blocked international sites work again.
 
-<br/>
 
 ## Summary
 
-When the power is out and internet is weak:  
+When the power is out and internet is weak:
 - VPNs are practically useless because they require strong, stable internet.  
 - DNS-based tools like **`Intra`** or **`Shekan`** are lighter and have a much better chance of working.  
 
@@ -91,31 +90,31 @@ When the power is out and internet is weak:
 
 # Which DNS to use?
 
-So the question: Which DNS is best?  
+**So the question: Which DNS is best?**  
 This depends heavily on your ISP. (For example, one DNS may work great with Shatel broadband, while a different one works better with MCI or Rightel).  
 
-For fixed-line (Telecom) and Shatel mobile, I personally recommend the **DoH server by the XStack group**. It’s really solid:
+For fixed-line (MKB) and Shatel mobile, I personally recommend the DoH server by the **[Xstack group][XS]**. It’s really solid:
 
-```
+```ruby
 https://rustdns.devefun.org/dns-query
 ```
 
 <hr/><br/>
 
-## Mansour’s DNS Tester  
+## Mr Mansour’s DNS Tester  
 
-Here comes Mansour (The Darkness)’s great DNS tester.  
-Just disable your VPN, open one of these links, click **Check**, and wait for the results.  
+Here comes Mr Mansour [The Darkness’s][MA] great DNS tester.  
+Just disable your VPN, open one of these links, click **Check**, and wait for the results.
 
 :::tabs
 
 == GitHub
 
-https://darknessshade.github.io/DNS-Tester/
+https://darknessshade.github.io/DNS-Tester
 
 == Cloudflare
 
-https://dns-tester.pages.dev/
+https://dns-tester.pages.dev
 
 :::
 
@@ -152,7 +151,7 @@ Don’t forget to fork and star the repo ✋🏿
 
 ## Setting up DoH in Intra
 
-Now that you’ve found the best DNS for your connection (using Mansour’s tester), it’s time to add it into the **Intra** app.  
+Now that you’ve found the best DNS for your connection (using Darkness’s tester), it’s time to add it into the **Intra** app.  
 
 ### Steps:
 1. Open **Intra** and tap the settings icon (top-left).
@@ -161,13 +160,13 @@ Now that you’ve found the best DNS for your connection (using Mansour’s test
 4. Tap **Custom server URL**.
 5. Paste your chosen **DoH** link. For example, mine worked best with:
 
-```reg
+```ruby
 https://rustdns.devefun.org/dns-query
 ```
 
 or the Shekan service:
 
-```reg
+```yaml
 https://free.shecan.ir/dns-query
 ```
 
@@ -213,18 +212,21 @@ Using the `Xstack` DNS or `Shekan` DNS, YouTube, Instagram, Twitter, and many in
 
 <hr/><br/> 
 
-### Intra Download Links
+### Download Links
 
 The Intra app is developed by Google’s Jigsaw team.  
 Official safe download links:
 
 <br/>
 
-| Platform | Download Link |
-|----------|---------------|
-| Android  | [Google Play – Intra][1] |
-| Android APK | [APKMirror – Intra][2] |
-| GitHub Repo | [GitHub – Jigsaw-Code/Intra][3] |
+|  **Platform**   |    **Download Link**     |
+|:---------------:|:-------------------------|
+|  Android        | [Google Play – Intra][1] |
+|  Android - APK  | [APKMirror – Intra][2]   |
+|  Github Repo    | [Jigsaw-Code/Intra][3]   |
+|  Android - APK  | [Shekan DNS][4]          |
+|  IOS            | [AppleStore - NEXT][5]   |
+|  IOS            | [AppleStore - CLOAK][6]  |
 
 ::: info Note
 
@@ -237,6 +239,9 @@ For desktop (Windows/macOS/Linux) you can use alternatives like **Nebulo** or se
 [1]: https://play.google.com/store/apps/details?id=app.intra
 [2]: https://www.apkmirror.com/apk/jigsaw/intra/
 [3]: https://github.com/Jigsaw-Code/Intra
+[4]: https://shecan.ir/tutorials/
+[5]: https://apps.apple.com/us/app/nextdns/id1463342498
+[6]: https://apps.apple.com/us/app/dnscloak-secure-dns-client/id1452162351
 [XS]: https://t.me/devefun/4681
 [TD]: https://github.com/darknessshade/
 [MA]: https://telegram.me/mansor427

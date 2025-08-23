@@ -6,13 +6,13 @@ lang: "en-US"
 dir: "ltr"
 
 hero:
-  name: "Dìana"
-  text: "A Collection of My Notes"
+  name: "A Collection of My Notes"
+  text: "I'm Dìana"
   tagline: Exploring technology, security, and everything in between.
   actions:
     - theme: brand
       text: Get Started with Gemini
-      link: /topics/Gemini
+      link: /en/topics/Gemini
     - theme: alt
       text: View on GitHub
       link: https://github.com/Diana-Cl/Diana-Cl

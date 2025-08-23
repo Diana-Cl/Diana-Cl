@@ -93,9 +93,9 @@ head:
 خب حالا سوال: کدوم DNS بهتره؟
 این خب تو ایران جواب ثابت نداره. چون بسته به اپراتور فرق می‌کنه (یه DNS برای شاتل خوبه، یکی دیگه برای مخابرات یکی دیگه واسه همراه آخر).  
 
-من برای نت ثابت مخابرات و شاتل موبایل، **DoH اختصاصی گروه **[Xstack][XS]** رو پیشنهاد می‌کنم چون واقعا محشره
+من برای نت ثابت مخابرات و شاتل موبایل، DoH اختصاصی گروه **[Xstack][XS]** رو پیشنهاد می‌کنم چون واقعا محشره
 
-```reg
+```ruby
 https://rustdns.devefun.org/dns-query
 ```
 
@@ -106,23 +106,29 @@ https://rustdns.devefun.org/dns-query
 اینجاست که تستر عالی آقا منصور [The Darkness][MA] به دادمون می‌رسه.   
 کافیه VPN خاموش باشه، یکی از لینک‌های زیر رو باز کنید، گزینه بررسی رو بزنید و صبر کنید تا نتایج رو براتون لیست کنه. 
 
+<div dir="ltr">
+
 :::tabs
 
 == GitHub
 
-https://darknessshade.github.io/DNS-Tester/
+https://darknessshade.github.io/DNS-Tester
 
 == Cloudflare
 
-https://dns-tester.pages.dev/
+https://dns-tester.pages.dev
 
 :::
+
+</div>
 
 <br/> 
 
 <p align="center">
   <img src="/dns/DNS-1.png" alt="DNS-Tester" width="1080px" />
-</p><br/>
+</p>
+
+<br/>
 
 بعدش اون DNSی که بهترین پینگ رو داشت کپی کنید و بذارید داخل برنامه **Intra**. همین!
 
@@ -155,20 +161,21 @@ https://dns-tester.pages.dev/
 
 حالا که DNS مناسب واسه اینترنت خودمون رو پیدا کردیم (مثلاً با تستر آقا منصور)، باید اونو داخل برنامه **Intra** اضافه کنیم.  
 
-### این کار خیلی ساده‌ست:
+این کار خیلی ساده‌ست:
+
 1. برنامه **Intra** رو باز کنید و روی آیکون تنظیمات (در بالا گوشه‌ی سمت چپ صفحه) بزنید.
 2. روی گزینه **Setting** بزنید.
 3. گزینه‌ی اول یعنی **Select DNS over HTTPS server** رو بزنید.
 4. روی **Custom server URL** بزنید.
 5. لینک **DoH** که از تستر کپی کردیم رو وارد کنید مثلاً واسه‌ی من پیشنهاد اول تستر این بود:
 
-```reg
+```ruby
 https://rustdns.devefun.org/dns-query
 ```
 
 یا حتی سرویس shekan
 
-```reg
+```yaml
 https://free.shecan.ir/dns-query
 ```
 
@@ -214,19 +221,23 @@ https://free.shecan.ir/dns-query
 
 <hr/><br/> 
 
-### لینک‌های دانلود Intra
+### لینک‌های دانلود
 
 اپلیکیشن Intra محصول تیم Jigsaw (زیرمجموعه گوگل) هستش.
 
 نسخه‌های رسمی و امنش رو از این لینک‌ها می‌تونید دانلود کنید:
 
-<br/> 
+<br/>
 
-| سیستم‌عامل | لینک دانلود |
-|------------|-------------|
-| اندروید    | [Google Play – Intra][1] |
-| فایل نصبی اندروید | [APKMirror – Intra][2] |
-| مخزن گیت‌هاب پروژه   | [GitHub – Jigsaw-Code/Intra][3] |
+|     **پلتفرم**     |   **لینک‌های دانلود**     |
+|:------------------:|:-------------------------|
+|  اندروید           | [Google Play – Intra][1] |
+|  فایل نصبی اندروید | [APKMirror – Intra][2]   |
+|  مخزن گیت‌هال پروژه | [Jigsaw-Code/Intra][3]   |
+| فایل نصبی اندروید  | [Shekan DNS][4]          |
+|  آیفون - IOS       | [AppleStore - NEXT][5]   |
+|  آیفون -  IOS      | [AppleStore - CLOAK][6]  |
+
 
 ::: info نکته
 
@@ -238,6 +249,9 @@ https://free.shecan.ir/dns-query
 [1]: https://play.google.com/store/apps/details?id=app.intra
 [2]: https://www.apkmirror.com/apk/jigsaw/intra/
 [3]: https://github.com/Jigsaw-Code/Intra
+[4]: https://shecan.ir/tutorials/
+[5]: https://apps.apple.com/us/app/nextdns/id1463342498
+[6]: https://apps.apple.com/us/app/dnscloak-secure-dns-client/id1452162351
 [XS]: https://t.me/devefun/4681
 [TD]: https://github.com/darknessshade/
 [MA]: https://telegram.me/mansor427
