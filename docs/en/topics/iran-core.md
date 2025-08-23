@@ -101,7 +101,7 @@ https://rustdns.devefun.org/dns-query
 
 <hr/><br/>
 
-## Mr Mansour’s DNS Tester  
+## DNS Tester  
 
 Here comes Mr Mansour [The Darkness’s][MA] great DNS tester.  
 Just disable your VPN, open one of these links, click **Check**, and wait for the results.
