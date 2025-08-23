@@ -15,11 +15,11 @@ tags:
   - x86
 ---
 
-# تفاوت نسخه‌های arm64-v8a و armeabi-v7a و X86 در اندروید
+# تفاوت نسخه‌های arm64-v8a و armeabi-v7a و x86 در اندروید
 
 <br/>
 <p align="center">
-  <img src="/dns/Android.webp" alt="Android kernel" width="1000px" />>
+  <img src="/dns/Android.webp" alt="Android kernel" width="1000px" />
 </p>
 
 بعضی اپلیکیشن‌ها به صورت **`Universal`** منتشر میشن یعنی روی همه‌ی پردازنده‌ها اجرا میشن، اما خیلی وقت‌ها برای **معماری‌های مختلف CPU** به‌طور جداگانه بیلد میشن. مثل:

@@ -15,12 +15,12 @@ tags:
   - x86
 ---
 
-# Difference Between arm64-v8a, armeabi-v7a, and X86 in Android
+# Difference Between arm64-v8a, armeabi-v7a, and x86 in Android
 
 
 <br/>
 <p align="center">
-  <img src="/dns/Android.webp" alt="Android kernel" width="1000px" />>
+  <img src="/dns/Android.webp" alt="Android kernel" width="1000px" />
 </p>
 
 Some apps are released as **`Universal`**, meaning they run on every type of CPU.  
@@ -34,31 +34,31 @@ But many apps are built separately for different **CPU architectures**, such as:
 ## Key differences
 
 ### armeabi-v7a <Badge type="tip" text="32bit" />
-- Runs only on 32-bit CPUs  
-- RAM usage limited to around 3~4 GB  
-- Slower compared to 64-bit versions  
+- Runs only on 32-bit CPUs
+- RAM usage limited to around 3~4 GB
+- Slower compared to 64-bit versions
 
 ### arm64-v8a <Badge type="tip" text="64bit" />
-- More complete and faster  
-- Can run both 64-bit and 32-bit apps  
-- Access to 4GB and higher RAM and better performance  
-- Almost all devices from the last 5 years are this architecture  
+- More complete and faster
+- Can run both 64-bit and 32-bit apps
+- Access to 4GB and higher RAM and better performance
+- Almost all devices from the last 5 years are this architecture
 
 ### x86 and x86_64
-- For Intel-based processors  
-- Belong to the 🦖 dinosaur era of phones/tablets  
+- For Intel-based processors
+- Belong to the 🦖 dinosaur era of phones/tablets
 - Thankfully, extinct now
 
 
 ## Cross-installation
 
 ### On an arm64-v8a phone <Badge type="tip" text="64bit" />
-- Can install **arm64-v8a** (recommended, optimized)  
-- Can also run **armeabi-v7a**, just slightly slower  
+- Can install **arm64-v8a** (recommended, optimized)
+- Can also run **armeabi-v7a**, just slightly slower
 
 ### On an armeabi-v7a phone <Badge type="tip" text="32bit" />
-- Cannot install **arm64-v8a** apps  
-- Cannot install **x86** versions either  
+- Cannot install **arm64-v8a** apps
+- Cannot install **x86** versions either
 
 ### Universal version
 - Includes all libraries (arm64, armeabi, x86, x86_64)  
