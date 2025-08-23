@@ -18,18 +18,18 @@ head:
 
 # Power Outages and the Story of Weak Internet
 
-### You’ve probably experienced this  
-When the power goes out, after a short while, your phone signal gets weaker and the internet becomes unstable, even if you’re on 4G with one or two bars.
-
-**The reason is very simple:** `Mobile cell towers / BTS` need electricity to operate.  
-When the power goes out, they rely only on their backup batteries.
-
 <br/>
 <p align="center">
   <img src="/dns/bts.jpg" alt="bts-1" width="1965px" />
-</p>
+</p><br/>
 
-<br/>
+### You’ve probably experienced this  
+When the power goes out, after a short while, your phone signal gets weaker and the internet becomes unstable, even if you’re on 4G with one or two bars.
+
+**The reason is very simple:** `BTS / Mobile cell towers` need electricity to operate.  
+When the power goes out, they rely only on their backup batteries.
+
+</br>
 
 ## Why do cell towers fail?
 - **Limited battery capacity:** Most towers  backup batteries last only 1–2 hours.
@@ -44,7 +44,7 @@ A farther tower means → weaker signal → more congestion on the remaining tow
 
 ::: danger Tip
 
-If your phone doesn’t switch to another tower and you’re stuck on a weak one, switch to `Airplane Mode / ✈️` for a few seconds, then turn it off. Usually, your device will reconnect to a better tower.
+If your phone doesn’t switch to another tower and you’re stuck on a weak one, switch to `Airplane Mode ✈️` for a few seconds, then turn it off. Usually, your device will reconnect to a better tower.
 
 <br/>
 <p align="center">
