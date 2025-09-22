@@ -14,7 +14,7 @@ head:
 # NB4A
 ## Nekobox for Android
 
-> Notes regarding Nekobox [version 1.4.0][1]
+> **Notes regarding Nekobox [version 1.4.0][1]**
 
 ## First Note - Updating Subscriptions
 
@@ -46,33 +46,33 @@ If rules for blocking ads and bypassing Iranian IPs and websites are not importa
 I turned off the rules from the Route section because if the geosite and geoip files weren't updated for someone, no config would connect anymore. I set it to off by default. If it's important for you to be able to access Iranian sites and block some ads with the VPN on, then first go to the Route section like in this screenshot:
 
 <p align="center">
-  <img src="/clients/NB4A-1" alt="Routing-Rules" width="640px" />
+  <img src="/clients/NB4A-1.png" alt="Routing-Rules" width="640px" />
 </p>
 <br/>
 
 Then go here
 
 <p align="center">
-  <img src="/clients/NB4A-2" alt="Routing-Rules2" width="640px" />
+  <img src="/clients/NB4A-2.png" alt="Routing-Rules2" width="640px" />
 </p>
 <br/>
 
 <p align="center">
-  <img src="/clients/NB4A-3" alt="Routing-Rules3" width="640px" />
+  <img src="/clients/NB4A-3.png" alt="Routing-Rules3" width="640px" />
 </p>
 <br/>
 
 And here you need to click on Update and wait for both geo asset files to update. I also wrote in the image that after updating, the current date should be written below them.
 
 <p align="center">
-  <img src="/clients/NB4A-4" alt="Routing-Rules4" width="640px" />
+  <img src="/clients/NB4A-4.png" alt="Routing-Rules4" width="640px" />
 </p>
 <br/>
 
 Now that these are updated, you can go back to the previous page and turn on any rule you want. I recommend turning them all on, except the last one. The last one is very heavy and overkill. If that one is on, it takes one or two seconds to start any config you try to connect to.
 
 <p align="center">
-  <img src="/clients/NB4A-5" alt="Routing-Rules5" width="640px" />
+  <img src="/clients/NB4A-5.png" alt="Routing-Rules5" width="640px" />
 </p>
 
 <br><br/>
@@ -85,22 +85,22 @@ Right here:
 `Nekobox settings → Apps VPN Mode → Bypass`
 
 <p align="center">
-  <img src="/clients/NB4A-6" alt="Apps-VPN-Mode" width="640px" />
+  <img src="/clients/NB4A-6.png" alt="Apps-VPN-Mode" width="640px" />
 </p>
 <br/>
 
 <p align="center">
-  <img src="/clients/NB4A-7" alt="Apps-VPN-Mode2" width="640px" />
+  <img src="/clients/NB4A-7.png" alt="Apps-VPN-Mode2" width="640px" />
 </p>
 <br/>
 
 <p align="center">
-  <img src="/clients/NB4A-8" alt="Apps-VPN-Mode3" width="640px" />
+  <img src="/clients/NB4A-8.png" alt="Apps-VPN-Mode3" width="640px" />
 </p>
 <br/>
 
 <p align="center">
-  <img src="/clients/NB4A-9" alt="Apps-VPN-Mode4" width="640px" />
+  <img src="/clients/NB4A-9.png" alt="Apps-VPN-Mode4" width="640px" />
 </p>
 <br/>
 
@@ -116,26 +116,27 @@ First, download and save my backup file or anyone else's.
 [Backup file link][4]
 
 <p align="center">
-  <img src="/clients/NB4A-10" alt="Backup-Files" width="640px" />
+  <img src="/clients/NB4A-10.png" alt="Backup-Files" width="640px" />
 </p>
 <br/>
 
 <p align="center">
-  <img src="/clients/NB4A-11" alt="Backup-Files2" width="640px" />
+  <img src="/clients/NB4A-11.png" alt="Backup-Files2" width="640px" />
 </p>
 <br/>
 
 <p align="center">
-  <img src="/clients/NB4A-12" alt="Backup-Files3" width="640px" />
+  <img src="/clients/NB4A-12.png" alt="Backup-Files3" width="640px" />
 </p>
 <br/>
 
 ### The Nekobox Backup File has three parts:
-**Configs, Rules, and App Settings**
+
+> Configs, Rules, and App Settings
 
 You can always safely check the Rules and App Settings parts and import them into Nekobox. But be careful: if you check the third part, Configs, they will replace your own configs, and whatever you had before in Nekobox will be deleted. So it's better to backup your own configs and settings first (using the Export option in the Tools menu shown in the screenshot above) before importing my backup. If you don't have any specific configs or they aren't important, then ignore this and just import any file you see, it'll be fine!
 
-If you didn't understand and need a video tutorial, you can find [one][6] or [two][7] [here][6].
+If you didn't understand and need a video tutorial, you can find [one][6] or [two][7] [here][6].  
 
 <br/>
 
@@ -143,7 +144,7 @@ If you didn't understand and need a video tutorial, you can find [one][6] or [tw
 You've been using some other VPN for a week, now you're back to Nekobox or Exclave or Victoria or whatever. If you use public subscription links, then the configs inside are probably dead by now. The first thing you should do is:
 
 <p align="center">
-  <img src="/clients/NB4A-13" alt="Update-Test" width="640px" />
+  <img src="/clients/NB4A-13.png" alt="Update-Test" width="640px" />
 </p>
 <br/>
 
