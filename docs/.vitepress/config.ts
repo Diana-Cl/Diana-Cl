@@ -88,6 +88,7 @@ export default defineConfig({
                 { text: 'خواب عمیق اپلیکیشن‌ها', link: '/topics/sleeping-apps' },
                 { text: 'استیبل دیفیوژن', link: '/topics/Stable-Diffusion' },
                 { text: 'امپراتوری سایبری', link: '/topics/REvil' },
+                { text: 'نکوباکس اندروید', link: '/topics/nekobox' },
                 { text: 'انتخابگر بک‌اند کلادفلر', link: '/topics/cf-backend-selector' },
                 { text: 'آپگرید PHP روی CentOS 7', link: '/topics/Upgrade-PHP-version-on-CentOS-7' },
               ]
@@ -196,6 +197,7 @@ export default defineConfig({
                 { text: 'Sleeping Apps', link: 'en/topics/sleeping-app' },
                 { text: 'Stable Diffusion', link: '/en/topics/Stable-Diffusion' },
                 { text: 'The Fallen Crown', link: '/en/topics/REvil' },
+                { text: 'Nekobox for Android', link: '/en/topics/nekobox' },
                 { text: 'Cloudflare Back-end Selector', link: '/en/topics/cf-backend-selector' },
                 { text: 'Upgrade PHP On CentOS 7', link: '/en/topics/Upgrade-PHP-version-on-CentOS-7' },
               ]
