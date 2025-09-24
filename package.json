@@ -18,7 +18,7 @@
   "license": "ISC",
   "type": "module",
   "devDependencies": {
-    "@nolebase/vitepress-plugin-inline-link-preview": "^2.18.1",
+    "@nolebase/vitepress-plugin-inline-link-preview": "^2.18.2",
     "gh-pages": "^6.3.0",
     "markdown-it-attrs": "^4.1.6",
     "markdown-it-footnote": "^4.0.0",
