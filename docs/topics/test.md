@@ -13,7 +13,36 @@ head:
       content: NekoBox, nekobox, NB4A, nekobox for Android, Exclave, Android, v2ray, singbox, c>
 ---
 
-This <span v-pre>{{ will be displayed as-is }}</span>
+این یک متن فارسی است...
+
+<Ltr>
+### English Section Title
+
+This is an English paragraph inside the Ltr component.
+
+- Item 1
+- Item 2
+
+You can write as much LTR content as you want here.
+</Ltr>
+
+اینجا دوباره متن به حالت راست‌چین برمی‌گردد.
+
+
+<br><br/> 
+
+## این یک تیتر فارسی است
+
+## An English Title That Is Now LTR {.ltr}
+
+This single paragraph is also LTR. {.ltr}
+
+
+
+<br><br/>
+<br><br/>
+<br><br/>
+<br><br/>
 
 
 
@@ -42,45 +71,18 @@ console.log('Hello, VitePress!')
 ```
 :::
 
-
-
-
-
-
-
-
 [[toc]]
 
-
-
-
-
-
-# Test
-
-
-اذه
-## Test
-
-نه
-
-## Test
-باشه
-
-بیاا
-### نیا
-کجا
 
 
 > این آخری کلادفلر مناسب برای کانفیگای وارپ تو هیدیفای و نکوباکس (وارپ در حال حاضر تو ایران و چ>
 
 ::: details Need Screenshot ?
 
-<div dir="ltr">
+<Ltr>
 <p align="center">
-  <img src="/clients/EX-6.png" alt="Exclave-Remote-DNS" width="640px" />
-</p>
-</div>
+  <img src="/clients/EX-6.png" alt="Exclave-Remote-DNS" width="640px" /></p>
+</Ltr>
 
 :::
 
