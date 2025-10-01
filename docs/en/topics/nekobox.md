@@ -1,8 +1,6 @@
 ---
 layout: doc
 outline: deep
-lang: 'en-US'
-dir: 'ltr'
 title: 'NekoBox for Android'
 description: 'Important notes before using NekoBox'
 date: 2025-06-17
@@ -13,9 +11,8 @@ head:
       content: NekoBox, nekobox, NB4A, nekobox for Android, Exclave, Android, v2ray, singbox, clients, xray, clash meta
 ---
 
-# NekoBox for Android — NB4A {#notes}
-
-[[toc]]
+# NB4A
+**NekoBox for Android**
 
 <br/>
 
@@ -26,8 +23,6 @@ head:
 In the latest update, some subscription links are not being added to the client. In my own backup, there are about ten subscription links at the end that do not update, while they work fine in other clients. I still don't know the reason. If this is important to you, do not update to this version. I still recommend using [Exclave][2]. Its [balancer](#balancer) feature is worth the entire NekoBox charade.
 
 ::: details **`Some of the subscriptions that don't update`**
-
-<Ltr>
 
 - https://robin.victoriacross.ir
 
@@ -41,8 +36,6 @@ In the latest update, some subscription links are not being added to the client.
 
 - https://raw.githubusercontent.com/4n0nymou3/multi-proxy-config-fetcher/refs/heads/main/configs/proxy_configs.txt
 
-</Ltr>
-
 It's not a big deal when we have our own [repository of various subscription links][3]. If one doesn't work, we'll use another :sneezing_face: :sweat_smile:
 
 :::
@@ -50,8 +43,6 @@ It's not a big deal when we have our own [repository of various subscription lin
 <br/>
 
 ## Note 2 - Outdated Route Asset Files {#assets}
-
-**Manage route assets**
 
 As always, the problems revolve around Routing Rules.
 
@@ -105,18 +96,12 @@ Now that these are updated, you can go back to the previous page and turn on any
 
 :::
 
-## Bypassing Local Applications {#bypass}
-
-**Allow apps to bypass VPN**
+## Allow apps to bypass VPN {#bypass}
 
 If you want to visit the MyIrancell app while the client is active, it won't open because you have to enter it with an Iranian IP. To avoid having to turn the client on and off every minute, it's better to add Iranian apps to the exceptions list. From where?
 From this path:
 
-<Ltr>
-
 > Nekobox settings → Apps VPN Mode → Bypass
-
-</Ltr>
 
 ::: details View Screenshot
 
@@ -141,8 +126,6 @@ In the first part of this article, we bypassed Iranian websites and IPs to conti
 <br/>
 
 ## How to Import a Backup File {#import}
-
-**Import backup files**
 
 First, download and save my backup file or anyone else's.
 
@@ -184,9 +167,7 @@ If you didn't understand and need a video tutorial, you can find some old videos
 
 <br/>
 
-## Update Subscription Links and Test Configs {#update-subl}
-
-**Update subscription links**
+## Update subscription links {#update-sub}
 
 You've been with Golabi VPN for a week, now you're back to NekoBox or Exclave or V2ray or whatever. If you use public subscription links, then the configs inside them are now dead. The first thing you should do is:
 
@@ -200,11 +181,7 @@ You've been with Golabi VPN for a week, now you're back to NekoBox or Exclave or
 
 First of all, you enter your desired group and select the option:
 
-<Ltr>
-
 :orange_circle: `Update current Groups subscription`
-
-</Ltr>
 
 and wait for it to update.
 
@@ -212,11 +189,8 @@ and wait for it to update.
 
 The second thing you should do is select the option:
 
-<Ltr>
-
 :yellow_circle: `Remove Duplicate servers`
 
-</Ltr>
 <br/>
 
 so that duplicate configs are deleted and you don't waste time and internet data testing them.
@@ -224,29 +198,23 @@ If you used my backup, then this option is not needed, it will remove duplicates
 
 The third thing you should do is press the option:
 
-<Ltr>
-
 :green_circle: `URL Test`
 
-</Ltr>
 <br/>
 
 Be careful that before performing this test, whatever VPN is on must be turned off, otherwise the test results will not be correct.
 
 And the last thing is to press the option:
 
-<Ltr>
-
 :red_circle: `Order/By Delay`
 
-</Ltr>
 <br/>
 
 so that the configs are listed in order of their speed and ping. Pressing this option once is enough.
 
 Now you can connect to one of the configs at the top of the list with a small green number next to it. Those with Timeout written next to them are gone.
 
-# Exclave Balancer
+# Exclave Load balance {#balancer}
 
 > **One of the best clients with Singbox core for Android**
 
@@ -277,15 +245,15 @@ But here in the Exclave client, what do we do? From the top of the page, from th
 
 **Now we configure the config here:**
 
-1. **Profile Name:** ← a custom name
+1. **Profile Name:** → a custom name
 
-2. **Type:** ← Group, select a group as input
+2. **Type:** → Group, select a group as input
 
-3. **Strategy:** ← leastPing, select the config with the lowest ping
+3. **Strategy:** → leastPing, select the config with the lowest ping
 
-4. **Custom test URL:** ← leave empty
+4. **Custom test URL:** → leave empty
 
-5. **Balancer observation interval:** ← 300 is okay
+5. **Balancer observation interval:** → 300 is okay
 
 And finally, we save it from the checkmark at the top of the screen.
 
@@ -354,51 +322,45 @@ But the worse case is that out of the five or six countries that are displayed f
 
 <br/>
 
-### NekoBox — Exclave
+### NekoBox / Exclave
 
 I don't remember their default remote DNS exactly, I think it was Google's DoH. Well, whatever, it doesn't matter because I remember it wasn't compatible with Iran's net and especially worker & page configs. That's why as soon as you install it, you have to change it to Google's DNS over HTTPS, but not DoH and at the same time DoH :sweat_smile:
 
-<Ltr>
-
-**Google DNS:**
+**Google DNS:**  
 ```
 https://8.8.8.8/dns-query
 ```
 
-**Adguard DNS:**
+**Adguard DNS:**  
 ```
 https://94.140.14.14/dns-query
 ```
 
-**controlD DNS:**
+**controlD DNS:**  
 ```
 https://freedns.controld.com/p2
 ```
 
-**Open DNS Cisco:**
+**Open DNS Cisco:**  
 ```
 https://208.67.222.222/dns-query
 ```
 
-**Clean Browsing:**
+**Clean Browsing:**  
 
 ```
 tcp://185.228.168.9
 ```
 
-**Cernel error**
-
+**Kernel error**  
 ```
 https://dns.kernel-error.de/dns-query
 ```
 
-**Cloudflare UDP:**
-
+**Cloudflare UDP:**  
 ```
 udp://1.1.1.1
 ```
-
-</Ltr>
 
 > This last one, Cloudflare, is suitable for warp configs in Hiddify and NekoBox (warp is currently martyred in Iran and China)
 
@@ -417,7 +379,7 @@ In short, it depends on which one our internet service provider works better wit
 
 ::: danger **Recommendation**
 
-::: details Read More
+::: details READ MORE
 
 I suggest you create a DNS for yourself with a worker. With it, you can use all the DoHs that are filtered in Iran. The name of the service is DNA Azadi. A cool group has worked on it. Here is a tutorial on how to make it in text and video format [link to Azadi DNS creation tutorial][12]
 
@@ -432,22 +394,16 @@ After creating your personal DNS service, come and test it a couple of times wit
 
 <br/>
 
-### Hiddify — V2ray
+### Hiddify / V2ray
 
 **It's better to leave Hiddify on default.**
 Its default is this:
-
-<Ltr>
 
 ```
 udp://1.1.11
 ```
 
-</Ltr>
-
 Only change it when websites don't load, as I explained above. Based on experience, when using configs created with worker or page (both vless and trojan), we have to change the default remote to a DNS over HTTPS type, for example, one of these:
-
-<Ltr>
 
 **Google DNS:**
 
@@ -466,8 +422,6 @@ https://94.140.14.14/dns-query
 ```
 https://9.9.9.9/dns-query
 ```
-
-</Ltr>
 
 ::: details View Screenshot
 
@@ -488,13 +442,7 @@ What other client is left? I don't know, whatever else there is is a fork of the
 
 <br/>
 
-## Direct DNS {#direct}
-
-<Ltr>
-
-**Direct DND / Local DNS**
-
-</Ltr>
+## Direct DNS / Local DNS {#direct}
 
 Direct DNS is a DNS server that is used to resolve `direct` domains (i.e., those that do not pass through the proxy, such as Iranian or LAN sites).
 Before our proxy config connects, it has another task in addition to that. If the config we have in the client uses a domain in its address section instead of an IP, like most configs, then when we want to connect with that config, the client uses this `Direct DNS` address to find the IP of the domain. First, it converts the domain of the config to an IP and then starts to perform its task, creating a tunnel, encrypting, tlshello, separating paths, and exchanging traffic, etc.
@@ -509,20 +457,15 @@ It's the same for Nekobox, but it doesn't have that option to turn it on or off.
 
 Also, for Direct or Local DNS, you can use a public, neutral, hassle-free, and unfiltered DNS server like Alibaba. In this case, as I said above, you must first turn off the `Use system DNS as Direct dns` option and then proceed to place your desired server in the box below it. This is Alibaba:
 
-<Ltr>
-
 ```
 https://223.5.5.5/dns-query
 ```
 
-</Ltr>
 <br/>
 
 ::: tip **Customization**
 
 If you want to customize, you can use good Iranian DNSs like Shecan or Electro to open domestic sites faster. It's similar in both clients. You can find it at this address:
-
-<Ltr>
 
 > DNS Settings > Direct DNS
 
@@ -538,8 +481,6 @@ If you want to customize, you can use good Iranian DNSs like Shecan or Electro t
 78.157.42.100
 ```
 
-</Ltr>
-
 :::
 
 <br/>
@@ -550,11 +491,7 @@ In the DNS settings of Nekobox and Exclave, there is an important option called 
 
 How to enable it is similar in both clients. Go to this address:
 
-<Ltr>
-
 > Settings > Enable DNS Routing
-
-</Ltr>
 
 and activate it with the button opposite it.
 
@@ -605,33 +542,21 @@ Inside Nekobox, Hiddify, and Exclave, this test server is more important than th
 
 which is by default on this one:
 
-<Ltr>
-
 ```
 http://cp.cloudflare.com
 ```
 
-</Ltr>
-
 which should be changed at the first opportunity to:
-
-<Ltr>
 
 ```
 http://www.google.com/generate_204
 ```
 
-</Ltr>
-
 or this one is not bad either:
-
-<Ltr>
 
 ```
 https://clients3.google.com/generate_204
 ```
-
-</Ltr>
 
 ::: details View Screenshot
 
@@ -651,8 +576,6 @@ If this remains as its default and you don't correct it, when you take a test, i
 ::: details Click here to view the list
 
 - It is recommended to use only the first 5, the rest are just to fill the space
-
-<Ltr>
 
 - https://www.gstatic.com/generate_204
 
@@ -744,13 +667,11 @@ If this remains as its default and you don't correct it, when you take a test, i
 
 - https://www.apple.com/library/test/success.html
 
-</Ltr>
-
 :::
 
 <br/>
 
-## TUN Implementation Or Stack
+## TUN Implementation / Stack
 
 First of all, let's say what **TUN** is.
 
@@ -760,27 +681,15 @@ It is a method that VPN clients (like Nekobox, Exclave, Hiddify, Singbox, and ma
 
 - **In Nekobox, go to:**
 
-<Ltr>
-
-Settings > TUN Settings > TUN Implementation.
-
-</Ltr>
+> Settings > TUN Settings > TUN Implementation.
 
 - **In Exclave, it's in:**
 
-<Ltr>
-
-Settings > TUN Settings > Stack.
-
-</Ltr>
+> Settings > TUN Settings > Stack.
 
 - **In Hiddify, it's in:**
 
-<Ltr>
-
-Config options > inbound options > TUN implementation.
-
-</Ltr>
+> Config options > inbound options > TUN implementation.
 
 - **Why is it important?** Choosing the right option can make your connection faster, more stable, or more secure. The wrong choice can also cause the internet to be disconnected or slow down.
 
@@ -797,7 +706,7 @@ Config options > inbound options > TUN implementation.
 
 ### TUN Types
 
-#### 1. System option
+#### 1. System
 This option uses the Android operating system (or the phone's internal TUN) to manage the VPN tunnel. This means that the client directly uses Android's own features to route traffic.
 
 <br/>
@@ -821,7 +730,7 @@ This option uses the Android operating system (or the phone's internal TUN) to m
 
 <br/>
 
-#### 2. gVisor option
+#### 2. gVisor
 **gVisor** is a technology created by Google to create an isolated and secure environment for running network code. In this mode, instead of using the operating system's TUN, it creates a separate virtual layer (like a lightweight virtual machine) that manages the traffic.
 
 <br/>
@@ -846,7 +755,7 @@ This option uses the Android operating system (or the phone's internal TUN) to m
 
 <br/>
 
-#### 3. Mixed option
+#### 3. Mixed
 This option is a hybrid mode that tries to combine the advantages of System and gVisor. In this mode, the client switches between System and gVisor depending on the type of traffic or settings.
 
 <br/>
@@ -871,7 +780,9 @@ This option is a hybrid mode that tries to combine the advantages of System and 
 For most users in Iran, I have these suggestions:
 
 1. **If you are a beginner or your device is old:** Start with **System**. Its speed is good and it usually works without problems.
+
 2. **If security and bypassing filtering are important to you:** Choose **gVisor**, especially if you use **Strict Route** and **Fake DNS** (which I explained in the previous section). Just make sure the Remote DNS is set correctly, like `https://8.8.8.8/dns-query`
+
 3. **If you don't know what's what:** Choose **Mixed** and test it. If a problem occurs, switch to one of the other two options.
 
 ### Important points for setting TUN Implementation
@@ -881,7 +792,7 @@ For most users in Iran, I have these suggestions:
 - **Speed or disconnection problems:** If your speed decreases with gVisor or Mixed or your connection is disconnected, first check the Remote DNS (for example, change it to Adguard DNS). If it is not fixed, go back to System.
 - **Weak devices:** If your phone is old or useless (like most Xiaomi phones) or has low RAM (for example, under 4 GB) or a weak CPU, gVisor may cause lag or crashes. In this case, System is better.
 
-**Final word**
+**Final word**  
 The choice between **System**, **gVisor**, and **Mixed** depends on your needs: speed, security, or something in between. My suggestion is to start with **gVisor**, because in Iran with heavy filtering, its security is useful. If a problem occurs, switch to Mixed or System. Always after changing the settings, with a simple test (like opening a filtered site or checking [dnsleaktest.com][10]), make sure everything is working correctly.
 
 <br/>
@@ -890,69 +801,60 @@ The choice between **System**, **gVisor**, and **Mixed** depends on your needs: 
 
 ### In NekoBox/Exclave
 
-- **Remote DNS** ← `https://8.8.8.8/dns-query`
-- **Direct DNS** ← Set it to system
-- **DNS Routing** ← Turn it on
-- **Fake DNS** ← Turn it off
-- **Use system DNS as Bootstrap DNS** ← Leave it on
-- **Enable Sniffing** ← Leave it on
-- **Hijack DNS** ← Leave it on
-- **TUN Implementation/Stack** ← Set it to gVisor unless the phone is old, then set it to system
-- **Connection Test URL** ← Be sure to change the default to the following address
-
-<Ltr>
+- **Remote DNS** → `https://8.8.8.8/dns-query`
+- **Direct DNS** → Set it to system
+- **DNS Routing** → Turn it on
+- **Fake DNS** → Turn it off
+- **Use system DNS as Bootstrap DNS** → Leave it on
+- **Enable Sniffing** → Leave it on
+- **Hijack DNS** → Leave it on
+- **TUN Implementation/Stack** → Set it to gVisor unless the phone is old, then set it to system
+- **Connection Test URL** → Be sure to change the default to the following address:
 
 ```
 http://www.gstatic.com/generate_204
 ```
 
-</Ltr>
 <br/>
 
 ### In Hiddify
 
-- **Remote DNS** ← Default or `https://8.8.8.8/dns-query`
-- **Direct DNS** ← Default `1.1.1.1`
-- **DNS Routing** ← Turn it on
-- **Strict Route** ← Turn it on
-- **TUN Implementation** ← Set it to gVisor
-- **Connection Test URL** ← Be sure to change the default to the following address
-
-<Ltr>
+- **Remote DNS** → Default or `https://8.8.8.8/dns-query`
+- **Direct DNS** → Default `1.1.1.1`
+- **DNS Routing** → Turn it on
+- **Strict Route** → Turn it on
+- **TUN Implementation** → Set it to gVisor
+- **Connection Test URL** → Be sure to change the default to the following address:
 
 ```
 http://www.gstatic.com/generate_204
 ```
 
-</Ltr>
 <br/>
 
 ### In V2rayNG and MahsaNG
 
-- **Sniffing** ← Leave it on for sure
-- **Local DNS** ← Turn it on
-- **Fake DNS** ← Turn it off
-- **Mux** ← Always off
-- **Fragment** ← Default off, we turn it on if the config domain is filtered.
-  - **Length** ← 10-30
-  - **Interval** ← 1-2
-  - **Packets** ← tlshello
-- **Allow Insecure** ← Always on
-- **Remote DNS** ← `1.1.1.1` or `8.8.8.8`
-- **Domestic DNS** ← Like remote `1.1.1.1`
-- **Intelligent Selection Method** ← Least Ping
-- **Connection Test URL** ← Check that it is like the following address:
-
-<Ltr>
+- **Sniffing** → Leave it on for sure
+- **Local DNS** → Turn it on
+- **Fake DNS** → Turn it off
+- **Mux** → Always off
+- **Fragment** → Default off, we turn it on if the config domain is filtered.
+  - **Length** → 10-30
+  - **Interval** → 1-2
+  - **Packets** → tlshello
+- **Allow Insecure** → Always on
+- **Remote DNS** → `1.1.1.1` or `8.8.8.8`
+- **Domestic DNS** → Like remote `1.1.1.1`
+- **Intelligent Selection Method** → Least Ping
+- **Connection Test URL** → Check that it is like the following address:
 
 ```
 https://www.gstatic.com/generate_204
 ```
 
-</Ltr>
 <br/>
 
-This way, the clients have a principled, ideal, standard setting according to the structure and recommended instructions in the xray and singbox cores, and most importantly, a stable and secure connection 😎.
+This way, the clients have a principled, ideal, standard setting according to the structure and recommended instructions in the xray and singbox cores, and most importantly, a stable and secure connection 😎
 
 <br/>
 
