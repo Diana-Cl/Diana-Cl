@@ -890,14 +890,14 @@ Config options > inbound options > TUN implementation.
 
 ### توی نکوباکس/اکسکیو
 
-- **Remote DNS** ← `https://8.8.8.8/dns-query`
+- ‏ **Remote DNS** ← `https://8.8.8.8/dns-query`
 - **Direct DNS** ← رو روی سیستم بذار
 - **DNS Routing** ← روشن کن
 - **Fake DNS** ← رو خاموش
 - **Use system DNS as Bootstrap DNS** ← روشن بذار
 - **Enable Sniffing** ← روشن بذار
 - **Hijack DNS** ← روشن بذار
-- **TUN Implementation/Stack** ← gVisor بذار مگه اینکه گوشی قدیمی باشه اون وقت system بذارش
+- ‏ **TUN Implementation/Stack** ← gVisor بذار مگه اینکه گوشی قدیمی باشه اون وقت system بذارش
 - **Connection Test URL** ← حتما پیش‌فرض رو به آدرس زیر تغییر بده
 
 <Ltr>
@@ -915,7 +915,7 @@ http://www.gstatic.com/generate_204
 - **Direct DNS** ← پیش‌فرض `1.1.1.1`
 - **DNS Routing** ← روشن کن
 - **Strict Route** ← روشن کن
-- **TUN Implementation** ← gVisor بذار
+- ‏ **TUN Implementation** ← gVisor بذار
 - **Connection Test URL** ←حتما پیش‌فرض رو به آدرس زیر تغییر بده
 
 <Ltr>
@@ -934,11 +934,11 @@ http://www.gstatic.com/generate_204
 - **Fake DNS** ← خاموش کن
 - **Mux** ← همیشه خاموش
 - **Fragment** ← پیش‌فرض خاموش، درصورت فیلتر شدن دامنه کانفیگ روشن می‌کنیم.
-  - **Length** ← 10-30
-  - **Interval** ← 1-2
-  - **Packets** ← tlshello
+  - ‏ **Length** ← 10-30
+  - ‏ **Interval** ← 1-2
+  - ‏ **Packets** ← tlshello
 - **Allow Insecure** ← همیشه روشن باشه
-- **Remote DNS** ← `1.1.1.1` یا `8.8.8.8`
+-  ‏**Remote DNS** ← `1.1.1.1` یا `8.8.8.8`
 - **Domestic DNS** ← مثل ریموت `1.1.1.1`
 - **Intelligent Selection Method** ← Least Ping
 - **Connection Test URL** ← چک کن حتما مثل آدرس زیر باشه: 
@@ -967,14 +967,14 @@ https://www.gstatic.com/generate_204
 - [مخزن لینک‌های ساب][3]
 
 [1]: https://github.com/MatsuriDayo/NekoBoxForAndroid/releases
-[2]: https://t.me/new_folder_revil/3417
+[2]: https://t.me/new_folder_revil/3498
 [3]: https://github.com/NiREvil/vless/ 
 [4]: https://t.me/new_folder_revil/3497
 [5]: https://github.com/dyhkwong/Exclave/releases
 [6]: https://t.me/F_NiREvil/5123
 [7]: https://t.me/F_NiREvil/5518
 [8]: https://t.me/new_folder_revil/3495
-[9]: https://t.me/new_folder_revil/3412
+[9]: https://t.me/new_folder_revil/3500
 [10]: https://www.dnsleaktest.com/
 [11]: https://t.me/F_NiREvil/620
 [12]: https://github.com/NiREvil/vless/tree/main/DNS%20over%20HTTPS/Azadi-DNS
