@@ -385,7 +385,7 @@ https://208.67.222.222/dns-query
 tcp://185.228.168.9
 ```
 
-**Cernel error**
+**Kernel error**
 
 ```
 https://dns.kernel-error.de/dns-query
