@@ -81,7 +81,7 @@ export default defineConfig({
               items: [
                 { text: 'گوگل جمنای', link: '/topics/Gemini' },
                 { text: 'پوکر – تگزاس هولدم', link: '/topics/poker-texas' },
-                { text: 'دستیارهای هوش مصنوعی', link: '/topics/ai-agents' },
+                { text: 'دستیارهای هوش مصنوعی', link: '/topics/ai' },
                 { text: 'تفاوت معماری پردازنده‌ها', link: '/topics/cpu-abi-android' },
                 { text: 'ترموکس', link: '/topics/termux' },
                 { text: 'اینترنت زمان قطعی برق', link: '/topics/iran-core' },
@@ -190,7 +190,7 @@ export default defineConfig({
               items: [
                 { text: 'Google Gemini', link: '/en/topics/Gemini' },
                 { text: 'Poker – Texas Holdem', link: '/en/topics/poker-texas' },
-                { text: 'Ai Agents', link: '/en/topics/ai-agents' },
+                { text: 'Ai Agents', link: '/en/topics/ai' },
                 { text: 'Processor Architecture', link: '/en/topics/cpu-abi-android' },
                 { text: 'Termux', link: '/en/topics/termux' },
                 { text: 'Iran Core', link: '/en/topics/iran-core' },
