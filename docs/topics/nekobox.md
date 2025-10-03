@@ -13,7 +13,8 @@ head:
       content: NekoBox, nekobox, NB4A, nekobox for Android, Exclave, Android, v2ray, singbox, clients, xray, clash meta
 ---
 
-# نکوباکس اندروید — NB4A
+# نکوباکس اندروید
+**NB4A**
 
 ---
 
@@ -22,6 +23,7 @@ head:
 [[toc]]
 
 ---
+
 <br/> 
 
 ## آپدیت نشدن برخی ساب‌ها
