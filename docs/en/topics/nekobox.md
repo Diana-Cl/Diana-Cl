@@ -14,6 +14,13 @@ head:
 # NB4A
 **NekoBox for Android**
 
+---
+
+## 📚 Table of Contents
+
+[[toc]]
+
+---
 <br/>
 
 ## Note 1 - Some Subscriptions Not Updating
