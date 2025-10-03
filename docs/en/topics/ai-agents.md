@@ -8,7 +8,7 @@ editLink: true
 head:
   - - meta
     - name: keywords
-      content: Gemini, Google studio, ChatGPT, Claude sonnet, DeepSeek, Kimi, Arena, Mistral, Grok3
+      content: Gemini, 2.5 Pro, Google studio, ChatGPT, Claude sonnet, DeepSeek, Kimi, Arena, Mistral, Grok-4
 
 ---
 
@@ -20,40 +20,9 @@ Ideal for developers, teams, researchers, and tech enthusiasts looking to levera
 
 ---
 
-## 📚 Table of Contents
+<h2> 📚 جدول مطالب</h2>
 
 [[toc]]
-
----
-
-## 📚 Table of Contents
-
-* [🌟 AI Code Assistants & Editors](#-ai-code-assistants--editors)
-* [🛠️ AI App Builders](#%EF%B8%8F-ai-app-builders)
-* [✨ AI Tools for Developers](#-ai-tools-for-developers)
-* [✍️ AI Code Completion](#️-ai-code-completion)
-* [🧠 Code Search & Navigation](#-code-search--navigation)
-* [🛠️ Code Review & Refactoring](#️-code-review--refactoring)
-* [📦 LLM Code Models](#-llm-code-models)
-* [⚙️ Natural Language to Code Tools](#️-natural-language-to-code-tools)
-* [💻 Shell & CLI Assistants](#-shell--cli-assistants)
-* [🧑‍💻 Coding Agents](#-coding-agents)
-* [🔄 PR Review Agents](#-pr-review-agents)
-* [🧪 Testing & QA Tools](#-testing--qa-tools)
-* [🧰 App Generators](#-app-generators)
-* [🎨 UI Generators](#-ui-generators)
-* [🔎 Snippet & Regex Tools](#-snippet--regex-tools)
-* [📖 Documentation Tools](#-documentation-tools)
-* [🔌 ChatGPT in Your Editor](#-chatgpt-in-your-editor)
-* [🚀 DevOps & Infrastructure](#-devops--infrastructure)
-* [🔒 Security & Compliance](#-security--compliance)
-* [🛡️ AI Security Tools](#️-ai-security-tools)
-* [📱 Mobile Development](#-mobile-development)
-* [🗄️ Database & API Tools](#️-database--api-tools)
-* [🎯 MLOps & Specialized Tools](#-mlops--specialized-tools)
-* [🗄️ MCP Server/Tools](#-mcp-server-tools)
-* [📚 Related Lists](#-related-lists)
-
 
 ---
 
