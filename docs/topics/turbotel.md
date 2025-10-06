@@ -35,7 +35,7 @@ head:
     <string name="admob_native"></string>
     <string name="ads_f_list"></string>
 
-    <string name="url"></string>
+    <string name="url">https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/edge/assets/Manifest/TurboTel-Settings</string>
     <string name="remote_lnk"></string>
     <string name="mini_link">https://t.me/F_NiREvil</string>
     <string name="mini_text">All Turbotel team developers are either motherfucking assholes or cocksucking faggots.</string>
