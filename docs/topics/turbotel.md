@@ -4,20 +4,22 @@ outline: deep
 lang: fa-IR
 dir: rtl
 title: "توربوتل"
-description: "راه‌حل‌های رفع مشکل کرش کردن توربوتل"
+description:  "راه‌حل‌های رفع مشکل کرش کردن توربوتل"
 date: 2025-9-29
 editLink: true
 head:
   - - meta
     - name: description
-      content:راه‌حل‌های رفع مشکل کرش کردن توربوتل
+      content: راه‌حل‌های رفع مشکل کرش کردن توربوتل
   - - meta
     - name: keywords
       content: کرش کردن توربوتل
 ---
 
 # توربوتل 
-و مشکلات پیرامون آن
+تلگرام غیر‌رسمی و مشکلات پیرامون آن‌ها
+
+<br/>
 
 [توربوتل][T] کرش می‌کنه، بزنی رو پروفایل کسی یا بخوای وارد تنظیمات بشی شوتت می‌کنه بیرون، مشکل از فایل من فایل اون‌یکی نیست، خود نسخه اصلی مارکت گوگل‌هم سکته‌ای شده 🤣 ولی نسخه‌های مود یکم بیشتر، چون توسعه‌دهنده‌ جنده‌ی برنامه تصمیم گرفته تبلیغات رو اجباری بکنه، قبلا از یه راه تبلیغات زو تزریق می‌کرد الان از سه‌چهار راه، تو [کانال تلکرامش][1] هم اینجوری نوشته: 
 
@@ -108,13 +110,13 @@ head:
 قبل از هرکاری این چهارتا تا لینک رو کپی کنید و بفرستید تو پیام‌های ذخیره‌شده‌ی توربوتل دم‌دستتون باشن:
 
 ```
-**1.** https://t.me/turbosettings/backup.backupRow
+**1.** telegram.me/turbosettings/backup.backupRow
 
-**2.** https://t.me/mtmanager
+**2.** telegram.me/mtmanager
 
-**3.** https://diana-cl.github.io/Diana-Cl/topics/turbotel
+**3.** diana-cl.github.io/Diana-Cl/topics/turbotel
 
-**4.** https://t.me/addtheme/REvil
+**4.** telegram.me/addtheme/REvil
 ```
 
 <br/>
@@ -293,8 +295,9 @@ head:
 - [NiREvil_GP.t.me][5]
 
 
-[1]: https://t.me/TurboTel/592
+[T]: https://telegram.me/F_NiREvil/7016
+[1]: https://telegram.me/TurboTel/592
 [2]: https://play.google.com/store/apps/details?id=org.telegram.messenger
 [3]: https://telegram.org/android
-[4]: https://t.me/new_folder_revil/3503
+[4]: https://telegram.me/new_folder_revil/3503
 [5]: https://NiREvil_GP.t.me
