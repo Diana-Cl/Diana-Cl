@@ -89,6 +89,7 @@ export default defineConfig({
                 { text: 'استیبل دیفیوژن', link: '/topics/Stable-Diffusion' },
                 { text: 'امپراتوری سایبری', link: '/topics/REvil' },
                 { text: 'نکوباکس اندروید', link: '/topics/nekobox' },
+                { text: 'توربوتل', link: '/topics/turbotel' },
                 { text: 'انتخابگر بک‌اند کلادفلر', link: '/topics/cf-backend-selector' },
                 { text: 'آپگرید PHP روی CentOS 7', link: '/topics/Upgrade-PHP-version-on-CentOS-7' },
               ]
