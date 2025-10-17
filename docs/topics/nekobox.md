@@ -498,7 +498,7 @@ https://9.9.9.9/dns-query
 
 <Ltr>
 
-**Direct DND / Local DNS**
+**Direct DNS / Local DNS**
 
 </Ltr>
 
@@ -509,11 +509,11 @@ https://9.9.9.9/dns-query
 
 - **چرا مهمه؟** اگه ISP‌ت DNS رو مسدود یا دستکاری کنه، سایت‌های داخلی لود نمی‌شن.
 
-- **پیشنهاد:** توی تنظیمات Exclave، گزینه "Use system DNS as Direct DNS" رو خاموش کن و تو کادر زیرش که نوشته "Direct DNS" بیا و `8.8.8.8` بذار تا فیکس همیشه از گوگل استفاده کنه، تو ایران ipv4 اون فیلتر نیست و سریعم که هست و دیگه آدم کور مگه از خدا چی میخواد؟؟
+- **پیشنهاد:** توی تنظیمات Exclave، گزینه "Use system DNS as Direct DNS" رو خاموش کن و تو کادر زیرش که نوشته "Direct DNS" بیا و `tcp://8.8.8.8` بذار تا فیکس همیشه از گوگل استفاده کنه، تو ایران TCP اون فیلتر نیست و سریعم که هست و دیگه آدم کور مگه از خدا چی میخواد؟؟
 
-برای Nekobox هم به همین شکله فقط دیگه اون گزیه رو نداره که روشن یا خاموش بکنید، توی نکوباکس اکه توی کادر Direct DNS بنویسی `local` همینجوری با حروف کوچیک اونوقت از دی‌ان‌اس داخلی اندروید استفاده می‌کنه و میتونی بذاری لوکال بمونه یا که مثل توضیح پاراگراف قبلی اینجاهم `8.8.8.8` قرار بدی.
+برای Nekobox هم به همین شکله فقط دیگه اون گزیه رو نداره که روشن یا خاموش بکنید، توی نکوباکس اکه توی کادر Direct DNS بنویسی `local` همینجوری با حروف کوچیک اونوقت از دی‌ان‌اس داخلی اندروید استفاده می‌کنه و میتونی بذاری لوکال بمونه یا که مثل توضیح پاراگراف قبلی اینجاهم `tcp://8.8.8.8` قرار بدی.
 
-هم‌چنین برای Direct یا همون Local DNS می‌تونی یه DNS سرور عمومی بی‌طرف و بی دردسر و فیلتر نشده مثل علی‌بابا استفاده کنی، در اینصورت بازم همونطور که بالاتر گفتم باید اول گزینه `Use system DNS as Direct dns` رو خاموش کنی بعد اقدام کنی برای قرار دادن سرور دلخواه تو کادر زیرش، این علی باباعه:
+هم‌چنین می‌تونی یه DNS سرور عمومی بی‌طرف و بی دردسر و فیلتر نشده مثل علی‌بابا استفاده کنی، در اینصورت بازم همونطور که بالاتر گفتم باید اول گزینه `Use system DNS as Direct dns` رو خاموش کنی بعد اقدام کنی برای قرار دادن سرور دلخواه تو کادر زیرش، این علی باباعه:
 
 <Ltr>
   
@@ -624,7 +624,7 @@ http://cp.cloudflare.com
 <Ltr>
 
 ```
-http://www.google.com/generate_204
+https://www.google.com/generate_204
 ```
 
 </Ltr>
@@ -972,14 +972,14 @@ https://www.gstatic.com/generate_204
 - [مخزن لینک‌های ساب][3]
 
 [1]: https://github.com/MatsuriDayo/NekoBoxForAndroid/releases
-[2]: https://t.me/new_folder_revil/3498
+[2]: https://t.me/new_folder_revil/3552
 [3]: https://github.com/NiREvil/vless/ 
 [4]: https://t.me/new_folder_revil/3497
 [5]: https://github.com/dyhkwong/Exclave/releases
 [6]: https://t.me/F_NiREvil/5123
 [7]: https://t.me/F_NiREvil/5518
 [8]: https://t.me/new_folder_revil/3495
-[9]: https://t.me/new_folder_revil/3500
+[9]: https://t.me/new_folder_revil/3554
 [10]: https://www.dnsleaktest.com/
 [11]: https://t.me/F_NiREvil/620
 [12]: https://github.com/NiREvil/vless/tree/main/DNS%20over%20HTTPS/Azadi-DNS
