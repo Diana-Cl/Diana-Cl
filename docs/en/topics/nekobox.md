@@ -458,7 +458,7 @@ Before our proxy config connects, it has another task in addition to that. If th
 
 - **Why is it important?** If your ISP blocks or manipulates DNS, domestic sites won't load.
 
-- **Recommendation:** In Exclave's settings, turn off the "Use system DNS as Direct DNS" option and in the box below it that says "Direct DNS", put `8.8.8.8` to always use Google. In Iran, its ipv4 is not filtered and it is fast, and what more could a blind person want from God?
+- **Recommendation:** In Exclave's settings, turn off the "Use system DNS as Direct DNS" option and in the box below it that says "Direct DNS", put `tcp://8.8.8.8` to always use Google. In Iran, its ipv4 is not filtered and it is fast, and what more could a blind person want from God?
 
 It's the same for Nekobox, but it doesn't have that option to turn it on or off. In Nekobox, if you write `local` in the Direct DNS box, just like that in lowercase, it will use the internal Android DNS, and you can leave it as local or, as explained in the previous paragraph, put `8.8.8.8` here as well.
 
@@ -466,6 +466,10 @@ Also, for Direct or Local DNS, you can use a public, neutral, hassle-free, and u
 
 ```
 https://223.5.5.5/dns-query
+```
+
+```
+tcp://223.5.5.5
 ```
 
 <br/>
@@ -876,14 +880,14 @@ This way, the clients have a principled, ideal, standard setting according to th
 - [Subscription Links Repository][3]
 
 [1]: https://github.com/MatsuriDayo/NekoBoxForAndroid/releases
-[2]: https://t.me/new_folder_revil/3498
+[2]: https://t.me/new_folder_revil/3552
 [3]: https://github.com/NiREvil/vless/
 [4]: https://t.me/new_folder_revil/3497
 [5]: https://github.com/dyhkwong/Exclave/releases
 [6]: https://t.me/F_NiREvil/5123
 [7]: https://t.me/F_NiREvil/5518
 [8]: https://t.me/new_folder_revil/3495
-[9]: https://t.me/new_folder_revil/3500
+[9]: https://t.me/new_folder_revil/3554
 [10]: https://www.dnsleaktest.com/
 [11]: https://t.me/F_NiREvil/620
 [12]: https://github.com/NiREvil/vless/tree/main/DNS%20over%20HTTPS/Azadi-DNS
