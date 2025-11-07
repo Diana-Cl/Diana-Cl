@@ -279,18 +279,23 @@ https://dns-tester.pages.dev
 https://dns.malw.link/dns-query
 ```
 
-یا حتی DNS کروه Xstack: 
-
-```rust
-https://rustdns.devefun.org/dns-query
-```
+<br/>
 
 یا حتی سرویس تمام رایگان Rethink DNS:
 > می‌تونید از وب‌سایت [Rethink][8] دی‌ان‌اس با قوانین دلخواه خودتون رو ایجاد کنید
 
-```ruby
+```rust
 https://sky.rethinkdns.com/1:sBrAAAIAwgQAAdA-AgA=
 ```
+
+<br/>
+
+یا حتی DNS کروه Xstack:
+
+```rust
+https://rustdns.devefun.org/dns-query
+```
+<br/>
 
 6. گزینه **Accept** رو بزنید و برگردید به صفحه اصلی
 7. تو صفحه‌ی اصلی بزنید روی دکمه فعال‌سازی تا شروع به کار بکنه، اگه بار اول باشه ازتون یه درخواستی می‌کنه بزنید روی OK تا موافقت بشه.
@@ -304,6 +309,8 @@ https://sky.rethinkdns.com/1:sBrAAAIAwgQAAdA-AgA=
 ::: tip 10 تا DNS برای دور زدن تحریم ها 
 
 > فقط تست باز شدن وب‌سایت YouTube گرفته شده و همه اوکی بودن.
+
+<Ltr>
 
 ● https://sky.rethinkdns.com/1:sBrAAAIAwgQAAdA-AgA=
 
@@ -326,6 +333,8 @@ https://sky.rethinkdns.com/1:sBrAAAIAwgQAAdA-AgA=
 ● https://resolver1.absolight.net/dns-query
 
 ● https://resolver2.absolight.net/dns-query
+
+</Ltr>
 
 :::
 
@@ -400,6 +409,8 @@ irm https://raw.githubusercontent.com/NiREvil/vless/main/edge/connectivity-test.
 
 بعد از اجرای دستور چندتا گزینه نمایش داده میشه: 
 
+<Ltr>
+
 **Commands:**
 
 - `test` ←  تست کلی dns پیشفرض سیستم 
@@ -415,6 +426,8 @@ irm https://raw.githubusercontent.com/NiREvil/vless/main/edge/connectivity-test.
 - `test -DNS 78.157.42.100` ← تست دی‌ان‌اس الکترو
 
 - `test -DNS 8.8.8.8 -Quick` ادغام پارامترها — تست سریع از دی‌ان‌اس گوگل
+
+</Ltr>
 
 ::: info **نکته**
 
