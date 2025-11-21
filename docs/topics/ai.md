@@ -3,9 +3,10 @@ layout: doc
 outline: deep
 lang: fa-IR
 dir: rtl
-title: 'هوش مصنوعی'
-description: 'سری ابزارهای هوش‌مصنوعی'
-date: 2025-7-2
+title: "ابزارهای برنامه‌نویسی مبتنی بر هوش مصنوعی"
+description: "شامل ویرایشگرهای کد هوشمند، موتورهای تکمیل خودکار کد، دستیارهای بازبینی کد، ابزارهای بازمهندسی هوشمند، مدل‌های زبانی بزرگ برای توسعه‌دهندگان
+و ابزارهایی که زبان طبیعی را به کد تبدیل می‌کنند."
+date: 2025-8-2
 editLink: true
 head:
   - - meta
@@ -15,7 +16,7 @@ head:
 
 # مدل‌های هوش‌ مصنوعی دستیار برنامه‌نویسی
 
-اگه دنبال یه لیست از مدل‌های هوش‌مصنوعی برای استفاده‌ عادی و روتین هستی پیشنهاد می‌کنم به [این لیست](./ai-tg) سر برنی.
+اگه دنبال یه لیست از مدل‌های هوش‌مصنوعی برای استفاده‌ عادی و روتین هستی پیشنهاد می‌کنم به [این لیست](./ai-daily) سر برنی.
 
 <br/>
 
@@ -32,7 +33,9 @@ head:
 <Ltr>
 
 ## 🌟 AI Code Assistants & Editors
-- **[Cursor](https://www.cursor.sh/)**: AI-powered code editor with advanced autocompletion and real-time coding assistance.
+- **[Cursor](https://www.cursor.sh/)**: AI-powered code editor with advanced autocompletion and real-time coding assistance. 
+- **[Antigravity](https://antigravity.google)**:
+Antigravity is Google's agentic development platform, evolving the IDE into the agent-first era. Experience liftoff with the next-generation IDE with Gemini 3 thinking pro.  
 - **[Cody (Sourcegraph)](https://about.sourcegraph.com/cody)**: AI assistant for code understanding, navigation, and generation across repositories.
 - **[Windsurf](https://windsurf.com/)**: AI-powered code editor with a powerful and advanced flexible coding agent that goes beyond simple autocompletion and code generation.
 - **[Aider](https://aider.chat)**: Collaborative AI tool for pair-programming and generating code edits via CLI.
