@@ -81,12 +81,11 @@ export default defineConfig({
               items: [
                 { text: 'گوگل جمنای', link: '/topics/Gemini' },
                 { text: 'پوکر – تگزاس هولدم', link: '/topics/poker-texas' },
-                { text: 'دستیارهای هوش مصنوعی', link: '/topics/ai' },
+                { text: 'ابزار‌های هوش مصنوعی', link: '/topics/ai' },
                 { text: 'تفاوت معماری پردازنده‌ها', link: '/topics/cpu-abi-android' },
                 { text: 'ترموکس', link: '/topics/termux' },
                 { text: 'اینترنت زمان قطعی برق', link: '/topics/iran-core' },
                 { text: 'خواب عمیق اپلیکیشن‌ها', link: '/topics/sleeping-apps' },
-                { text: 'استیبل دیفیوژن', link: '/topics/Stable-Diffusion' },
                 { text: 'امپراتوری سایبری', link: '/topics/REvil' },
                 { text: 'نکوباکس اندروید', link: '/topics/nekobox' },
                 { text: 'توربوتل', link: '/topics/turbotel' },
@@ -191,7 +190,7 @@ export default defineConfig({
               items: [
                 { text: 'Google Gemini', link: '/en/topics/Gemini' },
                 { text: 'Poker – Texas Holdem', link: '/en/topics/poker-texas' },
-                { text: 'Ai Agents', link: '/en/topics/ai' },
+                { text: 'AI Tools', link: '/en/topics/ai' },
                 { text: 'Processor Architecture', link: '/en/topics/cpu-abi-android' },
                 { text: 'Termux', link: '/en/topics/termux' },
                 { text: 'Iran Core', link: '/en/topics/iran-core' },
@@ -199,8 +198,8 @@ export default defineConfig({
                 { text: 'Stable Diffusion', link: '/en/topics/Stable-Diffusion' },
                 { text: 'The Fallen Crown', link: '/en/topics/REvil' },
                 { text: 'Nekobox for Android', link: '/en/topics/nekobox' },
-                { text: 'Cloudflare Back-end Selector', link: '/en/topics/cf-backend-selector' },
                 { text: 'Upgrade PHP On CentOS 7', link: '/en/topics/Upgrade-PHP-version-on-CentOS-7' },
+                { text: 'Cloudflare Back-end Selector', link: '/en/topics/cf-backend-selector' },
               ]
             }
           ],
