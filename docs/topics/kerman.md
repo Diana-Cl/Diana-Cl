@@ -1,11 +1,11 @@
 ## گزارش جامع تحلیل جغرافیای سیاسی و آمایش سرزمین 
 **بررسی تحلیلی پهناورترین استان‌های ایران، ابعاد ژئوپلیتیک و چالش‌های مدیریتی**
 
-<br><br/> 
+<br/> 
 
 <p align="center">
   <img src="/iran/kerman-1.jpg" alt="Persia" width="1280px" />
-</p><br/> 
+</p><br><br/> 
 
 # مقدمه و طرح مسئله
 ساختار تقسیمات کشوری در ایران، به عنوان بستری برای اعمال حاکمیت، توزیع منابع و مدیریت توسعه، همواره از اهمیت راهبردی برخوردار بوده است. سؤال بنیادین در خصوص اینکه «پهناورترین استان ایران کدام است؟» فراتر از یک پرسش ساده جغرافیایی، دریچه‌ای به سوی درک پیچیدگی‌های حکمرانی در فلات ایران می‌گشاید. وسعت سرزمینی یک استان، تنها یک عدد در جداول آماری نیست؛ بلکه متغیری تعیین‌کننده در تخصیص بودجه، چالش‌های امنیتی، مدیریت بحران‌های طبیعی و پتانسیل‌های اقتصادی است. در حال حاضر، بر اساس آخرین تغییرات در نقشه‌ی تقسیمات کشوری و مصوبات وزارت کشور، استان کرمان با مساحتی بالغ بر ۱۸۳،۲۸۵ کیلومتر مربع، عنوان پهناورترین استان ایران را به خود اختصاص داده است. این جایگاه، پیش از سال ۱۳۸۳ (۲۰۰۴ میلادی) و تقسیم استان خراسان بزرگ، متعلق به آن استان بود، اما با تفکیک خراسان، کرمان به رتبه نخست صعود کرد.
@@ -231,9 +231,25 @@
 
 مجموع مساحت سه استان اول (کرمان، سیستان و بلوچستان، خراسان جنوبی) به تنهایی بیش از ۳۱ درصد کل مساحت ایران را تشکیل می‌دهد که نشان‌دهنده تمرکز شدید وسعت سرزمینی در نیمه شرقی کشور است.
 
-::: danger **منبع داده‌ها**
+:::
 
-::: details برای مشاهده منابع کلیک کنید
+<br/>
+
+::: info Credits
+
+مطالب جمع اوری شده توسط جمنای گوگل
+
+Gemini 3 pro
+
+- deep research — Google ai studio [Link][gemini]
+
+:::
+
+<br/> 
+
+::: danger **Works cited**
+
+::: details برای مشاهده منبع داده‌ها کلیک کنید
 
 1. [Kerman province - Wikipedia][1]
 
@@ -241,15 +257,44 @@
 
 3. [Iran's Troubled Provinces][3]
 
+4. [Kerman Province, Iran - Persia Advisor][4]
+
+5. [Sistan and Baluchestan province - Wikipedia][5]
+
+6. [Iran - YouTube][6]
+
+7. [Yazd - Uppersia][7]
+
+8. [Yazd province - Wikipedia][8]
+
+9. [Kerman Province Attracts $227mn in Foreign Investment][9]
+
+10. [Kerman (province) - Wikitravel][10]
+
+11. [Not One Or Two – Pakistan Set To Split Into 12 Parts? Celebrations Erupt In Balochistan][11]
+
+12. [Iran Considers Dividing Sistan-Baluchestan Amid Tensions][12]
+
+13. [List of Iranian provinces by Human Development Index - Wikipedia][13]
+
+14. [Iran Provinces - Statoids][https://statoids.com/uir.html][14]
+
 :::
 
-
-Works cited
-1. Kerman province - Wikipedia, 
-2. 2. Provinces of Iran - Wikipedia, https://en.wikipedia.org/wiki/Provinces_of_Iran 3. Iran's Troubled Provinces: Baluchistan, https://iranprimer.usip.org/blog/2020/aug/06/irans-troubled-provinces-baluchistan 4. Kerman Province, Iran - Persia Advisor, https://www.persiaadvisor.com/about-persia/kerman-province/ 5. Sistan and Baluchestan province - Wikipedia, https://en.wikipedia.org/wiki/Sistan_and_Baluchestan_province 6. Sistan and Baluchestan, Iran - YouTube, https://www.youtube.com/watch?v=uTx2zBADhQQ 7. Yazd - Uppersia, https://www.uppersia.com/iran-destinations/yazd.html 8. Yazd province - Wikipedia, https://en.wikipedia.org/wiki/Yazd_province 9. Kerman Province Attracts $227mn in Foreign Investment, https://kayhan.ir/en/news/143638/kerman-province-attracts-$227mn-in-foreign-investment 10. Kerman (province) - Wikitravel, https://wikitravel.org/wiki/en/index.php?title=Kerman_(province)&mobileaction=toggle_view_desktop 11. Not One Or Two – Pakistan Set To Split Into 12 Parts? Celebrations Erupt In Balochistan, https://zeenews.india.com/world/not-one-or-two-pakistan-set-to-split-into-12-parts-celebrations-erupt-in-balochistan-2951648.html 12. Iran Considers Dividing Sistan-Baluchestan Amid Tensions, https://www.iranintl.com/en/202405188549 13. List of Iranian provinces by Human Development Index - Wikipedia, https://en.wikipedia.org/wiki/List_of_Iranian_provinces_by_Human_Development_Index 14. Iran Provinces - Statoids, https://statoids.com/uir.html
-
-
+<br/> 
 
 [1]: https://en.wikipedia.org/wiki/Kerman_province
-[2]: https://en.wikipedia.org/wiki/Provinces_of_Iran?hl=en-US
-[3]: https://en.wikipedia.org/wiki/Sistan_and_Baluchestan_province?hl=en-US
+[2]: https://en.wikipedia.org/wiki/Provinces_of_Iran
+[3]: https://iranprimer.usip.org/blog/2020/aug/06/irans-troubled-provinces-baluchistan
+[4]: https://www.persiaadvisor.com/about-persia/kerman-province
+[5]: https://en.wikipedia.org/wiki/Sistan_and_Baluchestan_province
+[6]: https://www.youtube.com/watch?v=uTx2zBADhQQ
+[7]: https://www.uppersia.com/iran-destinations/yazd.html
+[8]: https://en.wikipedia.org/wiki/Yazd_province
+[9]: https://kayhan.ir/en/news/143638/kerman-province-attracts-$227mn-in-foreign-investment
+[10]: https://wikitravel.org/wiki/en/index.php?title=Kerman_(province)&mobileaction=toggle_view_desktop
+[11]: https://zeenews.india.com/world/not-one-or-two-pakistan-set-to-split-into-12-parts-celebrations-erupt-in-balochistan-2951648.html
+[12]: https://www.iranintl.com/en/202405188549
+[13]: https://en.wikipedia.org/wiki/List_of_Iranian_provinces_by_Human_Development_Index
+[14]: https://statoids.com/uir.html
+[15]: https://aistudio.google.com/prompts/new_chat?model=gemini-3-pro-preview
