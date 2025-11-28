@@ -235,17 +235,21 @@
 
 ::: details برای مشاهده منابع کلیک کنید
 
-1. [Kerman province Wikipedia][1]
+1. [Kerman province - Wikipedia][1]
 
-2. [Provinces of iran Wikipedia][2]
+2. [Provinces of Iran - Wikipedia][2]
 
-3. [Sistan and Baluchestan][3]
+3. [Iran's Troubled Provinces][3]
 
 :::
 
 
+Works cited
+1. Kerman province - Wikipedia, 
+2. 2. Provinces of Iran - Wikipedia, https://en.wikipedia.org/wiki/Provinces_of_Iran 3. Iran's Troubled Provinces: Baluchistan, https://iranprimer.usip.org/blog/2020/aug/06/irans-troubled-provinces-baluchistan 4. Kerman Province, Iran - Persia Advisor, https://www.persiaadvisor.com/about-persia/kerman-province/ 5. Sistan and Baluchestan province - Wikipedia, https://en.wikipedia.org/wiki/Sistan_and_Baluchestan_province 6. Sistan and Baluchestan, Iran - YouTube, https://www.youtube.com/watch?v=uTx2zBADhQQ 7. Yazd - Uppersia, https://www.uppersia.com/iran-destinations/yazd.html 8. Yazd province - Wikipedia, https://en.wikipedia.org/wiki/Yazd_province 9. Kerman Province Attracts $227mn in Foreign Investment, https://kayhan.ir/en/news/143638/kerman-province-attracts-$227mn-in-foreign-investment 10. Kerman (province) - Wikitravel, https://wikitravel.org/wiki/en/index.php?title=Kerman_(province)&mobileaction=toggle_view_desktop 11. Not One Or Two – Pakistan Set To Split Into 12 Parts? Celebrations Erupt In Balochistan, https://zeenews.india.com/world/not-one-or-two-pakistan-set-to-split-into-12-parts-celebrations-erupt-in-balochistan-2951648.html 12. Iran Considers Dividing Sistan-Baluchestan Amid Tensions, https://www.iranintl.com/en/202405188549 13. List of Iranian provinces by Human Development Index - Wikipedia, https://en.wikipedia.org/wiki/List_of_Iranian_provinces_by_Human_Development_Index 14. Iran Provinces - Statoids, https://statoids.com/uir.html
 
-l
-[1]: https://en.wikipedia.org/wiki/Kerman_province?hl=en-US
+
+
+[1]: https://en.wikipedia.org/wiki/Kerman_province
 [2]: https://en.wikipedia.org/wiki/Provinces_of_Iran?hl=en-US
 [3]: https://en.wikipedia.org/wiki/Sistan_and_Baluchestan_province?hl=en-US
