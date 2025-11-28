@@ -34,7 +34,7 @@
 </p><br/>  
 
 <p align="center">
-  <img src="/iran/kerman-3.jpg" alt="Persia" width="960px" />
+  <img src="/iran/kerman-3.png" alt="Province" width="1280px" />
 </p><br/>  
 
 <p align="center">
