@@ -30,7 +30,17 @@ head:
 
 > پیرامون نکوباکس [نسخه 1.4.0][1]
 
-توی آپدیت آخر یه سری لینک‌های ساب به کلاینت اضافه نمیشن‌هاااا، تو بکاپ خودم اون آخراش ده تا لینک ساب هست که آپدیت نمیشن درحالی که توی کلاینت‌های دیگه اوکی هستن، دلیلشم نمی‌دونم هنوز. اگه این مسأله براتون مهمه اصلا آپدیت نکنید به این نسخه. هم‌چنان پیشنهاد من استفاده از [Exclave][2] هست. قابلیت [بالانسر](#balancer) اون می‌ارزه به کل هیکل نکوباکس ادایی
+توی آپدیت آخر یه سری لینک‌های ساب به کلاینت اضافه نمیشن‌هاااا، تو بکاپ خودم اون آخراش ده تا لینک ساب هست که آپدیت نمیشن درحالی که توی کلاینت‌های دیگه اوکی هستن، دلیل آپدیت و فچ نشدن کانفیگ‌های داخل برخی لینک‌ ساب‌ها `HTTP headers` اوناست، قطعا دیدید که ابتدای بعضی لینک‌های ساب چند سطر کامنت شده‌ (که شامل اطلاعاتی مثل اسم سازنده ساب و اطلاعات آپدیت دوره‌ای و لینک کانال یا گیت‌هاب یارو هست)، منطورم اینه برای مثال:  
+
+```yaml
+# profile-title: base64:U0hBRE9XU09DS1MgVElNRSDwn5G7
+# profile-update-interval: 24
+# subscription-userinfo: upload=5368709120; download=117037858816; total=955630223360; expire=1794268801
+# support-url: https://t.me/F_NiREvil
+# profile-web-page-url: https://github.com/NiREvil/vless
+```
+
+نکوباکس تو آپدیت اخرش اینارو نمی‌تونه هندل کنه و خطای Subscription found exception برمی‌گردونه، اگه این مسأله براتون مهمه اصلا آپدیت نکنید به این نسخه. هم‌چنان پیشنهاد من استفاده از [Exclave][2] هست. قابلیت [بالانسر](#balancer) اون می‌ارزه به کل هیکل نکوباکس ادایی
 
 ::: details **`از جمله ساب‌هایی که آپدیت نمیشن`**
 
@@ -362,7 +372,7 @@ head:
 
 ### نکوباکس / اکسکلیو
 
-ریموت DNS پیشفرضشون دقیقا یادم نیست فکر کنم DoH گوگل بودش حالا هرچی مهم نیست چون یادمه سازگار نبود لا نت ایران و مخوصا کانفیگ‌های worker & page به خاطر همین به محض نصب؛ باید تغییر بدیم به DNS over HTTPS گوگل ولی غیر DoH و در عین حال DoH :sweat_smile:  
+ریموت DNS پیش‌فرضشون دقیقا یادم نیست فکر کنم DoH گوگل بودش حالا هرچی مهم نیست چون یادمه سازگار نبود لا نت ایران و مخوصا کانفیگ‌های worker & page به خاطر همین به محض نصب؛ باید تغییر بدیم به DNS over HTTPS گوگل ولی غیر DoH و در عین حال DoH :sweat_smile:  
 
 <Ltr>
 
@@ -386,13 +396,19 @@ https://freedns.controld.com/p2
 https://208.67.222.222/dns-query
 ```
 
-**Clean Browsing:**
+**AliBaba:**  
+
+```
+https://223.5.5.5/dns-query
+```  
+
+**Clean Browsing:**  
 
 ```
 tcp://185.228.168.9
 ```
 
-**Kernel error**
+**Kernel error**  
 
 ```
 https://dns.kernel-error.de/dns-query
@@ -466,6 +482,12 @@ https://8.8.8.8/dns-query
 ```
 https://94.140.14.14/dns-query
 ```
+
+**AliBaba:**
+
+```
+https://223.5.5.5/dns-query
+```  
   
 **Quad DNS:**
 
@@ -670,13 +692,19 @@ https://clients3.google.com/generate_204
 
 - https://api.telegram.org/robots.txt
 
-- https://cp.cloudflare.com/
+- http://cp.cloudflare.com/
+
+- http://kernel.org
 
 - https://connectivitycheck.android.com/generate_204
 
 - https://connectivity.gstatic.com/generate_204
 
 - http://cachefly.cachefly.net/10mb.test
+
+- http://captive.apple.com/hotspot-detect.html
+
+- http://detectportal.firefox.com
 
 - https://play.googleapis.com/generate_204
 
@@ -705,6 +733,10 @@ https://clients3.google.com/generate_204
 - https://elementary.io/generate_204
 
 - https://httpstat.us/204
+
+- http://1.1.1.1
+
+- https://1.1.1.1
 
 - https://attwifi.apple.com/library/test/success.html
 
@@ -908,7 +940,7 @@ Config options > inbound options > TUN implementation.
 <Ltr>
 
 ```
-http://www.gstatic.com/generate_204
+https://www.gstatic.com/generate_204
 ```
 
 </Ltr>
@@ -926,7 +958,7 @@ http://www.gstatic.com/generate_204
 <Ltr>
 
 ```
-http://www.gstatic.com/generate_204
+https://www.gstatic.com/generate_204
 ```
 
 </Ltr>
@@ -974,11 +1006,11 @@ https://www.gstatic.com/generate_204
 [1]: https://github.com/MatsuriDayo/NekoBoxForAndroid/releases
 [2]: https://t.me/new_folder_revil/3552
 [3]: https://github.com/NiREvil/vless/ 
-[4]: https://t.me/new_folder_revil/3497
+[4]: https://t.me/new_folder_revil/3566
 [5]: https://github.com/dyhkwong/Exclave/releases
 [6]: https://t.me/F_NiREvil/5123
 [7]: https://t.me/F_NiREvil/5518
-[8]: https://t.me/new_folder_revil/3495
+[8]: https://t.me/new_folder_revil/3564
 [9]: https://t.me/new_folder_revil/3554
 [10]: https://www.dnsleaktest.com/
 [11]: https://t.me/F_NiREvil/620
