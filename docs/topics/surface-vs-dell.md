@@ -45,7 +45,7 @@ head:
 
 <br/>
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/eee4926a-c8a3-4506-aca4-cb5642dada6f" alt="surface-1" width="1280px" />
+  <img src="/surface/s1.png" alt="surface-1" width="1080px" />
 </p>
 <br/> 
 
@@ -58,7 +58,7 @@ head:
 
 <br/>
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/ee9782b3-9905-414d-b111-15c75cfe0af5" alt="dell-1" width="1280px" />
+  <img src="/surface/d1.png" alt="dell-1" width="1080px" />
 </p>
 <br/> 
 
@@ -85,7 +85,7 @@ head:
 
 <br/>
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/88394d62-a589-4092-b7e2-1b4c3119124a" alt="surface-2" width="1280px" />
+  <img src="/surface/s2.png" alt="surface-2" width="2629px" />
 </p><br/> 
 
 ### ۲.۲ Dell Latitude 7320 2-in-1: جان‌سختِ انعطاف‌پذیر
@@ -97,7 +97,7 @@ head:
 
 <br/>
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/84e8397e-c709-4df2-80f7-42694561dc6d" alt="dell-2" width="1280px" />
+  <img src="/surface/d2.jpeg" alt="dell-2" />
 </p><br/> 
 
 ## ۳. نمایشگر و دقت رنگ (حیاتی برای فتوشاپ)
@@ -224,13 +224,13 @@ head:
 4.  **حمل و نقل:** وزن سبک‌تر مدل فیبر کربن برای جابجایی دائم بهتر است.
 5.  **نکته خرید:** حیاتی است که هنگام خرید، کیفیت صفحه نمایش را چک کنید (باید روشن و پررنگ باشد) و مطمئن شوید دستگاه قفل بایوس (Bios Password) یا قفل شرکتی (Computrace) نداشته باشد.
 
-::: danger **رأی نهایی کارشناس:**
+::: tip **کارشناسی نهایی**
 
 برای یک «کاربر معمولی» در ایران که ترکیبی از فتوشاپ، وب‌گردی و آفیس را انجام می‌دهد و بودجه محدودی برای تعمیرات احتمالی دارد، **Dell Latitude 7320 2-in-1** (با شرط پنل صفحه نمایش خوب) گزینه عقلانی‌تر و آینده‌نگرانه‌تری است. پورت‌های کامل‌تر، قابلیت تعمیر آسان و وزن کمتر، آن را به ابزاری کارآمدتر تبدیل می‌کند. اما اگر "چشم‌نواز بودن" صفحه نمایش و بدنه اولویت مطلق است، هیچ دستگاهی در این رده قیمتی جایگزین **Surface Laptop 4** نمی‌شود.
 
 <br/>
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/00f75433-226e-46d2-a6a3-d5a966da8d60" alt="surface-vs-dell" width="1280px" />
+  <img src="/surface/sd.jpg" alt="surface-vs-dell" width="4048px" />
 </p>
 
 :::
@@ -239,9 +239,9 @@ head:
 
 ## Works cited
 
-::: info Works cited 
+::: info منابع تحقیق 
 
-::: details مشاهده منابع تحقیق
+::: details برای مشاهده کلیک کنید
 
 **فقط منابع استفاده شده رسمی ذکر شده**
 
