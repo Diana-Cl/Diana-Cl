@@ -88,6 +88,7 @@ export default defineConfig({
                 { text: 'خواب عمیق اپلیکیشن‌ها', link: '/topics/sleeping-apps' },
                 { text: 'امپراتوری سایبری', link: '/topics/REvil' },
                 { text: 'نکوباکس اندروید', link: '/topics/nekobox' },
+                { text: 'Surface VS DELL', link: '/topics/surface-vs-dell' },
                 { text: 'توربوتل', link: '/topics/turbotel' },
                 { text: 'کرمان', link: '/topics/kerman' },
                 { text: 'انتخابگر بک‌اند کلادفلر', link: '/topics/cf-backend-selector' },
