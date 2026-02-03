@@ -13,16 +13,15 @@ head:
       content: NekoBox, nekobox, NB4A, nekobox for Android, Exclave, Android, v2ray, singbox, clients, xray, clash meta
 ---
 
-# نکوباکس اندروید
-**NB4A**
+# نکوباکس - اکسکلیو اندروید
+**NB4A** & **Exclave**
 
----
+<br/>
 
 <h2>📚 Table of Contents</h2>
 
 [[toc]]
 
----
 
 <br/> 
 
@@ -692,6 +691,30 @@ https://clients3.google.com/generate_204
 
 - https://api.telegram.org/robots.txt
 
+- http://chatgpt.com/cdn-cgi/trace
+
+- https://chatgpt.com/cdn-cgi/trace
+
+- http://zzula.ir/cdn-cgi/trace
+
+- https://chat.openai.com/cdn-cgi/trace
+
+- http://cp.cloudflare.com/cdn-cgi/trace
+
+- https://connectivity.cloudflareclient.com/cdn-cgi/trace
+
+- https://check-host.net/cdn-cgi/trace
+
+- https://www.speedtest.net/cdn-cgi/trace
+
+- https://ifconfig.co/cdn-cgi/trace
+
+- https://iplocation.io/cdn-cgi/trace
+
+- https://whatismyipaddress.com/cdn-cgi/trace
+
+- https://one.one.one.one/cdn-cgi/trace
+
 - http://cp.cloudflare.com/
 
 - http://kernel.org
@@ -724,8 +747,6 @@ https://clients3.google.com/generate_204
 
 - https://check.firewalla.com
 
-- http://www.gstatic.com/generate_204
-
 - https://172.217.6.238/generate_204
 
 - https://e.foundation/net_204/
@@ -733,8 +754,6 @@ https://clients3.google.com/generate_204
 - https://elementary.io/generate_204
 
 - https://httpstat.us/204
-
-- http://1.1.1.1
 
 - https://1.1.1.1
 
@@ -759,8 +778,6 @@ https://clients3.google.com/generate_204
 - https://www.v2ex.com/generate_204
 
 - https://connect.rom.miui.com/generate_204
-
-- https://connectivitycheck.platform.hicloud.com/generate_204
 
 - https://wifi.vivo.com.cn/generate_204
 
@@ -925,13 +942,13 @@ Config options > inbound options > TUN implementation.
 
 ## خلاصه پیشنهادات {#summary}
 
-### توی نکوباکس/اکسکیو
+### توی نکوباکس/اکسکلیو
 
 - ‏ **Remote DNS** ← `https://8.8.8.8/dns-query`
 - **Direct DNS** ← رو روی سیستم بذار
 - **DNS Routing** ← روشن کن
 - **Fake DNS** ← رو خاموش
-- **Use system DNS as Bootstrap DNS** ← روشن بذار
+- **Use system DNS as Bootstrap DNS** ← روشن بذار تا روی سیستم باشه
 - **Enable Sniffing** ← روشن بذار
 - **Hijack DNS** ← روشن بذار
 - ‏ **TUN Implementation/Stack** ← gVisor بذار مگه اینکه گوشی قدیمی باشه اون وقت system بذارش
@@ -1011,7 +1028,7 @@ https://www.gstatic.com/generate_204
 [6]: https://t.me/F_NiREvil/5123
 [7]: https://t.me/F_NiREvil/5518
 [8]: https://t.me/new_folder_revil/3564
-[9]: https://t.me/new_folder_revil/3554
+[9]: https://t.me/new_folder_revil/3615
 [10]: https://www.dnsleaktest.com/
 [11]: https://t.me/F_NiREvil/620
 [12]: https://github.com/NiREvil/vless/tree/main/DNS%20over%20HTTPS/Azadi-DNS
