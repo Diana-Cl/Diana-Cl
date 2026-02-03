@@ -23,6 +23,7 @@
     "markdown-it-attrs": "^4.1.6",
     "markdown-it-footnote": "^4.0.0",
     "markdown-it-mathjax3": "^4.3.2",
+    "sass-embedded": "^1.97.3",
     "vitepress": "^1.6.3",
     "vitepress-plugin-image-viewer": "^1.1.6",
     "vitepress-plugin-mermaid": "^2.0.16",
