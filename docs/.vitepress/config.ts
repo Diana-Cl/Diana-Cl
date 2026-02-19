@@ -79,6 +79,7 @@ export default defineConfig({
             {
               text: '📚 یادداشت‌ها',
               items: [
+                { text: 'آرامش قبل از بحران', link: '/topics/crisis' },
                 { text: 'گوگل جمنای', link: '/topics/Gemini' },
                 { text: 'پوکر – تگزاس هولدم', link: '/topics/poker-texas' },
                 { text: 'ابزار‌های هوش مصنوعی', link: '/topics/ai' },
