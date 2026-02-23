@@ -530,9 +530,9 @@ https://9.9.9.9/dns-query
 
 - **چرا مهمه؟** اگه ISP‌ت DNS رو مسدود یا دستکاری کنه، سایت‌های داخلی لود نمی‌شن.
 
-- **پیشنهاد:** توی تنظیمات Exclave، گزینه "Use system DNS as Direct DNS" رو خاموش کن و تو کادر زیرش که نوشته "Direct DNS" بیا و `tcp://8.8.8.8` بذار تا فیکس همیشه از گوگل استفاده کنه، تو ایران TCP اون فیلتر نیست و سریعم که هست و دیگه آدم کور مگه از خدا چی میخواد؟؟
+- **پیشنهاد:** توی تنظیمات Exclave، گزینه "Use system DNS as Direct DNS" فکر کنم پیش‌فرض روشن باشه اگه نبود خودت اونو روشن کن تا از DNSهای پیش‌فرض استفاده کنه.
 
-برای Nekobox هم به همین شکله فقط دیگه اون گزیه رو نداره که روشن یا خاموش بکنید، توی نکوباکس اکه توی کادر Direct DNS بنویسی `local` همینجوری با حروف کوچیک اونوقت از دی‌ان‌اس داخلی اندروید استفاده می‌کنه و میتونی بذاری لوکال بمونه یا که مثل توضیح پاراگراف قبلی اینجاهم `tcp://8.8.8.8` قرار بدی.
+- **برای Nekobox** هم به همین شکله فقط دیگه اون دکمه‌ای برای روشن یا خاموش کردن نداره، توی نکوباکس اکه توی کادر Direct DNS بنویسی local همینجوری با حروف کوچیک اونوقت از دی‌ان‌اس داخلی اندروید استفاده می‌کنه، می‌تونی بذاری لوکال بمونه یا که یه TCP یا DoH مثل اختیاری در اون قسمت قرار بدی تا از دیفالت دربیاد. 
 
 هم‌چنین می‌تونی یه DNS سرور عمومی بی‌طرف و بی دردسر و فیلتر نشده مثل علی‌بابا استفاده کنی، در اینصورت بازم همونطور که بالاتر گفتم باید اول گزینه `Use system DNS as Direct dns` رو خاموش کنی بعد اقدام کنی برای قرار دادن سرور دلخواه تو کادر زیرش، این علی باباعه:
 
@@ -547,7 +547,7 @@ https://223.5.5.5/dns-query
 
 ::: tip **سفارشی سازی**
 
-اگه می‌خوای سفارشی کنی می‌تونی، از DNS‌های خوب ایرانی مثل شِکَن یا الکترو استفاده کنی تا سایت‌های داخلی سریع‌تر باز شن. توی هردو کلاینت مشابهه، تو این آدرس می‌تونی پیداش کنی:
+اگه می‌خوای سفارشی کنی می‌تونی، از DNS‌های خوب ایرانی مثل شِکَن یا زیرساخت استفاده کنی تا سایت‌های داخلی سریع‌تر باز شن. توی هردو کلاینت مشابهه، تو این آدرس می‌تونی پیداش کنی:
 
 <Ltr>
 
@@ -559,10 +559,10 @@ https://223.5.5.5/dns-query
 178.22.122.100
 ```
 
-**Electro DNS**
+**Zirsakht DNS**
 
 ```
-78.157.42.100
+217.218.127.127
 ```
 
 </Ltr>
@@ -645,7 +645,7 @@ http://cp.cloudflare.com
 <Ltr>
 
 ```
-https://www.google.com/generate_204
+https://www.gstatic.com/generate_204
 ```
 
 </Ltr>
@@ -685,7 +685,7 @@ https://clients3.google.com/generate_204
 
 - https://clients3.google.com/generate_204
 
-- https://www.google.com/gen_204
+- https://www.google.com/generate_204
 
 - https://api.v2fly.org/checkConnection.svgz
 
@@ -1021,14 +1021,14 @@ https://www.gstatic.com/generate_204
 - [مخزن لینک‌های ساب][3]
 
 [1]: https://github.com/MatsuriDayo/NekoBoxForAndroid/releases
-[2]: https://t.me/new_folder_revil/3552
+[2]: https://t.me/new_folder_revil/3628
 [3]: https://github.com/NiREvil/vless/ 
 [4]: https://t.me/new_folder_revil/3566
 [5]: https://github.com/dyhkwong/Exclave/releases
 [6]: https://t.me/F_NiREvil/5123
 [7]: https://t.me/F_NiREvil/5518
 [8]: https://t.me/new_folder_revil/3564
-[9]: https://t.me/new_folder_revil/3615
+[9]: https://t.me/new_folder_revil/3630
 [10]: https://www.dnsleaktest.com/
 [11]: https://t.me/F_NiREvil/620
 [12]: https://github.com/NiREvil/vless/tree/main/DNS%20over%20HTTPS/Azadi-DNS
