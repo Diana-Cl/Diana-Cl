@@ -81,6 +81,7 @@ export default defineConfig({
               items: [
                 { text: 'آرامش قبل از بحران', link: '/topics/crisis' },
                 { text: 'گوگل جمنای', link: '/topics/Gemini' },
+                { text: 'لینک داخلی کلاینت‌های ضروری', link: '/topics/ir' },
                 { text: 'پوکر – تگزاس هولدم', link: '/topics/poker-texas' },
                 { text: 'ابزار‌های هوش مصنوعی', link: '/topics/ai' },
                 { text: 'تفاوت معماری پردازنده‌ها', link: '/topics/cpu-abi-android' },
