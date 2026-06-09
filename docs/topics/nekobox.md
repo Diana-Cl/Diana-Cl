@@ -5,7 +5,7 @@ lang: 'fa-IR'
 dir: 'rtl'
 title: 'نکوباکس اندروید'
 description: 'نکاتی که قبل از استفاده از نکوباکس باید بدونیم'
-date: 2025-06-17
+date: 2026-6-9
 editLink: true
 head:
   - - meta
@@ -27,7 +27,7 @@ head:
 
 ## آپدیت نشدن برخی ساب‌ها
 
-> پیرامون نکوباکس [نسخه 1.4.1][1]
+> پیرامون نکوباکس [نسخه 1.4.2][1]
 
 توی آپدیت آخر یه سری لینک‌های ساب به کلاینت اضافه نمیشن‌هاااا، تو بکاپ خودم اون آخراش ده تا لینک ساب هست که آپدیت نمیشن درحالی که توی کلاینت‌های دیگه اوکی هستن، دلیل آپدیت و فچ نشدن کانفیگ‌های داخل برخی لینک‌ ساب‌ها `HTTP headers` اوناست، قطعا دیدید که ابتدای بعضی لینک‌های ساب چند سطر کامنت شده‌ (که شامل اطلاعاتی مثل اسم سازنده ساب و اطلاعات آپدیت دوره‌ای و لینک کانال یا گیت‌هاب یارو هست)، منطورم اینه برای مثال:  
 
@@ -1021,14 +1021,14 @@ https://www.gstatic.com/generate_204
 - [مخزن لینک‌های ساب][3]
 
 [1]: https://github.com/MatsuriDayo/NekoBoxForAndroid/releases
-[2]: https://t.me/new_folder_revil/3628
+[2]: https://t.me/new_folder_revil/3639
 [3]: https://github.com/NiREvil/vless/ 
 [4]: https://t.me/new_folder_revil/3566
 [5]: https://github.com/dyhkwong/Exclave/releases
 [6]: https://t.me/F_NiREvil/5123
 [7]: https://t.me/F_NiREvil/5518
 [8]: https://t.me/new_folder_revil/3564
-[9]: https://t.me/new_folder_revil/3630
+[9]: https://t.me/new_folder_revil/3641
 [10]: https://www.dnsleaktest.com/
 [11]: https://t.me/F_NiREvil/620
 [12]: https://github.com/NiREvil/vless/tree/main/DNS%20over%20HTTPS/Azadi-DNS

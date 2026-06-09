@@ -40,6 +40,8 @@ head:
 
 # 📦 دانلود کلاینت‌های ضروری با نت داخلی
 
+EXPIRED   EXPIRED   EXPIRED   EXPIRED  EXPIRED   EXPIRED
+
 <br>
 
 ::: tip نکته مهم قبل از نصب
