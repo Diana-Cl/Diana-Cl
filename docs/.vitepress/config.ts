@@ -46,17 +46,19 @@ export default defineConfig({
   ],
 
   markdown: {
-    config: md => {
-      md.use(footnote);
-      md.use(mathjax3);
-      md.use(attrs);
-      md.use(tabsMarkdownPlugin);
-      md.use(InlineLinkPreviewElementTransform, {
-        tag: 'NolebaseInlineLinkPreview'
-      });
-    },
-    lineNumbers: true,
+  config: md => {
+    md.use(footnote);
+    md.use(mathjax3);
+    md.use(attrs);
+
+    // md.use(tabsMarkdownPlugin);
+
+    // md.use(InlineLinkPreviewElementTransform, {
+    //   tag: 'NolebaseInlineLinkPreview'
+    // });
   },
+  lineNumbers: true,
+},
 
   mermaid: {},
 
