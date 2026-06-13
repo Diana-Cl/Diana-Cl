@@ -6,8 +6,23 @@ dir: rtl
 title: Markdown
 description: "آموزش کامل Markdown – از صفر تا صد برای نوشتن مقالات"
 date: 2026-06-12
+editLink: true
+head:
+  - - meta
+    - name: description
+      content: راهنمای کامل قواعد نگارش متن با زبان مارک داون, This is intended as a quick reference and showcase. 
+  - - meta
+    - name: keywords
+      content: Markdown, md core, Markdown is a simple way to format text that looks great on any device. It doesn’t do anything fancy like change the font size, color, or type — just the essentials, using keyboard symbols you already know.
+  - - meta
+    - property: og:title
+      content: آموزش مقدماتی و متوسطه نگارش مارک‌داون
+  - - meta
+    - property: og:description
+      content:  آموزش مارک‌داون نویسی، آموزش زبان markdown, markdown, مارک داون، نوشتار استاندارد
 ---
 
+<br/>
 
 # آموزش کامل Markdown
 
@@ -292,7 +307,6 @@ say_hello("World")
 
 ---
 
-
 ## فهرست مطالب (Table of Contents)
 
 این فهرست به شما کمک می‌کنه تا به سرعت به بخش مورد نظر خودتون در این راهنما بپرید. خود این فهرست هم یک مثال عالی برای یادگیری یکی از قابلیت‌های مهم مارک‌داون، یعنی **لینک‌دهی داخلی** است.
@@ -305,7 +319,7 @@ say_hello("World")
 
 در فهرست زیر، از لیست‌های تودرتو برای نمایش بهتر ساختار مقاله استفاده شده.
 
----
+<br/>
 
 ## فهرست مطالب
 
@@ -340,7 +354,8 @@ say_hello("World")
 ---
 
 
-حتما! با کمال میل ادامه میدم و بخش پیشرفته، نکات تکمیلی و منابع بیشتر رو به راهنمای قبلی اضافه می‌کنم. این هم از ادامه راهنما با همون فرمت مارک‌داون:
+<br/>
+
 ## بخش ششم: ترفندهای پیشرفته و حرفه‌ای
 
 حالا که با اصول اولیه و پیشرفته آشنا شدی، وقتشه چندتا ترفند یاد بگیری که نوشته‌هات رو از بقیه متمایز کنه. این قابلیت‌ها ممکنه در همه پلتفرم‌ها (به خصوص نسخه‌های قدیمی‌تر مارک‌داون) پشتیبانی نشن، ولی در جاهایی مثل گیت‌هاب (GFM - GitHub Flavored Markdown) به خوبی کار می‌کنن.
