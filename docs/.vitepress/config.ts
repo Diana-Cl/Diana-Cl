@@ -81,6 +81,7 @@ export default defineConfig({
               items: [
                 { text: 'آرامش قبل از بحران', link: '/topics/crisis' },
                 { text: 'گوگل جمنای', link: '/topics/Gemini' },
+                { text: 'مارک‌داون', link: '/topics/markdown' },                
                 { text: 'لینک داخلی کلاینت‌های ضروری', link: '/topics/ir' },
                 { text: 'پوکر – تگزاس هولدم', link: '/topics/poker-texas' },
                 { text: 'ابزار‌های هوش مصنوعی', link: '/topics/ai' },
@@ -194,6 +195,7 @@ export default defineConfig({
               items: [
                 { text: 'Google Gemini', link: '/en/topics/Gemini' },
                 { text: 'Poker – Texas Holdem', link: '/en/topics/poker-texas' },
+                { text: 'Markdown', link: '/topics/markdown' },
                 { text: 'AI Tools', link: '/en/topics/ai' },
                 { text: 'Processor Architecture', link: '/en/topics/cpu-abi-android' },
                 { text: 'Termux', link: '/en/topics/termux' },
@@ -290,10 +292,10 @@ export default defineConfig({
         },
         socialLinks: [
           { icon: 'github', link: 'https://github.com/Diana-Cl/' },
-          { icon: 'telegram', link: 'https://t.me/F_NiREvil/6448' },
+          { icon: 'telegram', link: 'https://t.me/NiREvil_GP' },
         ],
         footer: {
-          copyright: '© 2025 REvil — Sharing knowledge, one note at a time',
+          copyright: '© 2026 REvil — Sharing knowledge, one note at a time',
           message: 'Made with using VitePress',
         },
       },
