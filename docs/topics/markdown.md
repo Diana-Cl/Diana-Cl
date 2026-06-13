@@ -3,23 +3,29 @@ layout: doc
 outline: deep
 lang: fa-IR
 dir: rtl
-title: Markdown
-description: "آموزش کامل Markdown – از صفر تا صد برای نوشتن مقالات"
+
+title: آموزش Markdown
+description: "آموزش جامع Markdown؛ یادگیری کامل نگارش و قالب‌بندی متن از مقدماتی تا پیشرفته"
+
 date: 2026-06-12
 editLink: true
+
 head:
   - - meta
     - name: description
-      content: راهنمای کامل قواعد نگارش متن با زبان مارک داون, This is intended as a quick reference and showcase. 
+      content: راهنمای کامل زبان Markdown و اصول نگارش، قالب‌بندی و مستندسازی متون.
+
   - - meta
     - name: keywords
-      content: Markdown, md core, Markdown is a simple way to format text that looks great on any device. It doesn’t do anything fancy like change the font size, color, or type — just the essentials, using keyboard symbols you already know.
+      content: Markdown, Markdown Guide, Markdown Tutorial, Markdown Syntax, md, Documentation, Writing
+
   - - meta
     - property: og:title
-      content: آموزش مقدماتی و متوسطه نگارش مارک‌داون
+      content: آموزش جامع نگارش با Markdown
+
   - - meta
     - property: og:description
-      content:  آموزش مارک‌داون نویسی، آموزش زبان markdown, markdown, مارک داون، نوشتار استاندارد
+      content: آموزش کامل Markdown از مبانی تا مباحث پیشرفته برای تولید مستندات، مقالات و محتوای وب.
 ---
 
 <br/>
@@ -447,7 +453,7 @@ $$
 در گیت‌هاب و خیلی جاهای دیگه، می‌تونی با نوشتن کد ایموجی بین دو دو نقطه (`:`)، ایموجی به متنت اضافه کنی.
 
 ```markdown
-نوشتن با مارک‌داون خیلی باحاله! :joy: :rocket:
+نوشتن با مارک‌داون خیلی باحاله! :joy:
 ```
 
 **خروجی:**
@@ -461,6 +467,14 @@ $$
 2.  **سازگاری:** به یاد داشته باش که مارک‌داون "طعم‌های" مختلفی داره (مثل CommonMark, GFM, Markdown Extra). قابلیت‌های پیشرفته مثل جدول‌ها یا لیست وظایف ممکنه در همه جا یکسان کار نکنن. همیشه بهتره قابلیت‌های اصلی رو در اولویت قرار بدی.
 3.  **متن جایگزین برای تصاویر:** همیشه برای تصاویر `alt text` مناسب بنویس. این کار هم به سئو (SEO) کمک می‌کنه و هم باعث می‌شه افرادی که از صفحه‌خوان‌ها (Screen Readers) استفاده می‌کنن، متوجه محتوای تصویر بشن.
 4.  **استفاده از ویرایشگر مناسب:** از یک ویرایشگر کد یا متن استفاده کن که از Markdown پشتیبانی می‌کنه و قابلیت پیش‌نمایش زنده (Live Preview) داره. ابزارهایی مثل **VS Code**, **Typora**, **Obsidian** یا حتی ویرایشگر آنلاین گیت‌هاب عالی هستن.
+
+<br/>
+
+### انقلاب Markup تلگرام
+
+اخیرا پشتیبانی از پیام‌هایی با فرمت Markdown به تلگرام اضافه شده که به ربات‌ها اجازه میده متن‌های کاملا ساختاریافته‌ ارسال کنن. [^3]  
+برای مثال پاسخ‌های تولید شده توسط هوش مصنوعی ها رو با قالب‌بندی اصولی، استاندارد، مرتب و خوانا و بدون درهم‌ریختگی جداول و تیترها منتشر کنن  
+به احتمال زیاد در آینده نزدیک در دسترس عموم عم قرار می‌گیره، الان علی الحساب می‌تونید متن خودتون رو با مارک‌داون نوشته و به ربلت تلگرامی [@RichTextEchoBot](https://t.me/RichTextEchoBot) خفن بفرستید تا متن شما رو رندر کرده و براتون ارسال کنه، همین‌قدر جذااااب ؛)  
 
 ---
 
@@ -486,3 +500,7 @@ $$
 ## حرف آخر
 
 تبریک میگم! تو الان تمام ابزارهای لازم برای نوشتن مقاله‌های حرفه‌ای با مارک‌داون رو در اختیار داری. بهترین راه برای یادگیری، تمرین کردنه. سعی کن یادداشت‌های روزانه‌ت یا مقاله بعدی‌ت رو با همین فرمت بنویسی. خیلی زود می‌بینی که چقدر سریع و لذت‌بخش می‌شه.
+
+
+[^3]: https://core.telegram.org/bots/api-changelog#june-11-2026
+
