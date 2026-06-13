@@ -11,8 +11,8 @@ hero:
   tagline: "کاوش در فناوری، امنیت و هر چیزی در این بین"
   actions:
     - theme: brand
-      text: شروع با جمنای
-      link: /topics/Gemini
+      text: شروع با پوکر
+      link: /topics/poker-texas
     - theme: alt
       text: مشاهده در گیت‌هاب
       link: https://github.com/Diana-Cl/Diana-Cl
