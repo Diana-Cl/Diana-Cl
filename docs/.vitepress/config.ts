@@ -83,7 +83,8 @@ export default defineConfig({
               items: [
                 { text: 'آرامش قبل از بحران', link: '/topics/crisis' },
                 { text: 'گوگل جمنای', link: '/topics/Gemini' },
-                { text: 'آموزش Markdown', link: '/topics/markdown' },                
+                { text: 'آموزش Markdown', link: '/topics/markdown' },
+                { text: 'راه‌اندازی وورکر zizifn', link: '/topics/zizifn' },
                 { text: 'لینک داخلی کلاینت‌های ضروری', link: '/topics/ir' },
                 { text: 'پوکر – تگزاس هولدم', link: '/topics/poker-texas' },
                 { text: 'ابزار‌های هوش مصنوعی', link: '/topics/ai' },
@@ -198,6 +199,7 @@ export default defineConfig({
                 { text: 'Google Gemini', link: '/en/topics/Gemini' },
                 { text: 'Poker – Texas Holdem', link: '/en/topics/poker-texas' },
                 { text: 'Markdown', link: '/topics/markdown' },
+                { text: 'Serverless runtime', link: '/en/topics/zizifn' },
                 { text: 'AI Tools', link: '/en/topics/ai' },
                 { text: 'Processor Architecture', link: '/en/topics/cpu-abi-android' },
                 { text: 'Termux', link: '/en/topics/termux' },
