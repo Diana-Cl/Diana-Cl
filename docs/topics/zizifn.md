@@ -3,8 +3,8 @@ layout: doc
 outline: deep
 lang: "fa-IR"
 dir: rtl
-title: "راهنمای راه‌اندازی و دپلوی پروکسی VLESS"
-description: "آموزش گام‌به‌گام فورک کردن پروژه، دریافت اطلاعات کلودفلر و دپلوی خودکار وورکر با گیت‌هاب اکشنز"
+title: "راهنمای راه‌اندازی کد وورکر ZiZifn"
+description: "آموزش گام‌به‌گام فورک کردن پروژه، دریافت اطلاعات کلودفلر و دپلوی خودکار وورکر با گیت‌هاب اکشنز و در نهایت ساخت کانفیگ پروکسی VLESS"
 date: 2026-07-04
 editLink: true
 head:
@@ -13,7 +13,7 @@ head:
       content: آموزش کامل دپلوی پروکسی VLESS بر پایه وب‌اسمبلی و راست روی ورکر کلودفلر با استفاده از گیت‌هاب اکشنز
   - - meta
     - name: keywords
-      content: cloudflare worker, vless proxy, github actions, rust wasm, zizifn, wrangler deploy
+      content: serverless runtime, cloudflare worker, vless proxy, github actions, rust wasm, zizifn, wrangler deploy
 ---
 
 ## راهنمای جامع راه‌اندازی و دپلوی خودکار پروکسی VLESS
@@ -21,7 +21,7 @@ head:
 
 <br/> 
 <p align="center">
-  <img src="/zizifn/main-banner.png" alt="VLESS Worker Deployment" width="1080px" />
+  <img src="/zizifn/pic.png" alt="VLESS Worker Deployment" width="1080px" />
 </p>
 
 <br><br/> 
@@ -76,26 +76,64 @@ head:
 
 
 ### ساخت API Token با دسترسی ویرایش ورکر
-۱. در بالا و سمت راست نل کلودفلر، روی آیکون پروفایل خود کلیک کرده و وارد **My Profile** شوید.
+۱. بعد از [ورود][2] و یا [ساخت اکانت][3] در کلودفلر، از بالای صفحه منوی سمت چپ را باز کرده و در کادر **Quick search** عبارت **api** را تایپ کرده و سپس از بین نتایج جستجو **Account API Tokens** را انتخاب کنید.
 
 ::: details View Screenshot
 
 <p align="center">
-  <img src="/zizifn/pic3.png" alt="ایجاد توکن کلودفلر" width="1080px" />
+  <img src="/zizifn/pic3.png" alt="جستجوی توکن api" width="1080px" />
 </p>
-:::
-
-۲. از منوی سمت چپ گزینه‌ی **API Tokens** را انتخاب کنید.
-۳. روی دکمه **Create Token** کلیک کنید.
-۴. از بین قالب‌های آماده، قالب **Edit Cloudflare Workers** را پیدا کرده و دکمه **Use template** را بزنید.
-۵. بدون تغییر دادن تنظیمات دیگر، به انتهای صفحه بروید و روی **Continue to summary** و سپس **Create Token** کلیک کنید.
-۶. توکن ساخته‌شده را کپی کنید (این توکن فقط یک‌بار نمایش داده می‌شود).
-
 <br/>
 
 <p align="center">
-  <img src="/zizifn/cloudflare-secrets.png" alt="دریافت توکن و اکانت آی‌دی از کلودفلر" width="1080px" />
+  <img src="/zizifn/pic4.png" alt="انتخاب account api tokens" width="1080px" />
 </p>
+:::
+
+۲. روی دکمه **Create Token** کلیک کنید.
+
+::: details View Screenshot
+
+<p align="center">
+  <img src="/zizifn/pic5.png" alt="کلیک روی Create token" width="1080px" />
+</p>
+:::
+
+۳. از بین قالب‌های آماده (فلش قرمز رنگ) بر روی گزینه **Edit Cloudflare Workers** را انتخاب کنید. 
+
+::: details View Screenshot
+
+<p align="center">
+  <img src="/zizifn/pic6.png" alt="تغییر قالب توکن" width="1080px" />
+</p>
+<br/>
+
+<p align="center">
+  <img src="/zizifn/pic7.png" alt="انتخاب قالب ادیت وورکر" width="1080px" />
+</p>
+:::
+
+۴. در بخش **Token Expiration** بر حسب نیاز یک باز‌ی زمانی برای منقضی شدن توکن خود مشخص کرده سپس بر روی گزینه مشاهده و ایجاد توکن کلید کنید. 
+
+::: details View Screenshot
+
+<p align="center">
+  <img src="/zizifn/pic8.png" alt="زمان اکسپایر شدن توکن" width="1080px" />
+</p>
+:::
+
+::: danger **نکته** 
+توجه داشته باشید که پس از منقضی شدن توکن، وورکر شما از کار نخواهد افتاد، از آن پس قادر به دپلوی کردن مجدد پروژه از طریق گیت‌هاب نخواهید بود، که در این‌صورت باید مجددا توکن جدید ساخته و جایگزین توکن قبلی در تنظیمات ریپو گیت‌هاب خود کنید.
+:::
+
+۵. در این صفحه توکن ساخته‌شده را کپی کنید (این توکن فقط یک‌بار نمایش داده می‌شود پس در صورت نیاز آن‌را در جایی ذخیره کنید). همچنین در ابتدای این صفحه Account ID نیز نمایش داده میشود، آنرا نیز کپی کنید چون بهش نیاز داریم. پس از اطمینان از کپی شدن هردو؛ بر روی گزینه **confirm** جهت بسته شدن پنجره فعال کلید کنید.
+
+::: details View Screenshot
+
+<p align="center">
+  <img src="/zizifn/pic9.png" alt="کپی آی‌دی و توکن کلودفلر" width="1080px" />
+</p>
+:::
 
 <br/>
 
@@ -105,7 +143,27 @@ head:
 حالا باید اطلاعات دریافتی را به ریپازیتوری فورک‌شده‌ی خود در گیت‌هاب معرفی کنید تا اکشن بتواند با حساب کلودفلر شما احراز هویت کند.
 
 ۱. در ریپازیتوری فورک‌شده خود، به تب **Settings** بروید.
-۲. از منوی سمت چپ، روی **Secrets and variables** کلیک کرده و منوی زیرمجموعه آن یعنی **Actions** را انتخاب کنید.
+
+::: details View Screenshot
+
+<p align="center">
+  <img src="/zizifn/pic10.png" alt="ورود به تنظیمات رپو" width="1080px" />
+</p>
+:::
+
+<br/>	 
+
+۲. از داخل منو بر روی گزینه **Secrets and variables** کلیک کرده و از منوی زیرمجموعه آن یعنی **Actions** را انتخاب کنید.
+
+::: details View Screenshot
+
+<p align="center">
+  <img src="/zizifn/pic11.png" alt="انتخاب Actions" width="1080px" />
+</p>
+:::
+
+<br/>	 
+
 ۳. روی دکمه **New repository secret** کلیک کنید و متغیرها را بر اساس جدول زیر تعریف کنید:
 
 <br/>
@@ -119,11 +177,25 @@ head:
 
 <br/>
 
+::: details View Screenshot
+
 <p align="center">
-  <img src="/zizifn/github-secrets-setup.png" alt="تنظیم سکرت‌ها در گیت‌هاب" width="1080px" />
-</p>
+  <img src="/zizifn/pic12.png" alt="ایجاد سکرت۱" width="1080px" />
+</p><br/>  
+
+<p align="center">
+  <img src="/zizifn/pic13.png" alt="ایجاد سکرت۲" width="1080px" />
+</p><br/>  
+
+<p align="center">
+  <img src="/zizifn/pic14.png" alt="ایجاد سکرت نهایی" width="1080px" />
+</p><br/>  
+:::
 
 <br/>
+
+::: danger **نکته مهم**
+هردو متغیر اول (آیدی و توکن کلودفلر) اجباری هستند یعنی بدون دریافت این دو و قرار دادنشان در سکرت گیت‌هاب امکان دپلوی کردن وورکر وجود نخواهد داشت، ولی دو متغیر بعدی یعنی UUID و PROXYIP اختیاری هستند چون برای هردو یک مقدار پیشفرض داخل کد تعیین شده، ولی به شدت توصیه میشود که برای خود از داخل [این سایــت][4] یک آی‌دی کپی کرده و از آن استفاده کنید‌.
 
 ---
 
@@ -140,7 +212,7 @@ head:
 <br/>
 
 <p align="center">
-  <img src="/zizifn/run-workflow.png" alt="نحوه فعال‌سازی و اجرای دستی گیت‌هاب اکشنز" width="1080px" />
+  <img src="/zizifn/pic15.png" alt="نحوه فعال‌سازی و اجرای دستی گیت‌هاب اکشنز" width="1080px" />
 </p>
 
 <br/>
@@ -186,3 +258,6 @@ head:
 :::
 
 [1]: https://github.com/NiREvil/zizifn
+[2]: https://dash.cloudflare.com/login
+[3]: https://dash.cloudflare.com/sign-up
+[4]: https://www.uuidgenerator.net
