@@ -1,241 +1,402 @@
 ---
 layout: doc
 outline: deep
-lang: "fa-IR"
-dir: rtl
-title: "راهنمای راه‌اندازی کد وورکر ZiZifn"
-description: "آموزش گام‌به‌گام فورک کردن پروژه، دریافت اطلاعات کلودفلر و دپلوی خودکار وورکر با گیت‌هاب اکشنز و در نهایت ساخت کانفیگ پروکسی VLESS"
+lang: "en-US"
+dir: ltr
+title: "ZiZifn Worker Setup Guide"
+description: "Step-by-step guide to fork the project, retrieve Cloudflare credentials, auto-deploy the worker using GitHub Actions, and generate VLESS proxy configurations"
 date: 2026-07-04
 editLink: true
 head:
   - - meta
     - name: description
-      content: آموزش کامل دپلوی پروکسی VLESS بر پایه وب‌اسمبلی و راست روی ورکر کلودفلر با استفاده از گیت‌هاب اکشنز
+      content: Comprehensive guide to deploying a WebAssembly and Rust-based VLESS proxy on Cloudflare Workers using GitHub Actions
   - - meta
     - name: keywords
-      content: serverless runtime, cloudflare worker, vless proxy, github actions, rust wasm, zizifn, wrangler deploy
+      content: Serverless Runtime, cloudflare worker, vless proxy, github actions, rust wasm, zizifn, wrangler deploy
 ---
 
-## راهنمای جامع راه‌اندازی و دپلوی خودکار پروکسی VLESS
-**آموزش گام‌به‌گام فورک کردن، پیکربندی سکرت‌های امنیتی و اجرای دستی گیت‌هاب اکشن**
+## Comprehensive Guide to Setting Up and Auto-Deploying VLESS Proxy Configurations
+**Step-by-step tutorial for forking, configuring security secrets, and running GitHub Actions** {#serverless-runtime}
+
+<br/>
+<p align="center">
+  <img src="/zizifn/pic.png" alt="ZiZifn Main Page" >
+</p><br><br/>
+
+The **zizifn** project is a secure proxy configuration based on the VLESS-WS-TLS/TCP protocol. It is developed in Rust and WebAssembly (Wasm) architecture and runs on Cloudflare Workers using Wrangler. To deploy this project on your personal account, follow the step-by-step instructions below.
+
+
+::: info `Error 1101 and 1102`
+
+In this new structure, there is no need to add useless code or heavy obfuscation!
+:::
+
+<br/>
+
+<h2>📚 Table of Contents</h2>
+
+[[toc]]
 
 <br/> 
-<p align="center">
-  <img src="/zizifn/pic.png" alt="VLESS Worker Deployment" width="1080px" />
-</p>
 
-<br><br/> 
+## Step 1: Forking the Repository {#fork}
+First, you need to create a copy of this project in your own GitHub account.
 
-::: tip اجرای بدون دردسر
-در این ساختار جدید، هیچ نیازی به دستکاری فایل‌های پروژه، اضافه یا حذف کردن کدهای مخزن یا ارسال کامیت‌های الکی ندارید! همه‌چیز با تنظیم متغیرها و یک کلیک ساده دپلوی می‌شود. 😎
-:::
+1. Go to the main repository page [(Link)][1]
 
-پروژه **zizifn** یک کانفیگ پروکسی امن بر پایه پروتکل VLESS-WS-TLS است که با زبان Rust و معماری وب‌اسمبلی (Wasm) توسعه یافته و به کمک ابزار Wrangler روی ورکر کلودفلر اجرا می‌شود. برای اینکه بتوانید این پروژه را روی اکانت شخصی خود پیاده‌سازی کنید، مراحل زیر را گام‌به‌گام دنبال کنید.
-
----
-
-<br/>
-
-## گام اول: فورک کردن ریپازیتوری (Fork)
-در قدم اول باید یک نسخه از این پروژه را روی حساب گیت‌هاب خود کپی کنید.
-
-۱. به صفحه اصلی ریپازیتوری پروژه بروید، [لیــنک][1]
-۲. از بالای صفحه بر روی آیکون **Fork** (فلش قرمز) کلیک کنید.
+2. Click on the **Fork** icon (marked with a red arrow) at the top of the page.
 
 ::: details View Screenshot
 
 <p align="center">
-  <img src="/zizifn/pic1.png" alt="نحوه فورک کردن پروژه در گیت‌هاب" width="1080px" />
+  <img src="/zizifn/pic1.png" alt="How to fork the project on GitHub" width="1080px" />
 </p>
 :::
 
 <br/>
 
-۳. در صفحه بعد می‌توانید اسم دلخواه برای فورک تعیین کنید در غیر این‌صورت بر روی گزینه‌ی **Create fork** کلیک کنید تا پروژه به حساب شما منتقل شود.
+3. On the next page, you can optionally set a custom name for your fork. Otherwise, click on **Create fork** to transfer the project to your account.
 
 ::: details View Screenshot
 
 <p align="center">
-  <img src="/zizifn/pic2.png" alt="نحوه فورک کردن پروژه در گیت‌هاب" width="1080px" />
+  <img src="/zizifn/pic2.png" alt="How to fork the project on GitHub" width="1080px" />
 </p>
 :::
 
 <br/>
 
----
+## Step 2: Retrieving Cloudflare API Token and Account ID {#token-time}
+For automated deployment, GitHub Actions needs to connect to your Cloudflare account. To do this, we need two key parameters:
 
-## گام دوم: دریافت اطلاعات لازم از کلودفلر
-برای دپلوی خودکار، گیت‌هاب اکشنز نیاز دارد به حساب کلودفلر شما متصل شود. برای این کار به دو فاکتور اساسی نیاز داریم:
+<Ltr>
 
 - CloudFlare Account ID
 - CloudFlare API Token
 
-::: info **نکته**
-قبلا برای دریافت اکانت آی‌دی باید وارد صفحه وورکر و پیج‌ها می‌شدیم و از پایین صفحه اکانت آی‌دی رو کپی می‌کردیم ولی حالا موقع ساختن توکن، خودش ای‌دی هم نمایش میده پس همونجا کپی می‌کنیم.
+</Ltr>
+
+::: tip **Note**
+
+Previously, to get the Account ID, you had to navigate to the Workers & Pages section and copy it from the bottom of the page. Now, when creating a token, the Account ID is displayed right there, so you can copy it directly from that screen.
 :::
 
-
-### ساخت API Token با دسترسی ویرایش ورکر
-۱. بعد از [ورود][2] و یا [ساخت اکانت][3] در کلودفلر، از بالای صفحه منوی سمت چپ را باز کرده و در کادر **Quick search** عبارت **api** را تایپ کرده و سپس از بین نتایج جستجو **Account API Tokens** را انتخاب کنید.
-
-::: details View Screenshot
-
-<p align="center">
-  <img src="/zizifn/pic3.png" alt="جستجوی توکن api" width="1080px" />
-</p>
 <br/>
 
-<p align="center">
-  <img src="/zizifn/pic4.png" alt="انتخاب account api tokens" width="1080px" />
-</p>
+### Creating a Token with Worker Editing Permissions {#api-token}
+1. Log in to your Cloudflare dashboard.
+
+- [Log in to Cloudflare Account][2]
+- [Sign up for Cloudflare][3]
+
+::: details Click to expand details
+
+::: tip **Note**
+ 
+Recently, Cloudflare does not allow account creation with disposable/temporary emails. The account might get created but won't get verified, and you might get stuck in an endless email verification loop. Therefore, it is highly recommended to use reliable email providers such as G-Mail, Outlook, Hotmail, ProtonMail, etc., to register your Cloudflare account.
 :::
 
-۲. روی دکمه **Create Token** کلیک کنید.
-
-::: details View Screenshot
-
-<p align="center">
-  <img src="/zizifn/pic5.png" alt="کلیک روی Create token" width="1080px" />
-</p>
-:::
-
-۳. از بین قالب‌های آماده (فلش قرمز رنگ) بر روی گزینه **Edit Cloudflare Workers** را انتخاب کنید. 
-
-::: details View Screenshot
-
-<p align="center">
-  <img src="/zizifn/pic6.png" alt="تغییر قالب توکن" width="1080px" />
-</p>
 <br/>
 
-<p align="center">
-  <img src="/zizifn/pic7.png" alt="انتخاب قالب ادیت وورکر" width="1080px" />
-</p>
-:::
-
-۴. در بخش **Token Expiration** بر حسب نیاز یک باز‌ی زمانی برای منقضی شدن توکن خود مشخص کرده سپس بر روی گزینه مشاهده و ایجاد توکن کلید کنید. 
+2. Once logged in, open the left sidebar/menu at the top of the page, type **api** in the **Quick search** box, and select **Account API Tokens** from the search results.
 
 ::: details View Screenshot
 
 <p align="center">
-  <img src="/zizifn/pic8.png" alt="زمان اکسپایر شدن توکن" width="1080px" />
-</p>
-:::
-
-::: danger **نکته** 
-توجه داشته باشید که پس از منقضی شدن توکن، وورکر شما از کار نخواهد افتاد، از آن پس قادر به دپلوی کردن مجدد پروژه از طریق گیت‌هاب نخواهید بود، که در این‌صورت باید مجددا توکن جدید ساخته و جایگزین توکن قبلی در تنظیمات ریپو گیت‌هاب خود کنید.
-:::
-
-۵. در این صفحه توکن ساخته‌شده را کپی کنید (این توکن فقط یک‌بار نمایش داده می‌شود پس در صورت نیاز آن‌را در جایی ذخیره کنید). همچنین در ابتدای این صفحه Account ID نیز نمایش داده میشود، آنرا نیز کپی کنید چون بهش نیاز داریم. پس از اطمینان از کپی شدن هردو؛ بر روی گزینه **confirm** جهت بسته شدن پنجره فعال کلید کنید.
-
-::: details View Screenshot
+  <img src="/zizifn/pic3.png" alt="Search API token" width="1080px" />
+</p><br/>
 
 <p align="center">
-  <img src="/zizifn/pic9.png" alt="کپی آی‌دی و توکن کلودفلر" width="1080px" />
+  <img src="/zizifn/pic4.png" alt="Select Account API Tokens" width="1080px" />
 </p>
 :::
 
 <br/>
 
----
-
-## گام سوم: تنظیم سکرت‌ها در گیت‌هاب (GitHub Secrets)
-حالا باید اطلاعات دریافتی را به ریپازیتوری فورک‌شده‌ی خود در گیت‌هاب معرفی کنید تا اکشن بتواند با حساب کلودفلر شما احراز هویت کند.
-
-۱. در ریپازیتوری فورک‌شده خود، به تب **Settings** بروید.
+3. Click on the **Create Token** button.
 
 ::: details View Screenshot
 
 <p align="center">
-  <img src="/zizifn/pic10.png" alt="ورود به تنظیمات رپو" width="1080px" />
+  <img src="/zizifn/pic5.png" alt="Click on Create token" width="1080px" />
 </p>
 :::
-
-<br/>	 
-
-۲. از داخل منو بر روی گزینه **Secrets and variables** کلیک کرده و از منوی زیرمجموعه آن یعنی **Actions** را انتخاب کنید.
-
-::: details View Screenshot
-
-<p align="center">
-  <img src="/zizifn/pic11.png" alt="انتخاب Actions" width="1080px" />
-</p>
-:::
-
-<br/>	 
-
-۳. روی دکمه **New repository secret** کلیک کنید و متغیرها را بر اساس جدول زیر تعریف کنید:
 
 <br/>
 
-| نام سکرت (Secret Name) | وضعیت | مقدار پیش‌فرض | توضیحات |
+4. From the API token templates, click on **Edit Cloudflare Workers**. 
+
+::: details View Screenshot
+
+<p align="center">
+  <img src="/zizifn/pic6.png" alt="Token templates" width="1080px" />
+</p><br/>
+
+<p align="center">
+  <img src="/zizifn/pic7.png" alt="Select Edit Cloudflare Workers template" width="1080px" />
+</p>
+:::
+
+<br/>
+
+5. Under the **Token Expiration** section, set an expiration date for your token if needed, then proceed to view and create the token.
+
+::: details View Screenshot
+
+<p align="center">
+  <img src="/zizifn/pic8.png" alt="Token expiration" width="1080px" />
+</p>
+:::
+
+::: tip **Note**
+
+Please note that if the token expires, your deployed worker will NOT stop working. However, you will no longer be able to redeploy the project via GitHub Actions. If that happens, you must generate a new token and update the corresponding secret in your GitHub repository settings.
+:::
+
+<br/>
+
+6. Copy the generated API token on this page (this token is only shown once, so save it somewhere secure if needed). Also, copy your Account ID shown near the top of the page. After safely copying both values, click on the confirmation button to close the window.
+
+::: details View Screenshot
+
+<p align="center">
+  <img src="/zizifn/pic9.png" alt="Copy Cloudflare ID and Token" width="1080px" />
+</p>
+:::
+
+<br/>
+
+## Step 3: Setting up GitHub Secrets {#enviroments} 
+Now, you need to add the retrieved credentials to your forked GitHub repository so the workflow can authenticate with your Cloudflare account.
+
+1. In your forked repository, go to the **Settings** tab.
+
+::: details View Screenshot
+
+<p align="center">
+  <img src="/zizifn/pic10.png" alt="Navigate to repository settings" width="1080px" />
+</p>
+:::
+
+<br/>
+
+2. From the sidebar menu, click on **Secrets and variables** and select **Actions**.
+
+::: details View Screenshot
+
+<p align="center">
+  <img src="/zizifn/pic11.png" alt="Select Actions secrets" width="1080px" />
+</p>
+:::
+
+<br/>
+
+3. Click on the **New repository secret** button and define the variables according to the table below:
+
+<br/>
+
+| Secret Name | Status | Default Value | Description |
 |---|:---:|---|---|
-| `CLOUDFLARE_API_TOKEN` | ✔️ اجباری | - | توکن کلودفلر شما که اجازه ویرایش ورکرها را دارد. |
-| `CLOUDFLARE_ACCOUNT_ID` | ✔️ اجباری | - | آی‌دی حساب کلودفلر شما. |
-| `UUID` | ⚙️ اختیاری | `be0ff9df-1468-41a0-8865-796d1c6800db` | یوآی‌دی اختصاصی شما (ورژن ۴). |
-| `PROXYIP` | ⚙️ اختیاری | `di.nscl.ir` | آی‌پی یا دامین تمیز کلودفلر جهت مسیریابی ترافیک پشت پروکسی. |
+| `CLOUDFLARE_API_TOKEN` | ✔️ Required | - | Your Cloudflare API token with Workers editing permissions. |
+| `CLOUDFLARE_ACCOUNT_ID` | ✔️ Required | - | Your Cloudflare Account ID. |
+| `UUID` | ⚙️ Optional | `be0ff9df-1468-41a0-8865-796d1c6800db` | Your custom UUID (v4). |
+| `PROXYIP` | ⚙️ Optional | `di.nscl.ir` | Proxy IP to route traffic to backend services behind Cloudflare. |
 
 <br/>
 
 ::: details View Screenshot
 
 <p align="center">
-  <img src="/zizifn/pic12.png" alt="ایجاد سکرت۱" width="1080px" />
+  <img src="/zizifn/pic12.png" alt="Create secret step 1" width="1080px" />
 </p><br/>
 
 <p align="center">
-  <img src="/zizifn/pic13.png" alt="ایجاد سکرت۲" width="1080px" />
+  <img src="/zizifn/pic13.png" alt="Create secret step 2" width="1080px" />
 </p><br/>
 
 <p align="center">
-  <img src="/zizifn/pic14.png" alt="ایجاد سکرت نهایی" width="1080px" />
-</p><br/>  
+  <img src="/zizifn/pic14.png" alt="Final secret creation" width="1080px" />
+</p>
 :::
 
 <br/>
 
-::: danger **نکته مهم**
-هردو متغیر اول (آیدی و توکن کلودفلر) اجباری هستند یعنی بدون دریافت این دو و قرار دادنشان در سکرت گیت‌هاب امکان دپلوی کردن وورکر وجود نخواهد داشت، ولی دو متغیر بعدی یعنی UUID و PROXYIP اختیاری هستند چون برای هردو یک مقدار پیشفرض داخل کد تعیین شده، ولی به شدت توصیه میشود که برای خود از داخل [این سایــت][4] یک آی‌دی کپی کرده و از آن استفاده کنید‌.
-
----
-
-## گام چهارم: فعال‌سازی و اجرای دستی اکشن (Manual Deploy)
-گیت‌هاب به طور پیش‌فرض اجرای اکشن‌ها را روی ریپازیتوری‌های فورک‌شده متوقف می‌کند. باید یک‌بار آن را فعال و سپس اجرا کنیم.
-
-۱. به تب **Actions** در بالای ریپازیتوری خود بروید.
-۲. روی دکمه سبز رنگ **"I understand my workflows, go ahead and enable them"** کلیک کنید تا اکشن‌ها مجاز به فعالیت شوند.
-۳. از منوی سمت چپ، جریان کاری یا همان ورک‌فلوِ **Deploy Worker** را انتخاب کنید.
-۴. در سمت راست صفحه، یک نوار باریک با دکمه‌ی **Run workflow** ظاهر می‌شود. روی آن کلیک کنید.
-۵. در فرم پاپ‌آپی که باز می‌شود، می‌توانید به صورت اختیاری مقادیر `Proxy IP` یا `UUID` جدیدی را برای این اجرای خاص تایپ کنید (اگر خالی بگذارید از سکرت‌ها یا پیش‌فرض‌های سیستم استفاده می‌شود).
-۶. در نهایت دکمه‌ی سبز رنگ **Run workflow** را در آن فرم کوچک بفشارید.
-
+::: danger **Important Note**
+The first two variables (Cloudflare Account ID and API Token) are strictly required. Without them, you cannot deploy the worker. The other two variables (`UUID` and `PROXYIP`) are optional because the code falls back to pre-defined values. However, it is highly recommended to generate a unique UUID using [(this website)][4] and use it instead of the default value.
 <br/>
 
+::: details View Screenshot
+
 <p align="center">
-  <img src="/zizifn/pic15.png" alt="نحوه فعال‌سازی و اجرای دستی گیت‌هاب اکشنز" width="1080px" />
+  <img src="/zizifn/pic15.png" alt="Get UUID" width="1080px" />
 </p>
 
-<br/>
-
-::: note یادداشت مهم برای متغیرهای یک‌بار مصرف
-
-مقادیری که در فرم پاپ‌آپ دکمه‌ی **Run workflow** وارد می‌کنید، کاملاً یک‌بار مصرف هستند و در تنظیمات ریپازیتوری ذخیره نمی‌شوند. این قابلیت برای تست سریع آی‌پی‌های تمیز مختلف فوق‌العاده کاربردی است.
-
+To find other Proxy IPs, you can refer to this [Proxy Repository][5].
 :::
 
-پس از کلیک روی دکمه، گیت‌هاب سرور ابری را روشن کرده، کامپایلر زبان راست (`cargo`) و ابزار `wasm-pack` را راه‌اندازی می‌کند، کدها را کامپایل کرده و به طور اتوماتیک یک Worker جدید به نام `zr-wasm` در حساب کلودفلر شما ساخته و کدهایتان را روی آن منتشر می‌کند!
+<br/>	 
+
+## Step 4: Activating and Running GitHub Actions {#manual-deploy}
+By default, GitHub disables actions on forked repositories. You need to enable and run the workflow manually once.
+
+1. Navigate to the **Actions** tab at the top of your repository.
+
+2. Click on the green button:
+
+**"I understand my workflows, go ahead and enable them"**
+
+to authorize the actions to run.
+
+::: details View Screenshot
+
+<p align="center">
+  <img src="/zizifn/pic16.png" alt="Enable actions" width="1080px" />
+</p>
+:::
 
 <br/>
 
-::: info راهنما و کپی‌رایت
+3. As shown in the screenshot below, select **All workflows** from the left panel, then choose the **Deploy Worker** workflow.
 
-مستندات آماده‌سازی شده برای پنل VitePress پروژه زیزفن.
+::: details View Screenshot
+
+<p align="center">
+  <img src="/zizifn/pic17.png" alt="Select Deploy workflow" width="1080px" />
+</p>
+:::
+
+<br/>
+
+4. On the right side of the screen, a menu bar with a **Run workflow** button will appear. Click on it.
+
+5. In the dropdown form that opens, you can optionally input custom values for `Proxy IP` or `UUID` exclusively for this specific run. (If left blank, the workflow will fallback to your repository secrets or default values; it is generally recommended to set them up as secrets instead).
+
+::: details View Screenshot
+
+<p align="center">
+  <img src="/zizifn/pic18.png" alt="Run workflow" width="1080px" />
+</p>
+:::
+
+<br/>
+
+6. Finally, click the green **Run workflow** button inside the form. After about 30 to 60 seconds, a green checkmark will appear next to the run, indicating that the deployment process completed successfully.
+
+::: details View Screenshot
+
+<p align="center">
+  <img src="/zizifn/pic19.png" alt="Deploy success" width="1080px" />
+</p>
+:::
+
+<br/>
+
+::: tip Important Note on Temporary Variables
+
+Values entered directly into the **Run workflow** prompt form are strictly temporary (one-time use) and are not stored in your repository configuration. This feature is particularly useful for quickly testing different Proxy IPs or changing the UUID on the fly.
+:::
+
+<br/>
+
+::: info **Technical Details**
+
+After clicking **Run workflow**, GitHub boots up an Ubuntu runner, downloads and installs the Rust toolchain (`cargo`) and `wasm-pack`, compiles the Rust codebase to WebAssembly, and automatically deploys a new Worker named `zr-wasm` to your Cloudflare account.
+
+If you wish to change the default worker name, you can edit the first line of the [wrangler.toml][6] file inside your repository.
+
+::: details View Screenshot
+
+<p align="center">
+  <img src="/zizifn/pic20.png" alt="Worker name configuration" width="1080px" />
+</p>
+:::
+
+<br/>
+
+
+## How to Use
+
+### Accessing the Management Panel
+Once deployed, simply append your UUID to your Worker's URL:
+
+<Ltr>
+
+`https://Your-Worker-URL/Your-UUID`
+
+</Ltr>
+
+For example:
+
+<Ltr>
+
+`https://zr-wasm.workers.dev/be0ff9df-1468-41a0-8865-796d1c6800db`
+
+</Ltr>
+
+> If you did not create a custom UUID secret and are using the default code value, the UUID will be:
+>
+> ```reg
+> be0ff9df-1468-41a0-8865-796d1c6800db
+> ```
+
+<br/> 
+
+### Retrieving the Subscription Link
+Your subscription link automatically serves multiple configurations populated with clean Cloudflare IPs. You can use the buttons inside the panel to copy it automatically.
+
+Alternatively, if you need the subscription URL manually for external clients, append `xray` or `sb` between the Worker URL and your UUID:
+
+<Ltr>
+
+`https://Your-Worker-URL/xray/Your-UUID`
+
+`https://Your-Worker-URL/sb/Your-UUID`
+
+</Ltr>
+
+For example:
+
+<Ltr>
+
+`https://zr-wasm.workers.dev/xray/be0ff9df-1468-41a0-8865-796d1c6800db`
+
+</Ltr>
+
+::: tip **Differences Between xray and sb**
+
+- **xray suffix:**
+
+Suitable for clients utilizing the Xray core, such as:  
+v2rayNG, MahsaNG, Hiddify, Nekoray, v2rayN, Streisand, Napsternet, NPVT, Happ, etc.
+
+<br/>
+
+- **sb suffix:**
+
+Suitable for clients utilizing the Sing-Box core, such as:  
+Nekobox, Exclave, Singbox, Husi, Karing, etc.
+
+<br/>
+
+- **Clean Cloudflare IPs**
+
+The clean IPs in your configurations are sourced from the [NiREvil/vless][7] repository. The IPs are updated automatically every 4 hours.
+:::
+
+<br/> 
+
+
+::: info
 
 <div dir="ltr">
 
 **Deployment Engine**
+
 - GitHub Actions workflow runner (Ubuntu-24.04 VM)
 - Cloudflare Wrangler Action v3
+
+- Many thanks to [NiREvil] and [zizifn]
 
 </div>
 
@@ -243,21 +404,23 @@ head:
 
 <br/>
 
-::: danger هشدار امنیتی
+::: danger Security Warning
 
-::: details برای مشاهده نکات مهم امنیتی کلیک کنید
+::: details Click to view important security tips
 
-<div dir="rtl">
+**Never hardcode or type sensitive Cloudflare tokens in manual workflow run forms!** 
 
-**هرگز توکن‌های حساس کلودفلر را در فیلدهای متنی ورودی دستی تعریف نکنید!** 
-
-مقادیری که در فرم دستی وارد می‌کنید در تاریخچه لاگ‌های گیت‌هاب ذخیره شده و اگر ریپازیتوری شما عمومی (Public) باشد برای همگان قابل رویت خواهد بود. سکرت‌های حساس کلودفلر حتماً و باید از طریق مسیر ذکر شده در **گام سوم** (بخش Repository Secrets) ثبت شوند تا گیت‌هاب آن‌ها را رمزنگاری (Encrypt) کند.
-
-</div>
+Values typed directly into the manual workflow execution inputs are saved in your GitHub Actions run history. If your repository is public, these credentials will be visible to everyone. Sensitive secrets must always be defined via **Step 3** (Repository Secrets) so GitHub can securely encrypt them.
 
 :::
+
 
 [1]: https://github.com/NiREvil/zizifn
 [2]: https://dash.cloudflare.com/login
 [3]: https://dash.cloudflare.com/sign-up
 [4]: https://www.uuidgenerator.net
+[5]: https://github.com/NiREvil/vless/blob/main/sub/ProxyIP.md
+[6]: https://github.com/NiREvil/zizifn/blob/main/wrangler.toml
+[7]: https://github.com/NiREvil/vless/blob/main/Cloudflare-IPs.json
+[zizifn]: https://github.com/zizifn/edgetunnel 
+[NiREvil]: https://github.com/NiREvil
