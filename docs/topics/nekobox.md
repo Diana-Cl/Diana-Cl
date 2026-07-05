@@ -10,7 +10,7 @@ editLink: true
 head:
   - - meta
     - name: keywords
-      content: NekoBox, nekobox, NB4A, nekobox for Android, Exclave, Android, v2ray, singbox, clients, xray, clash meta
+      content: NekoBox, nekobox, NB4A, nekobox for Android, Exclave, Android, v2ray, singbox, clients, xray, clash meta, نکوباکس, اکسکلیو
 ---
 
 # نکوباکس - اکسکلیو اندروید
@@ -371,7 +371,7 @@ head:
 
 ### نکوباکس / اکسکلیو
 
-ریموت DNS پیش‌فرضشون دقیقا یادم نیست فکر کنم DoH گوگل بودش حالا هرچی مهم نیست چون یادمه سازگار نبود لا نت ایران و مخوصا کانفیگ‌های worker & page به خاطر همین به محض نصب؛ باید تغییر بدیم به DNS over HTTPS گوگل ولی غیر DoH و در عین حال DoH :sweat_smile:  
+ریموت DNS پیش‌فرضشون دقیقا یادم نیست فکر کنم udp گوگل بودش حالا هرچی مهم نیست چون یادمه سازگار نبود با نت ایران و مخصوصا کانفیگ‌های worker & page به خاطر همین به محض نصب؛ باید تغییر بدیم به DNS over HTTPS گوگل ولی غیر DoH و در عین حال DoH :sweat_smile:  
 
 <Ltr>
 
@@ -462,6 +462,16 @@ udp://1.1.1.1
 
 ```
 udp://1.1.11
+```
+
+</Ltr>
+
+و در نسخه‌های جدیدتر اینو پیش‌فرض قرار دادن:
+
+<Ltr>
+
+```
+tcp://8.8.8.8
 ```
 
 </Ltr>
@@ -1021,7 +1031,7 @@ https://www.gstatic.com/generate_204
 - [مخزن لینک‌های ساب][3]
 
 [1]: https://github.com/MatsuriDayo/NekoBoxForAndroid/releases
-[2]: https://t.me/new_folder_revil/3639
+[2]: https://t.me/new_folder_revil/3655
 [3]: https://github.com/NiREvil/vless/ 
 [4]: https://t.me/new_folder_revil/3566
 [5]: https://github.com/dyhkwong/Exclave/releases
