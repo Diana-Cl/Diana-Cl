@@ -11,8 +11,8 @@ hero:
   tagline: Exploring technology, security, and everything in between.
   actions:
     - theme: brand
-      text: Get Started with Gemini
-      link: /en/topics/Gemini
+      text: Get Started with Poker
+      link: /en/topics/poker-texas
     - theme: alt
       text: View on GitHub
       link: https://github.com/Diana-Cl/Diana-Cl
