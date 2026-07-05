@@ -85,7 +85,6 @@ export default defineConfig({
                 { text: 'گوگل جمنای', link: '/topics/Gemini' },
                 { text: 'آموزش Markdown', link: '/topics/markdown' },
                 { text: 'راه‌اندازی وورکر zizifn', link: '/topics/zizifn' },
-                { text: 'لینک داخلی کلاینت‌های ضروری', link: '/topics/ir' },
                 { text: 'پوکر – تگزاس هولدم', link: '/topics/poker-texas' },
                 { text: 'ابزار‌های هوش مصنوعی', link: '/topics/ai' },
                 { text: 'تفاوت معماری پردازنده‌ها', link: '/topics/cpu-abi-android' },
