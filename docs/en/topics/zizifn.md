@@ -1,12 +1,10 @@
-```markdown
 ---
 layout: doc
 outline: deep
 lang: "en-US"
-dir: ltr
 title: "ZiZifn Worker Setup Guide"
 description: "Step-by-step tutorial for forking the project, obtaining Cloudflare credentials, and automated Worker deployment with GitHub Actions, finally generating VLESS proxy configs"
-date: 2026-07-04
+date: 2026-08-08
 editLink: true
 head:
   - - meta
@@ -18,6 +16,7 @@ head:
 ---
 
 ## Comprehensive Guide to Setup and Auto-Deploy VLESS Proxy Config
+
 **Step-by-step tutorial for forking, configuring security secrets, and running GitHub Actions** {#serverless-runtime}
 
 <br/>
@@ -69,14 +68,11 @@ In the first step, you need to clone a copy of this project to your GitHub accou
 <br/>
 
 ## Step 2: Obtain API Token from Cloudflare {#token-time}
-For automated deployment, GitHub Actions needs to connect to your Cloudflare account. We need two essential factors:
 
-<Ltr>
+For automated deployment, GitHub Actions needs to connect to your Cloudflare account. We need two essential factors:
 
 - CloudFlare Account ID
 - CloudFlare API Token
-
-</Ltr>
 
 ::: tip **Note**
 
@@ -86,6 +82,7 @@ Previously, to get the Account ID, we had to go to the Workers & Pages section a
 <br/>
 
 ### Create Token with Worker Edit Permissions {#api-token}
+
 1. Log in to your Cloudflare dashboard.
 
 - [Login to Cloudflare Account][2]
@@ -169,6 +166,7 @@ Please note that after the token expires, your worker will not stop functioning.
 <br/>
 
 ## Step 3: Configure Secrets in GitHub {#enviroments}
+
 Now we need to introduce the obtained information to your forked repository on GitHub so that the action can authenticate with your Cloudflare account.
 
 1. In your forked repository, go to the **Settings** tab.
@@ -265,6 +263,7 @@ to allow actions to run.
 <p align="center">
   <img src="/zizifn/pic17.png" alt="Select Deploy" width="1080px" />
 </p>
+
 :::
 
 <br/>
@@ -290,6 +289,7 @@ After thirty to sixty seconds, a green checkmark will appear next to Deploy, ind
 <p align="center">
   <img src="/zizifn/pic19.png" alt="Deploy-success" width="1080px" />
 </p>
+
 :::
 
 <br/>
@@ -312,6 +312,7 @@ If you wish to change the Worker name, you can do so from the first line of the 
 <p align="center">
   <img src="/zizifn/pic20.png" alt="worker name" width="1080px" />
 </p>
+
 :::
 
 <br/>
@@ -320,31 +321,26 @@ If you wish to change the Worker name, you can do so from the first line of the 
 ## How to Use
 
 ### Access the Admin Panel
-After deployment, simply add your UUID to the end of your Worker URL:
 
-<Ltr>
+After deployment, simply add your UUID to the end of your Worker URL:  
 
 `https://Your-Worker-URL/Your-UUID`
 
-</Ltr>
-
 For example:
 
-<Ltr>
 
 `https://0x00.workers.dev/be0ff9df-1468-41a0-8865-796d1c6800db`
 
-</Ltr>
 
 > If you haven't set the UUID variable and the code default is used, the value is:
 >
 > ```reg
 > be0ff9df-1468-41a0-8865-796d1c6800db
-```
+> ```
 
 <br/> 
 
-Get Subscription Link
+### Get Subscription Link
 
 Your subscription link contains dozens of configs with clean Cloudflare IPs. Use the keys inside the panel to get it automatically.
 
@@ -358,13 +354,9 @@ Or if you need the subscription address manually to use in other clients, simply
 
 Sample subscription link:
 
-<Ltr>
-
 https://0x00.workers.dev/xray/be0ff9df-1468-41a0-8865-796d1c68000b
 
 https://0x00.workers.dev/sb/be0ff9df-1468-41a0-8865-796d1c68000b
-
-</Ltr>
 
 :::
 
@@ -403,7 +395,7 @@ Recently, patterns have been suggested to address disruptions on Iran's internet
 
 Additionally, to further optimize config performance, they have published a fork of v2rayNG called PattNG on GitHub. Therefore, alongside normal configs for v2rayNG, we will have another subscription called Enhanced, which will add configs with these new parameters pre-applied to your client. First, download and install the [PattNG] client from the patterniha GitHub repository, then from your panel, click on Import to v2rayNG and select Enhanced.
 
-[PattNG GitHub Link]
+[PattNG GitHub Link][PattNG]
 
 <br/>
 
@@ -415,15 +407,11 @@ Additionally, to further optimize config performance, they have published a fork
 
 ::: info
 
-<Ltr>
-
 Deployment Engine
 
 · GitHub Actions workflow runner (Ubuntu-24.04 VM)
 · Cloudflare Wrangler Action v3
 · Many thanks to [NiREvil] and [zizifn]
-
-</Ltr>
 
 :::
 
