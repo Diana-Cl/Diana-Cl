@@ -1,10 +1,15 @@
+/**
+ * The main font for the Persian language.
+ * -------------------------------------------------------------------------- */
 :root:where(:lang(fa)) {
   --vp-font-family-base:
     'Vazirmatn', 'Inter', ui-sans-serif, system-ui, sans-serif,
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
-/* Hero styles on the home page */
+/**
+ * Hero styles on the home page
+ * -------------------------------------------------------------------------- */
 :root {
   --vp-home-hero-name-color: transparent;
   --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #bd34fe 30%, #41d1ff);
@@ -24,22 +29,204 @@ img[src='/search.png'] {
   aspect-ratio: 1 / 1;
 }
 
-/* Left-to-right (Ltr) Section 
-   1. Automatic left-to-right sorting of code blocks and shortcodes. */
+/**
+ * LEFT-TO-RIGHT (LTR) SECTION 
+ * 
+ * 1. Automatic left-to-right sorting of code blocks and shortcodes.
+ * -------------------------------------------------------------------------- */
 :is(pre, code) {
   direction: ltr;
   text-align: left;
   font-family: 'Cascadia Code', 'JetBrains Mono', 'Fira Code', monospace;
 }
 
-/* 2. Class to left align a specific element (like a title) */
+/**
+ * 2. Class to left align a specific element (like a title)
+ * -------------------------------------------------------------------------- */
 .ltr {
   direction: ltr;
   text-align: left;
 }
 
-/* 3. Class for left-scrolling an entire section (container) */
+/**
+ * 3. Class for left-scrolling an entire section (container)
+ * -------------------------------------------------------------------------- */
 .ltr-container {
   direction: ltr;
   text-align: left;
+}
+
+/**
+ * VitePress Custom Blocks
+ * -------------------------------------------------------------------------- */
+
+/**
+ * Base 
+ * -------------------- */
+.vp-doc .custom-block {
+  border-radius: 14px;
+  padding: 18px 20px;
+  margin: 24px 0;
+  border-width: 1px;
+  border-style: solid;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/**
+ * Title 
+ * ------------------------ */  
+.vp-doc .custom-block-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 12px;
+  padding: 3px 9px;
+  border-radius: 7px;
+  font-size: 0.95rem;
+  font-weight: 800;
+  line-height: 1.6;
+}
+
+/**
+ * Text 
+ * -------------------------------- */
+.vp-doc .custom-block > :last-child {
+  margin-bottom: 0;
+}
+
+/**
+ * TIP 
+ * ---------------------- */
+.vp-doc .custom-block.tip {
+  border-color: color-mix(
+    in srgb,
+    var(--vp-c-tip-1) 28%,
+    transparent
+  );
+
+  background-color: var(--vp-custom-block-tip-bg);
+}
+
+.vp-doc .custom-block.tip .custom-block-title {
+  color: var(--vp-c-tip-1);
+  background-color: var(--vp-c-tip-soft);
+}
+
+.vp-doc .custom-block.tip .custom-block-title::before {
+  content: '💡';
+}
+
+/**
+ * WARNING 
+ * -------------------------- */
+.vp-doc .custom-block.warning {
+  border-color: color-mix(
+    in srgb,
+    var(--vp-c-warning-1) 28%,
+    transparent
+  );
+
+  background-color: var(--vp-custom-block-warning-bg);
+}
+
+.vp-doc .custom-block.warning .custom-block-title {
+  color: var(--vp-c-warning-1);
+  background-color: var(--vp-c-warning-soft);
+}
+
+.vp-doc .custom-block.warning .custom-block-title::before {
+  content: '⚠️';
+}
+
+/**
+ * DANGER 
+ * ------------------------- */
+.vp-doc .custom-block.danger {
+  border-color: color-mix(
+    in srgb,
+    var(--vp-c-danger-1) 28%,
+    transparent
+  );
+
+  background-color: var(--vp-custom-block-danger-bg);
+}
+
+.vp-doc .custom-block.danger .custom-block-title {
+  color: var(--vp-c-danger-1);
+  background-color: var(--vp-c-danger-soft);
+}
+
+.vp-doc .custom-block.danger .custom-block-title::before {
+  content: '🛑';
+}
+
+/**
+ * INFO 
+ * --------------- */
+.custom-block.info {
+  border-color: color-mix(
+    in srgb,
+    var(--vp-c-brand-1) 25%,
+    transparent
+  );
+}
+
+.custom-block.info .custom-block-title {
+  color: var(--vp-c-brand-1);
+  background: var(--vp-c-brand-soft);
+}
+
+.custom-block.info .custom-block-title::before {
+  content: 'ℹ️';
+}
+
+/**
+ * NOTE 
+ * ----------------------- */
+.vp-doc .custom-block.info,
+.vp-doc .custom-block.note {
+  border-color: color-mix(
+    in srgb,
+    var(--vp-c-note-1) 28%,
+    transparent
+  );
+
+  background-color: var(--vp-custom-block-note-bg);
+}
+
+.vp-doc .custom-block.info .custom-block-title,
+.vp-doc .custom-block.note .custom-block-title {
+  color: var(--vp-c-note-1);
+  background-color: var(--vp-c-note-soft);
+}
+
+.vp-doc .custom-block.info .custom-block-title::before,
+.vp-doc .custom-block.note .custom-block-title::before {
+  content: '📝';
+}
+
+/**
+ * Hover 
+ * -------------------- */
+@media (hover: hover) {
+  .vp-doc .custom-block:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  }
+}
+
+/**
+ * Mobile 
+ * --------------------- */
+@media (max-width: 640px) {
+  .vp-doc .custom-block {
+    padding: 15px 16px;
+    border-radius: 12px;
+  }
+
+  .vp-doc .custom-block-title {
+    font-size: 0.9rem;
+  }
 }
