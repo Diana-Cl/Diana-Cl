@@ -61,7 +61,7 @@ img[src='/search.png'] {
  * -------------------------------------------------------------------------- */
 
 /**
- * Base 
+ * Base
  * -------------------- */
 .vp-doc .custom-block {
   border-radius: 14px;
@@ -69,28 +69,36 @@ img[src='/search.png'] {
   margin: 24px 0;
   border-width: 1px;
   border-style: solid;
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 /**
- * Title 
+ * Title & Summary
  * ------------------------ */  
-.vp-doc .custom-block-title {
+.vp-doc .custom-block-title,
+.vp-doc .custom-block.details summary {
   display: inline-flex;
   align-items: center;
-  gap: 7px;
+  gap: 8px;
   margin-bottom: 12px;
-  padding: 3px 9px;
-  border-radius: 7px;
+  padding: 4px 10px;
+  border-radius: 8px;
   font-size: 0.95rem;
   font-weight: 800;
   line-height: 1.6;
 }
 
+/* Fix font issue with backticks in title */
+.vp-doc .custom-block-title code,
+.vp-doc .custom-block summary code {
+  font-family: var(--vp-font-family-base) !important;
+  font-weight: inherit;
+  font-size: inherit;
+  direction: inherit;
+}
+
 /**
- * Text 
+ * Text
  * -------------------------------- */
 .vp-doc .custom-block > :last-child {
   margin-bottom: 0;
@@ -100,20 +108,13 @@ img[src='/search.png'] {
  * TIP 
  * ---------------------- */
 .vp-doc .custom-block.tip {
-  border-color: color-mix(
-    in srgb,
-    var(--vp-c-tip-1) 28%,
-    transparent
-  );
-
+  border-color: color-mix(in srgb, var(--vp-c-tip-1) 28%, transparent);
   background-color: var(--vp-custom-block-tip-bg);
 }
-
 .vp-doc .custom-block.tip .custom-block-title {
   color: var(--vp-c-tip-1);
   background-color: var(--vp-c-tip-soft);
 }
-
 .vp-doc .custom-block.tip .custom-block-title::before {
   content: '💡';
 }
@@ -122,20 +123,13 @@ img[src='/search.png'] {
  * WARNING 
  * -------------------------- */
 .vp-doc .custom-block.warning {
-  border-color: color-mix(
-    in srgb,
-    var(--vp-c-warning-1) 28%,
-    transparent
-  );
-
+  border-color: color-mix(in srgb, var(--vp-c-warning-1) 28%, transparent);
   background-color: var(--vp-custom-block-warning-bg);
 }
-
 .vp-doc .custom-block.warning .custom-block-title {
   color: var(--vp-c-warning-1);
   background-color: var(--vp-c-warning-soft);
 }
-
 .vp-doc .custom-block.warning .custom-block-title::before {
   content: '⚠️';
 }
@@ -144,67 +138,87 @@ img[src='/search.png'] {
  * DANGER 
  * ------------------------- */
 .vp-doc .custom-block.danger {
-  border-color: color-mix(
-    in srgb,
-    var(--vp-c-danger-1) 28%,
-    transparent
-  );
-
+  border-color: color-mix(in srgb, var(--vp-c-danger-1) 28%, transparent);
   background-color: var(--vp-custom-block-danger-bg);
 }
-
 .vp-doc .custom-block.danger .custom-block-title {
   color: var(--vp-c-danger-1);
   background-color: var(--vp-c-danger-soft);
 }
-
 .vp-doc .custom-block.danger .custom-block-title::before {
-  content: '🛑';
+  content: '🚫';
 }
 
 /**
  * INFO 
  * --------------- */
-.custom-block.info {
-  border-color: color-mix(
-    in srgb,
-    var(--vp-c-brand-1) 25%,
-    transparent
-  );
+.vp-doc .custom-block.info {
+  border-color: color-mix(in srgb, var(--vp-c-brand-1) 25%, transparent);
+  background-color: var(--vp-custom-block-info-bg, var(--vp-c-default-soft));
 }
-
-.custom-block.info .custom-block-title {
+.vp-doc .custom-block.info .custom-block-title {
   color: var(--vp-c-brand-1);
-  background: var(--vp-c-brand-soft);
+  background-color: var(--vp-c-brand-soft);
 }
-
-.custom-block.info .custom-block-title::before {
+.vp-doc .custom-block.info .custom-block-title::before {
   content: 'ℹ️';
 }
 
 /**
  * NOTE 
  * ----------------------- */
-.vp-doc .custom-block.info,
 .vp-doc .custom-block.note {
-  border-color: color-mix(
-    in srgb,
-    var(--vp-c-note-1) 28%,
-    transparent
-  );
-
-  background-color: var(--vp-custom-block-note-bg);
+  border-color: color-mix(in srgb, var(--vp-c-note-1, var(--vp-c-text-2)) 28%, transparent);
+  background-color: var(--vp-custom-block-note-bg, var(--vp-c-default-soft));
 }
-
-.vp-doc .custom-block.info .custom-block-title,
 .vp-doc .custom-block.note .custom-block-title {
-  color: var(--vp-c-note-1);
-  background-color: var(--vp-c-note-soft);
+  color: var(--vp-c-note-1, var(--vp-c-text-1));
+  background-color: var(--vp-c-note-soft, var(--vp-c-bg-soft));
 }
-
-.vp-doc .custom-block.info .custom-block-title::before,
 .vp-doc .custom-block.note .custom-block-title::before {
   content: '📝';
+}
+
+/**
+ * DETAILS 
+ * ----------------------- */
+.vp-doc .custom-block.details {
+  border-color: var(--vp-c-divider);
+  background-color: var(--vp-custom-block-details-bg, var(--vp-c-bg-soft));
+}
+
+.vp-doc .custom-block.details summary {
+  cursor: pointer;
+  margin-bottom: 0;
+  user-select: none;
+  color: var(--vp-c-text-1);
+  background-color: var(--vp-c-default-soft);
+  transition: background-color 0.2s;
+}
+
+.vp-doc .custom-block.details summary:hover {
+  background-color: var(--vp-c-gray-soft);
+}
+
+.vp-doc .custom-block.details[open] summary {
+  margin-bottom: 12px;
+}
+
+.vp-doc .custom-block.details summary::before {
+  content: '▶';
+  display: inline-block;
+  font-size: 0.75rem;
+  transition: transform 0.2s ease;
+}
+
+/* 
+ * Arrow rotation when opening Details in RTL mode
+ * ----------------------------------66666------- */
+:root:where(:lang(fa)) .vp-doc .custom-block.details summary::before {
+  transform: rotate(180deg);
+}
+:root:where(:lang(fa)) .vp-doc .custom-block.details[open] summary::before {
+  transform: rotate(90deg);
 }
 
 /**
@@ -213,7 +227,7 @@ img[src='/search.png'] {
 @media (hover: hover) {
   .vp-doc .custom-block:hover {
     transform: translateY(-1px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
   }
 }
 
@@ -226,7 +240,8 @@ img[src='/search.png'] {
     border-radius: 12px;
   }
 
-  .vp-doc .custom-block-title {
+  .vp-doc .custom-block-title,
+  .vp-doc .custom-block.details summary {
     font-size: 0.9rem;
   }
 }
