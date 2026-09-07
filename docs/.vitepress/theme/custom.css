@@ -1,11 +1,10 @@
-/* فونت اصلی برای زبان فارسی */
 :root:where(:lang(fa)) {
   --vp-font-family-base:
     'Vazirmatn', 'Inter', ui-sans-serif, system-ui, sans-serif,
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
-/* استایل‌های هیرو در صفحه اصلی */
+/* Hero styles on the home page */
 :root {
   --vp-home-hero-name-color: transparent;
   --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #bd34fe 30%, #41d1ff);
@@ -25,25 +24,21 @@ img[src='/search.png'] {
   aspect-ratio: 1 / 1;
 }
 
-/* ============================================
-  بخش مربوط به چپ‌چین کردن محتوا (LTR)
-  ============================================
-*/
-
-/* 1. چپ‌چین کردن خودکار بلوک‌های کد و کدهای کوتاه */
+/* Left-to-right (Ltr) Section 
+   1. Automatic left-to-right sorting of code blocks and shortcodes. */
 :is(pre, code) {
   direction: ltr;
   text-align: left;
   font-family: 'Cascadia Code', 'JetBrains Mono', 'Fira Code', monospace;
 }
 
-/* 2. کلاس برای چپ‌چین کردن یک المان خاص (مثل تیتر) */
+/* 2. Class to left align a specific element (like a title) */
 .ltr {
   direction: ltr;
   text-align: left;
 }
 
-/* 3. کلاس برای چپ‌چین کردن یک بخش کامل (کانتینر) */
+/* 3. Class for left-scrolling an entire section (container) */
 .ltr-container {
   direction: ltr;
   text-align: left;
