@@ -2,14 +2,11 @@ import { defineConfig } from 'vitepress';
 import footnote from 'markdown-it-footnote';
 import mathjax3 from 'markdown-it-mathjax3';
 import attrs from 'markdown-it-attrs';
-import { mermaid } from 'vitepress-plugin-mermaid';
-import { tabsMarkdownPlugin } from 'vitepress-plugin-tabs';
-import { InlineLinkPreviewElementTransform } from '@nolebase/vitepress-plugin-inline-link-preview/markdown-it';
+import { withMermaid } from 'vitepress-plugin-mermaid';
 
 const base = '/Diana-Cl/';
-const siteUrl = `https://Diana-Cl.github.io${base}`;
 
-export default defineConfig({
+export default withMermaid(defineConfig({
   base: base,
   cleanUrls: true,
   ignoreDeadLinks: true,
@@ -26,6 +23,7 @@ export default defineConfig({
       },
     ],
     ['meta', { name: 'theme-color', content: '#5f67ee' }],
+    
     [
       'link',
       { rel: 'stylesheet', href: 'https://unpkg.com/video.js@8.17.4/dist/video-js.min.css' },
@@ -41,36 +39,60 @@ export default defineConfig({
         height: auto;
         aspect-ratio: 16/9;
       }
-    `,
+      `,
     ],
   ],
 
   markdown: {
-  config: md => {
-    md.use(footnote);
-    md.use(mathjax3);
-    md.use(attrs);
-
-    // md.use(tabsMarkdownPlugin);
-
-    // md.use(InlineLinkPreviewElementTransform, {
-    //   tag: 'NolebaseInlineLinkPreview'
-    // });
+    config: (md) => {
+      md.use(footnote);
+      md.use(mathjax3);
+      md.use(attrs);
+    },
+    lineNumbers: true,
   },
-  lineNumbers: true,
-},
 
-  mermaid: {},
+  mermaid: {
+    theme: 'default',
+  },
+
+  themeConfig: {
+    logo: '/logo-h.svg',
+    search: { provider: 'local' },
+    socialLinks: [
+      { icon: 'github', link: 'https://github.com/Diana-Cl/' },
+      {
+        icon: {
+          svg: '<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m20.665 3.717-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192l-8.533 7.701h-.002l-.002.001-.314 4.692c.46 0 .663-.211.921-.46l2.211-2.15 4.599 3.397c.848.467 1.457.227 1.668-.785l3.019-14.228c.309-1.239-.473-1.8-1.282-1.434z"/></svg>'
+        },
+        link: 'https://t.me/NiREvil_GP',
+        ariaLabel: 'Telegram'
+      }
+    ],
+  },
 
   locales: {
     root: {
       label: 'فارسی',
       lang: 'fa-IR',
       dir: 'rtl',
-      title: '',
-      description: '',
+      title: 'Diana',
+      description: 'یادداشت‌های شخصی درباره تکنولوژی و امنیت',
       themeConfig: {
-        logo: '/logo-h.svg',
+        returnToTopLabel: 'بازگشت به بالا',
+        sidebarMenuLabel: 'منوی جانبی',
+        darkModeSwitchLabel: 'تغییر تم',
+        langMenuLabel: 'تغییر زبان',
+        outline: { level: [2, 3], label: 'در این صفحه' },
+        docFooter: { prev: 'صفحه قبلی', next: 'صفحه بعدی' },
+        lastUpdated: {
+          text: 'آخرین بروزرسانی',
+          formatOptions: { dateStyle: 'medium', timeStyle: 'short' }
+        },
+        editLink: {
+          pattern: 'https://github.com/Diana-Cl/Diana-Cl/edit/main/docs/:path',
+          text: 'این صفحه را در گیت‌هاب ویرایش کنید',
+        },
         nav: [
           { text: '🏠 خانه', link: '/' },
           { text: '📚 یادداشت‌ها', link: '/topics/' },
@@ -136,10 +158,7 @@ export default defineConfig({
                 { text: 'نصب تمیز و اصولی ویندوز', link: '/wa/clean_install_windows' },
                 { text: 'لایسنس آفیس اصل نیست', link: '/wa/office-license-is-not-genuine' },
                 { text: 'مشکل سرورهای لایسنس', link: '/wa/licensing-servers-issue' },
-                {
-                  text: 'مشکلات ناشی از اسپوفرهای گیم',
-                  link: '/wa/issues_due_to_gaming_spoofers',
-                },
+                { text: 'مشکلات ناشی از اسپوفرهای گیم', link: '/wa/issues_due_to_gaming_spoofers' },
                 { text: 'مشکلات تغییر نسخه', link: '/wa/change_edition_issues' },
                 { text: 'نسخه‌های ارزیابی', link: '/wa/evaluation_editions' },
                 { text: 'رفع مشکل پاورشل', link: '/wa/fix_powershell' },
@@ -169,22 +188,30 @@ export default defineConfig({
             },
           ],
         },
-        editLink: {
-          pattern: 'https://github.com/Diana-Cl/Diana-Cl/edit/main/docs/:path',
-          text: 'این صفحه را در گیت‌هاب ویرایش کنید',
-        },
-        docFooter: { prev: 'صفحه قبلی', next: 'صفحه بعدی' },
-        lastUpdated: { text: 'آخرین بروزرسانی' },
       },
     },
+
     en: {
       label: 'English',
       lang: 'en-US',
       dir: 'ltr',
-      title: '',
+      title: 'Diana',
       description: 'My personal notes and articles about technology, security, and AI',
       themeConfig: {
-        logo: '/logo-h.svg',
+        returnToTopLabel: 'Return to top',
+        sidebarMenuLabel: 'Menu',
+        darkModeSwitchLabel: 'Appearance',
+        langMenuLabel: 'Change language',
+        outline: { level: [2, 3], label: 'On this page' },
+        docFooter: { prev: 'Previous page', next: 'Next page' },
+        lastUpdated: {
+          text: 'Last updated',
+          formatOptions: { dateStyle: 'medium', timeStyle: 'short' },
+        },
+        editLink: {
+          pattern: 'https://github.com/Diana-Cl/Diana-Cl/edit/main/docs/:path',
+          text: 'Edit this page on GitHub',
+        },
         nav: [
           { text: '🏠 Home', link: '/en/' },
           { text: '📚 Notes', link: '/en/topics/' },
@@ -197,16 +224,15 @@ export default defineConfig({
               items: [
                 { text: 'Google Gemini', link: '/en/topics/Gemini' },
                 { text: 'Poker – Texas Holdem', link: '/en/topics/poker-texas' },
-                { text: 'Markdown', link: '/topics/markdown' },
+                { text: 'Markdown', link: '/en/topics/markdown' },
                 { text: 'Serverless runtime', link: '/en/topics/zizifn' },
                 { text: 'AI Tools', link: '/en/topics/ai' },
                 { text: 'Processor Architecture', link: '/en/topics/cpu-abi-android' },
                 { text: 'Termux', link: '/en/topics/termux' },
                 { text: 'Iran Core', link: '/en/topics/iran-core' },
-                { text: 'Sleeping Apps', link: 'en/topics/sleeping-app' },
-                { text: 'Stable Diffusion', link: '/en/topics/Stable-Diffusion' },
+                { text: 'Sleeping Apps', link: '/en/topics/sleeping-apps' },
                 { text: 'The Fallen Crown', link: '/en/topics/REvil' },
-                { text: 'Nekobox for Android', link: '/en/topics/nekobox' },
+                { text: 'Exclave vs Nekobox', link: '/en/topics/nekobox' },
                 { text: 'Upgrade PHP On CentOS 7', link: '/en/topics/Upgrade-PHP-version-on-CentOS-7' },
                 { text: 'Cloudflare Back-end Selector', link: '/en/topics/cf-backend-selector' },
               ]
@@ -245,15 +271,9 @@ export default defineConfig({
                 { text: 'Win 10 After End-Of-Life', link: '/en/wa/windows10_eol' },
                 { text: 'Remove Malware', link: '/en/wa/remove_malware' },
                 { text: 'Clean Install Windows', link: '/en/wa/clean_install_windows' },
-                {
-                  text: 'Office License Is Not Genuine',
-                  link: '/en/wa/office-license-is-not-genuine',
-                },
+                { text: 'Office License Is Not Genuine', link: '/en/wa/office-license-is-not-genuine' },
                 { text: 'Licensing Servers Issue', link: '/en/wa/licensing-servers-issue' },
-                {
-                  text: 'Issues Due To Gaming Spoofers',
-                  link: '/en/wa/issues_due_to_gaming_spoofers',
-                },
+                { text: 'Issues Due To Gaming Spoofers', link: '/en/wa/issues_due_to_gaming_spoofers' },
                 { text: 'Change Edition Issues', link: '/en/wa/change_edition_issues' },
                 { text: 'Evaluation Editions', link: '/en/wa/evaluation_editions' },
                 { text: 'Fix Powershell', link: '/en/wa/fix_powershell' },
@@ -283,30 +303,13 @@ export default defineConfig({
             },
           ],
         },
-        search: { provider: 'local' },
-        docFooter: { prev: 'Previous page', next: 'Next page' },
-        lastUpdated: {
-          text: 'Last updated',
-          formatOptions: { dateStyle: 'medium', timeStyle: 'short' },
-        },
-        editLink: {
-          pattern: 'https://github.com/Diana-Cl/Diana-Cl/edit/main/docs/:path',
-          text: 'Edit this page on GitHub',
-        },
-        socialLinks: [
-          { icon: 'github', link: 'https://github.com/Diana-Cl/' },
-          { icon: 'telegram', link: 'https://t.me/NiREvil_GP' },
-        ],
-        footer: {
-          copyright: '© 2026 REvil — Sharing knowledge, one note at a time',
-          message: 'Made with using VitePress',
-        },
       },
     },
   },
 
   vite: {
     optimizeDeps: {
+      include: ['mermaid'],
       exclude: [
         'video.js',
         '@nolebase/vitepress-plugin-inline-link-preview/client',
@@ -319,4 +322,4 @@ export default defineConfig({
       ],
     },
   },
-});
+}));
