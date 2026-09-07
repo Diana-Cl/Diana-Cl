@@ -1,7 +1,4 @@
-/**
- * Colors: Solid
- * -------------------------------------------------------------------------- */
-
+/* Colors: Solid */
 :root {
   --vp-c-white: #ffffff;
   --vp-c-black: #000000;
@@ -256,10 +253,7 @@
   --vp-c-caution-soft: var(--vp-c-red-soft);
 }
 
-/**
- * Typography
- * -------------------------------------------------------------------------- */
-
+/* Typography */
 :root {
   --vp-font-family-base:
     'Inter', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
@@ -276,10 +270,7 @@
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
-/**
- * Shadows
- * -------------------------------------------------------------------------- */
-
+/* Shadows */
 :root {
   --vp-shadow-1: 0 1px 2px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.06);
   --vp-shadow-2: 0 3px 12px rgba(0, 0, 0, 0.07), 0 1px 4px rgba(0, 0, 0, 0.07);
@@ -289,10 +280,7 @@
     0 18px 56px rgba(0, 0, 0, 0.16), 0 4px 12px rgba(0, 0, 0, 0.16);
 }
 
-/**
- * Z-indexes
- * -------------------------------------------------------------------------- */
-
+/* Z-indexes */
 :root {
   --vp-z-index-footer: 10;
   --vp-z-index-local-nav: 20;
@@ -308,26 +296,17 @@
   }
 }
 
-/**
- * Layouts
- * -------------------------------------------------------------------------- */
-
+/* Layouts */
 :root {
   --vp-layout-max-width: 1440px;
 }
 
-/**
- * Component: Header Anchor
- * -------------------------------------------------------------------------- */
-
+/* Component: Header Anchor */
 :root {
   --vp-header-anchor-symbol: '#';
 }
 
-/**
- * Component: Code
- * -------------------------------------------------------------------------- */
-
+/* Component: Code */
 :root {
   --vp-code-line-height: 1.7;
   --vp-code-font-size: 0.875em;
@@ -386,10 +365,7 @@
   --vp-code-copy-copied-text-content: '已复制';
 }
 
-/**
- * Component: Button
- * -------------------------------------------------------------------------- */
-
+/* Component: Button */
 :root {
   --vp-button-brand-border: transparent;
   --vp-button-brand-text: var(--vp-c-white);
@@ -422,10 +398,7 @@
   --vp-button-sponsor-active-bg: transparent;
 }
 
-/**
- * Component: Custom Block
- * -------------------------------------------------------------------------- */
-
+/* Component: Custom Block */
 :root {
   --vp-custom-block-font-size: 14px;
   --vp-custom-block-code-font-size: 13px;
@@ -471,10 +444,7 @@
   --vp-custom-block-details-code-bg: var(--vp-custom-block-info-code-bg);
 }
 
-/**
- * Component: Input
- * -------------------------------------------------------------------------- */
-
+/* Component: Input */
 :root {
   --vp-input-border-color: var(--vp-c-border);
   --vp-input-bg-color: var(--vp-c-bg-alt);
@@ -482,10 +452,7 @@
   --vp-input-switch-bg-color: var(--vp-c-default-soft);
 }
 
-/**
- * Component: Nav
- * -------------------------------------------------------------------------- */
-
+/* Component: Nav */
 :root {
   --vp-nav-height: 64px;
   --vp-nav-bg-color: var(--vp-c-bg);
@@ -501,35 +468,23 @@
   --vp-nav-height: 22px;
 }
 
-/**
- * Component: Local Nav
- * -------------------------------------------------------------------------- */
-
+/* Component: Local Nav */
 :root {
   --vp-local-nav-bg-color: var(--vp-c-bg);
 }
 
-/**
- * Component: Sidebar
- * -------------------------------------------------------------------------- */
-
+/* Component: Sidebar */
 :root {
   --vp-sidebar-width: 272px;
   --vp-sidebar-bg-color: var(--vp-c-bg-alt);
 }
 
-/**
- * Colors Backdrop
- * -------------------------------------------------------------------------- */
-
+/* Colors Backdrop */
 :root {
   --vp-backdrop-bg-color: rgba(0, 0, 0, 0.6);
 }
 
-/**
- * Component: Home
- * -------------------------------------------------------------------------- */
-
+/* Component: Home */
 :root {
   --vp-home-hero-name-color: var(--vp-c-brand-1);
   --vp-home-hero-name-background: transparent;
@@ -538,10 +493,7 @@
   --vp-home-hero-image-filter: none;
 }
 
-/**
- * Component: Badge
- * -------------------------------------------------------------------------- */
-
+/* Component: Badge */
 :root {
   --vp-badge-info-border: transparent;
   --vp-badge-info-text: var(--vp-c-text-2);
@@ -560,10 +512,7 @@
   --vp-badge-danger-bg: var(--vp-c-danger-soft);
 }
 
-/**
- * Component: Carbon Ads
- * -------------------------------------------------------------------------- */
-
+/* Component: Carbon Ads */
 :root {
   --vp-carbon-ads-text-color: var(--vp-c-text-1);
   --vp-carbon-ads-poweredby-color: var(--vp-c-text-2);
@@ -572,10 +521,7 @@
   --vp-carbon-ads-hover-poweredby-color: var(--vp-c-text-1);
 }
 
-/**
-  * Component: Local Search
-  * -------------------------------------------------------------------------- */
-
+/* Component: Local Search */
 :root {
   --vp-local-search-bg: var(--vp-c-bg);
   --vp-local-search-result-bg: var(--vp-c-bg);
@@ -584,4 +530,134 @@
   --vp-local-search-result-selected-border: var(--vp-c-brand-1);
   --vp-local-search-highlight-bg: var(--vp-c-brand-1);
   --vp-local-search-highlight-text: var(--vp-c-neutral-inverse);
+}
+
+/* ====== Custom VitePress Blocks ======
+   ------ Base ------ */
+.custom-block {
+  border-radius: 14px;
+  padding: 18px 20px;
+  margin: 24px 0;
+  border-width: 1px;
+  border-style: solid;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.custom-block:hover {
+  transform: translateY(-1px);
+}
+
+
+/* ------ Title ------ */
+
+.custom-block-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  font-weight: 800;
+  font-size: 1rem;
+  line-height: 1.6;
+
+  padding: 3px 9px;
+  border-radius: 7px;
+
+  margin-bottom: 12px;
+}
+
+/* ------ Text ------ */
+.custom-block p:last-child {
+  margin-bottom: 0;
+}
+
+/* ====== TIP ====== */
+.custom-block.tip {
+  border-color: color-mix(
+    in srgb,
+    var(--vp-c-tip-1) 25%,
+    transparent
+  );
+}
+
+.custom-block.tip .custom-block-title {
+  color: var(--vp-c-tip-1);
+  background: var(--vp-c-tip-soft);
+}
+
+.custom-block.tip .custom-block-title::before {
+  content: '💡';
+}
+
+/* ====== WARNING ====== */
+.custom-block.warning {
+  border-color: color-mix(
+    in srgb,
+    var(--vp-c-warning-1) 25%,
+    transparent
+  );
+}
+
+.custom-block.warning .custom-block-title {
+  color: var(--vp-c-warning-1);
+  background: var(--vp-c-warning-soft);
+}
+
+.custom-block.warning .custom-block-title::before {
+  content: '⚠️';
+}
+
+/* ====== DANGER ====== */
+.custom-block.danger {
+  border-color: color-mix(
+    in srgb,
+    var(--vp-c-danger-1) 25%,
+    transparent
+  );
+}
+
+.custom-block.danger .custom-block-title {
+  color: var(--vp-c-danger-1);
+  background: var(--vp-c-danger-soft);
+}
+
+.custom-block.danger .custom-block-title::before {
+  content: '🚨';
+}
+
+/* ====== INFO ====== */
+.custom-block.info {
+  border-color: color-mix(
+    in srgb,
+    var(--vp-c-brand-1) 25%,
+    transparent
+  );
+}
+
+.custom-block.info .custom-block-title {
+  color: var(--vp-c-brand-1);
+  background: var(--vp-c-brand-soft);
+}
+
+.custom-block.info .custom-block-title::before {
+  content: 'ℹ️';
+}
+
+/* ====== NOTE ====== */
+.custom-block.note {
+  border-color: color-mix(
+    in srgb,
+    var(--vp-c-brand-1) 25%,
+    transparent
+  );
+}
+
+.custom-block.note .custom-block-title {
+  color: var(--vp-c-brand-1);
+  background: var(--vp-c-brand-soft);
+}
+
+.custom-block.note .custom-block-title::before {
+  content: '📝';
 }
