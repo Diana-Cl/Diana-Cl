@@ -3,6 +3,7 @@ import type { Theme } from 'vitepress';
 import { useRoute } from 'vitepress';
 import Ltr from './components/Ltr.vue';
 import CopyLink from './components/CopyLink.vue';
+import DocFooter from './components/DocFooter.vue';
 import PokerHand from './components/PokerHand.vue';
 import imageViewer from 'vitepress-plugin-image-viewer';
 import CitationLink from './components/CitationLink.vue';
