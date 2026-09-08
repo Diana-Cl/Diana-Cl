@@ -439,4 +439,5 @@ Nekobox, Exclave, Singbox, Husi, Karing, and etc.
 [8]: https://mehdi-hexing.github.io/mehdi-hexing/topics/WorkerPlacementGemini
 [zizifn]: https://github.com/zizifn/edgetunnel 
 [NiREvil]: https://github.com/NiREvil
+[Patterniha]: https://github.com/patterniha
 [PattNG]: https://github.com/patterniha/v2rayNG/releases
