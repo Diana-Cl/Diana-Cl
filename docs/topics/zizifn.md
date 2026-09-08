@@ -228,7 +228,10 @@ head:
 
 ۲. روی دکمه سبز رنگ 
 
-**"I understand my workflows, go ahead and enable them"**
+<Ltr>
+
+**"I understand my workflows, go ahead and enable them"**  
+</Ltr>
 
 کلیک کنید تا اکشن‌ها جهت اجرا مجاز شوند.
 
@@ -274,14 +277,14 @@ head:
 
 <br/>
 
-::: tip یادداشت مهم برای متغیرهای یک‌بار مصرف  
-مقادیری که در فرم پاپ‌آپ دکمه‌ی **Run workflow** وارد می‌کنید، کاملاً یک‌بار مصرف هستند و در تنظیمات ریپازیتوری ذخیره نمی‌شوند. این قابلیت برای تست سریع پروکسی‌آی‌پی‌های مختلف یا تغییر دادن سریع UUID کاربردی است.  
+::: tip متغیرهای یک‌بار مصرف  
+مقادیری که در فرم پاپ‌آپ موقع **Run workflow** وارد می‌کنید، کاملاً یک‌بار مصرف هستند و در تنظیمات ریپازیتوری ذخیره نمی‌شوند. این قابلیت برای تست سریع پروکسی‌آی‌پی‌های مختلف یا تغییر دادن سریع UUID کاربردی است.  
 :::
 
 <br/>
 
- > جزئیات کار
-> پس از کلیک روی دکمه **Run workflow** گیت‌هاب سرور ابری را استارت کرده، کامپایلر زبان راست (`cargo`) و ابزار `wasm-pack` را دانلود، نصب و راه‌اندازی کرده و سپس کدها را کامپایل می‌کند. اندکی بعد از تکمیل پروسه کامپایل، یک Worker جدید با نام `0x00` در اکانت کلودفلر شما ساخته می‌شود. (یا اگر موقع اجرای اکشن نام دیگری انتخاب کرده باشید وورکر با همان نام ساخته خواهد شد).
+> جزئیات کار
+> پس از کلیک روی دکمه **Run workflow** گیت‌‌هاب سرور ابری را استارت کرده، کامپایلر زبان راست `cargo` و ابزار `wasm-pack` را دانلود، نصب و راه‌اندازی کرده و سپس کدها را کامپایل می‌کند. اندکی بعد از تکمیل پروسه کامپایل، یک Worker جدید با نام `0x00` در اکانت کلودفلر شما ساخته می‌شود. (یا اگر موقع اجرای اکشن نام دیگری انتخاب کرده باشید وورکر با همان نام ساخته خواهد شد).
 > 
 > در صورت تمایل برای تغییر نام پیش‌فرض وورکر ب صورت دائمی می‌توانید از سطر اول فایل [wrangler.toml][6] داخل مخزن این‌کار را انجام دهید.
 > 
@@ -387,7 +390,7 @@ Nekobox, Exclave, Singbox, Husi, Karing, and etc.
 <br/> 
 
 ::: tip **کانفیگ‌های بهینه شده**  
-اخیرا [پترنی‌ها][Patterniha] برای رفع اختلال‌ها و قطع و وصلی‌های پیاپی بخاطر کصشعر بودن اینترنت ایران و همچنین رفع مشکل ضعف در سرعت آپلود در کانفیگ‌های ساخته شده با وورکر کلودفلر، پیشنهاد کردن که دو پارامتر به کانفیگ‌ها اضافه کنیم:
+اخیرا [پترنی‌ها][8] برای رفع اختلال‌ها و قطع و وصلی‌های پیاپی بخاطر کصشعر بودن اینترنت ایران و همچنین رفع مشکل ضعف در سرعت آپلود در کانفیگ‌های ساخته شده با وورکر کلودفلر، پیشنهاد کردن که دو پارامتر به کانفیگ‌ها اضافه کنیم:
 
 <Ltr>
 
@@ -404,9 +407,9 @@ Nekobox, Exclave, Singbox, Husi, Karing, and etc.
 </p><br/>
 
 ::: tip رفع مشکلات پیرامون سرویس‌های گوگل 
-دوستمون مهدی عزیز در این مقاله به طور کامل به حل این مضکل پرداخته (مسکل خطای ریجن و بالا نیومدن وب‌سایت Google studio و گذها جمنای،
+دوست عزیزمون مهدی در این مقاله به طور کامل به حل این مشکل پرداخته (مشکل خطای ریجن و بالا نیومدن [Google Ai studio] و گاها جمنای،
 حتما امتحانش کنید.  
-📑 [برای مشاهده مقاله مورد نظر اینجا کلیک کنید.][8]  
+[برای مشاهده مقاله مورد نظر اینجا کلیک کنید.][9]  
 :::
 
 <br/>
@@ -415,11 +418,13 @@ Nekobox, Exclave, Singbox, Husi, Karing, and etc.
 
 > **● Deployment Engine**
 >
-> - GitHub Actions workflow runner (Ubuntu-24.04 VM)  
+> - GitHub Actions runner (Ubuntu-24.04 VM)  
 > - Cloudflare Wrangler Action v4  
 > - Rust wasm-pack  v0.13.1  
 > 
-> - Many thanks to [NiREvil] and [zizifn]   
+> <br/> 
+> 
+> - **Many thanks to [NiREvil] and [zizifn]**   
 >
 > <br/>	
 
@@ -440,8 +445,8 @@ Nekobox, Exclave, Singbox, Husi, Karing, and etc.
 [5]: https://github.com/NiREvil/vless/blob/main/sub/ProxyIP.md
 [6]: https://github.com/NiREvil/zizifn/blob/c3a3367c543f3f0f88492597e7b8fea8f6b00fa3/wrangler.toml#L1
 [7]: https://github.com/NiREvil/vless/blob/main/Cloudflare-IPs.json
-[8]: https://mehdi-hexing.github.io/mehdi-hexing/topics/WorkerPlacementGemini
+[8]: https://t.me/patt_channel_x/93
+[9]: https://mehdi-hexing.github.io/mehdi-hexing/topics/WorkerPlacementGemini
 [zizifn]: https://github.com/zizifn/edgetunnel 
 [NiREvil]: https://github.com/NiREvil
 [PattNG]: https://github.com/patterniha/v2rayNG/releases
-[Pattetniha]: https://t.me/patt_channel_x/93
