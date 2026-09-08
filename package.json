@@ -23,13 +23,14 @@
     "markdown-it-attrs": "^4.1.6",
     "markdown-it-footnote": "^4.0.0",
     "markdown-it-mathjax3": "^4.3.2",
+    "mermaid": "^11.17.2",
     "sass-embedded": "^1.97.3",
     "vitepress": "^1.6.3",
-    "mermaid": "^11.17.2",
     "vitepress-plugin-image-viewer": "^1.1.6",
     "vitepress-plugin-mermaid": "^2.0.16",
     "vitepress-plugin-tabs": "^0.7.1",
-    "vue": "^3.4.27"
+    "vue": "^3.4.27",
+    "wrangler": "^4.129.1"
   },
   "dependencies": {
     "video.js": "^8.23.3",
