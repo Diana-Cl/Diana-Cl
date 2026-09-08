@@ -72,6 +72,7 @@ head:
 برای دپلوی خودکار، گیت‌هاب اکشنز نیاز دارد به حساب کلودفلر شما متصل شود. برای این کار به دو فاکتور اساسی نیاز داریم:
 
 <Ltr>  
+
 - CloudFlare Account ID   
 - CloudFlare API Token  
 </Ltr>
@@ -135,9 +136,9 @@ head:
 <p align="center">
   <img src="/zizifn/pic8.png" alt="زمان اکسپایر شدن توکن" width="1080px" />
 </p>
-:::
 
-> توجه داشته باشید که پس از منقضی شدن توکن، وورکر شما از کار نخواهد افتاد، از آن پس قادر به دپلوی کردن مجدد پروژه از طریق گیت‌هاب نخواهید بود، که در این‌صورت باید مجددا توکن جدید ساخته و جایگزین توکن قبلی در تنظیمات ریپو گیت‌هاب خود کنید.
+> توجه داشته باشید که پس از منقضی شدن توکن، وورکر شما از کار نخواهد افتاد، از آن پس قادر به دپلوی کردن مجدد پروژه از طریق گیت‌هاب نخواهید بود، که در این‌صورت باید مجددا توکن جدید ساخته و جایگزین توکن قبلی در تنظیمات ریپو گیت‌هاب خود کنید.  
+:::
 
 <br/>
 
@@ -174,7 +175,7 @@ head:
 :::
 
 <br/>
-í
+
 ۳. روی دکمه **New repository secret** کلیک کنید و متغیرها را بر اساس جدول زیر تعریف کنید:
 
 <Ltr>
@@ -183,10 +184,11 @@ head:
 |---|:---:|---|---|
 | `CLOUDFLARE_API_TOKEN` | ✔️ اجباری | - | توکن کلودفلر شما که اجازه ویرایش ورکرها را دارد. |
 | `CLOUDFLARE_ACCOUNT_ID` | ✔️ اجباری | - | آی‌دی حساب کلودفلر شما. |
-| `UUID` | ⚙️ اختیاری | در صورت خالی گذاشتن فیلد هنگام دپلوی، اتومات توسط اکشن جنریت میشود | یوآی‌دی اختصاصی شما (ورژن ۴). |
+| `UUID` | ⚙️ اختیاری | در صورت خالی گذاشتن فیلد هنگام دپلوی، اتومات توسط اکشن جنریت میشود | [آی‌دی][4] اختصاصی شما (ورژن ۴). |
 | `PROXYIP` | ⚙️ اختیاری | `di.nscl.ir` |پروکسی‌آی‌پی جهت مسیریابی ترافیک سرویس‌های پشت کلودفلر. |
 
 </Ltr>  
+
 <br/>
 
 ::: details مشاهده اسکرین‌شات
@@ -349,8 +351,7 @@ head:
 
 ::: tip تفاوت xray و xray-enhanced و sb
 
-#### عبارت xray:
-
+#### عبارت xray
 مناسب برای کلاینت‌هایی که از هسته‌ی Xray استفاده می‌کنند، مانند:
 
 <Ltr>  
@@ -359,8 +360,7 @@ v2rayNG, MahsaNG, Hiddify, Nekoray, v2rayN, Streisand, Napsternet, NPVT, Happ, a
 
 <br/>
 
-#### عبارت xray-enhanced:
-
+#### عبارت xray-enhanced
 دسته‌‌ای از کانفیگ‌ها که به صورت پیش‌فرض پارامتر‌های پترنیها رو شامل میشن، به عبارتی این کاتفیگ‌ها دارای Final Mask و Cypher suites و Undafe برای FP هستن. 
 
 مناسب برای کلاینت‌هایی که از هسته‌ی Xray استفاده می‌کنند، مانند:
@@ -371,7 +371,7 @@ PattNG و v2rayNG
 
 <br/>
 
-#### عبارت sb:  
+#### عبارت sb  
 مناسب برای کلاینت‌هایی که از هسته‌ی SingBox استفاده می‌کنند، مانند:  
 
 <Ltr>  
@@ -389,7 +389,8 @@ Nekobox, Exclave, Singbox, Husi, Karing, and etc.
 ::: tip **کانفیگ‌های بهینه شده**  
 اخیرا [پترنی‌ها][Patterniha] برای رفع اختلال‌ها و قطع و وصلی‌های پیاپی بخاطر کصشعر بودن اینترنت ایران و همچنین رفع مشکل ضعف در سرعت آپلود در کانفیگ‌های ساخته شده با وورکر کلودفلر، پیشنهاد کردن که دو پارامتر به کانفیگ‌ها اضافه کنیم:
 
-<Ltr>   
+<Ltr>
+
 - Final Mask  
 - Cypher suites  
 </Ltr>
@@ -410,16 +411,19 @@ Nekobox, Exclave, Singbox, Husi, Karing, and etc.
 
 <br/>
 
+<Ltr>
+
+> **● Deployment Engine**
 >
-> **Deployment Engine**
->
-> - GitHub Actions workflow runner (Ubuntu-24.04 VM)
-> - Cloudflare Wrangler Action v4
-> - Rust wasm-pack  v0.13.1
+> - GitHub Actions workflow runner (Ubuntu-24.04 VM)  
+> - Cloudflare Wrangler Action v4  
+> - Rust wasm-pack  v0.13.1  
 > 
 > - Many thanks to [NiREvil] and [zizifn]   
 >
 > <br/>	
+
+</Ltr>
 
 ::: danger هشدار امنیتی  
 ::: details برای مشاهده توضیحات کلیک کنید  
@@ -440,3 +444,4 @@ Nekobox, Exclave, Singbox, Husi, Karing, and etc.
 [zizifn]: https://github.com/zizifn/edgetunnel 
 [NiREvil]: https://github.com/NiREvil
 [PattNG]: https://github.com/patterniha/v2rayNG/releases
+[Pattetniha]: https://t.me/patt_channel_x/93
