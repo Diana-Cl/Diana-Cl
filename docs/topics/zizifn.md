@@ -280,33 +280,32 @@ head:
 
 <br/>
 
-::: info جزئیات کار
-پس از کلیک روی دکمه **Run workflow** گیت‌هاب سرور ابری را استارت کرده، کامپایلر زبان راست (`cargo`) و ابزار `wasm-pack` را دانتود، نصب و راه‌اندازی و کدها را کامپایل کرده و سپس به‌طور اتوماتیک یک Worker جدید با نام `zr-wasm` در اکانت کلودفلر شما ساخته می‌شود.
-
-در صورت تمایل برای تغییر نام پیش‌فرض وورکربله طور دائمی می‌توانید از سطر اول فایل [wrangler.toml][6] داخل ربپو انجام دهید. 
-
-::: details مشاهده اسکرین‌شات
-<p align="center">
-  <img src="/zizifn/pic20.png" alt="worker name" width="1080px" />
-</p>
-:::
-
+ > جزئیات کار
+> پس از کلیک روی دکمه **Run workflow** گیت‌هاب سرور ابری را استارت کرده، کامپایلر زبان راست (`cargo`) و ابزار `wasm-pack` را دانلود، نصب و راه‌اندازی کرده و سپس کدها را کامپایل می‌کند. اندکی بعد از تکمیل پروسه کامپایل، یک Worker جدید با نام `0x00` در اکانت کلودفلر شما ساخته می‌شود. (یا اگر موقع اجرای اکشن نام دیگری انتخاب کرده باشید وورکر با همان نام ساخته خواهد شد).
+> 
+> در صورت تمایل برای تغییر نام پیش‌فرض وورکر ب صورت دائمی می‌توانید از سطر اول فایل [wrangler.toml][6] داخل مخزن این‌کار را انجام دهید.
+> 
+> 
+> ::: details مشاهده اسکرین‌شات
+> <p align="center">
+>   <img src="/zizifn/pic20.png" alt="worker name" width="1080px" />
+> </p>
+> :::
+> 
 <br/>
 
 
 ## نحوه استفاده
-
 ### دسترسی به پنل مدیریت
-
 پس از دپلوی، کافیست UUID خود را به انتهای آدرس ورکر خود اضافه کنید:
 
 <Ltr>
 
-`https://Your-Worker-URL/Your-UUID`
+`https://Your-workers.dev-URL/<UUID>`
 
 </Ltr>
 
-برای مثال:
+**برای مثال:**
 
 <Ltr>
 
@@ -314,7 +313,7 @@ head:
 
 </Ltr>
 
-> اگر متغیر UUID ایجاد نکرده باشید در موقع اجرای اکشن هم فیلد  UUID رو خالی گذاشته باشبد اکشن گیت‌هاب خودش یک [UUID][4] جنریت کرده و به وورکر شما اختصاص میده. برای اطلاع از UUID ایجاد شده باید به داشبورد کلودفلر رفته و وارد وورکر مورد نظر شده و به تب تنظیمات داخل وورکر سر بزنید.
+> اگر متغیر UUID ایجاد نکرده باشید در موقع اجرای اکشن هم فیلد  UUID رو خالی گذاشته باشبد اکشن گیت‌هاب یک [UUID][4] جنریت کرده و به وورکر شما اختصاص خواهد داد. برای اطلاع از UUID ایجاد شده باید وارد داشبورد کلودفلر و سپس وورکر مورد نظر شده و به تب تنظیمات بروید، آی‌دی در بخش اول Secret and 
 
 <br/> 
 
@@ -325,14 +324,14 @@ head:
 و یا در صورت نیار لینک آدرس اشتراک‌ها به صورت دستی و استفاده از آن‌ها در کلاینت‌های دیگر کافیست انگشت خود را بر روی یکی کلید‌های `Import to ...` چند ثانیه نگه‌دارید (Long Touch). سپس مرورگر از شما درخواست مجوز کپی کردن لینک را خواهد کرد (تنها یکبار برای همیشه)، پس از تایید درخواست مجوز با کلیک بر روی گزینه `Allow` لینک ساب مربوط به همان کلاینت برای شما کپی خواهد شد. 
 
 ::: details مشاهده اسکرین‌شات
-
 <p align="center">
   <img src="/zizifn/pic21.png" alt="Copy Subscription link" width="1080px" />
-</p> <br/>
+</p><br/>
 
 ### لینک ساب برای مثال:
 
 <Ltr>  
+
 **For Xray Ccre clients:**  
 
 `https://0x00.workers.dev/xray/be0ff9df-1468-41a0-8865-796d1c6800db`
@@ -341,10 +340,12 @@ head:
 `https://0x00.workers.dev/sb/be0ff9df-1468-41a0-8865-796d1c6800db`
 
 **For PattNG Client:**   
-`https://0x00.workers.dev/xray-enhanced/be0ff9df-1468-41a0-8865-796d1c6800db`  
-</Ltr>
+`https://0x00.workers.dev/xray-enhanced/be0ff9df-1468-41a0-8865-796d1c6800db`
 
+</Ltr>
 :::
+
+## توضیحات بیشتر {#pattng}
 
 <br/>
 
@@ -367,12 +368,12 @@ v2rayNG, MahsaNG, Hiddify, Nekoray, v2rayN, Streisand, Napsternet, NPVT, Happ, a
 مناسب برای کلاینت‌هایی که از هسته‌ی Xray استفاده می‌کنند، مانند:
 
 <Ltr>  
-PattNG و v2rayNG,
+PattNG و v2rayNG,  
 </Ltr>
 
 <br/>
-#### عبارت sb:
 
+#### عبارت sb:  
 مناسب برای کلاینت‌هایی که از هسته‌ی SingBox استفاده می‌کنند، مانند:  
 
 <Ltr>  
@@ -381,8 +382,7 @@ Nekobox, Exclave, Singbox, Husi, Karing, and etc.
 
 <br/>
 
-#### آی‌پی تمیز کلودفلر
-
+#### آی‌پی تمیز کلودفلر  
 آی‌پی‌های موجود درکانفیگ‌ها از مخزن آی‌پی تمیز [NiREvil/vless][7] تامین میشه، سیکل بروزرسانی آی‌پی‌ها: هر ۴ ساعت.
 :::
 
@@ -392,7 +392,7 @@ Nekobox, Exclave, Singbox, Husi, Karing, and etc.
 اخیرا پترنی‌ها برای رفع اختلال های موجود روی اینترنت ایران و همچنین رفع مشکل ضعف در سرعت آپلود در کانفیگ‌های ساخته شده با وورکر کلودفلر، اضافه کردن دو پارامتر رو به کانفیگ‌ها پیشنهاد کردن:
 
 <Ltr>   
-- Final Mask
+- Final Mask  
 - Cypher suites  
 </Ltr>
 
@@ -412,21 +412,19 @@ Nekobox, Exclave, Singbox, Husi, Karing, and etc.
 
 <br/>
 
-::: info   
-<Ltr>  
-**Deployment Engine**
-
-- GitHub Actions workflow runner (Ubuntu-24.04 VM)
-- Cloudflare Wrangler Action v3
-
-- Many thanks to [NiREvil] and [zizifn]   
-</Ltr>  
-:::
-
-<br/>
+>
+> **Deployment Engine**
+>
+> - GitHub Actions workflow runner (Ubuntu-24.04 VM)
+> - Cloudflare Wrangler Action v4
+> - Rust wasm-pack  v0.13.1
+> 
+> - Many thanks to [NiREvil] and [zizifn]   
+>
+> <br/>	
 
 ::: danger هشدار امنیتی  
-::: details برای مشاهده نکات مهم امنیتی کلیک کنید  
+::: details برای مشاهده توضیحات کلیک کنید  
 
 **هرگز توکن‌های حساس کلودفلر را در فیلدهای متنی ورودی دستی تعریف نکنید!** 
 
@@ -438,7 +436,7 @@ Nekobox, Exclave, Singbox, Husi, Karing, and etc.
 [3]: https://dash.cloudflare.com/sign-up
 [4]: https://www.uuidgenerator.net
 [5]: https://github.com/NiREvil/vless/blob/main/sub/ProxyIP.md
-[6]: https://github.com/NiREvil/zizifn/blob/main/wrangler.toml
+[6]: https://github.com/NiREvil/zizifn/blob/c3a3367c543f3f0f88492597e7b8fea8f6b00fa3/wrangler.toml#L1
 [7]: https://github.com/NiREvil/vless/blob/main/Cloudflare-IPs.json
 [8]: https://mehdi-hexing.github.io/mehdi-hexing/topics/WorkerPlacementGemini
 [zizifn]: https://github.com/zizifn/edgetunnel 
