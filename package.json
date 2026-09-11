@@ -30,7 +30,7 @@
     "vitepress-plugin-mermaid": "^2.0.16",
     "vitepress-plugin-tabs": "^0.7.1",
     "vue": "^3.4.27",
-    "wrangler": "^4.129.1"
+    "wrangler": "^4.131.0"
   },
   "dependencies": {
     "video.js": "^8.23.3",
