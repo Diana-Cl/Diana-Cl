@@ -603,10 +603,10 @@ region = "gcp:us-central1"
 
 ::: details مشاهده اسکرین‌شات  
 <p align="center">
-  <img src="/zizifn/pic30.png" alt="Custom Clean IPs" width="1080px" />
-
+<img src="/zizifn/pic30.png" alt="Custom Clean IPs" width="1080px" />
+</p>
 <p align="center">
-  <img src="/zizifn/pic30-2.png" alt="Custom IP Nodes" width="1011px" />
+<img src="/zizifn/pic30-2.png" alt="Custom IP Nodes" width="1011px" />
 </p>
 :::
 
@@ -704,23 +704,25 @@ Nekobox, Exclave, Singbox, Husi, Karing, and etc.
 
 <Ltr>
 
-> **Deployment Engine**
+> <h3><p><b>Deployment Engine</b></p></h3>
 >
-> -▶ GitHub Actions runner (Ubuntu-26.04 VM)  
-> -▶ Cloudflare Wrangler Action v4  
-> -▶ Rust + wasm-pack  
+> ▶ GitHub Actions runner (Ubuntu-26.04 VM)    
+> ▶ Cloudflare Wrangler Action v7  
+> ▶ Rust + wasm-pack  
 > 
 > <br/>
->
-> <p><b>🪶 Credits</b></p>
->
-> [<img src="https://img.shields.io/badge/Upstream_Repo-Zizifn-966600" />][zizifn]  
-> [<img src="https://img.shields.io/badge/First_Dev-NiREvil-966600" />][NiREvil]  
-> [<img src="https://img.shields.io/badge/Scamalytics_IP_Risk_Score-Mehdi_Hexing-966600" />][Mehdi-Hexing]  
-> [<img src="https://img.shields.io/badge/Development_%26_Maintenance-Diana--Cl-966600" />][Diana]  
->
-> <br/>
+>  
+> <h3><p><b>🪶 Credits</b></p></h3>
+>  
+> <a href="https://github.com/NiREvil"><img src="https://img.shields.io/badge/First_Dev-NiREvil-966600" /></a>  
+> <a href="https://github.com/zizifn/edgetunnel"><img src="https://img.shields.io/badge/Upstream_Repo-Zizifn-966600" /></a>  
+> <a href="https://github.com/Diana-Cl"><img src="https://img.shields.io/badge/Development_%26_Maintenance-Diana--Cl-966600" /></a>  
+> <a href="https://github.com/mehdi-hexing"><img src="https://img.shields.io/badge/Scamalytics_IP_Risk_Score-Mehdi_Hexing-966600" /></a>  
+>  
+> <br/>  
 </Ltr>
+
+<br/>
 
 :::: danger هشدار امنیتی  
 ::: details برای مشاهده توضیحات کلیک کن  
