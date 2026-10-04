@@ -406,14 +406,15 @@ head:
 
 ۵. دفعه‌ی بعد که اکشن رو دستی اجرا میکنی، چک‌باکس همون اکانت رو تیک بزن.
 
-::: details مشاهده اسکرین‌شات  
+::: details مشاهده اسکرین‌شات
+
 <p align="center">
   <img src="/zizifn/pic24.png" alt="Multi-account secrets" width="1080px" />
 </p>
 
 <p align="center">
-  <img src="/zizifn/pic24-2.png" alt="Multi-account secrets" width="1080px" />
-</p>
+  <img src="/zizifn/pic24-2.png" alt="Multi-account secrets2" width="1080px" />
+</p>  
 :::
 
 ### اسم دلخواه برای هر وورکر {#names}
