@@ -111,6 +111,7 @@ export default withMermaid(defineConfig({
                 { text: 'ابزار‌های هوش مصنوعی', link: '/topics/ai' },
                 { text: 'تفاوت معماری پردازنده‌ها', link: '/topics/cpu-abi-android' },
                 { text: 'ترموکس', link: '/topics/termux' },
+                { text: 'عیب‌یابی شبکه‌ موبایل', link: '/topics/network-diagnostic' },
                 { text: 'اینترنت زمان قطعی برق', link: '/topics/iran-core' },
                 { text: 'خواب عمیق اپلیکیشن‌ها', link: '/topics/sleeping-apps' },
                 { text: 'امپراتوری سایبری', link: '/topics/REvil' },
